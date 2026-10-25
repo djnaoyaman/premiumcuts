@@ -23,6 +23,10 @@ def title_style(s):
 
 # IDs remain stable when a credited name or title is corrected.
 EDITS={
+ '001-b-13':('Prini Lorez','Boogaloo',''),
+ '001-b-14':('Doris Svensson','Du som bara har sett vårar',''),
+ '001-b-12':('Anita Strandell',"Va’ är de’ här för nå’t (Here We Are Falling in Love Again)",''),
+ '001-b-10':('Jula De Palma','Oh, Alfredo',''),
  '001-a-06':('The G/9 Group','Let Me (Deixa)',''),
  '001-a-09':('Chico Arnez & His Cubana Brass','Eso Beso',''),
  'cd-00-d1-17':('Chico Arnez & His Cubana Brass','Eso Beso',''),

@@ -3,6 +3,7 @@ import json,html,re,shutil,unicodedata,collections,os,hashlib
 from urllib.parse import quote
 from PIL import Image,ImageDraw,ImageFont
 from catalog_style import normalize_tracks
+from artwork import record_art
 P=Path(__file__).parent;D=P/'dist';e=html.escape
 origin=os.environ.get('SITE_ORIGIN','https://premium-cuts-listed.mossyelf3.chatgpt.site').rstrip('/')
 base_path=os.environ.get('BASE_PATH','').rstrip('/')
@@ -53,6 +54,7 @@ for v in volumes:
 tape_volumes=volumes.copy()
 cd_data=json.loads((P/'cd_catalog.json').read_text())
 cd_volumes=cd_data['volumes']
+for artwork_index,v in enumerate(cd_volumes,8):v['pattern']=artwork_index
 volumes+=cd_volumes
 tracks+=cd_data['tracks']
 normalize_tracks(tracks)
@@ -85,8 +87,9 @@ public_tracks=[{k:v for k,v in t.items() if k in {'id','volume','side','position
 (P/'tracks.json').unlink(missing_ok=True)
 
 def pattern(i,cls=''):
- return f'<div class="pattern p{i} {cls}" aria-hidden="true"><div class="pattern-layer"></div><div class="pattern-layer second"></div><span class="dot"></span></div>'
-asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','catalog_style.py','cd_catalog.json','research.json','src/app.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
+ return f'<div class="pattern bauhaus-art {cls}" data-art="{i}" aria-hidden="true">{record_art(i)}</div>'
+
+asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','artwork.py','catalog_style.py','cd_catalog.json','research.json','src/app.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
 # Public-only catalog snapshots let open players receive newly published sources.
 public_audio=[dict(id=t['id'],volume=t['volume'],title=t['title'],artist=t['artist'],videoId=players[t['id']]['id'],url=players[t['id']]['url']) for t in tracks if t['id'] in players]
 (D/'catalog-public.json').write_text(json.dumps(dict(version=asset_version,tracks=public_tracks,volumes=volumes,audio=public_audio),ensure_ascii=False))
