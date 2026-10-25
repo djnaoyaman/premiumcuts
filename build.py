@@ -1,14 +1,15 @@
 from pathlib import Path
-import json,html,re,shutil,unicodedata,collections
+import json,html,re,shutil,unicodedata,collections,os
 from urllib.parse import quote
 from PIL import Image,ImageDraw,ImageFont
 P=Path(__file__).parent;D=P/'dist';U=P/'source-images';e=html.escape
-origin='https://premium-cuts-listed.mossyelf3.chatgpt.site'
+origin=os.environ.get('SITE_ORIGIN','https://premium-cuts-listed.mossyelf3.chatgpt.site').rstrip('/')
+base_path=os.environ.get('BASE_PATH','').rstrip('/')
 titles=['ON THE AIR','SINCERELY','COMMERCIALS','AUDIOSCAPE','JINGLES','COUNSELING','HOLIDAY MUSIC']
 subtitles=['ラジオの向こうで、音楽に出会う。','一曲ずつ、気持ちをつないで。','日常の隙間に、小さな音楽を。','音が描く、もうひとつの風景。','短い合図から、次の曲へ。','気分に寄り添う、レコードの時間。','休日には、少し遠くの音楽を。']
 # Editorial taglines describe the archive experience, not the mix creator's stated intent.
 files=['画像1.jpg','画像2.jpg','image(20261025-152132).png','Premium Cuts 004 AUDIOSCAPE.jpg','Premium Cuts 005 JINGLES 1.jpg','Premium Cuts 006 COUNCERING.jpg','Premium Cuts 007 HOLIDAY MUSIC.png']
-for path in ['tracks','volumes','assets']: (D/path).mkdir(exist_ok=True)
+for path in ['tracks','volumes','assets']: (D/path).mkdir(parents=True,exist_ok=True)
 # Replace the superseded, out-of-scope catalog completely.
 for f in (D/'tracks').glob('*.html'):f.unlink()
 for n in ['style.css','app.js']:shutil.copy2(P/'src'/n,D/n)
@@ -119,3 +120,14 @@ im.save(D/'og.png');icon=Image.new('RGB',(180,180),'#f2e8d7');dr=ImageDraw.Draw(
 urls=['/','/tracks.html','/about.html']+['/volumes/'+v['id']+'.html' for v in volumes]+['/tracks/'+t['id']+'.html' for t in tracks]
 (D/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+origin+u+'</loc></url>' for u in urls)+'</urlset>');(D/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+origin+'/sitemap.xml\n')
 print(json.dumps({'volumes':len(volumes),'entries':len(tracks),'corrected':sum(t['status']=='corrected' for t in tracks),'pending':sum(t['status']=='pending' for t in tracks),'counts':[(v['id'],v['a'],v['b']) for v in volumes]},ensure_ascii=False))
+
+# Project Pages lives below /premiumcuts rather than the domain root.
+if base_path:
+ for page in D.rglob('*.html'):
+  markup=page.read_text()
+  for attr in ['href','src']:
+   markup=markup.replace(attr+'="/',attr+'="'+base_path+'/')
+  page.write_text(markup)
+ js=(D/'app.js').read_text().replace('href="/tracks/','href="'+base_path+'/tracks/').replace('href="/volumes/','href="'+base_path+'/volumes/')
+ (D/'app.js').write_text(js)
+(D/'.nojekyll').write_text('')
