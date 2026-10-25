@@ -11,8 +11,6 @@
         1,
         2
       ],
-      "mix_year": "2005",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 1
     },
@@ -26,8 +24,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2005",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 2
     },
@@ -41,8 +37,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2006",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 3
     },
@@ -56,8 +50,6 @@
       "discs": [
         1
       ],
-      "mix_year": null,
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 4
     },
@@ -71,8 +63,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2006",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 5
     },
@@ -86,8 +76,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2007",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 6
     },
@@ -101,8 +89,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2008",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 7
     },
@@ -116,8 +102,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2008",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 1
     },
@@ -131,8 +115,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2009",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 2
     },
@@ -146,8 +128,6 @@
       "discs": [
         1
       ],
-      "mix_year": null,
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 3
     },
@@ -161,8 +141,6 @@
       "discs": [
         1
       ],
-      "mix_year": null,
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 4
     },
@@ -176,8 +154,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2011",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 5
     },
@@ -191,8 +167,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2011",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 6
     },
@@ -206,8 +180,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2012",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 7
     },
@@ -221,8 +193,6 @@
       "discs": [
         1
       ],
-      "mix_year": "2013",
-      "source": "listed.xlsx",
       "tagline": "一枚のMIXを、一曲ずつ。",
       "pattern": 1
     }
@@ -240,8 +210,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 1,
       "format": "cd"
     },
     {
@@ -256,8 +224,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 3,
       "format": "cd"
     },
     {
@@ -272,8 +238,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 5,
       "format": "cd"
     },
     {
@@ -288,8 +252,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 7,
       "format": "cd"
     },
     {
@@ -304,8 +266,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 9,
       "format": "cd"
     },
     {
@@ -320,8 +280,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 11,
       "format": "cd"
     },
     {
@@ -336,8 +294,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 13,
       "format": "cd"
     },
     {
@@ -352,8 +308,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 15,
       "format": "cd"
     },
     {
@@ -368,8 +322,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 17,
       "format": "cd"
     },
     {
@@ -384,8 +336,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 19,
       "format": "cd"
     },
     {
@@ -400,8 +350,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 21,
       "format": "cd"
     },
     {
@@ -416,8 +364,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 23,
       "format": "cd"
     },
     {
@@ -432,8 +378,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 25,
       "format": "cd"
     },
     {
@@ -448,8 +392,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 27,
       "format": "cd"
     },
     {
@@ -464,8 +406,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 29,
       "format": "cd"
     },
     {
@@ -480,8 +420,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 31,
       "format": "cd"
     },
     {
@@ -496,8 +434,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 33,
       "format": "cd"
     },
     {
@@ -512,8 +448,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 35,
       "format": "cd"
     },
     {
@@ -528,8 +462,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 37,
       "format": "cd"
     },
     {
@@ -544,8 +476,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 39,
       "format": "cd"
     },
     {
@@ -560,8 +490,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 41,
       "format": "cd"
     },
     {
@@ -576,8 +504,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 43,
       "format": "cd"
     },
     {
@@ -592,8 +518,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 45,
       "format": "cd"
     },
     {
@@ -608,8 +532,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 47,
       "format": "cd"
     },
     {
@@ -624,8 +546,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 49,
       "format": "cd"
     },
     {
@@ -640,8 +560,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 51,
       "format": "cd"
     },
     {
@@ -656,8 +574,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 53,
       "format": "cd"
     },
     {
@@ -672,8 +588,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 55,
       "format": "cd"
     },
     {
@@ -688,8 +602,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 57,
       "format": "cd"
     },
     {
@@ -704,8 +616,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 59,
       "format": "cd"
     },
     {
@@ -720,8 +630,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 61,
       "format": "cd"
     },
     {
@@ -736,8 +644,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 63,
       "format": "cd"
     },
     {
@@ -752,8 +658,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 65,
       "format": "cd"
     },
     {
@@ -768,8 +672,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 67,
       "format": "cd"
     },
     {
@@ -784,8 +686,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 69,
       "format": "cd"
     },
     {
@@ -800,8 +700,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 71,
       "format": "cd"
     },
     {
@@ -816,8 +714,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 73,
       "format": "cd"
     },
     {
@@ -832,8 +728,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 75,
       "format": "cd"
     },
     {
@@ -848,8 +742,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 77,
       "format": "cd"
     },
     {
@@ -864,8 +756,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 79,
       "format": "cd"
     },
     {
@@ -880,8 +770,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 81,
       "format": "cd"
     },
     {
@@ -896,8 +784,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 83,
       "format": "cd"
     },
     {
@@ -912,8 +798,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 85,
       "format": "cd"
     },
     {
@@ -928,8 +812,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 87,
       "format": "cd"
     },
     {
@@ -944,8 +826,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 89,
       "format": "cd"
     },
     {
@@ -960,8 +840,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 91,
       "format": "cd"
     },
     {
@@ -976,8 +854,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 93,
       "format": "cd"
     },
     {
@@ -992,8 +868,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 95,
       "format": "cd"
     },
     {
@@ -1008,8 +882,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 97,
       "format": "cd"
     },
     {
@@ -1024,8 +896,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 99,
       "format": "cd"
     },
     {
@@ -1040,8 +910,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 101,
       "format": "cd"
     },
     {
@@ -1056,8 +924,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 103,
       "format": "cd"
     },
     {
@@ -1072,8 +938,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 105,
       "format": "cd"
     },
     {
@@ -1088,8 +952,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 107,
       "format": "cd"
     },
     {
@@ -1104,8 +966,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 109,
       "format": "cd"
     },
     {
@@ -1120,8 +980,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 111,
       "format": "cd"
     },
     {
@@ -1136,8 +994,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 113,
       "format": "cd"
     },
     {
@@ -1152,8 +1008,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 115,
       "format": "cd"
     },
     {
@@ -1168,8 +1022,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 117,
       "format": "cd"
     },
     {
@@ -1184,8 +1036,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 119,
       "format": "cd"
     },
     {
@@ -1200,8 +1050,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 121,
       "format": "cd"
     },
     {
@@ -1216,8 +1064,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 123,
       "format": "cd"
     },
     {
@@ -1232,8 +1078,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 125,
       "format": "cd"
     },
     {
@@ -1248,8 +1092,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 127,
       "format": "cd"
     },
     {
@@ -1264,8 +1106,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 129,
       "format": "cd"
     },
     {
@@ -1280,8 +1120,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 131,
       "format": "cd"
     },
     {
@@ -1296,8 +1134,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 133,
       "format": "cd"
     },
     {
@@ -1312,8 +1148,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 135,
       "format": "cd"
     },
     {
@@ -1328,8 +1162,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 137,
       "format": "cd"
     },
     {
@@ -1344,8 +1176,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 139,
       "format": "cd"
     },
     {
@@ -1360,8 +1190,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 141,
       "format": "cd"
     },
     {
@@ -1376,8 +1204,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 143,
       "format": "cd"
     },
     {
@@ -1392,8 +1218,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 145,
       "format": "cd"
     },
     {
@@ -1408,8 +1232,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 147,
       "format": "cd"
     },
     {
@@ -1424,8 +1246,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 149,
       "format": "cd"
     },
     {
@@ -1440,8 +1260,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 151,
       "format": "cd"
     },
     {
@@ -1456,8 +1274,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 153,
       "format": "cd"
     },
     {
@@ -1472,8 +1288,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 155,
       "format": "cd"
     },
     {
@@ -1488,8 +1302,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 157,
       "format": "cd"
     },
     {
@@ -1504,8 +1316,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 159,
       "format": "cd"
     },
     {
@@ -1520,8 +1330,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 161,
       "format": "cd"
     },
     {
@@ -1536,8 +1344,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 163,
       "format": "cd"
     },
     {
@@ -1552,8 +1358,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 165,
       "format": "cd"
     },
     {
@@ -1568,8 +1372,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 167,
       "format": "cd"
     },
     {
@@ -1584,8 +1386,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 169,
       "format": "cd"
     },
     {
@@ -1600,8 +1400,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 171,
       "format": "cd"
     },
     {
@@ -1616,8 +1414,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 173,
       "format": "cd"
     },
     {
@@ -1632,8 +1428,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 175,
       "format": "cd"
     },
     {
@@ -1648,8 +1442,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 177,
       "format": "cd"
     },
     {
@@ -1664,8 +1456,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 179,
       "format": "cd"
     },
     {
@@ -1680,8 +1470,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 181,
       "format": "cd"
     },
     {
@@ -1696,8 +1484,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 183,
       "format": "cd"
     },
     {
@@ -1712,8 +1498,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 185,
       "format": "cd"
     },
     {
@@ -1728,8 +1512,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 187,
       "format": "cd"
     },
     {
@@ -1744,8 +1526,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 189,
       "format": "cd"
     },
     {
@@ -1760,8 +1540,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 191,
       "format": "cd"
     },
     {
@@ -1776,8 +1554,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 193,
       "format": "cd"
     },
     {
@@ -1792,8 +1568,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 195,
       "format": "cd"
     },
     {
@@ -1808,8 +1582,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 197,
       "format": "cd"
     },
     {
@@ -1824,8 +1596,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 199,
       "format": "cd"
     },
     {
@@ -1840,8 +1610,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 201,
       "format": "cd"
     },
     {
@@ -1856,8 +1624,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 203,
       "format": "cd"
     },
     {
@@ -1872,8 +1638,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 205,
       "format": "cd"
     },
     {
@@ -1888,8 +1652,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 207,
       "format": "cd"
     },
     {
@@ -1904,8 +1666,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 209,
       "format": "cd"
     },
     {
@@ -1920,8 +1680,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 211,
       "format": "cd"
     },
     {
@@ -1936,8 +1694,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 213,
       "format": "cd"
     },
     {
@@ -1952,8 +1708,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 215,
       "format": "cd"
     },
     {
@@ -1968,8 +1722,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 217,
       "format": "cd"
     },
     {
@@ -1984,8 +1736,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 219,
       "format": "cd"
     },
     {
@@ -2000,8 +1750,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 221,
       "format": "cd"
     },
     {
@@ -2016,8 +1764,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 223,
       "format": "cd"
     },
     {
@@ -2032,8 +1778,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 225,
       "format": "cd"
     },
     {
@@ -2048,8 +1792,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 227,
       "format": "cd"
     },
     {
@@ -2064,8 +1806,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 229,
       "format": "cd"
     },
     {
@@ -2080,8 +1820,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 231,
       "format": "cd"
     },
     {
@@ -2096,8 +1834,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 233,
       "format": "cd"
     },
     {
@@ -2112,8 +1848,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 235,
       "format": "cd"
     },
     {
@@ -2128,8 +1862,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 237,
       "format": "cd"
     },
     {
@@ -2144,8 +1876,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 239,
       "format": "cd"
     },
     {
@@ -2160,8 +1890,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 241,
       "format": "cd"
     },
     {
@@ -2176,8 +1904,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 243,
       "format": "cd"
     },
     {
@@ -2192,8 +1918,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 245,
       "format": "cd"
     },
     {
@@ -2208,8 +1932,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 247,
       "format": "cd"
     },
     {
@@ -2224,8 +1946,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 249,
       "format": "cd"
     },
     {
@@ -2240,8 +1960,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 251,
       "format": "cd"
     },
     {
@@ -2256,8 +1974,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 253,
       "format": "cd"
     },
     {
@@ -2272,8 +1988,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 255,
       "format": "cd"
     },
     {
@@ -2288,8 +2002,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 257,
       "format": "cd"
     },
     {
@@ -2304,8 +2016,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 259,
       "format": "cd"
     },
     {
@@ -2320,8 +2030,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 261,
       "format": "cd"
     },
     {
@@ -2336,8 +2044,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 263,
       "format": "cd"
     },
     {
@@ -2352,8 +2058,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 265,
       "format": "cd"
     },
     {
@@ -2368,8 +2072,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 267,
       "format": "cd"
     },
     {
@@ -2384,8 +2086,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 269,
       "format": "cd"
     },
     {
@@ -2400,8 +2100,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 271,
       "format": "cd"
     },
     {
@@ -2416,8 +2114,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 273,
       "format": "cd"
     },
     {
@@ -2432,8 +2128,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 275,
       "format": "cd"
     },
     {
@@ -2448,8 +2142,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 277,
       "format": "cd"
     },
     {
@@ -2464,8 +2156,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 279,
       "format": "cd"
     },
     {
@@ -2480,8 +2170,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 281,
       "format": "cd"
     },
     {
@@ -2496,8 +2184,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 283,
       "format": "cd"
     },
     {
@@ -2512,8 +2198,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 285,
       "format": "cd"
     },
     {
@@ -2528,8 +2212,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 287,
       "format": "cd"
     },
     {
@@ -2544,8 +2226,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 289,
       "format": "cd"
     },
     {
@@ -2560,8 +2240,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 291,
       "format": "cd"
     },
     {
@@ -2576,8 +2254,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 293,
       "format": "cd"
     },
     {
@@ -2592,8 +2268,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 295,
       "format": "cd"
     },
     {
@@ -2608,8 +2282,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 297,
       "format": "cd"
     },
     {
@@ -2624,8 +2296,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 299,
       "format": "cd"
     },
     {
@@ -2640,8 +2310,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 301,
       "format": "cd"
     },
     {
@@ -2656,8 +2324,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 303,
       "format": "cd"
     },
     {
@@ -2672,8 +2338,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 305,
       "format": "cd"
     },
     {
@@ -2688,8 +2352,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 307,
       "format": "cd"
     },
     {
@@ -2704,8 +2366,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 309,
       "format": "cd"
     },
     {
@@ -2720,8 +2380,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 311,
       "format": "cd"
     },
     {
@@ -2736,8 +2394,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 313,
       "format": "cd"
     },
     {
@@ -2752,8 +2408,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 315,
       "format": "cd"
     },
     {
@@ -2768,8 +2422,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 317,
       "format": "cd"
     },
     {
@@ -2784,8 +2436,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 319,
       "format": "cd"
     },
     {
@@ -2800,8 +2450,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 321,
       "format": "cd"
     },
     {
@@ -2816,8 +2464,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 323,
       "format": "cd"
     },
     {
@@ -2832,8 +2478,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 325,
       "format": "cd"
     },
     {
@@ -2848,8 +2492,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 327,
       "format": "cd"
     },
     {
@@ -2864,8 +2506,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 329,
       "format": "cd"
     },
     {
@@ -2880,8 +2520,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 331,
       "format": "cd"
     },
     {
@@ -2896,8 +2534,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 333,
       "format": "cd"
     },
     {
@@ -2912,8 +2548,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 335,
       "format": "cd"
     },
     {
@@ -2928,8 +2562,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 337,
       "format": "cd"
     },
     {
@@ -2944,8 +2576,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 339,
       "format": "cd"
     },
     {
@@ -2960,8 +2590,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 341,
       "format": "cd"
     },
     {
@@ -2976,8 +2604,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 343,
       "format": "cd"
     },
     {
@@ -2992,8 +2618,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 345,
       "format": "cd"
     },
     {
@@ -3008,8 +2632,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 347,
       "format": "cd"
     },
     {
@@ -3024,8 +2646,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 349,
       "format": "cd"
     },
     {
@@ -3040,8 +2660,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 351,
       "format": "cd"
     },
     {
@@ -3056,8 +2674,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 353,
       "format": "cd"
     },
     {
@@ -3072,8 +2688,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 355,
       "format": "cd"
     },
     {
@@ -3088,8 +2702,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 357,
       "format": "cd"
     },
     {
@@ -3104,8 +2716,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 359,
       "format": "cd"
     },
     {
@@ -3120,8 +2730,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 361,
       "format": "cd"
     },
     {
@@ -3136,8 +2744,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 363,
       "format": "cd"
     },
     {
@@ -3152,8 +2758,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 365,
       "format": "cd"
     },
     {
@@ -3168,8 +2772,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 367,
       "format": "cd"
     },
     {
@@ -3184,8 +2786,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 369,
       "format": "cd"
     },
     {
@@ -3200,8 +2800,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 371,
       "format": "cd"
     },
     {
@@ -3216,8 +2814,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 373,
       "format": "cd"
     },
     {
@@ -3232,8 +2828,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 375,
       "format": "cd"
     },
     {
@@ -3248,8 +2842,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 377,
       "format": "cd"
     },
     {
@@ -3264,8 +2856,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 379,
       "format": "cd"
     },
     {
@@ -3280,8 +2870,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 381,
       "format": "cd"
     },
     {
@@ -3296,8 +2884,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 383,
       "format": "cd"
     },
     {
@@ -3312,8 +2898,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 385,
       "format": "cd"
     },
     {
@@ -3328,8 +2912,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 387,
       "format": "cd"
     },
     {
@@ -3344,8 +2926,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 389,
       "format": "cd"
     },
     {
@@ -3360,8 +2940,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 391,
       "format": "cd"
     },
     {
@@ -3376,8 +2954,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 393,
       "format": "cd"
     },
     {
@@ -3392,8 +2968,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 395,
       "format": "cd"
     },
     {
@@ -3408,8 +2982,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 397,
       "format": "cd"
     },
     {
@@ -3424,8 +2996,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 399,
       "format": "cd"
     },
     {
@@ -3440,8 +3010,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 401,
       "format": "cd"
     },
     {
@@ -3456,8 +3024,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 403,
       "format": "cd"
     },
     {
@@ -3472,8 +3038,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 405,
       "format": "cd"
     },
     {
@@ -3488,8 +3052,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 407,
       "format": "cd"
     },
     {
@@ -3504,8 +3066,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 409,
       "format": "cd"
     },
     {
@@ -3520,8 +3080,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 411,
       "format": "cd"
     },
     {
@@ -3536,8 +3094,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 413,
       "format": "cd"
     },
     {
@@ -3552,8 +3108,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 415,
       "format": "cd"
     },
     {
@@ -3568,8 +3122,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 417,
       "format": "cd"
     },
     {
@@ -3584,8 +3136,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 419,
       "format": "cd"
     },
     {
@@ -3600,8 +3150,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 421,
       "format": "cd"
     },
     {
@@ -3616,8 +3164,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 423,
       "format": "cd"
     },
     {
@@ -3632,8 +3178,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 425,
       "format": "cd"
     },
     {
@@ -3648,8 +3192,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 427,
       "format": "cd"
     },
     {
@@ -3664,8 +3206,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 429,
       "format": "cd"
     },
     {
@@ -3680,8 +3220,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 431,
       "format": "cd"
     },
     {
@@ -3696,8 +3234,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 433,
       "format": "cd"
     },
     {
@@ -3712,8 +3248,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 435,
       "format": "cd"
     },
     {
@@ -3728,8 +3262,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 437,
       "format": "cd"
     },
     {
@@ -3744,8 +3276,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 439,
       "format": "cd"
     },
     {
@@ -3760,8 +3290,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 441,
       "format": "cd"
     },
     {
@@ -3776,8 +3304,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 443,
       "format": "cd"
     },
     {
@@ -3792,8 +3318,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 445,
       "format": "cd"
     },
     {
@@ -3808,8 +3332,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 447,
       "format": "cd"
     },
     {
@@ -3824,8 +3346,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 449,
       "format": "cd"
     },
     {
@@ -3840,8 +3360,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 451,
       "format": "cd"
     },
     {
@@ -3856,8 +3374,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 453,
       "format": "cd"
     },
     {
@@ -3872,8 +3388,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 455,
       "format": "cd"
     },
     {
@@ -3888,8 +3402,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 457,
       "format": "cd"
     },
     {
@@ -3904,8 +3416,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 459,
       "format": "cd"
     },
     {
@@ -3920,8 +3430,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 461,
       "format": "cd"
     },
     {
@@ -3936,8 +3444,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 463,
       "format": "cd"
     },
     {
@@ -3952,8 +3458,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 465,
       "format": "cd"
     },
     {
@@ -3968,8 +3472,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 467,
       "format": "cd"
     },
     {
@@ -3984,8 +3486,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 469,
       "format": "cd"
     },
     {
@@ -4000,8 +3500,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 471,
       "format": "cd"
     },
     {
@@ -4016,8 +3514,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 473,
       "format": "cd"
     },
     {
@@ -4032,8 +3528,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 475,
       "format": "cd"
     },
     {
@@ -4048,8 +3542,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 477,
       "format": "cd"
     },
     {
@@ -4064,8 +3556,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 479,
       "format": "cd"
     },
     {
@@ -4080,8 +3570,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 481,
       "format": "cd"
     },
     {
@@ -4096,8 +3584,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 483,
       "format": "cd"
     },
     {
@@ -4112,8 +3598,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 485,
       "format": "cd"
     },
     {
@@ -4128,8 +3612,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 487,
       "format": "cd"
     },
     {
@@ -4144,8 +3626,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 489,
       "format": "cd"
     },
     {
@@ -4160,8 +3640,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 491,
       "format": "cd"
     },
     {
@@ -4176,8 +3654,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 493,
       "format": "cd"
     },
     {
@@ -4192,8 +3668,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 495,
       "format": "cd"
     },
     {
@@ -4208,8 +3682,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 497,
       "format": "cd"
     },
     {
@@ -4224,8 +3696,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 499,
       "format": "cd"
     },
     {
@@ -4240,8 +3710,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 501,
       "format": "cd"
     },
     {
@@ -4256,8 +3724,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 503,
       "format": "cd"
     },
     {
@@ -4272,8 +3738,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 505,
       "format": "cd"
     },
     {
@@ -4288,8 +3752,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 507,
       "format": "cd"
     },
     {
@@ -4304,8 +3766,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 509,
       "format": "cd"
     },
     {
@@ -4320,8 +3780,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 511,
       "format": "cd"
     },
     {
@@ -4336,8 +3794,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 513,
       "format": "cd"
     },
     {
@@ -4352,8 +3808,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 515,
       "format": "cd"
     },
     {
@@ -4368,8 +3822,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 517,
       "format": "cd"
     },
     {
@@ -4384,8 +3836,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 519,
       "format": "cd"
     },
     {
@@ -4400,8 +3850,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 521,
       "format": "cd"
     },
     {
@@ -4416,8 +3864,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 523,
       "format": "cd"
     },
     {
@@ -4432,8 +3878,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 525,
       "format": "cd"
     },
     {
@@ -4448,8 +3892,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 527,
       "format": "cd"
     },
     {
@@ -4464,8 +3906,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 529,
       "format": "cd"
     },
     {
@@ -4480,8 +3920,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 531,
       "format": "cd"
     },
     {
@@ -4496,8 +3934,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 533,
       "format": "cd"
     },
     {
@@ -4512,8 +3948,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 535,
       "format": "cd"
     },
     {
@@ -4528,8 +3962,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 537,
       "format": "cd"
     },
     {
@@ -4544,8 +3976,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 539,
       "format": "cd"
     },
     {
@@ -4560,8 +3990,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 541,
       "format": "cd"
     },
     {
@@ -4576,8 +4004,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 543,
       "format": "cd"
     },
     {
@@ -4592,8 +4018,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 545,
       "format": "cd"
     },
     {
@@ -4608,8 +4032,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 547,
       "format": "cd"
     },
     {
@@ -4624,8 +4046,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 549,
       "format": "cd"
     },
     {
@@ -4640,8 +4060,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 551,
       "format": "cd"
     },
     {
@@ -4656,8 +4074,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 553,
       "format": "cd"
     },
     {
@@ -4672,8 +4088,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 555,
       "format": "cd"
     },
     {
@@ -4688,8 +4102,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 557,
       "format": "cd"
     },
     {
@@ -4704,8 +4116,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 559,
       "format": "cd"
     },
     {
@@ -4720,8 +4130,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 561,
       "format": "cd"
     },
     {
@@ -4736,8 +4144,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 563,
       "format": "cd"
     },
     {
@@ -4752,8 +4158,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 565,
       "format": "cd"
     },
     {
@@ -4768,8 +4172,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 567,
       "format": "cd"
     },
     {
@@ -4782,10 +4184,8 @@
       "title": "Rio Mon Amour",
       "original": " / 07-Rio Mon Amour",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 569,
       "format": "cd"
     },
     {
@@ -4798,10 +4198,8 @@
       "title": "Maybe We've Been Loving Too Long",
       "original": " / 08-Maybe We've Been Loving Too Long",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 571,
       "format": "cd"
     },
     {
@@ -4814,10 +4212,8 @@
       "title": "Trauma",
       "original": " / 09-Trauma",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 573,
       "format": "cd"
     },
     {
@@ -4830,10 +4226,8 @@
       "title": "Hush",
       "original": " / 10-Hush",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 575,
       "format": "cd"
     },
     {
@@ -4846,10 +4240,8 @@
       "title": "I Shot The Sheriff",
       "original": " / 11-I Shot The Sheriff",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 577,
       "format": "cd"
     },
     {
@@ -4862,10 +4254,8 @@
       "title": "Sunglow '75",
       "original": " / 12-Sunglow '75",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 579,
       "format": "cd"
     },
     {
@@ -4878,10 +4268,8 @@
       "title": "Sing A Simple Song",
       "original": " / 13-Sing A Simple Song",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 581,
       "format": "cd"
     },
     {
@@ -4894,10 +4282,8 @@
       "title": "I Got Love",
       "original": " / 14-I Got Love",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 583,
       "format": "cd"
     },
     {
@@ -4910,10 +4296,8 @@
       "title": "Si Tu Querer",
       "original": " / 15-Si Tu Querer",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 585,
       "format": "cd"
     },
     {
@@ -4926,10 +4310,8 @@
       "title": "Tristez",
       "original": " / 16-Tristez",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 587,
       "format": "cd"
     },
     {
@@ -4942,10 +4324,8 @@
       "title": "Blue Bossa",
       "original": " / 17-Blue Bossa",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 589,
       "format": "cd"
     },
     {
@@ -4960,8 +4340,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 591,
       "format": "cd"
     },
     {
@@ -4974,10 +4352,8 @@
       "title": "Night In Tunisia",
       "original": " / 19-Night In Tunisia",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 593,
       "format": "cd"
     },
     {
@@ -4990,10 +4366,8 @@
       "title": "Do It For Yourself",
       "original": " / 20-Do It For Yourself",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 595,
       "format": "cd"
     },
     {
@@ -5006,10 +4380,8 @@
       "title": "More",
       "original": " / 21-More",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 597,
       "format": "cd"
     },
     {
@@ -5024,8 +4396,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 599,
       "format": "cd"
     },
     {
@@ -5040,8 +4410,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 601,
       "format": "cd"
     },
     {
@@ -5056,8 +4424,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 603,
       "format": "cd"
     },
     {
@@ -5072,8 +4438,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 605,
       "format": "cd"
     },
     {
@@ -5088,8 +4452,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 607,
       "format": "cd"
     },
     {
@@ -5102,10 +4464,8 @@
       "title": "Yesterday When I Was Young",
       "original": " / 27-Yesterday When I Was Young",
       "status": "pending",
-      "note": "Excelのアーティスト欄が空白のため、未記載として保持しています。",
+      "note": "アーティスト名を照合中です。",
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 609,
       "format": "cd"
     },
     {
@@ -5120,8 +4480,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 611,
       "format": "cd"
     },
     {
@@ -5136,8 +4494,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 613,
       "format": "cd"
     },
     {
@@ -5152,8 +4508,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 615,
       "format": "cd"
     },
     {
@@ -5168,8 +4522,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 617,
       "format": "cd"
     },
     {
@@ -5184,8 +4536,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 619,
       "format": "cd"
     },
     {
@@ -5200,8 +4550,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 621,
       "format": "cd"
     },
     {
@@ -5216,8 +4564,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 623,
       "format": "cd"
     },
     {
@@ -5232,8 +4578,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 625,
       "format": "cd"
     },
     {
@@ -5248,8 +4592,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 627,
       "format": "cd"
     },
     {
@@ -5264,8 +4606,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 629,
       "format": "cd"
     },
     {
@@ -5280,8 +4620,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 631,
       "format": "cd"
     },
     {
@@ -5296,8 +4634,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 633,
       "format": "cd"
     },
     {
@@ -5312,8 +4648,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 635,
       "format": "cd"
     },
     {
@@ -5328,8 +4662,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 637,
       "format": "cd"
     },
     {
@@ -5344,8 +4676,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 639,
       "format": "cd"
     },
     {
@@ -5360,8 +4690,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 641,
       "format": "cd"
     },
     {
@@ -5376,8 +4704,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 643,
       "format": "cd"
     },
     {
@@ -5392,8 +4718,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 645,
       "format": "cd"
     },
     {
@@ -5408,8 +4732,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 647,
       "format": "cd"
     },
     {
@@ -5424,8 +4746,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 649,
       "format": "cd"
     },
     {
@@ -5440,8 +4760,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 651,
       "format": "cd"
     },
     {
@@ -5456,8 +4774,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 653,
       "format": "cd"
     },
     {
@@ -5472,8 +4788,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 655,
       "format": "cd"
     },
     {
@@ -5488,8 +4802,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 657,
       "format": "cd"
     },
     {
@@ -5504,8 +4816,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 659,
       "format": "cd"
     },
     {
@@ -5520,8 +4830,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 661,
       "format": "cd"
     },
     {
@@ -5536,8 +4844,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 663,
       "format": "cd"
     },
     {
@@ -5552,8 +4858,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 665,
       "format": "cd"
     },
     {
@@ -5568,8 +4872,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 667,
       "format": "cd"
     },
     {
@@ -5584,8 +4886,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 669,
       "format": "cd"
     },
     {
@@ -5600,8 +4900,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 671,
       "format": "cd"
     },
     {
@@ -5616,8 +4914,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 673,
       "format": "cd"
     },
     {
@@ -5632,8 +4928,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 675,
       "format": "cd"
     },
     {
@@ -5648,8 +4942,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 677,
       "format": "cd"
     },
     {
@@ -5664,8 +4956,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 679,
       "format": "cd"
     },
     {
@@ -5680,8 +4970,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 681,
       "format": "cd"
     },
     {
@@ -5696,8 +4984,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 683,
       "format": "cd"
     },
     {
@@ -5712,8 +4998,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 685,
       "format": "cd"
     },
     {
@@ -5728,8 +5012,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 687,
       "format": "cd"
     },
     {
@@ -5744,8 +5026,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 689,
       "format": "cd"
     },
     {
@@ -5760,8 +5040,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 691,
       "format": "cd"
     },
     {
@@ -5776,8 +5054,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 693,
       "format": "cd"
     },
     {
@@ -5792,8 +5068,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 695,
       "format": "cd"
     },
     {
@@ -5808,8 +5082,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 697,
       "format": "cd"
     },
     {
@@ -5824,8 +5096,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 699,
       "format": "cd"
     },
     {
@@ -5840,8 +5110,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 701,
       "format": "cd"
     },
     {
@@ -5856,8 +5124,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 703,
       "format": "cd"
     },
     {
@@ -5872,8 +5138,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 705,
       "format": "cd"
     },
     {
@@ -5888,8 +5152,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 707,
       "format": "cd"
     },
     {
@@ -5904,8 +5166,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 709,
       "format": "cd"
     },
     {
@@ -5920,8 +5180,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 711,
       "format": "cd"
     },
     {
@@ -5936,8 +5194,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 713,
       "format": "cd"
     },
     {
@@ -5952,8 +5208,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 715,
       "format": "cd"
     },
     {
@@ -5968,8 +5222,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 717,
       "format": "cd"
     },
     {
@@ -5984,8 +5236,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 719,
       "format": "cd"
     },
     {
@@ -6000,8 +5250,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 721,
       "format": "cd"
     },
     {
@@ -6016,8 +5264,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 723,
       "format": "cd"
     },
     {
@@ -6032,8 +5278,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 725,
       "format": "cd"
     },
     {
@@ -6048,8 +5292,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 727,
       "format": "cd"
     },
     {
@@ -6064,8 +5306,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 729,
       "format": "cd"
     },
     {
@@ -6080,8 +5320,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 731,
       "format": "cd"
     },
     {
@@ -6096,8 +5334,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 733,
       "format": "cd"
     },
     {
@@ -6112,8 +5348,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 735,
       "format": "cd"
     },
     {
@@ -6128,8 +5362,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 737,
       "format": "cd"
     },
     {
@@ -6144,8 +5376,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 739,
       "format": "cd"
     },
     {
@@ -6160,8 +5390,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 741,
       "format": "cd"
     },
     {
@@ -6176,8 +5404,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 743,
       "format": "cd"
     },
     {
@@ -6192,8 +5418,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 745,
       "format": "cd"
     },
     {
@@ -6208,8 +5432,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 747,
       "format": "cd"
     },
     {
@@ -6224,8 +5446,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 749,
       "format": "cd"
     },
     {
@@ -6240,8 +5460,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 751,
       "format": "cd"
     },
     {
@@ -6256,8 +5474,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 753,
       "format": "cd"
     },
     {
@@ -6272,8 +5488,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 755,
       "format": "cd"
     },
     {
@@ -6288,8 +5502,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 757,
       "format": "cd"
     },
     {
@@ -6304,8 +5516,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 759,
       "format": "cd"
     },
     {
@@ -6320,8 +5530,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 761,
       "format": "cd"
     },
     {
@@ -6336,8 +5544,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 763,
       "format": "cd"
     },
     {
@@ -6352,8 +5558,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 765,
       "format": "cd"
     },
     {
@@ -6368,8 +5572,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 767,
       "format": "cd"
     },
     {
@@ -6384,8 +5586,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 769,
       "format": "cd"
     },
     {
@@ -6400,8 +5600,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 771,
       "format": "cd"
     },
     {
@@ -6416,8 +5614,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 773,
       "format": "cd"
     },
     {
@@ -6432,8 +5628,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 775,
       "format": "cd"
     },
     {
@@ -6448,8 +5642,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 777,
       "format": "cd"
     },
     {
@@ -6464,8 +5656,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 779,
       "format": "cd"
     },
     {
@@ -6480,8 +5670,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 781,
       "format": "cd"
     },
     {
@@ -6496,8 +5684,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 783,
       "format": "cd"
     },
     {
@@ -6512,8 +5698,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 785,
       "format": "cd"
     },
     {
@@ -6528,8 +5712,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 787,
       "format": "cd"
     },
     {
@@ -6544,8 +5726,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 789,
       "format": "cd"
     },
     {
@@ -6560,8 +5740,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 791,
       "format": "cd"
     },
     {
@@ -6576,8 +5754,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 793,
       "format": "cd"
     },
     {
@@ -6592,8 +5768,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 795,
       "format": "cd"
     },
     {
@@ -6608,8 +5782,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 797,
       "format": "cd"
     },
     {
@@ -6624,8 +5796,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 799,
       "format": "cd"
     },
     {
@@ -6640,8 +5810,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 801,
       "format": "cd"
     },
     {
@@ -6656,8 +5824,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 803,
       "format": "cd"
     },
     {
@@ -6672,8 +5838,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 805,
       "format": "cd"
     },
     {
@@ -6688,8 +5852,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 807,
       "format": "cd"
     },
     {
@@ -6704,8 +5866,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 809,
       "format": "cd"
     },
     {
@@ -6720,8 +5880,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 811,
       "format": "cd"
     },
     {
@@ -6736,8 +5894,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 813,
       "format": "cd"
     },
     {
@@ -6752,8 +5908,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 815,
       "format": "cd"
     },
     {
@@ -6768,8 +5922,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 817,
       "format": "cd"
     },
     {
@@ -6784,8 +5936,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 819,
       "format": "cd"
     },
     {
@@ -6800,8 +5950,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 821,
       "format": "cd"
     },
     {
@@ -6816,8 +5964,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 823,
       "format": "cd"
     },
     {
@@ -6832,8 +5978,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 825,
       "format": "cd"
     },
     {
@@ -6848,8 +5992,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 827,
       "format": "cd"
     },
     {
@@ -6864,8 +6006,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 829,
       "format": "cd"
     },
     {
@@ -6880,8 +6020,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 831,
       "format": "cd"
     },
     {
@@ -6896,8 +6034,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 833,
       "format": "cd"
     },
     {
@@ -6912,8 +6048,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 835,
       "format": "cd"
     },
     {
@@ -6928,8 +6062,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 837,
       "format": "cd"
     },
     {
@@ -6944,8 +6076,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 839,
       "format": "cd"
     },
     {
@@ -6960,8 +6090,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 841,
       "format": "cd"
     },
     {
@@ -6976,8 +6104,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 843,
       "format": "cd"
     },
     {
@@ -6992,8 +6118,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 845,
       "format": "cd"
     },
     {
@@ -7008,8 +6132,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 847,
       "format": "cd"
     },
     {
@@ -7024,8 +6146,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 849,
       "format": "cd"
     },
     {
@@ -7040,8 +6160,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 851,
       "format": "cd"
     },
     {
@@ -7056,8 +6174,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 853,
       "format": "cd"
     },
     {
@@ -7072,8 +6188,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 855,
       "format": "cd"
     },
     {
@@ -7088,8 +6202,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 857,
       "format": "cd"
     },
     {
@@ -7104,8 +6216,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 859,
       "format": "cd"
     },
     {
@@ -7120,8 +6230,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 861,
       "format": "cd"
     },
     {
@@ -7136,8 +6244,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 863,
       "format": "cd"
     },
     {
@@ -7152,8 +6258,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 865,
       "format": "cd"
     },
     {
@@ -7168,8 +6272,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 867,
       "format": "cd"
     },
     {
@@ -7184,8 +6286,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 869,
       "format": "cd"
     },
     {
@@ -7200,8 +6300,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 871,
       "format": "cd"
     },
     {
@@ -7216,8 +6314,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 873,
       "format": "cd"
     },
     {
@@ -7232,8 +6328,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 875,
       "format": "cd"
     },
     {
@@ -7248,8 +6342,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 877,
       "format": "cd"
     },
     {
@@ -7264,8 +6356,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 879,
       "format": "cd"
     },
     {
@@ -7280,8 +6370,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 881,
       "format": "cd"
     },
     {
@@ -7296,8 +6384,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 883,
       "format": "cd"
     },
     {
@@ -7312,8 +6398,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 885,
       "format": "cd"
     },
     {
@@ -7328,8 +6412,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 887,
       "format": "cd"
     },
     {
@@ -7344,8 +6426,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 889,
       "format": "cd"
     },
     {
@@ -7360,8 +6440,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 891,
       "format": "cd"
     },
     {
@@ -7376,8 +6454,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 893,
       "format": "cd"
     },
     {
@@ -7392,8 +6468,6 @@
       "status": "transcribed",
       "note": null,
       "source": null,
-      "source_name": "listed.xlsx",
-      "source_row": 895,
       "format": "cd"
     }
   ]

@@ -15,7 +15,7 @@ Masanori Suzuki（鈴木雅尭）によるPremium Cutsの収録曲アーカイ�
 
 ## 編集
 
-`selection.tsv` が画像から読み取ったカセットの選曲データ。`cd_catalog.json` が提供された `listed.xlsx` から取り込んだMIX CDの選曲データ。確定した綴りの修正と照合待ちの注記は `build.py` に保持。`catalog.json` と `dist/data.js` は生成物。
+`selection.tsv` が画像から読み取ったカセットの選曲データ。`cd_catalog.json` がMIX CDの選曲データ。確定した綴りの修正と照合待ちの注記は `build.py` に保持。`catalog.json` と `dist/data.js` は生成物。
 
 ```sh
 python -m pip install Pillow
@@ -25,9 +25,8 @@ python -m http.server 8000 --directory dist
 
 `dist/` がビルド不要の静的サイト。スタイルと操作は `src/`、原資料画像は `source-images/001.jpg`〜`007.jpg` に保存。`dist/` は生成物です。
 
-現段階ではYouTube埋め込みと詳しい楽曲解説を実装しない。制作年、発売年、活動国、録音地、ジャンル、背景、関連音楽は、出典を確認して曲ごとに追加する。
+指定されたYouTube音源と、確認できた資料に基づく楽曲解説を掲載する。制作年、発売年、活動国、録音地、ジャンル、背景、関連音楽は、出典を確認して曲ごとに追加する。
 
-Excelは二行で一曲の形式。448レコードを読み取り、日付に自動変換された曲番号は月／日から曲番／総数へ復元して連続性を検証。#00は24曲組と29曲組を別々の曲順として整理。アーティスト未記載15件は推測で補完しない。MIX作品の年は楽曲自体の発売年として使わない。元Excelの再生回数、登録日時、ローカル情報などはサイトデータに含めない。
 
 ## 共通PLAYER
 
