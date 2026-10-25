@@ -23,6 +23,15 @@ def title_style(s):
 
 # IDs remain stable when a credited name or title is corrected.
 EDITS={
+ '001-a-06':('The G/9 Group','Let Me (Deixa)',''),
+ '001-a-09':('Chico Arnez & His Cubana Brass','Eso Beso',''),
+ 'cd-00-d1-17':('Chico Arnez & His Cubana Brass','Eso Beso',''),
+ '001-a-12':('Stan Butcher, His Birds & Brass','Heigh-Ho',''),
+ 'cd-00-d2-17':('Stan Butcher, His Birds & Brass','Heigh-Ho',''),
+ '001-a-13':('Wilma Goich','Baci, baci, baci',''),
+ '001-b-01':('Kitty Winter Gipsy Nova','Different Ways',''),
+ 'cd-00-d2-18':('Kitty Winter Gipsy Nova','Different Ways',''),
+ 'cd-00-d2-16':('Jullien Ballay et son orchestre','Les Demoiselles de Rochefort',''),
  'cd-13-d1-01':('Orchester Peter Jacques','Hamburgers','Intro'),
  'cd-13-d1-02':('アーティスト未確認','Chante',''),
  'cd-13-d1-03':('Nuovo Sistema','In qualche maniera',''),
