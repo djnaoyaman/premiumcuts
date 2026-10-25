@@ -125,20 +125,21 @@ for v in cd_volumes:
 research=json.loads((P/'research.json').read_text())
 articles={tid:a for a in research['articles'] for tid in a['ids']}
 track_by_id={t['id']:t for t in tracks}
+players=dict(research.get('players',{}))
+for a in research['articles']:
+ if a.get('youtube'):
+  for tid in a['ids']:players[tid]=a['youtube']
+def player(t):
+ video=players.get(t['id'])
+ if not video:return ''
+ return f'<section id="listen" class="song-editorial song-player" aria-label="楽曲プレーヤー"><span class="eyebrow">PLAYER / ÉCOUTER</span><h2>この曲を聴く</h2><div class="youtube-player"><iframe src="https://www.youtube-nocookie.com/embed/{e(video["id"])}" title="{e(t["artist"])} — {e(t["title"])}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a class="text-link" href="{e(video["url"])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></section>'
 def editorial(t):
  a=articles.get(t['id'])
- if not a:
-  video=research.get('players',{}).get(t['id'])
-  if not video:return ''
-  return f'<section class="song-editorial"><span class="eyebrow">LE MORCEAU À ÉCOUTER</span><h2>この曲を聴く</h2><div class="youtube-player"><iframe src="https://www.youtube-nocookie.com/embed/{e(video["id"])}" title="{e(t["artist"])} — {e(t["title"])}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a class="text-link" href="{e(video["url"])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></section>'
-
+ if not a:return ''
  def refs(nums):return ''.join(f' <a class="cite" href="#reference-{n}" aria-label="出典{n}">[{n}]</a>' for n in nums)
  out='<article class="song-editorial"><span class="eyebrow">NOTES DE POCHETTE</span><h2 class="song-catch">'+e(a['catch'])+'</h2><p class="song-lead">'+e(a['intro'])+'</p><dl class="research-facts">'
  for label,value in [('発売年',str(a['year'])+'年'),('国・活動圏',a['country']),('参照盤の発売国',a['press_country']),('ジャンルの手がかり',a['genre']),('参照したレコード',a['release']),('制作・録音年','未確認')]:out+='<div><dt>'+label+'</dt><dd>'+e(value)+'</dd></div>'
  out+='</dl><p class="research-note">'+e(a['note'])+'</p>'
- if a.get('youtube'):
-  video=a['youtube'];out+=f'<section class="editorial-section"><span class="eyebrow">LE MORCEAU À ÉCOUTER</span><h3>この曲を聴く</h3><div class="youtube-player"><iframe src="https://www.youtube-nocookie.com/embed/{e(video["id"])}" title="{e(t["artist"])} — {e(t["title"])}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a class="text-link" href="{e(video["url"])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></section>'
-
  for heading,body,nums in a['sections']:out+='<section class="editorial-section"><h3>'+e(heading)+'</h3><p>'+e(body)+refs(nums)+'</p></section>'
  out+='<p class="research-note">「聴きどころを探す」は編集上の鑑賞提案です。試聴による音の感想は、音源を確認してから追加します。</p><section class="editorial-section"><span class="eyebrow">ÉCOUTER ENCORE</span><h3>関連曲を、棚の中から。</h3><div class="related-cuts">'
  for tid,reason in a['related']:
@@ -159,6 +160,9 @@ for t in tracks:
  title=t['title'];loc=location_label(t);status={'pending':'原表記を照合中','corrected':'表記を修正済み','transcribed':'ジャケット画像から転記' if t['format']=='tape' else 'Excelの曲目から転記'}[t['status']]
  artist=f'<a class="artist-link" href="/tracks.html?artist={quote(t["artist"],safe="")}">{e(t["artist"])} <span>↗</span></a>' if t['artist']!='アーティスト未記載' else '<p class="artist-link">アーティスト未記載</p>'
  page=head(title+' — '+t['artist']+' | Premium Cuts Listed',t['artist']+'「'+title+'」。'+v['display_code']+' '+v['title']+'の収録曲。','/tracks/'+t['id']+'.html')+'<body id="top">'+header('tracks')+f'''<main id="main" class="wrap song-page"><div class="breadcrumb"><a href="/volumes/{t['volume']}.html">{v['display_code']} {e(v['title'])}</a> / {loc}</div><section class="song-hero"><div><span class="eyebrow">PREMIUM CUTS {v['display_code']} / {loc}</span><h1>{e(title)}</h1>{artist}<p class="song-status">{status}</p></div><a class="song-cover" href="/volumes/{t['volume']}.html" aria-label="収録作品{e(v['title'])}へ">{pattern(v['pattern'])}<span>{v['display_code']} / {e(v['title'])} ↗</span></a></section><section class="song-info"><div><span class="eyebrow">DANS LA COLLECTION</span><h2>この曲の、<i>居場所。</i></h2></div><dl><div><dt>収録作品</dt><dd><a href="/volumes/{t['volume']}.html">Premium Cuts {v['display_code']}<br>{e(v['title'])} ↗</a></dd></div><div><dt>収録位置</dt><dd>{loc}</dd></div><div><dt>アーティスト</dt><dd>{e(t['artist'])}</dd></div></dl></section>'''
+ if t['id'] in players:
+  page=page.replace('<section class="song-info">',player(t)+'<section class="song-info">',1)
+  page=page.replace(f'<p class="song-status">{status}</p>',f'<p class="song-status">{status}</p><a class="text-link" href="#listen">▶ この曲を聴く</a>',1)
  page+=editorial(t)
  if t['note']:
   page+='<section class="notation-note"><span class="eyebrow">NOTE SUR LE TITRE</span><h2>表記について</h2><p>'+e(t['note'])+'</p><p class="original-label">原資料の表記<br><strong>'+e(t['original'])+'</strong></p>'
