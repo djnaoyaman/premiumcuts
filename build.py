@@ -151,7 +151,7 @@ def editorial(t):
  out+='</dl>'
  if a.get('note'):out+='<p class="research-note">'+e(a['note'])+'</p>'
  for heading,body,nums in a['sections']:out+='<section class="editorial-section"><h3>'+e(heading)+'</h3><p>'+e(body)+refs(nums)+'</p></section>'
- out+='<p class="research-note">「聴きどころを探す」は、この曲を楽しむための鑑賞ガイドです。</p><section class="editorial-section"><span class="eyebrow">ÉCOUTER ENCORE</span><h3>関連曲を、棚の中から。</h3><div class="related-cuts">'
+ out+='<p class="research-note">聴き方の提案は、この曲を楽しむための鑑賞ガイドです。</p><section class="editorial-section"><span class="eyebrow">ÉCOUTER ENCORE</span><h3>関連曲を、棚の中から。</h3><div class="related-cuts">'
  for tid,reason in a['related']:
   x=track_by_id[tid];out+=f'<a href="/tracks/{tid}.html"><strong>{e(x["title"])}</strong><span>{e(x["artist"])}</span><small>{e(reason)}</small><b aria-hidden="true">↗</b></a>'
  out+='</div></section>'

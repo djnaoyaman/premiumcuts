@@ -1,5 +1,6 @@
 """Regression checks for credited names, recording coverage and public output."""
 from pathlib import Path
+from datetime import date
 import json,re
 root=Path(__file__).resolve().parents[1]
 c=json.loads((root/'catalog.json').read_text());r=json.loads((root/'research.json').read_text())
@@ -11,8 +12,19 @@ assert byid['cd-13-d1-07']['artist']=='Nina Shaw'
 assert byid['cd-00-d2-02']['title']=='If I Were a Bell'
 assert byid['cd-10-d1-24']['title']=='California Soul'
 assert byid['cd-09-d1-27']['artist']=='April Set'
+assert byid['002-b-05']['artist']=='Les Miladys'
+assert byid['003-a-05']['artist']=='Uno Loop'
+assert byid['003-b-13']['artist']=='Douglas Westlund & Kjell Öhman'
+assert byid['003-a-08']['title']=='Dansa (Chante… comme si tu devais mourir)'
+assert byid['002-b-08']['title']=='Aquarella'
 articles={i:a for a in r['articles'] for i in a['ids']};players=dict(r['players'])
+assert len(articles)==sum(len(a['ids']) for a in r['articles']), 'Duplicate editorial track ID'
+assert len({a['catch'] for a in r['articles']})==len(r['articles']), 'Repeated editorial headline'
 for a in r['articles']:
+ assert a['ids'] and all(i in byid for i in a['ids']), a['ids']
+ assert len(a['sections'])>=3 and a['intro'] and a['sources'], a['ids']
+ assert a.get('year') is None or (isinstance(a['year'],int) and 1900<=a['year']<=date.today().year), a['ids']
+ assert all(s['url'].startswith(('https://','http://')) and s['label'] and s['note'] for s in a['sources']), a['ids']
  if a.get('youtube'):
   for i in a['ids']:players[i]=a['youtube']
  for i,_ in a['related']:assert i in byid,i
