@@ -9,3 +9,13 @@
 .youtube-player{aspect-ratio:16/9;width:100%;background:#12688715}.youtube-player iframe{display:block;width:100%;height:100%;border:0}
 
 .asterisk-icon{display:inline-block;width:1em;height:1em;vertical-align:middle;flex-shrink:0}.brand-mark{font-family:inherit;line-height:1}.star{line-height:1}
+
+/* Song names always lead; artist names share a secondary, natural-case style. */
+.track-main strong,.catalog-title strong,.song-hero h1,.pc-queue-list strong{text-transform:none}
+.track-main>span,.catalog-title>span,.artist-link,.pc-queue-list span{text-transform:none}
+.mix-marker{font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid currentColor;padding:.22rem .4rem;white-space:nowrap;align-self:center}
+.mix-marker:empty{display:none}
+.song-hero .mix-marker{display:inline-block;margin-top:.75rem}
+@media(max-width:650px){.track-row>.mix-marker,.catalog-row>.mix-marker{font-size:.55rem;letter-spacing:0}}
+
+.track-main .mix-marker,.catalog-title .mix-marker{display:inline-block;margin-top:6px;font-size:.6rem}.catalog-title .mix-marker:empty{display:none}

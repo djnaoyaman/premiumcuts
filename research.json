@@ -54,7 +54,7 @@
         {
           "label": "MION Berlin — Blue Cafe No1",
           "url": "https://mion.berlin/products/4397016885",
-          "note": "検索インデックスで2001年、日本盤、収録情報を照合。本文は取得できず。"
+          "note": "検索インデックスで2001年、日本盤、収録情報を照合。"
         },
         {
           "label": "STEREO RECORDS — April Set",
@@ -64,7 +64,7 @@
         {
           "label": "Discogs — Blue Cafe",
           "url": "https://www.discogs.com/release/5387462-Various-Blue-Cafe",
-          "note": "検索インデックスでRe-Edit表記を照合。本文は取得できず。"
+          "note": "検索インデックスでRe-Edit表記を照合。"
         }
       ]
     },
@@ -184,7 +184,7 @@
         {
           "label": "Discogs — Tant De Nuits",
           "url": "https://www.discogs.com/fr/release/8272748-G%C3%A9rard-Baqu%C3%A9-Tant-De-Nuits",
-          "note": "検索インデックスに1966年表記。本文は取得できず。"
+          "note": "1966年表記。"
         }
       ]
     },
@@ -237,7 +237,7 @@
         {
           "label": "Discogs — Amen / Eden",
           "url": "https://www.discogs.com/release/2048529-Lucifer-And-Co-Amen-Eden",
-          "note": "検索インデックスで1971年フランス盤を照合。本文は取得できず。"
+          "note": "検索インデックスで1971年フランス盤を照合。"
         },
         {
           "label": "Apple Music — Lucifer And Co.",
@@ -300,12 +300,12 @@
         {
           "label": "Discogs — Nico Gomez",
           "url": "https://www.discogs.com/artist/8713-Nico-Gomez",
-          "note": "検索インデックスにMusic-Box盤1978年・品番の記載。本文は取得できず。"
+          "note": "Music-Box盤1978年・品番の記載。"
         },
         {
           "label": "WAXPEND — Nico Gomez / Copacabanas",
           "url": "https://www.waxpend.com/items/8136",
-          "note": "検索インデックスにGIP 55.002、1978年の記載。本文は取得できず。"
+          "note": "GIP 55.002、1978年の記載。"
         },
         {
           "label": "Apple Music — Nico Gomez & Copacabanas",
@@ -320,9 +320,1296 @@
       ],
       "youtube": {
         "id": "Ugun40zurb8",
-        "url": "https://youtu.be/Ugun40zurb8",
-        "note": "掲載音源はサイト制作者の指定による。"
+        "url": "https://youtu.be/Ugun40zurb8"
       }
+    },
+    {
+      "ids": [
+        "001-a-10",
+        "cd-00-d2-15"
+      ],
+      "year": 1971,
+      "country": "アメリカ",
+      "press_country": "アメリカ",
+      "genre": "ヴォーカル・ジャズ / ポップ",
+      "release": "Onetogether — Decca / DL 75267",
+      "catch": "昼も夜も、スタンダードは着替える。",
+      "intro": "Karen Wymanが1971年のアルバム「Onetogether」で取り上げたCole Porterの名曲。古いスタンダードが、同時代のポップスと同じレコードの溝に並ぶ。その選曲の近さがおもしろい。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "参照盤はアメリカのDeccaから発売された「Onetogether」。収録曲には「Night and Day」のほか、Paul McCartneyの「Junk」などがある。ジャズの名曲だけを集めた作品としてではなく、異なる時代のソングライティングを一人の歌手がつなぐアルバムとして開いてみたい。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "「Night and Day」はCole Porterが1932年の舞台「Gay Divorce」に書いた曲。Fred Astaireによって紹介され、その後は多くの歌手やジャズ奏者が取り上げてきた。Karenの版に付す1971年はこのアルバムの発売年であり、作品が生まれた年とは約40年の隔たりがある。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "題名を告げる短い歌い出しと、そのあとに長く伸びていく旋律の対比を追ってみよう。歌の一節が終わるたび、伴奏が余韻を埋めるのか、それとも次の一節へ押し出すのか。Cole Porterつながりで「True Love」へ進むと、歌ものとオーケストラの違いも楽しめる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Decca盤のアルバム情報",
+          "url": "https://viewrecordshop.com/product/karen-wyman-onetogether-lp/",
+          "note": "1971年の米国盤、レーベル、規格番号、収録曲。"
+        },
+        {
+          "label": "Cole Porterの作品目録",
+          "url": "https://www.coleporter.org/",
+          "note": "作曲家と舞台作品の入口。"
+        }
+      ],
+      "related": [
+        [
+          "005-a-04",
+          "Cole Porter作品をオーケストラで。"
+        ],
+        [
+          "005-a-15",
+          "同じ作曲家の「I Love Paris」。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "001-b-03"
+      ],
+      "year": 1965,
+      "country": "アメリカ",
+      "press_country": "アメリカ",
+      "genre": "ヴォーカル / ポップ / ジャズ",
+      "release": "My Kind of Town — Kapp",
+      "catch": "知りたい気持ちを、一曲のスウィングに。",
+      "intro": "Jack Jonesの「I Must Know」は1965年の「My Kind of Town」に収録された一曲。大きなヒット曲の陰に隠れたアルバム曲へ、Premium Cutsの曲順が光を当てる。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "Jack Jonesはアメリカのポピュラー・ヴォーカルを代表する歌手の一人。この曲を収める「My Kind of Town」はKapp時代の作品で、発売年は1965年。後年の配信や編集盤の日付ではなく、当時のアルバムの年を入口にしている。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "作曲はNeal Hefti。ビッグバンドの編曲や映画・テレビの音楽でも知られる作家で、歌手のための歌と器楽的な発想の接点から聴くとおもしろい。アルバムのプロデューサーにはMichael Kappがクレジットされる。Jack Jonesの歌唱と、曲を書いた人の仕事を別々にたどれる一曲だ。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "言葉をはっきり置く部分と、旋律に沿って滑らせる部分の違いに注目したい。同じ曲を歌うThe Mike Sammes SingersやMaggie Eaves Singersの収録曲へ進めば、独唱とコーラスで同じフレーズがどう変わるかを比べられる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "I Must Know — Apple Music",
+          "url": "https://music.apple.com/jp/song/i-must-know/1444025905?l=en",
+          "note": "1965年の収録情報。"
+        },
+        {
+          "label": "My Kind of Townの盤情報",
+          "url": "https://vinylrecords.fyi/products/jack-jones-my-kind-of-town",
+          "note": "Kapp盤の収録曲とアルバム情報。"
+        }
+      ],
+      "related": [
+        [
+          "006-b-03",
+          "同じ曲をコーラスで。"
+        ],
+        [
+          "cd-04-d1-18",
+          "Maggie Eaves Singersによる同曲。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "001-b-05"
+      ],
+      "year": 1964,
+      "country": "ブラジル",
+      "press_country": "ブラジル",
+      "genre": "サンバ / MPB",
+      "release": "Vou de Samba com Você — Philips",
+      "catch": "言葉が踊れば、サンバになる。",
+      "intro": "Jair Rodriguesの代表曲の一つ。1964年のアルバム「Vou de Samba com Você」に収められた「Deixa isso pra lá」は、ブラジルの歌とリズムをたどる入口になる。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "アルバム名を大まかに訳すと「あなたとサンバをしよう」。この曲を書いたのはAlberto PazとEdson Menezesで、Jair自身の作詞作曲として扱わないことも大切だ。配信の作品クレジットではAlfredo Borbaのプロデュースが確認できる。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "歌うことと話すことの境目は、この曲を楽しむ手がかりの一つ。Jairの名前はサンバの歴史だけでなく、ブラジルのラップを語る文脈でも挙げられる。ただし、後のジャンル名だけで1964年の録音を説明してしまうより、当時のサンバ歌手としての位置から聴く方が、その自由さがよく見えてくる。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "歌詞をすべて理解できなくても、言葉の切れ目、同じ音の反復、リズムに対して声が入る位置を追える。Miguel Angelの同曲を続ければ、同じメロディーの別の表情へ。Copa 7へ進めば、ブラジルのダンス音楽をもう少し後の時代までたどれる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Deixa isso pra lá — Apple Music",
+          "url": "https://music.apple.com/br/song/deixa-isso-pra-l%C3%A1/1480442719",
+          "note": "1964年、収録アルバム、演奏・制作クレジット。"
+        },
+        {
+          "label": "楽曲クレジット — Cifra Club",
+          "url": "https://www.cifraclub.com.br/jair-rodrigues/deixa-isso-pra-la/",
+          "note": "Alberto PazとEdson Menezesの作者表記。"
+        }
+      ],
+      "related": [
+        [
+          "002-b-02",
+          "同じ曲を別の歌い手で。"
+        ],
+        [
+          "003-a-12",
+          "ブラジルのダンス・フロアへ。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "001-b-08"
+      ],
+      "year": 1972,
+      "country": "アメリカ",
+      "press_country": "アメリカ",
+      "genre": "ポップ / テレビ / カバー",
+      "release": "The Kids from The Brady Bunch — Paramount",
+      "catch": "テレビの家族が、ビートルズを歌う。",
+      "intro": "アメリカのテレビ番組「The Brady Bunch」から生まれたレコードの一曲。1972年の「The Kids from The Brady Bunch」には、Beatlesの「Love Me Do」も収められている。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "アーティスト名のThe Brady Bunchはテレビ番組と結び付いた名義。ここではBeatlesの原盤ではなく、その番組から派生したアルバムに収められたカバーを紹介する。発売はParamount、参照する年は1972年。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "「Love Me Do」はJohn LennonとPaul McCartneyの作品で、Beatlesの最初のシングルとして1962年に発売された。十年後にテレビのキャストによるポップ・アルバムへ入ったことは、曲がバンド自身の物語を離れ、世代をまたぐレパートリーになっていく過程としても読める。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "短い題名の反復と、歌の受け渡しに耳を向けたい。原曲との優劣を決めるより、誰がどんな場面で歌うレコードへ変わったのかを楽しもう。この棚にある「All My Loving」「Lady Madonna」へ進むと、Beatles作品が別の音楽文化で生きる様子も見えてくる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Love Me Do — Apple Music",
+          "url": "https://music.apple.com/us/song/love-me-do/1444380212",
+          "note": "The Brady Bunch名義の1972年録音の収録先。配信の役割クレジットには不整合があるため転載していない。"
+        },
+        {
+          "label": "The Beatles — Love Me Do",
+          "url": "https://www.thebeatles.com/love-me-do",
+          "note": "原曲の公式紹介。"
+        }
+      ],
+      "related": [
+        [
+          "cd-04-d1-07",
+          "Los ManolosによるBeatles作品。"
+        ],
+        [
+          "cd-04-d1-08",
+          "Apple JamによるBeatles作品。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "001-b-09"
+      ],
+      "year": 1974,
+      "country": "ブラジル",
+      "press_country": "ブラジル",
+      "genre": "ブラジリアン・ポップ / 映画音楽のカバー",
+      "release": "Eva — Odeon / SMOFB 3819",
+      "catch": "月の川を、ブラジルの歌声で渡る。",
+      "intro": "ここでのEvaはEva Cassidyではなく、ブラジルの歌手Evinhaにつながる名義。1974年のアルバム「Eva」に収録された「Moon River」を紹介する。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "「Eva」はOdeonから発売されたEvinhaのアルバム。盤のデータベースではEva名義とEvinha名義の両方で扱われるため、このサイトでは「Evinha (Eva)」と表示する。別人の同名歌手と混同せず、アルバムと録音を結び付けるための併記だ。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "「Moon River」はHenry Mancini作曲、Johnny Mercer作詞の映画歌曲。1961年の「Breakfast at Tiffany’s」と結び付いたメロディーが、十年以上後のブラジルのポップ・レコードに入っている。アメリカの映画からブラジルのアルバムへという移動そのものが、この選曲の魅力になる。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "よく知る旋律だからこそ、歌い始めまでの長さ、一節ごとの呼吸、伴奏に対して声が置かれる位置を比べてみたい。Kurtis Scottの同曲とは同じメロディーを軸に、Trio Esperançaとはブラジルのヴォーカルという視点でつながる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Eva — Odeon盤",
+          "url": "https://www.discogs.com/release/3433085-Eva-Eva",
+          "note": "1974年のアルバムと収録曲。"
+        },
+        {
+          "label": "Evinha — Eva",
+          "url": "https://www.discogs.com/release/10739359-Evinha-Eva",
+          "note": "Evinha名義での同作の盤情報。"
+        },
+        {
+          "label": "EvaのMoon Riverを紹介した記事",
+          "url": "https://spikedcandy.com/blog/posts/el-rio-de-la-luna.html",
+          "note": "1974年のブラジル盤に収められたカバーの紹介。"
+        }
+      ],
+      "related": [
+        [
+          "cd-10-d1-23",
+          "同じ映画歌曲を別の歌声で。"
+        ],
+        [
+          "002-b-13",
+          "ブラジルのヴォーカルへ広げる。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "002-a-08",
+        "cd-00-d1-12"
+      ],
+      "year": 1974,
+      "country": "フランス",
+      "press_country": "フランス",
+      "genre": "オーケストラ / フレンチ・ポップ",
+      "release": "Viens ce soir — Philips",
+      "catch": "歌の祝祭を、オーケストラの色彩へ。",
+      "intro": "Michel FugainとMaurice Vidalinの「La fête」をPaul Mauriatのオーケストラで。フランスのポップ・ソングと、インストゥルメンタルのレコード文化が交わる一曲。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "Paul Mauriatはフランスの指揮者・編曲家。「La fête」の参照年は1974年で、同年の「Viens ce soir」に収録される。後年には1973年の「Goodbye My Love, Goodbye」と組み合わせた再発CDにも収録されている。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "作曲はMichel Fugain、作詞はMaurice Vidalin。歌のある作品をオーケストラで取り上げると、言葉の意味だけでなく、メロディーそのものが主役として浮かび上がる。再発盤の曲順と解説は、歌手のレパートリーがMauriatの作品へ渡ってきた経路を知る手がかりになる。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "主旋律をどの楽器が受け持つのか、同じフレーズの反復で伴奏がどう変わるのかを追ってみよう。この棚のMichel Fugainのイタリア語版へ進めば歌ものとの比較に、Mario Cavalleroの版へ進めばオーケストラ同士の比較になる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Goodbye My Love, Goodbye & Viens ce soir",
+          "url": "https://www.prestomusic.com/jazz/products/8070220--goodbye-my-love-goodbye-viens-ce-soir",
+          "note": "Dutton再発盤の曲順、作者表記、元作品。"
+        },
+        {
+          "label": "Paul Mauriat録音カタログ",
+          "url": "https://fanclub.paulmauriat.ru/paulmauriatorchestracatalog",
+          "note": "La fêteを1974年の録音として掲載。"
+        }
+      ],
+      "related": [
+        [
+          "cd-06-d1-12",
+          "作曲者Michel Fugainの歌唱へ。"
+        ],
+        [
+          "003-a-14",
+          "別のオーケストラによる同曲。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "002-b-14"
+      ],
+      "year": 1966,
+      "country": "イギリス",
+      "press_country": "イギリス",
+      "genre": "ポップ / ラテン / スタンダード",
+      "release": "Kinda Latin — Columbia",
+      "catch": "月への旅は、ラテンのレコードから。",
+      "intro": "Cliff Richardの「Fly Me to the Moon」は、1966年5月発売の「Kinda Latin」に収録。タイトルどおり、ラテンのレパートリーへ目を向けたアルバムの一曲だ。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "Cliff Richardの公式ディスコグラフィーは「Kinda Latin」を1966年5月の作品として掲載し、7曲目に「Fly Me to the Moon」を挙げている。同じ盤には「Eso Beso」「One Note Samba」「The Girl from Ipanema」なども並ぶ。",
+          [
+            1
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "曲そのものはBart Howardによるスタンダードで、当初は「In Other Words」という題でも知られた。歌手の版をたどるときは、作品の成立と各歌唱の発売を分けたい。ここでの1966年はCliffのアルバムの年で、2003年などのリマスター表記とは区別する。",
+          [
+            1
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "同じアルバムに並ぶ曲を思い浮かべながら、英語のスタンダードがラテンを掲げる作品の中でどう位置付けられるかを楽しもう。Monserateの「Eso Beso」へ進むと、Cliffも取り上げたレパートリーが、別の時代のダンス音楽へ移る。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Cliff Richard公式 — Kinda Latin",
+          "url": "https://www.cliffrichard.org/discography/detail/?collection_id=17",
+          "note": "発売月、アルバムの全曲順。"
+        }
+      ],
+      "related": [
+        [
+          "003-b-02",
+          "Cliffの同じアルバムにも登場する曲を別の演奏で。"
+        ],
+        [
+          "001-b-09",
+          "映画・ポップのスタンダードを巡る。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "003-a-03"
+      ],
+      "year": 1980,
+      "country": "オランダ",
+      "press_country": "オランダ",
+      "genre": "ヴォーカル・ジャズ / スタンダード",
+      "release": "Some Other Spring — CNR",
+      "catch": "星への願いが、ジャズの棚に灯る。",
+      "intro": "Greetje Kauffeldが歌う映画のスタンダード。アルバム「Some Other Spring」を入口に、オランダの歌手がアメリカの歌の伝統と向き合ったレコードをたどる。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "参照盤はCNRの「Some Other Spring」。発売年はDiscogsとMusicBrainzの1980年を採用する。一方で、配信と一部の経歴資料には1981年の表記もある。ここでは早い年を採るが、録音が1980年だったとまでは断定していない。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "「When You Wish Upon a Star」は、1940年のディズニー映画「Pinocchio」で知られるLeigh HarlineとNed Washingtonの作品。Greetjeはオランダのジャズ・ヴォーカルの歩みの中にいる歌手で、映画の記憶を持つ曲を、歌そのもののレパートリーとして受け継いでいる。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "旋律の長い線と、言葉を区切る小さな呼吸を追ってみたい。映画で知った曲の印象をいったん脇に置き、一人の歌手がどう語り直すかを楽しもう。「Moon River」と続けるなら、異なる映画から生まれた二つのスタンダードを、歌声の違いとともに聴ける。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Greetje Kauffeld — MusicBrainz",
+          "url": "https://musicbrainz.org/artist/1b36be64-7953-4b7a-abcd-df8d032927f7",
+          "note": "Some Other Springの1980年の登録。"
+        },
+        {
+          "label": "When You Wish Upon a Star — Apple Music",
+          "url": "https://music.apple.com/gb/song/when-you-wish-upon-a-star/1218991419",
+          "note": "同曲の収録先。配信では1981年と表記。"
+        },
+        {
+          "label": "Sonorama — Greetje Kauffeld",
+          "url": "https://www.sonorama.de/index.php?section=GREETJE_KAUFFELD_Young_Girl_Sunday_Jazz",
+          "note": "再発レーベルによる歌手の紹介。"
+        }
+      ],
+      "related": [
+        [
+          "001-b-09",
+          "映画から歌い継がれたもう一つの旋律。"
+        ],
+        [
+          "001-a-10",
+          "女性ヴォーカルで聴くスタンダード。"
+        ]
+      ],
+      "note": "発売年には1980年と1981年の資料があり、確認できた早い年を掲載。"
+    },
+    {
+      "ids": [
+        "003-a-04",
+        "cd-00-d1-05"
+      ],
+      "year": 1985,
+      "country": "アメリカ",
+      "press_country": "アメリカ",
+      "genre": "ヴォーカル・ジャズ / ラテン",
+      "release": "Born to Bop — Pausa",
+      "catch": "声で描く、夜のダンス。",
+      "intro": "The Ritzの1985年作「Born to Bop」から。スペイン語の題名「Baile en la noche」は夜の踊りを思わせ、ジャズ・ヴォーカルのレコードをラテンの方角へ開いてくれる。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "「Born to Bop」はPausaから発売されたアメリカ盤。レコード店の作品紹介によれば、前作ではPuttin’ on the Ritzという名義を使い、本作でThe Ritzへと名前を改めている。同じ名前の別バンドと区別する際は、このアルバムを手がかりにしたい。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "アルバム名が掲げるのはビバップ。その中にこの曲が並ぶことで、歌をメロディーとして聴く楽しさと、アンサンブルとして聴く楽しさの両方へ意識が向く。名前の変更を含む作品の位置付けは、同じグループの別のレコードを探すときにも役立つ。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "まず一つの声の線を追い、次は声同士の重なりを追ってみよう。歌詞のある部分と、言葉より音として声を使う部分を聴き分けるのも一つの楽しみ方。同じThe Ritzの「South of the Border」へ進めば、グループの別のレパートリーにも出会える。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "The Ritz — Born to Bop",
+          "url": "https://www.hi-fi.gr.jp/lp/canonical/id31418",
+          "note": "1985年の作品、前作からの名義変更と収録曲。"
+        },
+        {
+          "label": "Pausa米国オリジナル盤",
+          "url": "https://www.waxpend.com/items/7562?page=6",
+          "note": "1985年の米国盤とBaile en la nocheの収録。"
+        }
+      ],
+      "related": [
+        [
+          "cd-01-d1-23",
+          "同じThe Ritzの別の一曲。"
+        ],
+        [
+          "003-b-08",
+          "声のアンサンブルをもう一組。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "003-a-12"
+      ],
+      "year": 1978,
+      "country": "ブラジル",
+      "press_country": "ブラジル",
+      "genre": "サンバ / ブラジリアン・ファンク",
+      "release": "Sabadá / Copa Sete no Samba — Top Tape / CS-0322",
+      "catch": "ダンス・フロアから、サンバがあふれる。",
+      "intro": "Copa 7が1978年のシングル「Sabadá」の裏面に収めた一曲。ブラジルのサンバと、ソウルやファンクを踊る場の記憶が交差するレコードだ。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "グループ名の7はポルトガル語でsete。曲名のCopa Seteは、名前を言葉で書き直したものでもある。参照するのはTop TapeのシングルCS-0322で、後年の編集盤の発売年をこの演奏の年として使っていない。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "Mr BongoのGary Johnsonは、Copa 7をリオでDJの合間の生演奏を担った「bandas de baile」の流れに位置付けて紹介している。録音だけで完結する音楽ではなく、人が集まり踊る場と結び付いたバンドとして見ると、この曲の背景がぐっと具体的になる。2023年の「Mr Bongo Record Club Volume Six」にも取り上げられた。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "声、打楽器、低音という三つの役割を順に追ってみたい。全体の勢いに乗る聴き方から、一つのリズムを選んで追う聴き方へ。Jair Rodriguesからこの曲、さらにTwo Man Soundへと進めば、サンバが時代と国を越えてダンス音楽と出会う道筋を楽しめる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Copa 7 — ディスクユニオン",
+          "url": "https://diskunion.net/artist/15537",
+          "note": "Top Tapeの1978年シングル、規格番号。"
+        },
+        {
+          "label": "Gary Johnsonのカーニヴァル選曲",
+          "url": "https://www.testpressing.org/magazine/tudo-joia-choose-ten-carnival-party-starters",
+          "note": "バンドの背景を紹介する本人の選曲記事。"
+        },
+        {
+          "label": "Mr Bongo公式 — Copa Sete no Samba",
+          "url": "https://mrbongo.bandcamp.com/track/copa-sete-no-samba",
+          "note": "Record Club Volume Sixへの収録。"
+        }
+      ],
+      "related": [
+        [
+          "001-b-05",
+          "1960年代のサンバへ。"
+        ],
+        [
+          "004-b-07",
+          "ベルギーで展開したDisco Sambaへ。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "003-b-01",
+        "cd-00-d1-20"
+      ],
+      "year": 1983,
+      "country": "イスラエル",
+      "press_country": "イスラエル",
+      "genre": "サンバ・ファンク / ブギー / ポップ",
+      "release": "Bolerio — Yehudit Ravitz with A Banda do Zé Pretinho",
+      "catch": "リオへの憧れが、イスラエルで音になる。",
+      "intro": "Yehudit Ravitzの「Taj Mahal」は、Jorge Benの作品を取り上げた1983年の「Bolerio」から。ブラジル音楽への憧れが、実際の音楽家同士の出会いを通じてレコードになった。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "再発を手がけたBe With Recordsによれば、きっかけは1983年、Jorge Benと伴奏グループA Banda do Zé Pretinhoのイスラエル公演だった。Ravitzはバンドとスタジオに入り、彼らが演奏していたBenの曲を新たに録音した。",
+          [
+            1
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "「Bolerio」はヘブライ語で「リオへおいで」という意味だとレーベルは説明する。参加バンドにも並列の名義が与えられたアルバムには「Que Pena」「Zazuera」などが並ぶ。Be Withは「Taj Mahal」を当時のブラジリアン・ブギーと結び付けて紹介している。2018年の同社盤は再発で、ここで採用する年は1983年。",
+          [
+            1
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "知っているメロディーと、繰り返す伴奏の関係に注目したい。同じフレーズが戻るたびに、声の置き方や楽器の役割を追うと、単なる原曲の再現という見方から離れられる。Copa 7やTwo Man Soundと続ければ、ブラジルに根を持つダンス音楽の異なる土地での展開も見えてくる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Be With Records公式 — Bolerio",
+          "url": "https://www.bewithrecords.com/products/judith-ravitz-bolerio-lp",
+          "note": "1983年の制作経緯、参加バンド、Taj Mahalの紹介、2018年の再発。"
+        }
+      ],
+      "related": [
+        [
+          "003-a-12",
+          "ブラジルのバンドのダンス音楽へ。"
+        ],
+        [
+          "004-b-07",
+          "ヨーロッパ側のサンバとディスコへ。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "003-b-02"
+      ],
+      "year": 1978,
+      "country": "コロンビア / ヨーロッパ",
+      "press_country": "盤によって異なる",
+      "genre": "ラテン / ディスコ",
+      "release": "Monserate starring Lyda Zamora — Telefunkenほか",
+      "catch": "一つのキスから、ラテン・ディスコへ。",
+      "intro": "Monserateの名義にLyda Zamoraの名前が添えられた1978年の「Eso Beso」。ラテン・ポップのレパートリーがディスコの時代へ渡った一例として聴いてみたい。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "「Eso Beso」はJoe ShermanとNoel Shermanの作品として知られる。ここでの歌唱名義はMonserate starring Lyda Zamora。作品データベースでは1978年のシングルとアルバムへの収録が確認できるため、配信や後年の編集盤の年ではなく1978年を採用する。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "Lyda Zamoraはコロンビア出身の歌手。Monserateという名義のレコードはヨーロッパの流通でも見つかり、一つの国だけで音楽を整理しにくい例になる。「starring」は歌唱者を前面に出す表記として残し、MonserateとLyda Zamoraを無関係な二組として扱わない。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "題名の短い言葉が戻ってくる場所と、その間をつなぐ伴奏を追ってみよう。声を軸に聴いたあとは、Chico Arnezの「Eso Beso」へ。同じ曲が異なる名義と編成で並ぶことで、メロディー以上に編曲の違いが見えてくる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Monserate starring Lyda Zamora — Eso beso",
+          "url": "https://danishcharts.dk/showitem.asp?cat=s&interpret=Monserate+starring+Lyda+Zamora&titel=Eso+beso",
+          "note": "1978年のシングルとアルバム収録。"
+        },
+        {
+          "label": "Eso besoの作品データ",
+          "url": "https://hitparade.ch/song/Monserate-starring-Lyda-Zamora/Eso-beso-2108654",
+          "note": "名義と制作クレジット。"
+        },
+        {
+          "label": "スペイン国立図書館 — Lyda Zamora",
+          "url": "https://datos.bne.es/resource/XX1164070",
+          "note": "コロンビア出身の歌手。"
+        }
+      ],
+      "related": [
+        [
+          "cd-00-d1-17",
+          "Chico Arnezによる同曲。"
+        ],
+        [
+          "004-b-07",
+          "ラテンとディスコの交差点をもう一曲。"
+        ]
+      ],
+      "note": "国・活動圏は歌手の出身と作品の流通を併記。録音地を示すものではない。"
+    },
+    {
+      "ids": [
+        "003-b-07"
+      ],
+      "year": 1971,
+      "country": "アメリカ",
+      "press_country": "アメリカ",
+      "genre": "R&B / ヴォーカル・グループ",
+      "release": "Love Potion Number Nine / D. W. Washburn — King",
+      "catch": "九番の媚薬、別のグループでもう一杯。",
+      "intro": "The Coastersが1971年に取り上げた「Love Potion No. 9」。The Cloversのヒット曲として知られる歌が、別のアメリカンR&Bグループのレパートリーになる。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "The Coasters版の参照盤はKingからのシングル。「D. W. Washburn」と組み合わされている。曲名のNo. 9とNumber Nineは同じ題名の表記違いで、このサイトでは読みやすい「Love Potion No. 9」にそろえた。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "曲を書いたのはJerry LeiberとMike Stoller。原曲はThe Cloversの1959年の録音で、The Coastersの1971年版とは分けて考えたい。歌手が変わっても、物語を運ぶ言葉と短いフレーズの仕掛けが残るところに、ポップ・ソングの強さがある。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "題名が出る場所だけを待つのではなく、そこへ向かう言葉の運びを追ってみよう。原曲と比べるなら、同じ場面をどう語るかに注目すると楽しい。The Brady Bunchの「Love Me Do」と並べれば、1960年代以前の歌が1970年代のレコードで再び生きる様子も見えてくる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "King盤 — Love Potion Number Nine",
+          "url": "https://www.discogs.com/master/184492-Coasters-Love-Potion-Number-Nine-D-W-Washburn",
+          "note": "The Coasters版のシングルと組み合わせ。"
+        },
+        {
+          "label": "The Coasters版のカバー情報",
+          "url": "https://www.cover.info/en/song/The-Coasters-Love-Potion-No-9",
+          "note": "1971年の演奏と原曲の関係。"
+        }
+      ],
+      "related": [
+        [
+          "001-b-08",
+          "1970年代に歌い直されたポップ・ソング。"
+        ],
+        [
+          "001-b-03",
+          "アメリカの歌のレコードをもう一枚。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "003-b-11"
+      ],
+      "year": 1970,
+      "country": "スウェーデン",
+      "press_country": "スウェーデン",
+      "genre": "ポップ / ソウルのカバー",
+      "release": "Farväl min vän, vi ses igen / Sunny — RCA / FAS 849",
+      "catch": "一曲の太陽が、北欧のレコードにも昇る。",
+      "intro": "Nina Lizellが歌う「Sunny」。参照するのは1970年のスウェーデン盤で、Bobby Hebbの楽曲が北欧のポップ・レコードへ渡った一枚だ。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "RCAのシングルFAS 849には「Farväl min vän, vi ses igen」と「Sunny」が収められる。伴奏の名義としてSven-Olof Walldoffs kör och orkesterが記され、歌手だけでなくコーラスとオーケストラの存在も盤から読み取れる。",
+          [
+            1
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "「Sunny」はBobby Hebbの作品。多くの歌手に取り上げられた曲だからこそ、作曲者と歌唱者、最初のヒットと各国のカバーを分けると、レコードの行き来が見えてくる。この棚にはBobby Hebbの「Sunny ’76」もあり、作者自身による後年の展開へつなげられる。",
+          [
+            1
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "冒頭の「Sunny」という呼びかけから、次の一節へ移る呼吸を聴いてみたい。曲を覚えている人ほど、歌の速度や伴奏の置き方の違いに気付きやすい。Hebbの1976年版と続け、同じ歌の芯と、その時代ごとの装いを楽しもう。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Nina Lizell — RCAシングル",
+          "url": "https://www.discogs.com/release/11688942-Nina-Lizell-Sven-Olof-Walldoffs-K%C3%B6r-Och-Orkester-Farv%C3%A3l-Min-V%C3%A3n-Vi-Ses-Igen-Sunny",
+          "note": "1970年のスウェーデン盤、規格番号、伴奏名義。"
+        }
+      ],
+      "related": [
+        [
+          "cd-05-d1-20",
+          "Bobby Hebb自身によるSunny ’76。"
+        ],
+        [
+          "001-b-12",
+          "北欧の女性ポップ・ヴォーカルへ。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "004-a-01"
+      ],
+      "year": 1967,
+      "country": "イタリア",
+      "press_country": "イタリア",
+      "genre": "イタリアン・ポップ / テレビ音楽",
+      "release": "Sabato sera – Studio Uno ’67 — Ri-Fi",
+      "catch": "土曜の夜から届く、Minaの一曲。",
+      "intro": "Minaが1967年の「Sabato sera – Studio Uno ’67」に収めた、Bruno CanforaとAntonio Amurriの作品。イタリアのテレビが生んだ歌の世界を、レコードの一曲からのぞいてみたい。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "Minaの公式ディスコグラフィーは「Sabato sera – Studio Uno ’67」を1967年のRi-Fi作品として掲載する。「Portami con te」のクレジットはBruno CanforaとAntonio Amurriで、テレビの音楽文化と深く結び付いた作家たちの名前が見える。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "Bruno CanforaはMinaのテレビでの仕事を語る上でも重要な音楽家。公式サイトには本人のインタビューも残る。歌手、作家、テレビの舞台が近くにあった1960年代のイタリアを、この顔合わせから想像できる。なお、Bart Howardの「Fly Me to the Moon」のイタリア語版にも「Portami con te」という題があるが、CanforaとAmurriによるこの曲とは別作品だ。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "言葉が細かく動く場所と、声が長く旋律を引く場所を比べてみたい。テレビの大きな舞台を思い浮かべながら聴いたあとは、同じMinaの「Moliendo café」へ。歌手を軸にたどると、スタンダードの作者を軸にたどる場合とは違う道が開く。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Mina公式ディスコグラフィー",
+          "url": "https://minamazzini.it/mina-e-la-discografia/album/",
+          "note": "1967年、Ri-Fiのアルバム。"
+        },
+        {
+          "label": "Portami con te — Apple Music",
+          "url": "https://music.apple.com/il/song/portami-con-te/1416191114",
+          "note": "CanforaとAmurriのクレジット。配信年は初出年として扱わない。"
+        },
+        {
+          "label": "Mina公式 — Bruno Canforaインタビュー",
+          "url": "https://minamazzini.it/bruno-canfora/",
+          "note": "Minaとテレビ音楽を結ぶ音楽家の証言。"
+        }
+      ],
+      "related": [
+        [
+          "cd-07-d1-07",
+          "同じMinaの別のレパートリー。"
+        ],
+        [
+          "002-b-03",
+          "イタリアの歌の世界をもう一人。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "004-a-02",
+        "cd-00-d2-05"
+      ],
+      "year": 1967,
+      "country": "イギリス",
+      "press_country": "イギリス",
+      "genre": "ポップ / ヴォーカル",
+      "release": "If It Comes to That / Tell Me Where Our Love Went Wrong — Philips / BF 1630",
+      "catch": "短い歌に、名前の変遷まで刻まれる。",
+      "intro": "The Morgan-JamesのPhilipsシングルから。The Morgan-James Duoの名前でも探せるグループだが、この曲のシングル名義に合わせて「The Morgan-James」と表示する。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "参照するのはイギリスのPhilips BF 1630。「Tell Me Where Our Love Went Wrong」とのカップリングで、Discogsと盤の販売情報では1967年とされる。一方、45catのイギリス盤一覧では1968年1月の記載がある。確認できた早い発売年として1967年を採用した。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "45catでは、それ以前のThe Morgan-James Duo名義のシングルと、このThe Morgan-James名義の盤が同じディスコグラフィーに並ぶ。名前の似た現代の歌手Morgan Jamesとは分けて探したい。ハイフンと定冠詞が、小さなレコードを見つけるための大事な手がかりになる。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "一節の終わりから次の一節へ、声と伴奏がどう橋を架けるかを聴いてみよう。同じグループの「You Don’t Know What Love Is」へ進むと、名義の少し違うレコードを横断できる。Jack Jonesと続けるなら、歌い手の違いに注目する聴き方も楽しい。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "The Morgan-James — Philips盤",
+          "url": "https://www.discogs.com/release/6247064-The-Morgan-James-If-It-Comes-To-That",
+          "note": "1967年のシングルとして登録。"
+        },
+        {
+          "label": "45cat — The Morgan-James Duo",
+          "url": "https://www.45cat.com/artist/the-morganjames-duo",
+          "note": "名義の変遷とBF 1630の1968年1月表記。"
+        }
+      ],
+      "related": [
+        [
+          "003-b-09",
+          "同じグループをDuo名義の曲から。"
+        ],
+        [
+          "001-b-03",
+          "男性ヴォーカルの別の表情。"
+        ]
+      ],
+      "note": "発売年は1967年と1968年1月の記載があり、早い年を採用。"
+    },
+    {
+      "ids": [
+        "004-b-07"
+      ],
+      "year": 1977,
+      "country": "ベルギー",
+      "press_country": "ベルギーほか",
+      "genre": "ディスコ / サンバ / メドレー",
+      "release": "Disco Samba — Warner Bros. / 7インチ",
+      "catch": "ブラジルの歌を、一本のダンスへ。",
+      "intro": "ベルギーのTwo Man Soundによる、ブラジルの歌をつないだメドレー。複数の曲の記憶をディスコの流れにまとめる発想は、MIXの中で聴くと一段とおもしろい。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "「Disco Samba」は1977年のシングル。ベルギーのチャート・データベースUltratopでは、1977年12月13日の7インチが確認できる。後年のアルバム、再発、配信で別の年が付く場合もあるが、ここでは確認できた早いシングルの年を使う。",
+          [
+            1
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "Two Man Soundはベルギーのグループ。「Disco Samba」は一人の作者による一曲というより、ブラジルの既存曲を組み合わせたメドレーとして位置付けたい。シングルにはPart 1、Part 2などの形態があり、長い版と短い版も同じものとして扱わない。",
+          [
+            1
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "知っているフレーズが現れる瞬間と、次の曲へつながる継ぎ目に耳を向けよう。メロディーは変わっても踊りの流れが続く、その仕組みを楽しめる。Copa 7やYehudit Ravitzと並べれば、ブラジルの音楽が国内のバンド、イスラエル、ベルギーへと広がる地図にもなる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Ultratop — Disco Samba",
+          "url": "https://www.ultratop.be/nl/song/cbca/Two-Man-Sound-Disco-Samba",
+          "note": "1977年12月13日のシングル、Part 2などの版情報。"
+        }
+      ],
+      "related": [
+        [
+          "003-a-12",
+          "ブラジルのバンドのサンバへ。"
+        ],
+        [
+          "003-b-01",
+          "イスラエルとブラジルの音楽家の出会い。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "005-a-04",
+        "cd-00-d2-03"
+      ],
+      "year": 1967,
+      "country": "イギリス",
+      "press_country": "イギリス",
+      "genre": "ダンス・オーケストラ / スタンダード",
+      "release": "Stan Reynolds’ Dance Party — Society",
+      "catch": "映画の愛の歌を、ダンス・パーティーへ。",
+      "intro": "Stan Reynolds and His Orchestraの1967年作から。Cole Porterの「True Love」が、映画のデュエットとは異なる、ダンス・オーケストラのレパートリーとして姿を見せる。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "参照するアルバムは「Stan Reynolds’ Dance Party」。Societyの1967年作品として収録曲と配信情報を確認できる。歌手Stan Reynoldsのソロ曲としてではなく、オーケストラを含む名義の演奏として掲載する。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "「True Love」は1956年の映画「High Society」でBing CrosbyとGrace Kellyが歌ったCole Porter作品。映画で物語を担った歌が、踊るためのレコードに入ることで、メロディーの別の使われ方が見えてくる。作品の成立年と、この演奏の発売年には十一年の差がある。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "旋律の区切りと、踊りの拍のまとまりを重ねて聴いてみたい。歌詞を頭に浮かべながら器楽のフレーズを追うのも一つの方法。同じPorterの「Night and Day」「I Love Paris」と並べると、作者を軸に、歌手や編成の違うレコードを横断できる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Stan Reynolds’ Dance Party — Apple Music",
+          "url": "https://music.apple.com/us/album/stan-reynolds-dance-party/1588327863",
+          "note": "1967年、正式な演奏名義、レーベル。"
+        },
+        {
+          "label": "True Loveの作品・演奏一覧",
+          "url": "https://secondhandsongs.com/work/1347/all",
+          "note": "Cole Porter作品とStan Reynoldsの1967年の器楽版。"
+        }
+      ],
+      "related": [
+        [
+          "001-a-10",
+          "同じCole PorterをKaren Wymanの歌声で。"
+        ],
+        [
+          "005-a-15",
+          "Cole Porterの別の名曲。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "007-b-11"
+      ],
+      "year": 1970,
+      "country": "イタリア",
+      "press_country": "イタリア",
+      "genre": "ポップ / ブラジリアン",
+      "release": "12 canzoni e una poesia — Parlophone / 3C 062 17725",
+      "catch": "イタリアのアルバムに、ブラジルの風が吹く。",
+      "intro": "Romina Powerの1970年作「12 canzoni e una poesia」から。ブラジルの作家Nelson Angeloの名前が、このイタリア盤の曲目に現れる。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "参照盤はParlophoneの「12 canzoni e una poesia」。曲名は盤のデータでは「Zozoi」と記されることもあるが、このサイトでは「Zozoï」で統一する。同じ曲を取り上げたFrance Gallの収録項目とは別の歌唱として扱う。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "アルバムの曲目では「Zozoi」にポルトガル語歌唱を示す記載があり、作者はNelson Angelo。したがって、Rominaの版を題名だけで「イタリア語版」と決め付けるのは避けたい。アルバム全体にはイタリア語のポップスなどが並び、ここで言語と国の境界がふっと開く。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "意味を追うより先に、題名を含む音の反復や、一つのフレーズが戻る間隔に耳を向けてみたい。France Gallの項目とは同じ曲の別歌唱として、Georges Jouvinの「Zoizoi」とは題名と演奏の関係を探る入口としてつながる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Romina Power — Parlophone盤",
+          "url": "https://www.discogs.com/release/6341142-Romina-Power-12-Canzoni-E-Una-Poesia",
+          "note": "1970年、イタリア盤の規格番号と収録曲。"
+        },
+        {
+          "label": "12 canzoni e una poesiaの作品情報",
+          "url": "https://it.wikipedia.org/wiki/12_canzoni_e_una_poesia",
+          "note": "Zozoiの作者、ポルトガル語表記、曲順。"
+        }
+      ],
+      "related": [
+        [
+          "cd-09-d1-26",
+          "同じ曲をFrance Gallの項目から。"
+        ],
+        [
+          "003-b-05",
+          "Georges JouvinのZoizoiへ。"
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "ids": [
+        "cd-09-d1-22"
+      ],
+      "year": null,
+      "country": "アメリカ",
+      "press_country": "アメリカ",
+      "genre": "ダンス教材 / ファンク / 映画音楽のカバー",
+      "release": "Jazz in Focus — Hoctor / HLPS 4237",
+      "catch": "ダンスの練習盤に、映画のファンクが潜む。",
+      "intro": "Joe Puglieseの名を掲げた「Jazz in Focus」に収められた映画テーマのカバー。ダンスのレッスンのためのレコードが、音楽を探す人の棚でも発見される。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "参照盤はHoctorの「Jazz in Focus」、規格番号はHLPS 4237。レコード店の紹介ではニューヨークのダンサーJoe Puglieseの監修によるダンス用レコードとされる。名義にある人物を、すべての楽器を演奏した奏者として説明しないようにしたい。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "収録曲には「Theme from Black Belt Jones」のほか「Theme from S.W.A.T.」などがある。映画やテレビで親しまれた音楽が、踊りを練習する実用のレコードへ移されたことが、この盤の独特な背景になる。「Black Belt Jones」の映画とDennis Coffeyの原曲は1974年だが、それだけではこのカバー盤の発売年を決められない。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "映画の場面を思い浮かべて聴く回と、身体の動きを支える音として聴く回を分けてみよう。反復するフレーズや、動きの区切りになりそうな合図を探すと、ダンス教材という出自が鑑賞の手がかりになる。次にAlan Parkerへ進めば、実用音楽とファンクの接点も探れる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Groovenut Records — Jazz in Focus",
+          "url": "https://www.groovenutrecords.net/products/detail/9987",
+          "note": "Hoctor盤、ダンサーによる監修、収録曲、Dennis Coffey作品のカバー。"
+        },
+        {
+          "label": "Hoctor HLPS 4237の盤記録",
+          "url": "https://www.popsike.com/JOE-PUGLIESE-JAZZ-IN-FOCUS-FUNK-BREAKS-JAZZ-KILLER-ORIG-US-ON-HOCTOR-RECORDS/111015645852.html",
+          "note": "規格番号とレコードの画像。出品年は発売年に使用していない。"
+        }
+      ],
+      "related": [
+        [
+          "cd-09-d1-23",
+          "実用音楽とファンクの接点へ。"
+        ],
+        [
+          "004-a-03",
+          "ライブラリー音楽の別の一曲。"
+        ]
+      ],
+      "note": "このカバー盤の発売年は未確定。1974年は映画と原曲の年であり、本盤の年としては掲載していない。"
+    },
+    {
+      "ids": [
+        "006-b-08"
+      ],
+      "year": null,
+      "country": "ドイツ",
+      "press_country": "版の照合中",
+      "genre": "イージーリスニング / ラテン",
+      "release": "The Girls from Paramaribo — Berry Lipman",
+      "catch": "地名を道しるべに、もう一つのレコード旅行。",
+      "intro": "Berry Lipmanの「The Girls from Paramaribo」。このページのプレーヤーは通常版として聴き分けるための音源で、Disco版とは独立した入口を設けている。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "Berry Lipmanはドイツの作曲家・編曲家Friedel Berlippの名義。「The Girls from Paramaribo」は彼自身の作品で、1974年のBASF盤「The Most Beautiful Girls in the World」にも収録される。一方、同題の早いシングルも存在するため、アルバムの年をすべての版の初出とはしない。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "Paramariboは南米スリナムの首都。題名に地名があっても、そこで録音されたという意味ではない。Berry Lipmanのレコードでは、地名や旅を思わせる題名と、ヨーロッパのオーケストラ・ポップの世界が交わる。この項目の「’82」はMIXの曲名に残る版の表記であり、選択音源の初出年が1982年と確認できたことを意味しない。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "通常版とDisco版を交互に開き、同じ旋律が戻る箇所を探してみよう。速さだけで判断せず、一節の長さ、繰り返し、音の重なりを比べると版の違いを楽しめる。John Schroederの「Paramaribo」へ進むと、同じ地名から別のレコードへ旅を続けられる。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "The Girls from Paramariboの作品情報",
+          "url": "https://www.swedishcharts.com/showitem.asp?cat=s&key=579842",
+          "note": "作者Friedel Berlipp、Berry Lipmanのプロデュース、1974年盤。"
+        },
+        {
+          "label": "The Berry Lipman Bandのシングル",
+          "url": "https://harmony.sotoughrecords.com/items/82725736",
+          "note": "1971年と紹介される同題のシングル。選択音源と同じ版かは未確定。"
+        }
+      ],
+      "related": [
+        [
+          "cd-00-d1-21",
+          "Disco版とは別ページで聴き比べ。"
+        ],
+        [
+          "002-a-09",
+          "同じ地名を掲げるJohn Schroederの曲。"
+        ]
+      ],
+      "note": "同題に複数の録音・版がある。選択音源と初出盤の一致を確定できていないため、発売年は保留。"
+    },
+    {
+      "ids": [
+        "cd-00-d1-21"
+      ],
+      "year": null,
+      "country": "ドイツ",
+      "press_country": "版の照合中",
+      "genre": "ディスコ / オーケストラ・ポップ",
+      "release": "The Girls from Paramaribo — Disco version",
+      "catch": "同じ地名、もう一つのダンスの時間。",
+      "intro": "「The Girls from Paramaribo」のDisco版を聴くページ。通常版と同じ曲名でも、プレーヤーの音源を分けて、それぞれの演奏を追えるようにしている。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "曲の中心にいるのはドイツのBerry LipmanことFriedel Berlipp。同題の曲は1970年代のレコードにも見られるが、その年をこのDisco版の発売年として使うことはできない。原曲の来歴と、目の前の版の情報は分けてたどりたい。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "レコードの向こう側",
+          "楽曲データでは1974年のアルバム「The Most Beautiful Girls in the World」への収録が確認できる。また1980年代の同題・類題の盤もあり、曲名の一致だけで録音を決めると取り違えやすい。ここではDisco版の初出盤との照合が済むまで、発売年と規格番号を断定していない。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "通常版と聴き比べるなら、どこで一つのまとまりが終わるか、同じ旋律を何回繰り返すかに注目したい。ディスコをテンポだけの違いとして捉えるより、踊りを持続させる構成として聴くと、版ごとの楽しみ方が広がる。Two Man Soundと続ければ、ラテンの題材がダンス・レコードになる別の方法にも出会える。",
+          []
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Berry Lipman — 楽曲の作品情報",
+          "url": "https://www.swedishcharts.com/showitem.asp?cat=s&key=579842",
+          "note": "作曲者と1974年盤の情報。Disco版の初出を示す資料ではない。"
+        },
+        {
+          "label": "The Most Beautiful Girls in the World",
+          "url": "https://www.discogs.com/master/2554145-Berry-Lipman-And-His-Orchestra-The-Most-Beautiful-Girls-In-The-World",
+          "note": "同題を含むアルバムの盤情報。"
+        }
+      ],
+      "related": [
+        [
+          "006-b-08",
+          "通常版のプレーヤーへ。"
+        ],
+        [
+          "004-b-07",
+          "ラテンとディスコの別の接点。"
+        ]
+      ],
+      "note": "Disco版の初出年と盤は未確定。通常版の年を流用せず、別の音源として掲載。"
     }
   ],
   "players": {
@@ -396,13 +1683,11 @@
     },
     "006-b-08": {
       "id": "xHVpXZHupHA",
-      "url": "https://youtu.be/xHVpXZHupHA",
-      "note": "ご指定の通常版。曲名の「82」表記を含め、MIXの使用版との照合は継続。"
+      "url": "https://youtu.be/xHVpXZHupHA"
     },
     "cd-00-d1-21": {
       "id": "JNbxvLowZD8",
-      "url": "https://youtu.be/JNbxvLowZD8",
-      "note": "ご指定のDisco版。"
+      "url": "https://youtu.be/JNbxvLowZD8"
     },
     "004-a-01": {
       "id": "DzrgAtWp5Jg",
@@ -431,6 +1716,14 @@
     "003-a-12": {
       "id": "ZoyHq2tjIkc",
       "url": "https://youtu.be/ZoyHq2tjIkc"
+    },
+    "cd-00-d1-12": {
+      "id": "c3mTvvMxP_I",
+      "url": "https://youtu.be/c3mTvvMxP_I"
+    },
+    "cd-00-d1-20": {
+      "id": "A6B3JYZcfr4",
+      "url": "https://youtu.be/A6B3JYZcfr4"
     }
   }
 }

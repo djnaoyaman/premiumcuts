@@ -43,3 +43,14 @@ CRATE DIGGIN’とsuburbia CLASSICAの共通操作を参考に、単一のYouTub
 公開カタログは`version.json`と`catalog-public.json`で配信します。プレーヤーは起動時、ページ移動時、タブに戻った際と60秒ごとに更新を確認し、PLAYERの「最新の曲を確認」からも取得できます。再生中のYouTubeインスタンスと現在の音源を保持し、既存の再生順を維持して追加音源を末尾に加えます。作品や全曲を選び直すと最新の収録順になります。更新取得に失敗しても既存の曲は消しません。
 
 ヘッダーと装飾のマークはSVGで描画し、端末による絵文字への置換を避けています。
+
+
+## Editorial names and articles
+
+`catalog_style.py` applies shared song and artist display names before any HTML, search data or player queues are generated. Song titles lead and artist names follow. Intro, Interlude and Outro are mix annotations; they are never part of an artist name. IDs, positions and the 675 appearances stay stable. Original-language diacritics and official acronyms are retained; unverified identities remain explicit.
+
+Name corrections were checked against the published Premium Cuts #09 and #13 tracklists at TICRO MARKET and Virus Pro, the #10 listing at Jet Set, original-release catalogs and the music sources linked in each article. Similar names alone are insufficient for merging performers or recordings.
+
+All 23 selected recordings have editorial pages. The Berry Lipman normal and Disco recordings remain separate; their exact first issues and the Joe Pugliese cover release year remain unconfirmed. Dates are earliest verified releases for the relevant recording, never automatically composition, recording or remaster dates.
+
+Validation includes `python build.py`, `node scripts/verify_player.cjs` and `python scripts/verify_catalog.py`.
