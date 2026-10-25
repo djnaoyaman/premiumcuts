@@ -1,0 +1,328 @@
+{
+  "year_policy": "同一演奏について確認できた最も早い発売年を採用。制作年・原曲の成立年・再発年と区別。異説は資料メモに残す。",
+  "updated": "2026-10-25",
+  "articles": [
+    {
+      "ids": [
+        "001-a-01"
+      ],
+      "year": 2001,
+      "country": "日本",
+      "press_country": "日本",
+      "genre": "ボサノヴァ / クラブ・ポップ",
+      "release": "Various Artists — Blue Cafe No1 / Blue Cafe / BLCF-0001 / 12インチ",
+      "catch": "選ぶ人が、最初の一曲をつくる。",
+      "intro": "Premium Cutsの選曲者、鈴木雅尭によるApril Set。その楽曲がTAPE 001の冒頭を飾る。レコードを紹介するDJと、レコードを生み出す音楽家が、一つのMIXの入口で重なる。",
+      "sections": [
+        [
+          "曲とアーティスト",
+          "April Setは鈴木雅尭のソロ・プロジェクトとして紹介されている。販売店の盤情報では「Blue Cafe No1」が2001年の日本盤として登録され、この曲を収録する。ここでは確認できた早い発売年の2001年を採用した。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "同じ曲名でも、版を見分ける",
+          "後年の「Blue Cafe」にはRe-Edit表記の版がある。2001年の収録情報と、後年の再編集版の発売年は分けて考えたい。原資料にはRe-Editの指定がないため、このMIXで使用された版の確定は音源照合後に行う。",
+          [
+            3
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "まずは一曲だけで、その後はTAPE 001の冒頭から。自己名義の曲を置いた入口から、The Creaturesへどう気分が渡されるかに耳を向けたい。同じApril Setの「Bossa Presso」へ進めば、選曲者自身の制作にも関心が広がる。",
+          []
+        ]
+      ],
+      "note": "2001年は盤の発売年。録音・制作年は未確認。後年のRe-Editとは区別して掲載。",
+      "related": [
+        [
+          "002-a-04",
+          "同じアーティスト。April Setの制作をさらにたどる。"
+        ],
+        [
+          "004-b-01",
+          "同じアーティストの別収録曲。"
+        ],
+        [
+          "001-a-02",
+          "TAPE 001でこの曲の次に置かれた一曲。"
+        ]
+      ],
+      "sources": [
+        {
+          "label": "MION Berlin — Blue Cafe No1",
+          "url": "https://mion.berlin/products/4397016885",
+          "note": "検索インデックスで2001年、日本盤、収録情報を照合。本文は取得できず。"
+        },
+        {
+          "label": "STEREO RECORDS — April Set",
+          "url": "https://www.stereo-records.com/search.php?art=APRIL+SET",
+          "note": "鈴木雅尭とApril Setの関係。"
+        },
+        {
+          "label": "Discogs — Blue Cafe",
+          "url": "https://www.discogs.com/release/5387462-Various-Blue-Cafe",
+          "note": "検索インデックスでRe-Edit表記を照合。本文は取得できず。"
+        }
+      ]
+    },
+    {
+      "ids": [
+        "001-a-02"
+      ],
+      "year": 1983,
+      "country": "イギリス",
+      "press_country": "イギリス",
+      "genre": "ポストパンク / ヴォーカル・ポップ",
+      "release": "Right Now / Weathercade — Wonderland / SHE 2 / 7インチ",
+      "catch": "ポストパンクから、昔の歌への扉を開く。",
+      "intro": "Siouxsie SiouxとBudgieによるThe Creaturesが、Herbie MannとCarl Sigmanの作品を取り上げた1983年のシングル。異なる時代の歌を、自分たちのレパートリーへ迎え入れる一曲だ。",
+      "sections": [
+        [
+          "レコードの輪郭",
+          "MusicBrainzに登録されたイギリス盤は1983年7月発売。レーベルはWonderland、品番はSHE 2で、B面は「Weathercade」。A面の作者としてHerbie MannとCarl Sigmanが記載されている。",
+          [
+            1
+          ]
+        ],
+        [
+          "二人の別の活動として",
+          "Budgieのインタビュー記事は、Siouxsie and the BansheesとThe Creaturesという二つの活動を振り返っている。本曲を聴く際にも、Bansheesの名前から入る道と、スタンダードのカバーとして入る道の両方がある。",
+          [
+            2
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "歌の一節を追う聴き方と、声と打楽器のやり取りを意識する聴き方を試したい。MIXでは前のApril Set、後のGérard Baquéと続け、演奏者や言語が変わってもつながって聞こえる箇所を探してみる。",
+          []
+        ]
+      ],
+      "note": "1983年はこの演奏のシングル発売年。作品そのものの成立年や録音日とは分けている。",
+      "related": [
+        [
+          "001-a-01",
+          "TAPE 001の前曲。曲順から聴き比べる。"
+        ],
+        [
+          "001-a-03",
+          "TAPE 001の次曲。別のカバー表現へ。"
+        ]
+      ],
+      "sources": [
+        {
+          "label": "MusicBrainz — Right Now",
+          "url": "https://musicbrainz.org/release/2b9f84fb-3ea6-4bc3-8dc2-24339deb8106",
+          "note": "発売国・発売年月・作者・品番・B面。"
+        },
+        {
+          "label": "Lyndsanity — Budgie interview",
+          "url": "https://www.lyndsanity.com/music/siouxsie-and-the-banshees-budgie-on-death-divorce-autobiography-its-truth-its-real-and-its-neither-good-nor-bad/",
+          "note": "2025年の本人インタビュー。グループの活動背景。"
+        }
+      ]
+    },
+    {
+      "ids": [
+        "001-a-03",
+        "cd-00-d2-07"
+      ],
+      "year": 1965,
+      "country": "フランス",
+      "press_country": "フランス",
+      "genre": "フレンチ・ポップ / ヴォーカル・サンバ",
+      "release": "Tant de nuits — CBS / EP 5669 / 4曲入りEP",
+      "catch": "あの旋律が、フランス語で話しだす。",
+      "intro": "「Bitter Sweet Samba」をフランス語の歌として楽しむGérard Baquéの一曲。旋律を知っている人にも、歌い手と言語が変わることで、新しい入口が生まれる。",
+      "sections": [
+        [
+          "歌になったサンバ",
+          "EncyclopédisqueのEP情報には、A1「Tant de nuits」の作者としてSol LakeとG. Baqué、オーケストラの指揮者としてSid Daleが記載されている。同じEPのA2には「Tijuana taxi」も収録。親しみのあるインストゥルメンタルの題名が、一枚のフランス盤に並ぶ。",
+          [
+            1
+          ]
+        ],
+        [
+          "盤の年と、音への評価",
+          "発売年はEncyclopédisqueの1965年を採用。Discogsの検索インデックスには1966年の記載もある。デシネの紹介文では、フランス語カバーであることに加え、厚いビッグバンド編成と力強いビートが評価されている。これは同店による批評として紹介する。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "Dieter ReithやNew Sun Pops Orchestraの同曲と続けて、主旋律を担当するものが歌声から楽器へ移る違いを楽しみたい。フランス語の意味を調べる前に、言葉の区切りとメロディーの重なりに耳を向けるのも一案。",
+          []
+        ]
+      ],
+      "note": "最も早い資料年の1965年を採用。1966年表記も残るため、制作・録音年の断定はしない。CD原資料にはSammbaの表記がある。",
+      "related": [
+        [
+          "005-a-16",
+          "同じ曲の別演奏。Dieter Reithによる解釈。"
+        ],
+        [
+          "cd-05-d1-12",
+          "同じ曲の別演奏。オーケストラ版と比較。"
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Encyclopédisque — Tant de nuits",
+          "url": "https://www.encyclopedisque.fr/disque/47478.html",
+          "note": "1965年フランス盤。品番・作者・指揮・全4曲。"
+        },
+        {
+          "label": "dessinee — Tant de nuits",
+          "url": "https://dessinee.jp/ddblog/dessineeshop-blog/0424-gerard-baque---tant-de-nuits.html",
+          "note": "2012年のレコード紹介。カバー関係と音に関する批評。"
+        },
+        {
+          "label": "Discogs — Tant De Nuits",
+          "url": "https://www.discogs.com/fr/release/8272748-G%C3%A9rard-Baqu%C3%A9-Tant-De-Nuits",
+          "note": "検索インデックスに1966年表記。本文は取得できず。"
+        }
+      ]
+    },
+    {
+      "ids": [
+        "001-a-04",
+        "cd-00-d1-11"
+      ],
+      "year": 1971,
+      "country": "フランスを中心とする活動",
+      "press_country": "フランス",
+      "genre": "ファンク / サイケデリック・ポップ",
+      "release": "Amen / Eden — Disques Vogue / 7インチ",
+      "catch": "「楽園」の向こうに、映画音楽家がいる。",
+      "intro": "Lucifer and Co.の名前をたどると、映画音楽家Gabriel Yaredへ行き着く。「Eden」は、後の映画作品からさかのぼって、彼のポップ・ミュージックの仕事に出会う入口でもある。",
+      "sections": [
+        [
+          "名前の後ろにいる音楽家",
+          "フランス盤「Amen / Eden」は1971年として登録されている。現在の配信ではGabriel Yared名義の「Lucifer And Co.」として公開され、「Eden」にはGeorges Costa、Barbara Peters、Michel Costaの名前が付されている。デジタル配信の権利年2024年は、原盤の発売年とは区別する。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "映画音楽より前の、人とのつながり",
+          "出版社Wise Musicの略歴には、レバノンに生まれたYaredが、ブラジルでの活動を経て、フランスでCosta兄弟と仕事をした経緯が記されている。後に「ベティ・ブルー」や「イングリッシュ・ペイシェント」などを手がける作曲家の、広い活動歴の中にこのレコードを置いてみたい。",
+          [
+            3
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "映画の場面を想像する前に、まず短いポップ曲として声の入り方や曲の展開を追ってみる。その後にYaredの映画音楽へ進めば、名前だけではつながりにくい活動の幅を、自分の耳で確かめられる。",
+          []
+        ]
+      ],
+      "note": "1971年は原盤の発売年。国はフランス盤と活動圏を示し、参加者全員の国籍や録音地を意味しない。",
+      "related": [
+        [
+          "001-a-03",
+          "TAPE 001の前曲。フランス盤を続けてたどる。"
+        ],
+        [
+          "001-a-05",
+          "TAPE 001の次曲。MIXの流れで比較する。"
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Discogs — Amen / Eden",
+          "url": "https://www.discogs.com/release/2048529-Lucifer-And-Co-Amen-Eden",
+          "note": "検索インデックスで1971年フランス盤を照合。本文は取得できず。"
+        },
+        {
+          "label": "Apple Music — Lucifer And Co.",
+          "url": "https://music.apple.com/us/album/lucifer-and-co-single/1756866145",
+          "note": "1971年表記と現在の配信名義。"
+        },
+        {
+          "label": "Wise Music Classical — Gabriel Yared",
+          "url": "https://www.wisemusicclassical.com/composer/3111/Gabriel-Yared/",
+          "note": "出版社による略歴・本人の回想。"
+        }
+      ]
+    },
+    {
+      "ids": [
+        "001-a-05"
+      ],
+      "year": 1978,
+      "country": "オランダ / ベルギー",
+      "press_country": "盤ごとの発売国を照合中",
+      "genre": "ラテン / ブラジリアン・ポップ",
+      "release": "Meu Piao — Music-Box / M. BOX 10072 / 7インチ",
+      "catch": "ブラジルの気分を、ヨーロッパの楽団で。",
+      "intro": "ポルトガル語の題名を持つ「Meu Pião」。演奏者Nico Gomezの足跡はオランダとベルギーへつながる。曲の言語や音楽の系統と、演奏者の活動した場所を分けてたどると、レコードの地図が広がる。",
+      "sections": [
+        [
+          "採用したのは1978年",
+          "Discogsのアーティスト索引には、Music-Boxの7インチ「Meu Piao」が1978年として掲載されている。アルバム「Nico Gomez & Copacabanas」は販売店に1978年、配信に1979年の表記があるため、このページでは確認できた最も早い1978年を採用した。",
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "ベルギーで暮らした音楽家",
+          "息子Raymond van het Groenewoudの公式略歴によれば、両親はアムステルダム育ち。父で音楽家のNico Gomezは1947年にブリュッセルへ移った。Raymondが父の楽団でベースを弾いたことも記されている。この曲への参加を示す資料ではないが、楽団を営んだ音楽家としての暮らしが見える。",
+          [
+            4
+          ]
+        ],
+        [
+          "聴きどころを探す",
+          "言葉の響きに集中する一回と、伴奏のリズムを追う一回を分けてみたい。関連曲の「Aquarela」は同じ曲ではなく、ブラジルのレパートリーが異なる演奏家の手を渡る様子を楽しむための選曲。",
+          []
+        ]
+      ],
+      "note": "1978年を採用。7インチ・LP・後年盤の情報を区別し、MIXで使われた盤と録音日は未確定。",
+      "related": [
+        [
+          "002-b-08",
+          "ブラジルのレパートリーを別の演奏家で。共演関係を示すリンクではない。"
+        ],
+        [
+          "004-b-02",
+          "別の演奏家のAquarela。歌の表現を聴き比べる選曲。"
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Discogs — Nico Gomez",
+          "url": "https://www.discogs.com/artist/8713-Nico-Gomez",
+          "note": "検索インデックスにMusic-Box盤1978年・品番の記載。本文は取得できず。"
+        },
+        {
+          "label": "WAXPEND — Nico Gomez / Copacabanas",
+          "url": "https://www.waxpend.com/items/8136",
+          "note": "検索インデックスにGIP 55.002、1978年の記載。本文は取得できず。"
+        },
+        {
+          "label": "Apple Music — Nico Gomez & Copacabanas",
+          "url": "https://music.apple.com/jp/album/nico-gomez-copacabanas/1123620897",
+          "note": "アルバムの1979年表記。"
+        },
+        {
+          "label": "Raymond van het Groenewoud — Bio",
+          "url": "https://raymondvanhetgroenewoud.be/bio/",
+          "note": "家族の公式略歴。Nico Gomezの移住と楽団。"
+        }
+      ],
+      "youtube": {
+        "id": "Ugun40zurb8",
+        "url": "https://youtu.be/Ugun40zurb8",
+        "note": "掲載音源はサイト制作者の指定による。"
+      }
+    }
+  ]
+}

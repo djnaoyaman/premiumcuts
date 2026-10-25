@@ -121,18 +121,47 @@ for v in cd_volumes:
  if v['mix_year']:page+=f'<p>資料内のMIX作品の年 <b>{v["mix_year"]}</b>。この年は収録楽曲そのものの制作年・発売年を示すものではありません。</p>'
  page+='</section></div><nav class="volume-pagination" aria-label="作品一覧"><a href="/#collection">← 作品一覧</a><a href="/tracks.html?volume='+vid+'">この作品の全曲を検索 →</a></nav></main>'+footer()+'</body></html>'
  (D/f'volumes/{vid}.html').write_text(page)
+# Source-backed editorial articles share explicit entry IDs; titles alone never merge recordings.
+research=json.loads((P/'research.json').read_text())
+articles={tid:a for a in research['articles'] for tid in a['ids']}
+track_by_id={t['id']:t for t in tracks}
+def editorial(t):
+ a=articles.get(t['id'])
+ if not a:return ''
+ def refs(nums):return ''.join(f' <a class="cite" href="#reference-{n}" aria-label="出典{n}">[{n}]</a>' for n in nums)
+ out='<article class="song-editorial"><span class="eyebrow">NOTES DE POCHETTE</span><h2 class="song-catch">'+e(a['catch'])+'</h2><p class="song-lead">'+e(a['intro'])+'</p><dl class="research-facts">'
+ for label,value in [('発売年',str(a['year'])+'年'),('国・活動圏',a['country']),('参照盤の発売国',a['press_country']),('ジャンルの手がかり',a['genre']),('参照したレコード',a['release']),('制作・録音年','未確認')]:out+='<div><dt>'+label+'</dt><dd>'+e(value)+'</dd></div>'
+ out+='</dl><p class="research-note">'+e(a['note'])+'</p>'
+ if a.get('youtube'):
+  video=a['youtube'];out+=f'<section class="editorial-section"><span class="eyebrow">LE MORCEAU À ÉCOUTER</span><h3>この曲を聴く</h3><div class="youtube-player"><iframe src="https://www.youtube-nocookie.com/embed/{e(video["id"])}" title="{e(t["artist"])} — {e(t["title"])}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a class="text-link" href="{e(video["url"])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></section>'
+
+ for heading,body,nums in a['sections']:out+='<section class="editorial-section"><h3>'+e(heading)+'</h3><p>'+e(body)+refs(nums)+'</p></section>'
+ out+='<p class="research-note">「聴きどころを探す」は編集上の鑑賞提案です。試聴による音の感想は、音源を確認してから追加します。</p><section class="editorial-section"><span class="eyebrow">ÉCOUTER ENCORE</span><h3>関連曲を、棚の中から。</h3><div class="related-cuts">'
+ for tid,reason in a['related']:
+  x=track_by_id[tid];out+=f'<a href="/tracks/{tid}.html"><strong>{e(x["title"])}</strong><span>{e(x["artist"])}</span><small>{e(reason)}</small><b aria-hidden="true">↗</b></a>'
+ out+='</div></section>'
+ appearances=[track_by_id[x] for x in a['ids'] if x!=t['id']]
+ if appearances:
+  out+='<section class="editorial-section"><h3>ほかの収録先</h3><ul>'
+  for x in appearances:
+   v=next(v for v in volumes if v['id']==x['volume']);out+=f'<li><a href="/tracks/{x["id"]}.html">{e(v["display_code"])} {e(v["title"])} / {location_label(x)} ↗</a></li>'
+  out+='</ul></section>'
+ out+='<section class="research-sources"><span class="eyebrow">SOURCES & REPÈRES</span><h3>出典と資料メモ</h3><p>年は確認できた最も早い発売年を採用。活動国と盤の発売国、再発年は分けて記録しています。</p><ol>'
+ for n,s in enumerate(a['sources'],1):out+=f'<li id="reference-{n}"><a href="{e(s["url"])}" target="_blank" rel="noopener noreferrer">{e(s["label"])} ↗</a><p>{e(s["note"])}</p></li>'
+ return out+'</ol><p class="research-note">資料確認日 '+research['updated']+' · 解説は確認資料の範囲で更新します。</p></section></article>'
 # Every entry keeps a fixed URL. Original cassette entry URLs stay unchanged.
 for t in tracks:
  v=next(x for x in volumes if x['id']==t['volume']);same=[x for x in tracks if x['volume']==t['volume'] and x['side']==t['side']];pos=same.index(t)
  title=t['title'];loc=location_label(t);status={'pending':'原表記を照合中','corrected':'表記を修正済み','transcribed':'ジャケット画像から転記' if t['format']=='tape' else 'Excelの曲目から転記'}[t['status']]
  artist=f'<a class="artist-link" href="/tracks.html?artist={quote(t["artist"],safe="")}">{e(t["artist"])} <span>↗</span></a>' if t['artist']!='アーティスト未記載' else '<p class="artist-link">アーティスト未記載</p>'
  page=head(title+' — '+t['artist']+' | Premium Cuts Listed',t['artist']+'「'+title+'」。'+v['display_code']+' '+v['title']+'の収録曲。','/tracks/'+t['id']+'.html')+'<body id="top">'+header('tracks')+f'''<main id="main" class="wrap song-page"><div class="breadcrumb"><a href="/volumes/{t['volume']}.html">{v['display_code']} {e(v['title'])}</a> / {loc}</div><section class="song-hero"><div><span class="eyebrow">PREMIUM CUTS {v['display_code']} / {loc}</span><h1>{e(title)}</h1>{artist}<p class="song-status">{status}</p></div><a class="song-cover" href="/volumes/{t['volume']}.html" aria-label="収録作品{e(v['title'])}へ">{pattern(v['pattern'])}<span>{v['display_code']} / {e(v['title'])} ↗</span></a></section><section class="song-info"><div><span class="eyebrow">DANS LA COLLECTION</span><h2>この曲の、<i>居場所。</i></h2></div><dl><div><dt>収録作品</dt><dd><a href="/volumes/{t['volume']}.html">Premium Cuts {v['display_code']}<br>{e(v['title'])} ↗</a></dd></div><div><dt>収録位置</dt><dd>{loc}</dd></div><div><dt>アーティスト</dt><dd>{e(t['artist'])}</dd></div></dl></section>'''
+ page+=editorial(t)
  if t['note']:
   page+='<section class="notation-note"><span class="eyebrow">NOTE SUR LE TITRE</span><h2>表記について</h2><p>'+e(t['note'])+'</p><p class="original-label">原資料の表記<br><strong>'+e(t['original'])+'</strong></p>'
   if t['source']:page+=f'<a class="text-link" href="{e(t["source"])}" target="_blank" rel="noopener noreferrer">表記の照合に使った資料 ↗</a>'
   page+='</section>'
  source_label='ジャケットのトラックリストを見る' if t['format']=='tape' else 'Excelから整理した曲目の出典を見る'
- page+=f'<div class="song-source"><a class="text-link" href="/volumes/{t["volume"]}.html#source">{source_label} ↗</a><p>制作・発売年、国、ジャンル、制作背景は、出典を確かめながら順次追加します。音源・動画も同一の演奏や版を照合してから掲載します。</p></div><nav class="song-pagination" aria-label="前後の曲">'
+ page+=f'<div class="song-source"><a class="text-link" href="/volumes/{t["volume"]}.html#source">{source_label} ↗</a><p>楽曲情報は資料を照合しながら更新しています。音源・動画は同一の演奏や版を確認してから掲載します。</p></div><nav class="song-pagination" aria-label="前後の曲">'
  if pos>0:
   prev=same[pos-1];page+=f'<a href="/tracks/{prev["id"]}.html"><span>← PREVIOUS CUT</span><strong>{e(prev["title"])}</strong><small>{e(prev["artist"])}</small></a>'
  else:page+=f'<a href="/volumes/{t["volume"]}.html"><span>← TRACKLIST</span><strong>作品の曲目へ</strong></a>'
