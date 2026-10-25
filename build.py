@@ -127,7 +127,11 @@ articles={tid:a for a in research['articles'] for tid in a['ids']}
 track_by_id={t['id']:t for t in tracks}
 def editorial(t):
  a=articles.get(t['id'])
- if not a:return ''
+ if not a:
+  video=research.get('players',{}).get(t['id'])
+  if not video:return ''
+  return f'<section class="song-editorial"><span class="eyebrow">LE MORCEAU À ÉCOUTER</span><h2>この曲を聴く</h2><div class="youtube-player"><iframe src="https://www.youtube-nocookie.com/embed/{e(video["id"])}" title="{e(t["artist"])} — {e(t["title"])}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a class="text-link" href="{e(video["url"])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></section>'
+
  def refs(nums):return ''.join(f' <a class="cite" href="#reference-{n}" aria-label="出典{n}">[{n}]</a>' for n in nums)
  out='<article class="song-editorial"><span class="eyebrow">NOTES DE POCHETTE</span><h2 class="song-catch">'+e(a['catch'])+'</h2><p class="song-lead">'+e(a['intro'])+'</p><dl class="research-facts">'
  for label,value in [('発売年',str(a['year'])+'年'),('国・活動圏',a['country']),('参照盤の発売国',a['press_country']),('ジャンルの手がかり',a['genre']),('参照したレコード',a['release']),('制作・録音年','未確認')]:out+='<div><dt>'+label+'</dt><dd>'+e(value)+'</dd></div>'

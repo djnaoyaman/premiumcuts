@@ -324,5 +324,11 @@
         "note": "掲載音源はサイト制作者の指定による。"
       }
     }
-  ]
+  ],
+  "players": {
+    "007-b-11": {
+      "id": "jBxDoBz1KwI",
+      "url": "https://youtu.be/jBxDoBz1KwI"
+    }
+  }
 }
