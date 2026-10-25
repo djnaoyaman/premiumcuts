@@ -15,3 +15,21 @@ api.play('003-b-11','volume:003');events.onStateChange({data:1});events.onStateC
 api.play('007-b-11','volume:007');events.onError({data:101});assert.equal(api.getState().wantsPlay,false);assert.match(get('pc-status').textContent,/YouTube/);assert.equal(api.getState().current,'007-b-11','specified unavailable video is preserved');
 api.play('004-b-07','volume:004');assert.equal(api.getState().queue.join(','),'004-a-01,004-a-02,004-b-07');get('pc-seek').value=30;get('pc-seek').oninput();assert.equal(calls.at(-1).join(','),'seek,30');
 console.log('PASS 23 recordings; mix queues, deduplication, pending-stop, play/pause, auto advance, end-of-queue, errors, seeking.');
+(async()=>{
+ // A tab already playing must acquire a newly published source without recreating YouTube.
+ await api.refresh(true); // Finish the initial offline check in this isolated harness.
+ api.play('004-b-07','volume:004');events.onStateChange({data:1});
+ const before=api.getState(),callsBefore=calls.length;
+ const added={...catalog.tracks.find(t=>t.id==='004-a-03'),videoId:'abcdefghijk',url:'https://youtu.be/abcdefghijk'};
+ const updated=audio.map(t=>({...t,...(t.id==='004-b-07'?{videoId:'zyxwvutsrqp',url:'https://youtu.be/zyxwvutsrqp'}:{})}));updated.push(added);
+ ctx.fetch=async url=>({ok:true,json:async()=>url.includes('version.json')?{version:'fixture-v2'}:{version:'fixture-v2',tracks:catalog.tracks,volumes:catalog.volumes,audio:updated}});
+ assert.equal(await api.refresh(true),true);
+ assert.equal(api.getState().current,before.current);assert.equal(api.getState().playing,true);assert.equal(calls.length,callsBefore,'refresh does not reload or pause the active recording');
+ assert.equal(api.getState().queue.slice(0,before.queue.length).join(','),before.queue.join(','),'existing relative play order preserved');assert.ok(api.getState().queue.includes(added.id),'new source appears in selected mix');
+ events.onStateChange({data:1});assert.equal(api.getState().playing,true,'active-source identity survives source metadata updates');
+ api.play(added.id,'volume:004');assert.equal(calls.at(-1)[1],'abcdefghijk','new source can be selected without a page reload');
+ const lastQueue=api.getState().queue.join(',');ctx.fetch=async()=>{throw Error('offline')};assert.equal(await api.refresh(true),false);assert.equal(api.getState().queue.join(','),lastQueue,'offline checks preserve the existing catalog');
+ ctx.fetch=async url=>({ok:true,json:async()=>url.includes('version.json')?{version:'bad-v3'}:{version:'bad-v3',tracks:catalog.tracks,volumes:catalog.volumes,audio:[{id:'bad',videoId:'invalid',title:'Bad',artist:'Bad'}]}});
+ assert.equal(await api.refresh(true),false);assert.equal(api.getState().queue.join(','),lastQueue,'invalid data cannot erase a working queue');
+ console.log('PASS stale-tab catalog refresh, active recording continuity, new source selection, offline and invalid-data recovery.');
+})().catch(e=>{console.error(e);process.exitCode=1});
