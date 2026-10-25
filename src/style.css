@@ -41,3 +41,16 @@
  .collection>.section-heading h2{white-space:nowrap}
  .collection>.section-heading p{max-width:none;font-size:11px}
 }
+
+/* Editorial selection: fixed membership, with all mix appearances linked back. */
+.essential-badge{display:inline-block;border:1px solid currentColor;padding:6px 9px;font-size:9px;letter-spacing:.08em;white-space:nowrap;line-height:1.3}
+.essential-badge:hover{background:var(--blue);color:var(--paper)}
+.song-hero .essential-badge{display:table;margin-top:18px}
+.essentials-teaser,.essentials-heading{display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:7%;padding:64px 0;border-bottom:1px solid var(--blue)}
+.essentials-teaser h2{font:400 clamp(38px,5vw,72px)/1.05 var(--serif);letter-spacing:-1.5px;margin:20px 0}
+.essentials-teaser p,.essentials-heading p{line-height:2}.essentials-symbol{display:block;border:1px solid currentColor;padding:16px;min-width:0}
+.essentials-symbol>.pattern{aspect-ratio:1.25}.essentials-symbol>span{display:block;font-size:10px;letter-spacing:.08em;padding-top:15px}
+.essentials-page{padding-bottom:70px}.essentials-heading{padding-top:30px}.essentials-heading h1{font:400 clamp(42px,6.4vw,92px)/1.04 var(--serif);letter-spacing:-2px;margin:24px 0}
+.essential-list{list-style:none;padding:0;margin:0}.essential-cut{display:grid;grid-template-columns:42px minmax(0,1fr) 42px 60px;align-items:center;gap:24px;padding:25px 0;border-bottom:1px solid var(--line)}
+.essential-number{font:24px var(--serif)}.essential-song{display:flex;flex-direction:column;gap:9px}.essential-song strong{font:26px/1.25 var(--serif);overflow-wrap:anywhere}.essential-song span{font-size:14px}.essential-origin{display:inline-block;font-size:11px;margin-top:13px;opacity:.8}.essential-cut .text-link{font-size:12px}
+@media(max-width:700px){.essentials-teaser,.essentials-heading{grid-template-columns:minmax(0,1fr);gap:26px;padding-block:35px}.essentials-symbol{max-width:430px;width:100%}.essentials-heading h1{font-size:clamp(42px,11vw,70px)}.essential-cut{grid-template-columns:24px minmax(0,1fr) 32px;gap:12px;padding-block:20px}.essential-cut>.text-link{grid-column:2}.essential-song strong{font-size:22px}.essential-song span{font-size:13px}.essential-number{font-size:18px}.catalog-row>.essential-badge,.track-row>.essential-badge{font-size:7px;padding:4px;letter-spacing:0}.catalog-row{flex-wrap:wrap}.catalog-row>.catalog-title{flex-basis:55%}.catalog-row>.essential-badge{margin-left:auto}header nav{flex-wrap:wrap;gap:10px 16px}}

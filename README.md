@@ -61,3 +61,7 @@ Validation includes `python build.py`, `node scripts/verify_player.cjs` and `pyt
 ## Record-shelf artwork
 
 `artwork.py` generates 22 distinct original SVG compositions using circles, semicircles, triangles, rectangles and lines in the established blue/cream palette. Each work has a stable design across its card, volume page and track pages. The mobile album-link grids use one column at widths up to 700px; desktop/tablet grids retain their broader layouts.
+
+## Premium Cuts Essentials
+
+`features.json` fixes DJ Naoyaman’s selected 24 recordings as an editorial feature. `/features/essentials.html` lists one entry per recording, with play, essay and mix links. Home and navigation link to the feature; matching appearances carry the Essentials badge and can be filtered in the catalog. Future player additions do not automatically join the selection.
