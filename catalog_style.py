@@ -130,6 +130,26 @@ EDITS={
  'cd-03-d1-08':('Rhetta Hughes','Walk On By',''),
  'cd-11-d1-23':('Konstantin Orbelyen Orchestra','曲名未確認',''),
 }
+# Credits verified in the extended research batch.
+EDITS.update({'003-b-15': ('Ira', 'Che cosa mai sarà', ''),
+ '004-a-03': ('The Lee Mason Sound', 'Sky High', ''),
+ '004-a-09': ('Mary Roos', "Die Liebe kommt leis’ (You Can't Hurry Love)", ''),
+ '004-b-10': ('Aldemaro Romero', 'Two (Chipoleando)', ''),
+ '004-b-12': ('Basso-Valdambrini Quintet', 'Lotar', ''),
+ '004-b-14': ('Séverine', 'Je suis bien la même (Am I the Same Girl)', ''),
+ '005-a-09': ('Mahna Mackay', 'Daydream', ''),
+ '005-a-13': ('Bebeto', 'Take It Easy My Brother Charles / Charlie Brown', ''),
+ '005-b-15': ('Jerry Williams & His Dynamite & Soul Band', 'The Name Game', ''),
+ '005-b-16': ('Johnny Reimar', "En solskinssang (Trini's Tune)", ''),
+ '005-b-17': ('Blossom Dearie', "59th Street Bridge Song (Feelin' Groovy)", ''),
+ '006-a-02': ('Svante Thuresson', 'Fantasi (Fantasy)', ''),
+ '006-a-03': ('Roger Webb and His Piano and Orchestra', 'The Spiderman', ''),
+ 'cd-00-d2-06': ('Roger Webb and His Piano and Orchestra', 'The Spiderman', ''),
+ '006-a-16': ("The Manhattan Trio and the Sylvet's", "We Don't Need Them", ''),
+ '006-b-02': ('Daniela Davoli', 'Samba para mi amor', ''),
+ '006-b-05': ('Pierre Devevey feat. Christiane Legrand', 'Angelina', ''),
+ '007-b-03': ('The Blue Diamonds', 'I Want You to Be My Baby', '')})
+
 ALIASES={
  'lucifer and co.':'Lucifer and Co.', 'gerard baque':'Gérard Baqué',
  'portinho e sua orquestra':'Portinho e sua Orquestra',
@@ -142,6 +162,7 @@ ALIASES={
  'pete rugolo et son orchestre':'Pete Rugolo et son orchestre',
 }
 TITLES={
+ 'love me do':'Love Me Do',
  'night and day':'Night and Day','baile en la noche':'Baile en la noche',
  'la fete':'La fête','la fête':'La fête', 'figa da guine':'Figa de Guiné',
  'moliendo cafe':'Moliendo café', 'copa sete no samba':'Copa Sete no Samba',
