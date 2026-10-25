@@ -73,6 +73,7 @@ EDITS={
  'cd-12-d1-05':('Erica & Chinquinho','Chattanooga Choo Choo',''),
  'cd-12-d1-13':('Cañones y Mantequilla','No me tomes el pelo',''),
  'cd-12-d1-27':('Chico Arnez, His Orchestra & Choir','A banda',''),
+ 'cd-13-d1-14':('Les Requins','Campus No. 8',''),
  'cd-13-d1-28':('Dynamite Brass','Fura de fila',''),
  'cd-13-d1-30':("Liz Damon's Orient Express",'Loneliness Remembers','Outro'),
  'cd-02-d1-03':('La Nueva Banda Santisteban','The Suitcase',''),
@@ -131,6 +132,7 @@ def normalize_tracks(tracks):
   artist=t['artist']
   if artist.isupper() and artist not in KEEP:
    artist=' '.join(w if w in KEEP else w.title() for w in artist.split())
+  artist=re.sub(r"(?<=\w)'([ST])\b",lambda m:"'"+m[1].lower(),artist)
   artist=re.sub(r'\bfeat\.', 'feat.',artist,flags=re.I)
   t['artist']=ALIASES.get(artist.lower(),artist)
   t['title']=TITLES.get(t['title'].lower(),title_style(t['title']))
