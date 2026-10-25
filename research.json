@@ -2848,6 +2848,63 @@
         ]
       ],
       "note": ""
+    },
+    {
+      "ids": [
+        "005-a-15",
+        "cd-00-d2-11"
+      ],
+      "year": null,
+      "country": "活動国の詳細は未確認",
+      "press_country": "ベネズエラ",
+      "genre": "ヴォーカル・ジャズ / スタンダード",
+      "release": "A Venezuela — Bobby Cole Trio / Vene Vox / BL-33",
+      "catch": "パリを歌うレコードを、ベネズエラの盤から。",
+      "intro": "「I Love Paris」の題名をたどって行き着くのは、フランス盤とは限らない。Bobby Cole Trioの「A Venezuela」にも、このCole Porter作品が収められている。一つの歌が旅する距離は、題名よりずっと長い。",
+      "sections": [
+        [
+          "街の名前を、舞台の歌に",
+          "「I Love Paris」はCole Porterが作詞・作曲したミュージカル「Can-Can」のレパートリー。作品の舞台は19世紀末のパリで、ダンスホールとカンカンをめぐる物語の中にこの曲がある。街そのものの民謡ではなく、舞台から生まれた歌が、さまざまな歌手のスタンダードになった。",
+          [
+            1
+          ]
+        ],
+        [
+          "小さな盤目録から広がる地図",
+          "参照できるのは、Vene VoxのBL-33「A Venezuela」。Bobby Cole Trio名義のアルバムの曲目に「I Love Paris」と作者Cole Porterの名前がある。盤の発売国と、歌手の出身や録音地は別の情報だ。初出年は確定できず、同名義の別作品の年をそのまま当てはめずに残している。",
+          [
+            2
+          ]
+        ],
+        [
+          "同じ作曲家で、別のレコードへ",
+          "歌の切れ目で、伴奏がどう返すかを待ってみたい。声の線を追う一回と、その合間を聴く一回では、短い歌にも違う景色が見つかる。この棚の「Night and Day」「True Love」もCole Porter作品。パリという地名から探し始めた耳が、一人の作曲家を通じて別の街や映画へ進んでいく。",
+          []
+        ]
+      ],
+      "note": "参照盤の初出年・録音地は未確定。再発年や同名義の他作品の年とは分けている。",
+      "sources": [
+        {
+          "label": "Concord Theatricals — Can-Can",
+          "url": "https://www.concordtheatricals.com/p/44600/can-can",
+          "note": "Cole Porterの作詞作曲、舞台の設定、I Love Parisの収録。"
+        },
+        {
+          "label": "Bobby Cole Trio — A Venezuela",
+          "url": "https://www.discogs.com/release/5794072-Bobby-Cole-Trio-A-Venezuela",
+          "note": "Vene Vox BL-33、歌唱名義、同曲の収録と作者表記。"
+        }
+      ],
+      "related": [
+        [
+          "001-a-10",
+          "同じCole PorterをKaren Wymanの歌で。"
+        ],
+        [
+          "005-a-04",
+          "Cole Porter作品をオーケストラで。"
+        ]
+      ]
     }
   ],
   "players": {
@@ -2962,6 +3019,14 @@
     "cd-00-d1-20": {
       "id": "A6B3JYZcfr4",
       "url": "https://youtu.be/A6B3JYZcfr4"
+    },
+    "005-a-15": {
+      "id": "MF13kdqG6jA",
+      "url": "https://youtu.be/MF13kdqG6jA"
+    },
+    "cd-00-d2-11": {
+      "id": "MF13kdqG6jA",
+      "url": "https://youtu.be/MF13kdqG6jA"
     }
   }
 }

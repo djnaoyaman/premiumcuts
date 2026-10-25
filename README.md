@@ -51,7 +51,7 @@ CRATE DIGGIN’とsuburbia CLASSICAの共通操作を参考に、単一のYouTub
 
 Name corrections were checked against the published Premium Cuts #09 and #13 tracklists at TICRO MARKET and Virus Pro, the #10 listing at Jet Set, original-release catalogs and the music sources linked in each article. Similar names alone are insufficient for merging performers or recordings.
 
-All 23 selected recordings have editorial pages. The Berry Lipman normal and Disco recordings remain separate; their exact first issues and the Joe Pugliese cover release year remain unconfirmed. Dates are earliest verified releases for the relevant recording, never automatically composition, recording or remaster dates.
+All 24 selected recordings have editorial pages. The Berry Lipman normal and Disco recordings remain separate; their exact first issues and the Joe Pugliese cover release year remain unconfirmed. Dates are earliest verified releases for the relevant recording, never automatically composition, recording or remaster dates.
 
 Validation includes `python build.py`, `node scripts/verify_player.cjs` and `python scripts/verify_catalog.py`.
 

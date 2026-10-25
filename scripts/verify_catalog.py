@@ -17,7 +17,7 @@ for a in r['articles']:
   for i in a['ids']:players[i]=a['youtube']
  for i,_ in a['related']:assert i in byid,i
  for _,_,refs in a['sections']:assert all(1<=n<=len(a['sources']) for n in refs)
-assert len({v['id'] for v in players.values()})==23
+assert len({v['id'] for v in players.values()})==24
 assert all(i in articles for i in players)
 assert players['006-b-08']['id']=='xHVpXZHupHA'
 assert players['cd-00-d1-21']['id']=='JNbxvLowZD8'
@@ -28,4 +28,4 @@ for f in (root/'dist').rglob('*'):
  if f.suffix not in ('.html','.json','.js'):continue
  text=f.read_text()
  assert all(x.lower() not in text.lower() for x in ('listed.xlsx','DOCUMENT ORIGINAL','ご提供いただいた','source_row','source_name')),f
-print(f'PASS 675 entries; 23 recording articles; {len(articles)} article pages; independent versions; public output scan')
+print(f'PASS 675 entries; 24 recording articles; {len(articles)} article pages; independent versions; public output scan')
