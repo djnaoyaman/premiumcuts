@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,html,re,shutil,unicodedata,collections,os
+import json,html,re,shutil,unicodedata,collections,os,hashlib
 from urllib.parse import quote
 from PIL import Image,ImageDraw,ImageFont
 P=Path(__file__).parent;D=P/'dist';U=P/'source-images';e=html.escape
@@ -12,7 +12,7 @@ files=['画像1.jpg','画像2.jpg','image(20261025-152132).png','Premium Cuts 00
 for path in ['tracks','volumes','assets']: (D/path).mkdir(parents=True,exist_ok=True)
 # Replace the superseded, out-of-scope catalog completely.
 for f in (D/'tracks').glob('*.html'):f.unlink()
-for n in ['style.css','app.js']:shutil.copy2(P/'src'/n,D/n)
+for n in ['style.css','app.js','player.css','player.js']:shutil.copy2(P/'src'/n,D/n)
 for i in range(1,8):
  shutil.copy2(U/f'{i:03}.jpg',D/f'assets/source-{i:03}.jpg')
 corrections={
@@ -56,6 +56,14 @@ cd_data=json.loads((P/'cd_catalog.json').read_text())
 cd_volumes=cd_data['volumes']
 volumes+=cd_volumes
 tracks+=cd_data['tracks']
+research=json.loads((P/'research.json').read_text())
+articles={tid:a for a in research['articles'] for tid in a['ids']}
+track_by_id={t['id']:t for t in tracks}
+players=dict(research.get('players',{}))
+for a in research['articles']:
+ if a.get('youtube'):
+  for tid in a['ids']:players[tid]=a['youtube']
+
 def position_label(t):
  return f"{t['side']}{t['position']:02}" if t['format']=='tape' else f"{t['side']} · {t['position']:02}"
 def location_label(t):
@@ -71,22 +79,25 @@ marks={
  '006':{'A':{0:['counseling 1'],13:['counseling 2'],16:['counseling 3']},'B':{11:['counseling 4'],14:['counseling 5']}},
  '007':{'A':{0:['JINGLE'],8:['JINGLE'],17:['JINGLE']},'B':{4:['JINGLE'],13:['JINGLE']}}}
 (D/'data.js').write_text('const TRACKS='+json.dumps(tracks,ensure_ascii=False)+';\nconst VOLUMES='+json.dumps(volumes,ensure_ascii=False)+';')
+(D/'data.js').write_text((D/'data.js').read_text()+'\nconst PREMIUM_AUDIO='+json.dumps([dict(id=t['id'],volume=t['volume'],title=t['title'],artist=t['artist'],videoId=players[t['id']]['id'],url=players[t['id']]['url']) for t in tracks if t['id'] in players],ensure_ascii=False)+';')
 (P/'catalog.json').write_text(json.dumps({'volumes':volumes,'tracks':tracks,'markers':marks},ensure_ascii=False,indent=2))
 (P/'tracks.json').unlink(missing_ok=True)
 
 def pattern(i,cls=''):
  return f'<div class="pattern p{i} {cls}" aria-hidden="true"><div class="pattern-layer"></div><div class="pattern-layer second"></div><span class="dot"></span></div>'
+asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['research.json','src/app.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
 def head(title,desc,path='/'):
- return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="{origin}{path}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{origin}{path}"><meta property="og:image" content="{origin}/og.png"><meta property="og:locale" content="ja_JP"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#f2e8d7"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/style.css"><script defer src="/data.js"></script><script defer src="/app.js"></script></head>'''
+ return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="{origin}{path}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{origin}{path}"><meta property="og:image" content="{origin}/og.png"><meta property="og:locale" content="ja_JP"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#f2e8d7"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/style.css?v={asset_version}"><link rel="stylesheet" href="/player.css?v={asset_version}"><script defer src="/data.js?v={asset_version}"></script><script defer src="/app.js?v={asset_version}"></script><script defer src="/player.js?v={asset_version}"></script></head>'''
 def header(active=''):
- return '<a class="skip" href="#main">本文へ</a><header><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✳</span><span>Premium Cuts<br><b>Listed.</b></span></a><nav aria-label="メインナビゲーション">'+''.join(f'<a class="{"selected" if k==active else ""}" href="{u}">{n}</a>' for k,u,n in [('volumes','/#collection','作品から探す'),('tracks','/tracks.html','すべての曲'),('about','/about.html','このサイトについて')])+'</nav><span class="header-meta">LES BONNES<br>VIBRATIONS.</span></header>'
-def footer():return '<footer><a class="footer-logo" href="/">Premium Cuts Listed<span>Une collection de bonnes vibrations.</span></a><p>Selection & mix by Masanori Suzuki<br>個人制作の収録曲アーカイブ</p><a href="#top">ページの上へ ↑</a></footer>'
+ return '<a class="skip" href="#main">本文へ</a><header><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✳</span><span>Premium Cuts<br><b>Listed.</b></span></a><nav aria-label="メインナビゲーション">'+''.join(f'<a class="{"selected" if k==active else ""}" href="{u}">{n}</a>' for k,u,n in [('player','/player.html','PLAYER'),('volumes','/#collection','作品から探す'),('tracks','/tracks.html','すべての曲'),('about','/about.html','このサイトについて')])+'</nav><span class="header-meta">LES BONNES<br>VIBRATIONS.</span></header>'
+def footer():return (P/'src/player-shell.html').read_text()+'<footer><a class="footer-logo" href="/">Premium Cuts Listed<span>Une collection de bonnes vibrations.</span></a><p>Selection & mix by Masanori Suzuki<br>個人制作の収録曲アーカイブ</p><a href="#top">ページの上へ ↑</a></footer>'
 def tile(v):
  description='SIDE A + SIDE B' if v['format']=='tape' else ('2 DISCS' if len(v['discs'])>1 else 'TRACKLIST')
  return f'''<article class="volume-card"><a href="/volumes/{v['id']}.html">{pattern(v['pattern'])}<div class="card-meta"><span>PREMIUM CUTS</span><span>{v['display_code']}</span></div><h3>{e(v['title'])}<span>↗</span></h3><div class="card-bottom"><span>{description}</span><span>{v['count']} ENTRIES</span></div></a></article>'''
 def row(t):
  badge='<span class="dot-label" title="'+e(t['note'] or '')+'">要照合</span>' if t['status']=='pending' else ''
- return f'''<li class="track-row" data-id="{t['id']}"><span class="track-pos">{position_label(t)}</span><a class="track-main" href="/tracks/{t['id']}.html"><strong>{e(t['title'])}</strong><span>{e(t['artist'])}</span></a>{badge}<a class="row-arrow" href="/tracks/{t['id']}.html" aria-label="{e(t['title'])}の詳細">↗</a></li>'''
+ play=f'<button type="button" class="pc-inline-play" data-play-id="{t["id"]}" data-play-scope="volume:{t["volume"]}" aria-label="{e(t["title"])}を再生">▶</button>' if t['id'] in players else ''
+ return f'''<li class="track-row" data-id="{t['id']}"><span class="track-pos">{position_label(t)}</span><a class="track-main" href="/tracks/{t['id']}.html"><strong>{e(t['title'])}</strong><span>{e(t['artist'])}</span></a>{badge}{play}<a class="row-arrow" href="/tracks/{t['id']}.html" aria-label="{e(t['title'])}の詳細">↗</a></li>'''
 N=len(tracks)
 home=head('Premium Cuts Listed — 一曲の先に、また一曲。','Masanori SuzukiのPremium Cuts。その収録曲だけを、作品と曲順からたどる音楽アーカイブ。')+'<body id="top">'+header('volumes')+f'''<main id="main"><section class="hero wrap"><div class="hero-top"><span class="eyebrow">THE PREMIUM CUTS ARCHIVE</span><span class="eyebrow">JAZZ, BRASIL, FRENCH & MANY MORE</span></div><div class="hero-content"><div><h1>Premium<br>Cuts <i>Listed.</i></h1><p class="hero-jp">一曲の先に、<br>また一曲。</p><p class="hero-copy">鈴木雅尭の「Premium Cuts」で出会った音楽を。<br>作品を開き、曲順をたどり、好きな一曲を見つける。</p><a class="round-link" href="#collection">レコード棚をのぞく <span>↓</span></a></div><div class="hero-art">{pattern(1)}<div class="art-caption"><span>UNE COLLECTION<br>DE BONNES VIBRATIONS.</span><span>TAPES &amp; MIX CDS</span></div></div></div><div class="hero-bottom"><span>MIXED BY MASANORI SUZUKI</span><span>07 TAPES + 15 MIX CDS &nbsp; / &nbsp; {N} ENTRIES</span></div></section><section class="collection wrap" id="collection"><div class="section-heading"><div><span class="eyebrow">LA COLLECTION</span><h2>作品から、<i>ひらく。</i></h2></div><p>カセットとMIX CD。<br>番号が同じでも、別々の作品として。</p></div><div class="collection-label">MIX TAPES / 001—007</div><div class="volume-grid">'''+''.join(tile(v) for v in tape_volumes)+'''</div><div class="section-heading cd-section-heading"><div><span class="eyebrow">LES MIX CDS / #00—#14</span><h2>MIX CDから、<i>ひらく。</i></h2></div><p>カセットとは異なる15タイトル。<br>ディスクごとの曲順で。</p></div><div class="volume-grid">'''+''.join(tile(v) for v in cd_volumes)+f'''<a class="index-card" href="/tracks.html"><span class="eyebrow">INDEX DES MORCEAUX</span><strong>すべての曲を<br><i>ひとつの棚に。</i></strong><span class="index-number">{N}<small>曲目</small></span><span class="index-bottom">曲名・アーティストから探す <b>↗</b></span></a></div></section><section class="about-strip wrap"><span class="star" aria-hidden="true">✳</span><div><span class="eyebrow">À PROPOS</span><h2>好きな音楽を、<br>ゆっくり、深く。</h2><p>この棚に並ぶのは「Premium Cuts」の収録曲だけ。<br>まずは曲目と曲順を。音楽の背景や映像は、一曲ずつ大切に。</p><a class="text-link" href="/about.html">このアーカイブについて ↗</a></div></section></main>'''+footer()+'</body></html>'
 (D/'index.html').write_text(home)
@@ -122,17 +133,10 @@ for v in cd_volumes:
  page+='</section></div><nav class="volume-pagination" aria-label="作品一覧"><a href="/#collection">← 作品一覧</a><a href="/tracks.html?volume='+vid+'">この作品の全曲を検索 →</a></nav></main>'+footer()+'</body></html>'
  (D/f'volumes/{vid}.html').write_text(page)
 # Source-backed editorial articles share explicit entry IDs; titles alone never merge recordings.
-research=json.loads((P/'research.json').read_text())
-articles={tid:a for a in research['articles'] for tid in a['ids']}
-track_by_id={t['id']:t for t in tracks}
-players=dict(research.get('players',{}))
-for a in research['articles']:
- if a.get('youtube'):
-  for tid in a['ids']:players[tid]=a['youtube']
 def player(t):
  video=players.get(t['id'])
  if not video:return ''
- return f'<section id="listen" class="song-editorial song-player" aria-label="楽曲プレーヤー"><span class="eyebrow">PLAYER / ÉCOUTER</span><h2>この曲を聴く</h2><div class="youtube-player"><iframe src="https://www.youtube-nocookie.com/embed/{e(video["id"])}" title="{e(t["artist"])} — {e(t["title"])}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a class="text-link" href="{e(video["url"])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></section>'
+ return f'<section id="listen" class="song-editorial pc-listen-card" aria-label="この曲を聴く"><div><span class="eyebrow">ÉCOUTER CE MORCEAU</span><h2>この曲を聴く</h2><p>共通プレーヤーで再生。音楽を聴きながら、曲の背景を。</p><p>{e(video.get("note",""))}</p></div><div><button class="pc-play-button" type="button" data-play-id="{t["id"]}" data-play-scope="volume:{t["volume"]}">▶ この曲を聴く</button><p><a class="text-link" href="{e(video["url"])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></div></section>'
 def editorial(t):
  a=articles.get(t['id'])
  if not a:return ''
@@ -180,12 +184,22 @@ for t in tracks:
 # A fully usable HTML list remains available with JavaScript disabled.
 page=head('すべての曲 | Premium Cuts Listed',f'Premium Cutsの{N}曲目を作品、曲名、アーティストから検索。','/tracks.html')+'<body id="top">'+header('tracks')+f'''<main id="main" class="wrap catalog-page"><section class="catalog-heading"><div><span class="eyebrow">INDEX DES MORCEAUX</span><h1>すべての曲を、<br><i>ひとつの棚に。</i></h1></div><p>22作品の曲目を横断して。<br>気になる名前から、次の一曲へ。</p></section><form class="filters" role="search" onsubmit="return false"><label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="曲名・アーティストを検索" placeholder="曲名・アーティストを検索"></label><select id="series-filter" aria-label="シリーズ"><option value="">すべてのシリーズ</option><option value="tape">MIX TAPE</option><option value="cd">MIX CD</option></select><select id="volume-filter" aria-label="収録作品"><option value="">すべての作品</option>'''+''.join(f'<option value="{v["id"]}">{v["display_code"]} {v["title"]}</option>' for v in volumes)+'''</select><select id="side-filter" aria-label="収録面・ディスク"><option value="">すべての面・ディスク</option><option value="A">Side A</option><option value="B">Side B</option><option value="D1">Disc 1</option><option value="D2">Disc 2</option></select><select id="sort" aria-label="並べ替え"><option value="order">作品・曲順</option><option value="title">曲名 A–Z</option><option value="artist">アーティスト A–Z</option></select><button class="reset" type="button" id="reset">条件をクリア</button></form><div class="list-caption"><span id="result-count" aria-live="polite">'''+str(N)+''' 曲目</span><span>曲名 / アーティスト / 収録作品</span></div><ol class="catalog-list" id="catalog-list">'''+''.join(f'<li class="catalog-row"><a class="catalog-title" href="/tracks/{t["id"]}.html"><strong>{e(t["title"])}</strong><span>{e(t["artist"])}</span></a><a class="volume-tag" href="/volumes/{t["volume"]}.html">{next(v["display_code"] for v in volumes if v["id"]==t["volume"])} / {position_label(t)}</a><a class="row-arrow" href="/tracks/{t["id"]}.html" aria-label="{e(t["title"])}の詳細">↗</a></li>' for t in tracks)+'''</ol><div class="no-results" id="no-results" hidden><span>✳</span><h2>該当する曲が見つかりませんでした。</h2><p>別の綴りで検索するか、条件をクリアしてみてください。</p></div><p class="list-note">同じ曲が複数の作品に収録されている場合は、作品ごとに表示します。画像・Excelの原表記でも検索できます。</p></main>'''+footer()+'</body></html>';(D/'tracks.html').write_text(page)
 page=head('このサイトについて | Premium Cuts Listed','Premium Cuts Listedの掲載範囲、曲順、表記修正と調査方針について。','/about.html')+'<body id="top">'+header('about')+'''<main id="main" class="wrap about-page"><div class="eyebrow">À PROPOS DE CETTE COLLECTION</div><h1>好きな音楽を、<br><i>ゆっくり、深く。</i></h1><div class="about-body"><section><h2>Premium Cutsの収録曲を、たどる。</h2><p>Premium Cuts Listedは、Masanori Suzuki（鈴木雅尭）による「Premium Cuts」に収録された楽曲を紹介する、個人制作のアーカイブです。ご提供いただいたカセット7作品のジャケット画像と、MIX CD 15タイトル分のExcelを起点に、作品別・Side別・ディスク別の曲目を整理しています。同じ番号でもカセットとMIX CDは別作品として掲載します。</p><p>サイトの構成はCRATE DIGGIN’を参考にしています。掲載対象を決めるのはPremium Cutsのトラックリストです。</p></section><section><h2>曲順と、短い合図も大切に。</h2><p>各作品のSide AとSide Bは、画像の並び順を維持しています。intro、jingle、commercial、intermissionなどは曲間の区切りとして記載し、名前のある曲目の件数には含めていません。二曲の境界が曖昧な項目は、現段階では画像どおりの一項目として残しています。</p></section><section><h2>綴りを直す。原表記も残す。</h2><p>確認できた誤植は修正し、個別ページに修正内容と照合資料を記録します。判読しづらいもの、同名アーティストや別バージョンとの取り違えがあり得るものは「要照合」として残します。大文字・小文字、アクセント、読みやすい句読点は必要に応じて整えています。</p><p>制作年と発売年、アーティストの活動国と録音地、原曲とカバー、アルバム版と別ミックスを分けて調べます。資料で確認できない情報を、推測で埋めることはしません。</p></section><section><h2>一曲ずつ、育てる。</h2><p>まずは作品と曲の入口をつくりました。曲の背景、国やジャンルとのつながり、関連アーティスト、音源・動画は、資料を確かめながら少しずつ加えていきます。詳しい解説が加わっても、作品ごとの曲順からたどる入り口はそのままです。</p></section><section><h2>デザインについて。</h2><p>ブルーとクリーム色、紙の質感、リズムのある幾何学模様。ご提供の参考画像を手がかりに、フランスの音楽誌や小さなレコード店を思わせる棚を目指しました。各作品の模様はこのサイト独自のもので、実際のジャケットは作品ページの原資料欄に掲載しています。</p></section><a class="round-link" href="/#collection">作品の棚へ戻る <span>↗</span></a></div></main>'''+footer()+'</body></html>';(D/'about.html').write_text(page)
+# Shared PLAYER page; the playback instance remains outside the replaced main content.
+playable_volumes=[v for v in volumes if any(t['volume']==v['id'] and t['id'] in players for t in tracks)]
+options='<option value="all">指定音源のあるすべての曲</option>'+''.join(f'<option value="volume:{v["id"]}">{e(v["display_code"])} {e(v["title"])}</option>' for v in playable_volumes)
+page=head('PLAYER | Premium Cuts Listed','Premium Cutsの収録曲を作品の曲順で連続再生。音楽を聴きながら解説やトラックリストを読む。','/player.html')+'<body id="top">'+header('player')+'<main id="main" class="wrap pc-player-page"><span class="eyebrow">THE LISTENING ROOM</span><h1>Listen.<br><i>Dig a little deeper.</i></h1><p>音楽を聴きながら、レコードの背景へ。<br>指定音源のある曲を、作品ごとの曲順で。</p><button type="button" class="pc-play-button" data-play-all>▶ すべての曲を聴く</button><div class="pc-queue-tools"><label for="pc-scope">再生する曲順</label><select id="pc-scope">'+options+'</select><span id="pc-queue-count"></span></div><ol id="pc-queue-list" class="pc-queue-list"></ol><noscript><p>連続再生にはJavaScriptを有効にしてください。各楽曲ページのYouTubeリンクからも聴けます。</p></noscript></main>'+footer()+'</body></html>'
+(D/'player.html').write_text(page)
+# Each mix has an explicit queue-start action, independent from browsing.
+for v in playable_volumes:
+ pagefile=D/f'volumes/{v["id"]}.html';markup=pagefile.read_text()
+ markup=markup.replace('<div class="pills">',f'<button type="button" class="pc-play-button" data-play-volume="{v["id"]}">▶ この作品の曲順で聴く</button><div class="pills">',1)
+ pagefile.write_text(markup)
 # Matching sharing and home-screen assets.
 (D/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#f2e8d7"/><circle cx="32" cy="32" r="25" fill="#126887"/><circle cx="32" cy="32" r="10" fill="#f2e8d7"/><circle cx="32" cy="32" r="3" fill="#126887"/></svg>')
 im=Image.new('RGB',(1200,630),'#f2e8d7');draw=ImageDraw.Draw(im);font='/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf';draw.line((50,65,1150,65),fill='#126887',width=2);draw.text((60,120),'Premium',font=ImageFont.truetype(font,100),fill='#126887');draw.text((60,240),'Cuts Listed.',font=ImageFont.truetype(font,92),fill='#126887');draw.text((65,520),'THE PREMIUM CUTS ARCHIVE / TAPES + MIX CDS',font=ImageFont.truetype(font,23),fill='#126887');
 for x in range(810,1140,40):draw.rectangle((x,115,x+18,460),fill='#126887')
 im.save(D/'og.png');icon=Image.new('RGB',(180,180),'#f2e8d7');dr=ImageDraw.Draw(icon);dr.ellipse((15,15,165,165),fill='#126887');dr.ellipse((60,60,120,120),fill='#f2e8d7');dr.ellipse((82,82,98,98),fill='#126887');icon.save(D/'apple-touch-icon.png')
-urls=['/','/tracks.html','/about.html']+['/volumes/'+v['id']+'.html' for v in volumes]+['/tracks/'+t['id']+'.html' for t in tracks]
+urls=['/','/tracks.html','/about.html','/player.html']+['/volumes/'+v['id']+'.html' for v in volumes]+['/tracks/'+t['id']+'.html' for t in tracks]
 (D/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+origin+u+'</loc></url>' for u in urls)+'</urlset>');(D/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+origin+'/sitemap.xml\n')
 print(json.dumps({'volumes':len(volumes),'entries':len(tracks),'corrected':sum(t['status']=='corrected' for t in tracks),'pending':sum(t['status']=='pending' for t in tracks),'counts':[(v['id'],v['count']) for v in volumes]},ensure_ascii=False))
 

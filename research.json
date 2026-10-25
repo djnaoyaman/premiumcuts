@@ -326,6 +326,34 @@
     }
   ],
   "players": {
+    "003-b-07": {
+      "id": "Z--L9meVdnk",
+      "url": "https://youtu.be/Z--L9meVdnk"
+    },
+    "003-b-01": {
+      "id": "A6B3JYZcfr4",
+      "url": "https://youtu.be/A6B3JYZcfr4"
+    },
+    "002-b-14": {
+      "id": "5FjzVGzyDzE",
+      "url": "https://youtu.be/5FjzVGzyDzE"
+    },
+    "002-a-08": {
+      "id": "c3mTvvMxP_I",
+      "url": "https://youtu.be/c3mTvvMxP_I"
+    },
+    "001-b-08": {
+      "id": "woo-C7XsQWs",
+      "url": "https://youtu.be/woo-C7XsQWs"
+    },
+    "001-b-09": {
+      "id": "y_HodmY6UrQ",
+      "url": "https://youtu.be/y_HodmY6UrQ"
+    },
+    "001-b-05": {
+      "id": "__luZkxUEHA",
+      "url": "https://youtu.be/__luZkxUEHA"
+    },
     "007-b-11": {
       "id": "jBxDoBz1KwI",
       "url": "https://youtu.be/jBxDoBz1KwI"
@@ -342,33 +370,35 @@
       "id": "kjZIl2qm_YY",
       "url": "https://youtu.be/kjZIl2qm_YY"
     },
-    "001-b-05": {
-      "id": "__luZkxUEHA",
-      "url": "https://youtu.be/__luZkxUEHA"
+    "003-a-04": {
+      "id": "o1w5FMjoQ9Y",
+      "url": "https://youtu.be/o1w5FMjoQ9Y"
     },
-    "001-b-08": {
-      "id": "woo-C7XsQWs",
-      "url": "https://youtu.be/woo-C7XsQWs"
+    "cd-00-d1-05": {
+      "id": "o1w5FMjoQ9Y",
+      "url": "https://youtu.be/o1w5FMjoQ9Y"
     },
-    "001-b-09": {
-      "id": "y_HodmY6UrQ",
-      "url": "https://youtu.be/y_HodmY6UrQ"
+    "004-a-02": {
+      "id": "mksuSaD6-SM",
+      "url": "https://youtu.be/mksuSaD6-SM"
     },
-    "002-a-08": {
-      "id": "c3mTvvMxP_I",
-      "url": "https://youtu.be/c3mTvvMxP_I"
+    "cd-00-d2-05": {
+      "id": "mksuSaD6-SM",
+      "url": "https://youtu.be/mksuSaD6-SM"
     },
-    "002-b-14": {
-      "id": "5FjzVGzyDzE",
-      "url": "https://youtu.be/5FjzVGzyDzE"
+    "004-b-07": {
+      "id": "1X-1b6u_Au4",
+      "url": "https://youtu.be/1X-1b6u_Au4"
     },
-    "003-b-01": {
-      "id": "A6B3JYZcfr4",
-      "url": "https://youtu.be/A6B3JYZcfr4"
+    "006-b-08": {
+      "id": "xHVpXZHupHA",
+      "url": "https://youtu.be/xHVpXZHupHA",
+      "note": "ご指定の通常版。原資料の曲名には「82」の表記があり、MIXの使用版との照合は継続。"
     },
-    "003-b-07": {
-      "id": "Z--L9meVdnk",
-      "url": "https://youtu.be/Z--L9meVdnk"
+    "cd-00-d1-21": {
+      "id": "JNbxvLowZD8",
+      "url": "https://youtu.be/JNbxvLowZD8",
+      "note": "ご指定のDisco版。"
     }
   }
 }

@@ -1,0 +1,10 @@
+<aside id="pc-player" class="pc-player" aria-label="音楽プレーヤー" data-expanded="true">
+ <div class="pc-panel-top"><a href="/player.html" class="eyebrow">THE LISTENING ROOM</a><button type="button" id="pc-fold" aria-label="プレーヤーを小さく表示" aria-expanded="true">−</button></div>
+ <div class="pc-stage"><div class="pc-art" aria-hidden="true"><div class="pc-record"><span>PREMIUM<br>CUTS</span></div></div><div class="pc-video"><div id="pc-yt"></div></div></div>
+ <div class="pc-now"><span class="eyebrow">NOW ON THE TURNTABLE</span><strong id="pc-title">曲を選んでください</strong><span id="pc-artist"></span><a id="pc-song-link" hidden>曲の解説を読む ↗</a></div>
+ <div class="pc-transport" role="group" aria-label="音楽の再生操作"><button type="button" id="pc-prev" aria-label="前の曲" title="前の曲">|◀</button><button type="button" id="pc-stop" aria-label="停止" title="停止">■</button><button type="button" id="pc-toggle" aria-label="再生" title="再生">▶</button><button type="button" id="pc-next" aria-label="次の曲" title="次の曲">▶|</button><button type="button" id="pc-full" aria-label="全画面プレーヤーを開く" title="全画面">⛶</button></div>
+ <div class="pc-progress"><span id="pc-elapsed">0:00</span><input type="range" id="pc-seek" min="0" max="100" value="0" aria-label="再生位置"><span id="pc-duration">—</span></div>
+ <div class="pc-options"><label><input type="checkbox" id="pc-auto" checked> 自動で次の曲へ</label><button type="button" id="pc-queue-open">曲順を見る ↗</button></div>
+ <p id="pc-status" role="status" aria-live="polite">再生する曲を選んでください。</p><a id="pc-youtube" target="_blank" rel="noopener noreferrer" hidden>YouTubeで開く ↗</a>
+ <div class="pc-full-tools" hidden><div role="group" aria-label="全画面の表示方法"><button type="button" data-pc-mode="video" aria-pressed="false">VIDEO</button><button type="button" data-pc-mode="art" aria-pressed="false">ART</button><button type="button" data-pc-mode="hybrid" aria-pressed="true">HYBRID</button></div><button type="button" id="pc-close-full">× 閉じる</button></div>
+</aside>
