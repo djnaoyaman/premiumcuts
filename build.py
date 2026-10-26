@@ -156,9 +156,15 @@ for v in cd_volumes:
  page+='</div><nav class="volume-pagination" aria-label="作品一覧"><a href="/#collection">← 作品一覧</a><a href="/tracks.html?volume='+vid+'">この作品の全曲を検索 →</a></nav></main>'+footer()+'</body></html>'
  (D/f'volumes/{vid}.html').write_text(page)
 # Source-backed editorial articles share explicit entry IDs; titles alone never merge recordings.
+def reference_player(t):
+ ref=articles.get(t['id'],{}).get('reference_audio')
+ if not ref:return ''
+ video_id=ref['url'].split('v=')[-1]
+ return f'''<section id="listen" class="song-editorial pc-listen-card reference-audio" aria-label="この曲を聴く"><div><span class="eyebrow">REFERENCE RECORDING</span><h2>この曲を聴く</h2><p>{e(t['artist'])} / {e(t['title'])}</p><p>指定の参考音源。動画の配信クレジット：{e(ref['artist'])} · {e(ref['credit'])}</p></div><div><button type="button" class="pc-play-button" data-reference-video="{e(video_id)}" data-reference-track="{e(t['id'])}" data-reference-title="{e(t['title'])}" data-reference-artist="{e(t['artist'])}">▶ この曲を聴く</button><p><a class="text-link" href="{e(ref['url'])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></div></section>'''
+
 def player(t):
  video=players.get(t['id'])
- if not video:return ''
+ if not video:return reference_player(t)
  return f'<section id="listen" class="song-editorial pc-listen-card" aria-label="この曲を聴く"><div><span class="eyebrow">ÉCOUTER CE MORCEAU</span><h2>この曲を聴く</h2><p>共通プレーヤーで再生。音楽を聴きながら、曲の背景を。</p><p>{e(video.get("note",""))}</p></div><div><button class="pc-play-button" type="button" data-play-id="{t["id"]}" data-play-scope="volume:{t["volume"]}">▶ この曲を聴く</button><p><a class="text-link" href="{e(video["url"])}" target="_blank" rel="noopener noreferrer">YouTubeで開く ↗</a></p></div></section>'
 def editorial(t):
  a=articles.get(t['id'])
@@ -169,9 +175,6 @@ def editorial(t):
  out+='</dl>'
  if a.get('note'):out+='<p class="research-note">'+e(a['note'])+'</p>'
  for heading,body,nums in a['sections']:out+='<section class="editorial-section"><h3>'+e(heading)+'</h3><p>'+e(body)+refs(nums)+'</p></section>'
- if a.get('reference_audio'):
-  ref=a['reference_audio']
-  out+='<section class="editorial-section reference-audio"><span class="eyebrow">REFERENCE RECORDING</span><h3>参考音源 — '+e(ref['artist'])+'</h3><p>'+e(ref['title'])+'</p><p>'+e(ref['credit'])+'</p><p>掲載演奏とは別の参考音源です。</p><a class="text-link" href="'+e(ref['url'])+'" target="_blank" rel="noopener noreferrer">参考音源をYouTubeで開く ↗</a></section>'
  out+='<p class="research-note">聴き方の提案は、この曲を楽しむための鑑賞ガイドです。</p><section class="editorial-section"><span class="eyebrow">ÉCOUTER ENCORE</span><h3>関連曲を、棚の中から。</h3><div class="related-cuts">'
  for tid,reason in a['related']:
   x=track_by_id[tid];out+=f'<a href="/tracks/{tid}.html"><strong>{e(x["title"])}</strong><span>{e(x["artist"])}</span><small>{e(reason)}</small><b aria-hidden="true">↗</b></a>'
@@ -192,7 +195,7 @@ for t in tracks:
  marker=f'<span class="mix-marker">{e(t["mix_marker"])}</span>' if t.get('mix_marker') else ''
  artist=f'<a class="artist-link" href="/tracks.html?artist={quote(t["artist"],safe="")}">{e(t["artist"])} <span>↗</span></a>' if not t['artist'].startswith('アーティスト未') else '<p class="artist-link">アーティスト未確認</p>'
  page=head(title+' — '+t['artist']+' | Premium Cuts Listed',t['artist']+'「'+title+'」。'+v['display_code']+' '+v['title']+'の収録曲。','/tracks/'+t['id']+'.html')+'<body id="top">'+header('tracks')+f'''<main id="main" class="wrap song-page"><div class="breadcrumb"><a href="/volumes/{t['volume']}.html">{v['display_code']} {e(v['title'])}</a> / {loc}</div><section class="song-hero"><div><span class="eyebrow">PREMIUM CUTS {v['display_code']} / {loc}</span><h1>{e(title)}</h1>{artist}{marker}{essential_badge(t)}</div><a class="song-cover" href="/volumes/{t['volume']}.html" aria-label="収録作品{e(v['title'])}へ">{pattern(v['pattern'])}<span>{v['display_code']} / {e(v['title'])} ↗</span></a></section><section class="song-info"><div><span class="eyebrow">DANS LA COLLECTION</span><h2>この曲の、<i>居場所。</i></h2></div><dl><div><dt>収録作品</dt><dd><a href="/volumes/{t['volume']}.html">Premium Cuts {v['display_code']}<br>{e(v['title'])} ↗</a></dd></div><div><dt>収録位置</dt><dd>{loc}</dd></div><div><dt>アーティスト</dt><dd>{e(t['artist'])}</dd></div></dl></section>'''
- if t['id'] in players:
+ if t['id'] in players or articles.get(t['id'],{}).get('reference_audio'):
   page=page.replace('<section class="song-info">',player(t)+'<section class="song-info">',1)
   page=page.replace(artist+marker+essential_badge(t)+'</div>',artist+marker+essential_badge(t)+'<p><a class="text-link" href="#listen">▶ この曲を聴く</a></p></div>',1)
  page+=editorial(t)
@@ -209,7 +212,7 @@ page=head('すべての曲 | Premium Cuts Listed',f'Premium Cutsの{N}曲目を�
 page=head('このサイトについて | Premium Cuts Listed','Premium Cuts ListedのPremium Cutsの音楽と収録作品について。','/about.html')+'<body id="top">'+header('about')+'''<main id="main" class="wrap about-page"><div class="eyebrow">À PROPOS DE CETTE COLLECTION</div><h1>好きな音楽を、<br><i>ゆっくり、深く。</i></h1><div class="about-body"><section><h2>Premium Cutsの収録曲を、たどる。</h2><p>Premium Cuts Listedは、Masanori Suzuki（鈴木雅尭）による「Premium Cuts」に収録された楽曲を紹介する、個人制作のアーカイブです。カセット7作品とMIX CD 15タイトルを、作品別・Side別・ディスク別の曲順で紹介しています。同じ番号でもカセットとMIX CDは別作品として掲載します。</p><p>サイトの構成はCRATE DIGGIN’を参考にしています。掲載対象を決めるのはPremium Cutsのトラックリストです。</p></section><section><h2>曲順と、短い合図も大切に。</h2><p>各作品のSide AとSide Bを、収録順にたどれます。intro、jingle、commercial、intermissionなどは曲間の区切りとして記載し、名前のある曲目の件数には含めていません。</p></section><section><h2>一曲の背景を、深く知る。</h2><p>制作年と発売年、アーティストの活動国と録音地、原曲とカバー。それぞれの違いを大切にしながら、音楽の背景を紹介します。</p></section><section><h2>一曲ずつ、育てる。</h2><p>まずは作品と曲の入口をつくりました。曲の背景、国やジャンルとのつながり、関連アーティスト、音源・動画は、資料を確かめながら少しずつ加えていきます。詳しい解説が加わっても、作品ごとの曲順からたどる入り口はそのままです。</p></section><section><h2>デザインについて。</h2><p>ブルーとクリーム色、紙の質感、リズムのある幾何学模様。フランスの音楽誌や小さなレコード店を思わせる棚を目指しました。各作品の模様は、このサイト独自のデザインです。</p></section><a class="round-link" href="/#collection">作品の棚へ戻る <span>↗</span></a></div></main>'''+footer()+'</body></html>';(D/'about.html').write_text(page)
 # Shared PLAYER page; the playback instance remains outside the replaced main content.
 playable_volumes=[v for v in volumes if any(t['volume']==v['id'] and t['id'] in players for t in tracks)]
-options='<option value="all">指定音源のあるすべての曲</option>'+''.join(f'<option value="volume:{v["id"]}">{e(v["display_code"])} {e(v["title"])}</option>' for v in playable_volumes)
+options='<option value="reference" hidden>参考音源（単独再生）</option><option value="all">指定音源のあるすべての曲</option>'+''.join(f'<option value="volume:{v["id"]}">{e(v["display_code"])} {e(v["title"])}</option>' for v in playable_volumes)
 page=head('PLAYER | Premium Cuts Listed','Premium Cutsの収録曲を作品の曲順で連続再生。音楽を聴きながら解説やトラックリストを読む。','/player.html')+'<body id="top">'+header('player')+'<main id="main" class="wrap pc-player-page"><span class="eyebrow">THE LISTENING ROOM</span><h1>Listen.<br><i>Dig a little deeper.</i></h1><p>音楽を聴きながら、レコードの背景へ。<br>指定音源のある曲を、作品ごとの曲順で。</p><button type="button" class="pc-play-button" data-play-all>▶ すべての曲を聴く</button><div class="pc-queue-tools"><label for="pc-scope">再生する曲順</label><select id="pc-scope">'+options+'</select><span id="pc-queue-count"></span><button type="button" id="pc-show-all">すべての音源を表示</button><button type="button" id="pc-refresh">最新の曲を確認</button><span id="pc-catalog-status" role="status" aria-live="polite"></span></div><ol id="pc-queue-list" class="pc-queue-list"></ol><noscript><p>連続再生にはJavaScriptを有効にしてください。各楽曲ページのYouTubeリンクからも聴けます。</p></noscript></main>'+footer()+'</body></html>'
 (D/'player.html').write_text(page)
 # Curated Essentials membership is explicit and independent of future player additions.

@@ -2,7 +2,7 @@
    Keep one YouTube instance and the selected queue alive while browsing. */
 (()=>{'use strict';
  const scriptURL=new URL(document.currentScript.src),base=new URL('.',scriptURL).pathname;
- let catalogVersion=scriptURL.searchParams.get('v')||'',catalogRequest=null,lastCatalogCheck=0,activeVideoId=null;
+ let catalogVersion=scriptURL.searchParams.get('v')||'',catalogRequest=null,lastCatalogCheck=0,activeVideoId=null,referenceTrack=null;
  const tracks=PREMIUM_AUDIO, byId=new Map(tracks.map(t=>[t.id,t]));
  const $=id=>document.getElementById(id),panel=$('pc-player');if(!panel)return;
  const title=$('pc-title'),artist=$('pc-artist'),status=$('pc-status'),toggle=$('pc-toggle'),seek=$('pc-seek');
@@ -15,15 +15,16 @@
  function clearWatch(){clearTimeout(watchdog);watchdog=null}
  function watch(){clearWatch();const serial=loadSerial;watchdog=setTimeout(()=>{if(serial!==loadSerial||!wantsPlay||playing)return;wantsPlay=false;yt?.pauseVideo?.();paint(false);setStatus('再生ボタンをもう一度押すか、YouTubeで開いてください。')},18000)}
  function matches(){const id=yt?.getVideoData?.()?.video_id;return !id||id===activeVideoId}
- function queueFor(value){return unique(value.startsWith('volume:')?tracks.filter(t=>t.volume===value.slice(7)):tracks)}
+ function queueFor(value){if(value==='reference')return referenceTrack?[referenceTrack.id]:[];return unique(value.startsWith('volume:')?tracks.filter(t=>t.volume===value.slice(7)):tracks)}
  function chooseScope(value){scope=value;queue=queueFor(value);renderQueue()}
  function load(id,play=false){const t=byId.get(id);if(!t)return;clearWatch();loadSerial++;reachedPlaying=false;current=id;activeVideoId=t.videoId;wantsPlay=play;paint(false);title.textContent=t.title;artist.textContent=t.artist;
-  const a=$('pc-song-link');a.hidden=false;a.textContent='曲の解説を読む ↗';a.href=base+'tracks/'+id+'.html';const link=$('pc-youtube');link.hidden=false;link.href=t.url;
+  const a=$('pc-song-link');a.hidden=false;a.textContent='曲の解説を読む ↗';a.href=base+'tracks/'+(t.pageId||id)+'.html';const link=$('pc-youtube');link.hidden=false;link.href=t.url;
   $('pc-elapsed').textContent='0:00';$('pc-duration').textContent='—';seek.value=0;seek.max=100;loading={id,play};
   if(ready){loading=null;if(play){setStatus('音源を読み込んでいます。');watch();yt.loadVideoById(t.videoId)}else{yt.cueVideoById(t.videoId);setStatus('再生ボタンで聴けます。')}}else setStatus('YouTubeの準備をしています。');
   renderQueue();document.querySelectorAll('[data-play-id]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.playId===id)));
  }
  function playId(id,value){if(!byId.has(id))return;if(value)chooseScope(value);if(!queue.includes(id)){scope='all';queue=unique(tracks);if(!queue.includes(id)){queue.unshift(id)}}expanded(true);load(id,true)}
+ function playReference(source){if(!source||!/^[a-zA-Z0-9_-]{11}$/.test(source.video)||!/^[a-zA-Z0-9_-]+$/.test(source.track))return;referenceTrack={id:'reference:'+source.track,pageId:source.track,videoId:source.video,title:source.title,artist:source.artist,url:'https://www.youtube.com/watch?v='+source.video};byId.set(referenceTrack.id,referenceTrack);scope='reference';queue=[referenceTrack.id];expanded(true);load(referenceTrack.id,true)}
  function advance(delta,automatic=false){if(!queue.length)return;const i=queue.indexOf(current);if(automatic&&i===queue.length-1){wantsPlay=false;reachedPlaying=false;paint(false);setStatus('この曲順の再生が終わりました。');return}const next=queue[(i<0?(delta>0?0:queue.length-1):(i+delta+queue.length)%queue.length)];load(next,automatic||wantsPlay||playing)}
  function playPause(){if(!current){const first=queue[0];if(first)load(first,true);return}if(wantsPlay||playing){wantsPlay=false;if(loading)loading.play=false;clearWatch();yt?.pauseVideo?.();paint(false);setStatus('一時停止中');return}wantsPlay=true;if(!ready){loading={id:current,play:true};setStatus('準備ができ次第、選んだ曲を再生します。');return}if(!matches()){load(current,true);return}setStatus('音源を読み込んでいます。');watch();yt.playVideo()}
  function stop(){wantsPlay=false;reachedPlaying=false;if(loading)loading.play=false;loadSerial++;clearWatch();yt?.stopVideo?.();paint(false);seek.value=0;$('pc-elapsed').textContent='0:00';setStatus('停止しました。')}
@@ -59,7 +60,7 @@
    if(data.version!==manifest.version||!Array.isArray(data.audio)||!Array.isArray(data.tracks)||!Array.isArray(data.volumes))throw Error('catalog format');
    if(!data.audio.every(t=>t&&typeof t.id==='string'&&/^[a-zA-Z0-9_-]{11}$/.test(t.videoId)&&typeof t.title==='string'&&typeof t.artist==='string'))throw Error('audio format');
    // Retain the active recording and the existing play order; append newly available cuts.
-   const oldOrder=queue.slice();tracks.splice(0,tracks.length,...data.audio);byId.clear();tracks.forEach(t=>byId.set(t.id,t));
+   const oldOrder=queue.slice();tracks.splice(0,tracks.length,...data.audio);byId.clear();tracks.forEach(t=>byId.set(t.id,t));if(referenceTrack)byId.set(referenceTrack.id,referenceTrack);
    if(typeof TRACKS!=='undefined')TRACKS.splice(0,TRACKS.length,...data.tracks);
    if(typeof VOLUMES!=='undefined')VOLUMES.splice(0,VOLUMES.length,...data.volumes);
    const available=queueFor(scope),availableSet=new Set(available),seenVideos=new Set();
@@ -75,10 +76,10 @@
    for(const selector of ['meta[name="description"]','link[rel="canonical"]','meta[property^="og:"]','meta[name^="twitter:"]']){document.head.querySelectorAll(selector).forEach(n=>n.remove());doc.head.querySelectorAll(selector).forEach(n=>document.head.append(n.cloneNode(true)))}
    if(push)history.pushState(null,'',url.pathname+url.search+url.hash);initPage();if(url.hash)document.getElementById(decodeURIComponent(url.hash.slice(1)))?.scrollIntoView();else window.scrollTo(0,0);
   }catch(_){if(serial===navigation)location.assign(url.href)}}
- document.addEventListener('click',async e=>{const b=e.target.closest('[data-play-id],[data-play-volume],[data-play-all]');if(b){e.preventDefault();if(b.dataset.playId&&!byId.has(b.dataset.playId))await refreshCatalog(true);if(b.hasAttribute('data-play-all')){chooseScope('all');load(queue[0],true)}else if(b.dataset.playVolume){chooseScope('volume:'+b.dataset.playVolume);if(queue.length)load(queue[0],true);else setStatus('この作品の音源は順次追加しています。')}else playId(b.dataset.playId,b.dataset.playScope||'volume:'+byId.get(b.dataset.playId)?.volume);return}
+ document.addEventListener('click',async e=>{const ref=e.target.closest('[data-reference-video]');if(ref){e.preventDefault();playReference({video:ref.dataset.referenceVideo,track:ref.dataset.referenceTrack,title:ref.dataset.referenceTitle,artist:ref.dataset.referenceArtist});return}const b=e.target.closest('[data-play-id],[data-play-volume],[data-play-all]');if(b){e.preventDefault();if(b.dataset.playId&&!byId.has(b.dataset.playId))await refreshCatalog(true);if(b.hasAttribute('data-play-all')){chooseScope('all');load(queue[0],true)}else if(b.dataset.playVolume){chooseScope('volume:'+b.dataset.playVolume);if(queue.length)load(queue[0],true);else setStatus('この作品の音源は順次追加しています。')}else playId(b.dataset.playId,b.dataset.playScope||'volume:'+byId.get(b.dataset.playId)?.volume);return}
   if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const a=e.target.closest('a[href]');if(!a||a.target||a.hasAttribute('download'))return;const u=new URL(a.href,location.href);if(u.origin!==location.origin||!u.pathname.startsWith(base)||u.pathname===location.pathname&&u.search===location.search||!(u.pathname.endsWith('.html')||u.pathname===base))return;e.preventDefault();navigate(u)
  });
  $('pc-queue-open').onclick=()=>navigate(new URL(base+'player.html',location.origin));addEventListener('popstate',()=>navigate(new URL(location.href),false));
- window.PremiumPlayer={play:playId,stop,chooseScope,refresh:refreshCatalog,getState:()=>({queue:queue.slice(),scope,current,playing,wantsPlay,ready,full})};
+ window.PremiumPlayer={play:playId,playReference,stop,chooseScope,refresh:refreshCatalog,getState:()=>({queue:queue.slice(),scope,current,playing,wantsPlay,ready,full})};
  expanded(location.pathname.endsWith('/player.html'));initPage();const initial=location.pathname.match(/\/tracks\/([^/]+)\.html$/)?.[1];if(byId.has(initial)){chooseScope('volume:'+byId.get(initial).volume);load(initial,false)}else if(queue.length)load(queue[0],false);startAPI();refreshCatalog();setInterval(()=>refreshCatalog(),60000);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshCatalog()});addEventListener('focus',()=>refreshCatalog());
 })();
