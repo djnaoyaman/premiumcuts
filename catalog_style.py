@@ -22,7 +22,8 @@ def title_style(s):
  return ' '.join(out)
 
 # IDs remain stable when a credited name or title is corrected.
-EDITS={'cd-05-d1-19': ('Nina Simone', "Ain't Got No, I Got Life (Groovefinder Remix)", ''),
+EDITS={'005-a-16': ('Dieter Reith Orchestra', 'Bitter Sweet Samba', ''),
+ 'cd-05-d1-19': ('Nina Simone', "Ain't Got No, I Got Life (Groovefinder Remix)", ''),
  '001-a-11': ('Julian Barey Orchestra', 'Chanson des jumelles (Version instrumentale)', ''),
  '002-a-05': ('Caterina Valente', 'Bala com Bala', ''),
  '002-a-10': ('Ethel Ennis', 'Who Will Buy?', ''),

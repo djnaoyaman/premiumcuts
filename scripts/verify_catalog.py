@@ -8,6 +8,8 @@ r['articles']+=json.loads((root/'editorial_updates.json').read_text())['articles
 byid={t['id']:t for t in c['tracks']}
 assert byid['001-a-11']['title']=='Chanson des jumelles (Version instrumentale)'
 assert byid['001-a-11']['artist']=='Julian Barey Orchestra'
+assert byid['005-a-16']['artist']=='Dieter Reith Orchestra'
+assert byid['005-a-16']['essentials'] and not byid['005-a-16']['remix']
 assert len(c['tracks'])==len(byid)==675
 assert (byid['cd-13-d1-01']['artist'],byid['cd-13-d1-01']['title'])==('Orchester Peter Jacques','Hamburgers')
 assert (byid['cd-13-d1-03']['artist'],byid['cd-13-d1-03']['title'])==('Nuovo Sistema','In qualche maniera')
@@ -33,14 +35,14 @@ for a in r['articles']:
  for i,_ in a['related']:assert i in byid,i
  for _,_,refs in a['sections']:assert all(1<=n<=len(a['sources']) for n in refs)
 players.update(json.loads((root/'audio_sources.json').read_text()))
-assert len({v['id'] for v in players.values()})==31
+assert len({v['id'] for v in players.values()})==33
 explicit_sources=json.loads((root/'audio_sources.json').read_text())
 assert all(i in articles or i in explicit_sources for i in players)
 assert all(i in byid for i in explicit_sources)
 for i in ('cd-01-d1-08','cd-05-d1-19'):
  assert byid[i]['remix'] and not byid[i]['essentials']
-assert '001-a-11' not in players, 'Reference recording must not enter the mix player'
-assert 'i5qBz24yrAU' not in {v['id'] for v in players.values()}
+assert players['001-a-11']['id']=='i5qBz24yrAU'
+assert byid['001-a-11']['artist']=='Julian Barey Orchestra'
 assert players['006-b-08']['id']=='xHVpXZHupHA'
 assert players['cd-00-d1-21']['id']=='JNbxvLowZD8'
 for t in byid.values():
@@ -50,4 +52,4 @@ for f in (root/'dist').rglob('*'):
  if f.suffix not in ('.html','.json','.js'):continue
  text=f.read_text()
  assert all(x.lower() not in text.lower() for x in ('listed.xlsx','DOCUMENT ORIGINAL','ご提供いただいた','source_row','source_name')),f
-print(f'PASS 675 entries; 24 recording articles; {len(articles)} article pages; independent versions; public output scan')
+print(f'PASS 675 entries; 25 selected recordings; {len(articles)} article pages; independent versions; public output scan')
