@@ -7,3 +7,10 @@
 @media(prefers-reduced-motion:reduce){.pc-record{animation:none!important}}
 
 .pc-queue-tools>button{background:transparent;border:1px solid var(--line);padding:10px 12px;font:inherit;font-size:11px}.pc-queue-tools>button:hover{background:var(--blue);color:var(--paper)}#pc-catalog-status{font-size:11px;flex-basis:100%;line-height:1.7}
+
+/* Comfortable touch controls without forcing the player beyond the viewport. */
+.pc-queue-tools{flex-wrap:wrap}.pc-queue-tools>*{min-width:0;max-width:100%}
+@media(max-width:600px){.pc-player:not(.pc-fullscreen){grid-template-columns:minmax(72px,25%) minmax(0,1fr);gap:8px;max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain}.pc-player[data-expanded=false]:not(.pc-fullscreen){grid-template-columns:80px minmax(0,1fr);padding:12px;gap:8px}.pc-player:not(.pc-fullscreen) .pc-transport button,.pc-player:not(.pc-fullscreen) .pc-transport #pc-toggle{width:44px;height:44px;flex-shrink:0}.pc-player:not(.pc-fullscreen) .pc-panel-top button{width:44px;height:44px}.pc-player .pc-now{min-width:0}.pc-player:not(.pc-fullscreen) .pc-now strong{font-size:17px}.pc-player:not(.pc-fullscreen) .pc-transport{gap:3px}.pc-player:not(.pc-fullscreen){bottom:max(10px,env(safe-area-inset-bottom))}.pc-queue-tools select,.pc-queue-tools>button,.pc-listen-card button{min-height:44px;font-size:16px}.pc-queue-tools select{width:100%}.pc-queue-list button{min-height:48px}.pc-fullscreen{height:100dvh;max-height:100dvh;overflow-y:auto}}
+@media(max-height:500px) and (orientation:landscape){.pc-player:not(.pc-fullscreen){max-height:calc(100dvh - 20px);overflow-y:auto}.pc-fullscreen .pc-stage{max-height:66dvh}}
+
+@media(max-width:600px){.pc-player[data-expanded=true]:not(.pc-fullscreen) .pc-stage{grid-row:2}.pc-player[data-expanded=true]:not(.pc-fullscreen) .pc-now{grid-column:2;grid-row:2}.pc-player[data-expanded=true]:not(.pc-fullscreen) .pc-transport{grid-column:1/-1}}

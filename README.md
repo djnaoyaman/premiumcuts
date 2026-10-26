@@ -65,3 +65,7 @@ Validation includes `python build.py`, `node scripts/verify_player.cjs` and `pyt
 ## Premium Cuts Essentials
 
 `features.json` fixes DJ Naoyaman’s selected 24 recordings as an editorial feature. `/features/essentials.html` lists one entry per recording, with play, essay and mix links. Home and navigation link to the feature; matching appearances carry the Essentials badge and can be filtered in the catalog. Future player additions do not automatically join the selection.
+
+## Explicit audio additions
+
+`audio_sources.json` stores later user-specified YouTube recordings by stable catalog track ID. The builder merges these after the researched sources and includes the file in the public catalog version, so open players can receive the additions. This does not change the fixed Essentials selection.

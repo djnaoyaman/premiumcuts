@@ -29,7 +29,8 @@ for a in r['articles']:
   for i in a['ids']:players[i]=a['youtube']
  for i,_ in a['related']:assert i in byid,i
  for _,_,refs in a['sections']:assert all(1<=n<=len(a['sources']) for n in refs)
-assert len({v['id'] for v in players.values()})==24
+players.update(json.loads((root/'audio_sources.json').read_text()))
+assert len({v['id'] for v in players.values()})==27
 assert all(i in articles for i in players)
 assert players['006-b-08']['id']=='xHVpXZHupHA'
 assert players['cd-00-d1-21']['id']=='JNbxvLowZD8'
