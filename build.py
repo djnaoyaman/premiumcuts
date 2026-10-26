@@ -59,6 +59,9 @@ volumes+=cd_volumes
 tracks+=cd_data['tracks']
 normalize_tracks(tracks)
 research=json.loads((P/'research.json').read_text())
+editorial_updates=json.loads((P/'editorial_updates.json').read_text())
+research['articles']+=editorial_updates['articles']
+research['updated']=max(research['updated'],editorial_updates['updated'])
 articles={tid:a for a in research['articles'] for tid in a['ids']}
 track_by_id={t['id']:t for t in tracks}
 players=dict(research.get('players',{}))
@@ -104,7 +107,7 @@ public_tracks=[{k:v for k,v in t.items() if k in {'id','volume','side','position
 def pattern(i,cls=''):
  return f'<div class="pattern bauhaus-art {cls}" data-art="{i}" aria-hidden="true">{record_art(i)}</div>'
 
-asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','src/app.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
+asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','editorial_updates.json','src/app.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
 # Public-only catalog snapshots let open players receive newly published sources.
 public_audio=[dict(id=t['id'],volume=t['volume'],title=t['title'],artist=t['artist'],videoId=players[t['id']]['id'],url=players[t['id']]['url']) for t in tracks if t['id'] in players]
 (D/'catalog-public.json').write_text(json.dumps(dict(version=asset_version,tracks=public_tracks,volumes=volumes,audio=public_audio),ensure_ascii=False))
@@ -166,6 +169,9 @@ def editorial(t):
  out+='</dl>'
  if a.get('note'):out+='<p class="research-note">'+e(a['note'])+'</p>'
  for heading,body,nums in a['sections']:out+='<section class="editorial-section"><h3>'+e(heading)+'</h3><p>'+e(body)+refs(nums)+'</p></section>'
+ if a.get('reference_audio'):
+  ref=a['reference_audio']
+  out+='<section class="editorial-section reference-audio"><span class="eyebrow">REFERENCE RECORDING</span><h3>参考音源 — '+e(ref['artist'])+'</h3><p>'+e(ref['title'])+'</p><p>'+e(ref['credit'])+'</p><p>掲載演奏とは別の参考音源です。</p><a class="text-link" href="'+e(ref['url'])+'" target="_blank" rel="noopener noreferrer">参考音源をYouTubeで開く ↗</a></section>'
  out+='<p class="research-note">聴き方の提案は、この曲を楽しむための鑑賞ガイドです。</p><section class="editorial-section"><span class="eyebrow">ÉCOUTER ENCORE</span><h3>関連曲を、棚の中から。</h3><div class="related-cuts">'
  for tid,reason in a['related']:
   x=track_by_id[tid];out+=f'<a href="/tracks/{tid}.html"><strong>{e(x["title"])}</strong><span>{e(x["artist"])}</span><small>{e(reason)}</small><b aria-hidden="true">↗</b></a>'

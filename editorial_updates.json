@@ -1,0 +1,79 @@
+{
+  "updated": "2026-10-26",
+  "articles": [
+    {
+      "ids": [
+        "001-a-11"
+      ],
+      "year": null,
+      "country": "フランス映画音楽の文脈（掲載演奏者の活動国は未確認）",
+      "press_country": "掲載演奏の原盤は未確認",
+      "genre": "映画音楽 / オーケストラ・ポップ",
+      "release": "参考音源：Les demoiselles de Rochefort — Michel Legrand",
+      "catch": "双子の歌を、オーケストラの輪郭で。",
+      "intro": "「Les Demoiselles de Rochefort（ロシュフォールの恋人たち）」という映画の名から、一曲の旋律へ。このページでたどるのは「Chanson des jumelles（双子の歌）」の器楽版。MIXのJulian Barey Orchestra名義を残しながら、映画のサウンドトラックへも耳を伸ばす。",
+      "sections": [
+        [
+          "映画の名から、一曲の名へ",
+          "従来の掲載曲名は「Les Demoiselles de Rochefort」。これはJacques Demyの映画名で、Ciné-Tamarisはフランスでの公開日を1967年3月8日と記録する。音楽を担当したのはMichel Legrand。「Chanson des jumelles」と曲を特定すると、映画全体のイメージから、その中の一つのメロディーへと聴く焦点が定まる。",
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "声がなくても、歌のかたちは残る",
+          "「Chanson des jumelles」は歌の題名だが、器楽版も存在する。フランス教育省の資料も歌唱版とinstrumentalを分けて掲載している。言葉の代わりに旋律を運ぶ楽器へ注意を向ければ、歌の区切りやフレーズの受け渡しを別の角度から楽しめる。歌詞を追う聴き方から、音の輪郭を追う聴き方へ。",
+          [
+            2
+          ]
+        ],
+        [
+          "参考音源と、棚に残す演奏者名",
+          "参考動画はMichel Legrand名義の「Chanson des jumelles (Version instrumentale)」。配信表示には映画のサウンドトラック名と「℗ 1967 Warner Chappell Music France」がある。一方、このMIXの掲載名義はJulian Barey Orchestra。作曲者が同じ曲でも演奏や録音まで同じとは限らないため、参考動画を掲載演奏そのものとして結びつけず、旋律をたどるための別音源として紹介する。",
+          [
+            3
+          ]
+        ]
+      ],
+      "sources": [
+        {
+          "label": "Ciné-Tamaris — Les Demoiselles de Rochefort",
+          "url": "https://cine-tamaris.fr/jacques-demy/les-demoiselles-de-rochefort-1966/",
+          "note": "映画の公式紹介。Jacques Demy、Michel Legrand、フランス公開日。"
+        },
+        {
+          "label": "Éduscol — Nous sommes deux sœurs jumelles",
+          "url": "https://eduscol.education.gouv.fr/chansonsquifontlhistoire/Nous-sommes-deux-soeurs-jumelles.html",
+          "note": "フランス教育省の資料。Chanson des jumellesと器楽版を別に掲載。資料の年を掲載演奏の発売年には流用しない。"
+        },
+        {
+          "label": "Michel Legrand — Chanson des jumelles（参考音源）",
+          "url": "https://www.youtube.com/watch?v=i5qBz24yrAU",
+          "note": "Version instrumentale。Julian Barey Orchestraの演奏との同一性を示すものではない。"
+        }
+      ],
+      "related": [
+        [
+          "005-a-08",
+          "Louis Corchiaによる同じ映画の題名を持つ一曲へ。"
+        ],
+        [
+          "cd-00-d2-16",
+          "Jullien Ballay et son orchestre名義の同映画曲へ。"
+        ],
+        [
+          "cd-10-d1-15",
+          "由紀さおりと安田祥子が歌う「ふたごの歌」へ。"
+        ]
+      ],
+      "note": "旧掲載名：Les Demoiselles de Rochefort / Julian Barey Orchestra。掲載名義は維持。発売年・録音年・原盤は未確認。参考動画の℗1967はMichel Legrand音源の表示で、Julian Barey Orchestraの演奏の発売年を示すものではありません。",
+      "reference_audio": {
+        "title": "Chanson des jumelles (Version instrumentale)",
+        "artist": "Michel Legrand",
+        "url": "https://www.youtube.com/watch?v=i5qBz24yrAU",
+        "credit": "℗ 1967 Warner Chappell Music France"
+      }
+    }
+  ]
+}

@@ -22,7 +22,8 @@ def title_style(s):
  return ' '.join(out)
 
 # IDs remain stable when a credited name or title is corrected.
-EDITS={'002-a-05': ('Caterina Valente', 'Bala com Bala', ''),
+EDITS={'001-a-11': ('Julian Barey Orchestra', 'Chanson des jumelles (Version instrumentale)', ''),
+ '002-a-05': ('Caterina Valente', 'Bala com Bala', ''),
  '002-a-10': ('Ethel Ennis', 'Who Will Buy?', ''),
  '002-a-15': ('The Renaissance', 'Walk on By', ''),
  '002-b-03': ('Ornella Vanoni', 'Samba della rosa', ''),

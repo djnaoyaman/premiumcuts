@@ -4,7 +4,10 @@ from datetime import date
 import json,re
 root=Path(__file__).resolve().parents[1]
 c=json.loads((root/'catalog.json').read_text());r=json.loads((root/'research.json').read_text())
+r['articles']+=json.loads((root/'editorial_updates.json').read_text())['articles']
 byid={t['id']:t for t in c['tracks']}
+assert byid['001-a-11']['title']=='Chanson des jumelles (Version instrumentale)'
+assert byid['001-a-11']['artist']=='Julian Barey Orchestra'
 assert len(c['tracks'])==len(byid)==675
 assert (byid['cd-13-d1-01']['artist'],byid['cd-13-d1-01']['title'])==('Orchester Peter Jacques','Hamburgers')
 assert (byid['cd-13-d1-03']['artist'],byid['cd-13-d1-03']['title'])==('Nuovo Sistema','In qualche maniera')
@@ -32,6 +35,8 @@ for a in r['articles']:
 players.update(json.loads((root/'audio_sources.json').read_text()))
 assert len({v['id'] for v in players.values()})==27
 assert all(i in articles for i in players)
+assert '001-a-11' not in players, 'Reference recording must not enter the mix player'
+assert 'i5qBz24yrAU' not in {v['id'] for v in players.values()}
 assert players['006-b-08']['id']=='xHVpXZHupHA'
 assert players['cd-00-d1-21']['id']=='JNbxvLowZD8'
 for t in byid.values():

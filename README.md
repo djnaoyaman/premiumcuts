@@ -69,3 +69,5 @@ Validation includes `python build.py`, `node scripts/verify_player.cjs` and `pyt
 ## Explicit audio additions
 
 `audio_sources.json` stores later user-specified YouTube recordings by stable catalog track ID. The builder merges these after the researched sources and includes the file in the public catalog version, so open players can receive the additions. This does not change the fixed Essentials selection.
+
+`editorial_updates.json` adds later source-backed notes without replacing the larger research archive. Reference recordings are rendered as explicit external links and never added to the mix playback queue.
