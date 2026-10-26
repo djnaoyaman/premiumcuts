@@ -53,7 +53,7 @@ Name corrections were checked against the published Premium Cuts #09 and #13 tra
 
 Source-backed editorial coverage is now 477 distinct articles across 515 catalog appearances. The current research pass covered all 675 entries; 160 appearances remain unresolved pending recording, performer or source confirmation. Each new article includes its own headline, introduction, three detailed sections, internal related-track links and a bibliography.
 
-All 25 selected recordings have editorial pages. The Berry Lipman normal and Disco recordings remain separate; their exact first issues and the Joe Pugliese cover release year remain unconfirmed. Dates are earliest verified releases for the relevant recording, never automatically composition, recording or remaster dates.
+All 26 selected recordings have editorial pages. The Berry Lipman normal and Disco recordings remain separate; their exact first issues and the Joe Pugliese cover release year remain unconfirmed. Dates are earliest verified releases for the relevant recording, never automatically composition, recording or remaster dates.
 
 Validation includes `python build.py`, `node scripts/verify_player.cjs` and `python scripts/verify_catalog.py`.
 
@@ -74,4 +74,4 @@ Validation includes `python build.py`, `node scripts/verify_player.cjs` and `pyt
 
 The Remix category is an explicit selection in features.json, separate from Essentials. It is visible through badges and the catalog feature filter. Adding a playable remix does not add it to the Essentials selection.
 
-Explicit catalog audio sources take priority over reference-only links and are included in normal work and all-track queues. The nine recordings supplied in this editing session are pinned by track ID and YouTube ID in the player regression checks. Core navigation, source-backed track pages and the persistent YouTube player follow SUBURBIA CLASSICA and CRATE DIGGIN; About links to both related sites.
+Explicit catalog audio sources take priority over reference-only links and are included in normal work and all-track queues. The ten recordings supplied in this editing session are pinned by track ID and YouTube ID in the player regression checks. Core navigation, source-backed track pages and the persistent YouTube player follow SUBURBIA CLASSICA and CRATE DIGGIN; About links to both related sites.

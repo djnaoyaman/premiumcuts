@@ -35,7 +35,7 @@ for a in r['articles']:
  for i,_ in a['related']:assert i in byid,i
  for _,_,refs in a['sections']:assert all(1<=n<=len(a['sources']) for n in refs)
 players.update(json.loads((root/'audio_sources.json').read_text()))
-assert len({v['id'] for v in players.values()})==33
+assert len({v['id'] for v in players.values()})==34
 explicit_sources=json.loads((root/'audio_sources.json').read_text())
 assert all(i in articles or i in explicit_sources for i in players)
 assert all(i in byid for i in explicit_sources)
@@ -52,4 +52,4 @@ for f in (root/'dist').rglob('*'):
  if f.suffix not in ('.html','.json','.js'):continue
  text=f.read_text()
  assert all(x.lower() not in text.lower() for x in ('listed.xlsx','DOCUMENT ORIGINAL','ご提供いただいた','source_row','source_name')),f
-print(f'PASS 675 entries; 25 selected recordings; {len(articles)} article pages; independent versions; public output scan')
+print(f'PASS 675 entries; 26 selected recordings; {len(articles)} article pages; independent versions; public output scan')
