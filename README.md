@@ -71,3 +71,5 @@ Validation includes `python build.py`, `node scripts/verify_player.cjs` and `pyt
 `audio_sources.json` stores later user-specified YouTube recordings by stable catalog track ID. The builder merges these after the researched sources and includes the file in the public catalog version, so open players can receive the additions. This does not change the fixed Essentials selection.
 
 `editorial_updates.json` adds later source-backed notes without replacing the larger research archive. Reference recordings can be played individually through the same YouTube instance with the catalog performer credit and an explicit source-credit note, and never join the mix playback queues.
+
+The Remix category is an explicit selection in features.json, separate from Essentials. It is visible through badges and the catalog feature filter. Adding a playable remix does not add it to the Essentials selection.
