@@ -54,3 +54,7 @@
 .essential-list{list-style:none;padding:0;margin:0}.essential-cut{display:grid;grid-template-columns:42px minmax(0,1fr) 42px 60px;align-items:center;gap:24px;padding:25px 0;border-bottom:1px solid var(--line)}
 .essential-number{font:24px var(--serif)}.essential-song{display:flex;flex-direction:column;gap:9px}.essential-song strong{font:26px/1.25 var(--serif);overflow-wrap:anywhere}.essential-song span{font-size:14px}.essential-origin{display:inline-block;font-size:11px;margin-top:13px;opacity:.8}.essential-cut .text-link{font-size:12px}
 @media(max-width:700px){.essentials-teaser,.essentials-heading{grid-template-columns:minmax(0,1fr);gap:26px;padding-block:35px}.essentials-symbol{max-width:430px;width:100%}.essentials-heading h1{font-size:clamp(42px,11vw,70px)}.essential-cut{grid-template-columns:24px minmax(0,1fr) 32px;gap:12px;padding-block:20px}.essential-cut>.text-link{grid-column:2}.essential-song strong{font-size:22px}.essential-song span{font-size:13px}.essential-number{font-size:18px}.catalog-row>.essential-badge,.track-row>.essential-badge{font-size:7px;padding:4px;letter-spacing:0}.catalog-row{flex-wrap:wrap}.catalog-row>.catalog-title{flex-basis:55%}.catalog-row>.essential-badge{margin-left:auto}header nav{flex-wrap:wrap;gap:10px 16px}}
+
+/* All sleeves share square framing; keep geometry and captions uncropped. */
+.pattern.bauhaus-art{color:#073da8;background:#f4efe5;aspect-ratio:1}
+.volume-card .bauhaus-art{border:0}

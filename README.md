@@ -60,7 +60,7 @@ Validation includes `python build.py`, `node scripts/verify_player.cjs` and `pyt
 
 ## Record-shelf artwork
 
-`artwork.py` generates 22 distinct original SVG compositions using circles, semicircles, triangles, rectangles and lines in the established blue/cream palette. Each work has a stable design across its card, volume page and track pages. The mobile album-link grids use one column at widths up to 700px; desktop/tablet grids retain their broader layouts.
+`artwork.py` supplies 23 original square SVG sleeves: seven tapes, fifteen mix CDs, and a dedicated Essentials feature. All use cobalt blue (#073DA8), warm ivory (#F4EFE5), consistent margins and sleeve typography. Flowing bands, quarter-circle modules, fine-line arcs, nested frames and negative-space patterns provide varied compositions across the series. Stable data-art IDs keep each cover identical on the home shelf, volume pages and track pages. The responsive cover containers stay square so the art is never cropped; the existing single-column mobile shelf and broader desktop/tablet layouts are preserved.
 
 ## Premium Cuts Essentials
 
