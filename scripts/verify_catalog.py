@@ -52,4 +52,4 @@ for f in (root/'dist').rglob('*'):
  if f.suffix not in ('.html','.json','.js'):continue
  text=f.read_text()
  assert all(x.lower() not in text.lower() for x in ('listed.xlsx','DOCUMENT ORIGINAL','ご提供いただいた','source_row','source_name')),f
-print(f'PASS 675 entries; 26 selected recordings; {len(articles)} article pages; independent versions; public output scan')
+print(f'PASS 675 entries; 32 selected recordings; {len(articles)} article pages; independent versions; public output scan')

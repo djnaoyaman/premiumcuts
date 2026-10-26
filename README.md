@@ -53,7 +53,7 @@ Name corrections were checked against the published Premium Cuts #09 and #13 tra
 
 Source-backed editorial coverage is now 477 distinct articles across 515 catalog appearances. The current research pass covered all 675 entries; 160 appearances remain unresolved pending recording, performer or source confirmation. Each new article includes its own headline, introduction, three detailed sections, internal related-track links and a bibliography.
 
-All 26 selected recordings have editorial pages. The Berry Lipman normal and Disco recordings remain separate; their exact first issues and the Joe Pugliese cover release year remain unconfirmed. Dates are earliest verified releases for the relevant recording, never automatically composition, recording or remaster dates.
+All 32 selected recordings have editorial pages. The Berry Lipman normal and Disco recordings remain separate; their exact first issues and the Joe Pugliese cover release year remain unconfirmed. Dates are earliest verified releases for the relevant recording, never automatically composition, recording or remaster dates.
 
 Validation includes `python build.py`, `node scripts/verify_player.cjs` and `python scripts/verify_catalog.py`.
 
