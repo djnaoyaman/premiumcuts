@@ -33,7 +33,7 @@ for a in r['articles']:
  for i,_ in a['related']:assert i in byid,i
  for _,_,refs in a['sections']:assert all(1<=n<=len(a['sources']) for n in refs)
 players.update(json.loads((root/'audio_sources.json').read_text()))
-assert len({v['id'] for v in players.values()})==27
+assert len({v['id'] for v in players.values()})==29
 assert all(i in articles for i in players)
 assert '001-a-11' not in players, 'Reference recording must not enter the mix player'
 assert 'i5qBz24yrAU' not in {v['id'] for v in players.values()}
