@@ -1,7 +1,8 @@
 """Verify generated About-only poster gallery and its image assets."""
 from pathlib import Path
 from html.parser import HTMLParser
-import ast
+import ast, hashlib
+from urllib.parse import urlsplit, parse_qs
 from PIL import Image
 
 root = Path(__file__).resolve().parents[1]
@@ -32,13 +33,16 @@ sequence = [entry[0] for entry in manifest]
 assert len(set(sequence)) == len(sequence)
 for number, image in zip(sequence, posters):
     name = f'about-poster-{number}.webp'
-    assert image['src'].endswith('/assets/'+name)
+    assert urlsplit(image['src']).path.endswith('/assets/'+name)
     assert image.get('loading') == 'lazy' and image.get('decoding') == 'async'
     assert image.get('alt')
-    links = [a for t,a in tags if t == 'a' and a.get('href', '').endswith('/assets/'+name)]
+    links = [a for t,a in tags if t == 'a' and urlsplit(a.get('href', '')).path.endswith('/assets/'+name)]
     assert len(links) == 1 and links[0].get('target') == '_blank'
     assert 'noopener' in links[0].get('rel', '')
     asset = root/'dist/assets'/name
+    digest = hashlib.sha256(asset.read_bytes()).hexdigest()[:12]
+    assert parse_qs(urlsplit(image['src']).query) == {'v': [digest]}
+    assert links[0]['href'] == image['src']
     with Image.open(asset) as im:
         assert im.format == 'WEBP'
         assert (int(image['width']), int(image['height'])) == im.size

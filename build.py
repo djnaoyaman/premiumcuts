@@ -29,6 +29,8 @@ about_posters = [
  ('14', 'NAOYA', '通路に立つNAOYAを青い幾何学模様と組み合わせた正方形のアート'),
  ('09', 'SAYA', '建物を望む窓辺のSAYAを落ち着いた色調で描いたポスター'),
  ('03', 'SAYA', 'SAYAの肖像にコバルトブルーの筆文字を重ねたクリーム色のポスター'),
+ ('15', 'SUI', '海辺のSUIを青い文字とクリーム色の余白で構成した正方形のアート'),
+ ('16', 'SUI', 'SUIの表情を朱色の文字と筆跡で描いた正方形のアート'),
 ]
 # Only the generated poster derivatives are published; originals stay private.
 for poster, _, _ in about_posters:
@@ -242,7 +244,8 @@ poster_gallery = f'<section class="about-gallery" aria-labelledby="about-gallery
 for display_number, (number, caption, alt) in enumerate(about_posters, 1):
  with Image.open(P/f'src/assets/about-poster-{number}.webp') as poster_image:
   poster_width, poster_height = poster_image.size
- poster_gallery += f'<figure class="about-poster"><a href="/assets/about-poster-{number}.webp" target="_blank" rel="noopener noreferrer" aria-label="{display_number:02} / {e(caption)}のポスターを大きく開く（新しいタブ）"><img src="/assets/about-poster-{number}.webp" alt="{e(alt)}" width="{poster_width}" height="{poster_height}" loading="lazy" decoding="async"></a><figcaption><span>{display_number:02} / {e(caption)}</span><span aria-hidden="true">↗</span></figcaption></figure>'
+ poster_hash = hashlib.sha256((P/f'src/assets/about-poster-{number}.webp').read_bytes()).hexdigest()[:12]
+ poster_gallery += f'<figure class="about-poster"><a href="/assets/about-poster-{number}.webp?v={poster_hash}" target="_blank" rel="noopener noreferrer" aria-label="{display_number:02} / {e(caption)}のポスターを大きく開く（新しいタブ）"><img src="/assets/about-poster-{number}.webp?v={poster_hash}" alt="{e(alt)}" width="{poster_width}" height="{poster_height}" loading="lazy" decoding="async"></a><figcaption><span>{display_number:02} / {e(caption)}</span><span aria-hidden="true">↗</span></figcaption></figure>'
 poster_gallery += '</div><div class="about-gallery-coda" lang="en"><p>Saya studied abroad in Limoges, France.<br>NAOYA was posted to NY.<br>NAOYA travels around the world.</p><p>NAOYA is a DJ.<br>Expanded from Hip-Hop DJ to all genres.<br>Influenced by Saya.</p></div></section>'
 page=head('このサイトについて | Premium Cuts Listed','Premium Cuts ListedのPremium Cutsの音楽と収録作品について。','/about.html')+'<body id="top">'+header('about')+'''<main id="main" class="wrap about-page"><div class="eyebrow">À PROPOS DE CETTE COLLECTION</div><h1>あの時代、妻と聴いた曲。</h1><div class="about-body"><section><h2>Premium Cutsの収録曲を、たどる。</h2><p>Premium Cuts Listedは、Masanori Suzuki（鈴木雅尭）による「Premium Cuts」に収録された楽曲を紹介する、個人制作のアーカイブです。カセット7作品とMIX CD 15タイトルを、作品別・Side別・ディスク別の曲順で紹介しています。同じ番号でもカセットとMIX CDは別作品として掲載します。</p><p>サイトの構成は、<a class="text-link" href="https://djnaoyaman.github.io/suburbia-classica/" target="_blank" rel="noopener noreferrer">SUBURBIA CLASSICA ↗</a> と <a class="text-link" href="https://djnaoyaman.github.io/cratediggin/" target="_blank" rel="noopener noreferrer">CRATE DIGGIN’ ↗</a> の仕様を引き継いでいます。掲載対象を決めるのはPremium Cutsのトラックリストです。</p></section><section><h2>曲順と、短い合図も大切に。</h2><p>各作品のSide AとSide Bを、収録順にたどれます。intro、jingle、commercial、intermissionなどは曲間の区切りとして記載し、名前のある曲目の件数には含めていません。</p></section><section><h2>一曲の背景を、深く知る。</h2><p>制作年と発売年、アーティストの活動国と録音地、原曲とカバー。それぞれの違いを大切にしながら、音楽の背景を紹介します。</p></section><section><h2>一曲ずつ、育てる。</h2><p>まずは作品と曲の入口をつくりました。曲の背景、国やジャンルとのつながり、関連アーティスト、音源・動画は、資料を確かめながら少しずつ加えていきます。詳しい解説が加わっても、作品ごとの曲順からたどる入り口はそのままです。</p></section><section><h2>デザインについて。</h2><p>ブルーとクリーム色、紙の質感、リズムのある幾何学模様。<br>大好きなフランスの音楽誌や小さなレコード店を思わせる棚のイメージの再現を目指しました。<br>各作品の模様は、このサイト独自にデザインしたものです。</p></section></div>'''+poster_gallery+'''<div class="about-gallery-return"><a class="round-link" href="/#collection">作品の棚へ戻る <span>↗</span></a></div></main>'''+footer()+'</body></html>';(D/'about.html').write_text(page)
 # Shared PLAYER page; the playback instance remains outside the replaced main content.
