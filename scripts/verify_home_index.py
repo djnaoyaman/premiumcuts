@@ -33,3 +33,7 @@ css=(p/'src/style.css').read_text()
 assert '.essentials-teaser{background:#f08080;color:#10394a;' in css
 assert 'text-align:right;justify-items:end' in css
 assert '.essentials-teaser a:focus-visible{outline-color:currentColor}' in css
+
+assert "background:var(--blue);color:var(--paper);min-height:300px" in css
+assert ".songs-index>strong{font:500 21px/1.65 var(--sans)" in css
+assert "class=\"index-card songs-index\"" in home
