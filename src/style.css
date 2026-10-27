@@ -113,12 +113,16 @@
 
 /* Generated personal posters belong to the About page only. */
 .about-gallery{max-width:1120px;margin:58px auto 36px;padding-top:28px;border-top:1px solid var(--line)}
-.about-gallery-heading{margin-bottom:26px}
+.about-gallery-heading{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:26px}
 .about-gallery-heading h2{font:400 clamp(32px,4vw,52px)/1.1 var(--serif);letter-spacing:-1px;margin:10px 0 0}
+.about-gallery-names{font:500 11px/1.6 var(--sans);letter-spacing:2px;margin:12px 0 0}
+.about-gallery-story{font:400 13px/1.85 var(--sans);margin:0}
 .about-poster-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 32px}
 .about-poster{min-width:0;margin:0}
 .about-poster>a{display:block}
-.about-poster img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}
+.about-poster img{display:block;width:100%;height:auto}
 .about-poster figcaption{display:flex;justify-content:space-between;gap:14px;margin-top:12px;font:500 11px/1.6 var(--sans);letter-spacing:.6px}
+.about-gallery-coda{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;margin-top:28px}
+.about-gallery-coda p{font:400 13px/1.85 var(--sans);margin:0}
 .about-gallery-return{max-width:740px;margin:0 auto}
-@media(max-width:700px){.about-gallery{margin:38px auto 28px;padding-top:24px}.about-poster-grid{grid-template-columns:1fr;gap:30px}.about-gallery-heading{margin-bottom:22px}}
+@media(max-width:700px){.about-gallery{margin:38px auto 28px;padding-top:24px}.about-poster-grid{gap:24px 12px}.about-poster figcaption{font-size:10px;letter-spacing:0;gap:6px}.about-gallery-heading{display:block;margin-bottom:22px}.about-gallery-story{font-size:12px;margin-top:20px}.about-gallery-coda{grid-template-columns:1fr;gap:12px}.about-gallery-coda p{font-size:12px}}
