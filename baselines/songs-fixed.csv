@@ -1,0 +1,676 @@
+﻿order,id,work_id,work_title,format,side,position,artist,title,source
+1,001-a-01,001,ON THE AIR,tape,A,1,April Set,Blue Code 2969 ～静かの海でふたりでお茶を～,selection.tsv
+2,001-a-02,001,ON THE AIR,tape,A,2,The Creatures,Right Now,selection.tsv
+3,001-a-03,001,ON THE AIR,tape,A,3,Gérard Baqué,Tant de nuits (Bitter Sweet Samba),selection.tsv
+4,001-a-04,001,ON THE AIR,tape,A,4,Lucifer and Co.,Eden,selection.tsv
+5,001-a-05,001,ON THE AIR,tape,A,5,Nico Gomez,Meu Pião,selection.tsv
+6,001-a-06,001,ON THE AIR,tape,A,6,The G/9 Group,Let Me (Deixa),selection.tsv
+7,001-a-07,001,ON THE AIR,tape,A,7,Ana Maria e Maurício,Figa de Guiné,selection.tsv
+8,001-a-08,001,ON THE AIR,tape,A,8,Os Novos Baianos,De Vera (vocal),selection.tsv
+9,001-a-09,001,ON THE AIR,tape,A,9,Chico Arnez & His Cubana Brass,Eso Beso,selection.tsv
+10,001-a-10,001,ON THE AIR,tape,A,10,Karen Wyman,Night and Day,selection.tsv
+11,001-a-11,001,ON THE AIR,tape,A,11,Julian Barey Orchestra,Chanson des jumelles (Version instrumentale),selection.tsv
+12,001-a-12,001,ON THE AIR,tape,A,12,"Stan Butcher, His Birds & Brass",Heigh-Ho,selection.tsv
+13,001-a-13,001,ON THE AIR,tape,A,13,Wilma Goich,"Baci, baci, baci",selection.tsv
+14,001-a-14,001,ON THE AIR,tape,A,14,The Leading Figures,Tuxedo Junction,selection.tsv
+15,001-a-15,001,ON THE AIR,tape,A,15,The Lipstics,Bim Ba Ba Bi Baaa,selection.tsv
+16,001-a-16,001,ON THE AIR,tape,A,16,Jean DuShon,Feeling Good,selection.tsv
+17,001-a-17,001,ON THE AIR,tape,A,17,Jean Sullivan,I Saw the Light,selection.tsv
+18,001-b-01,001,ON THE AIR,tape,B,1,Kitty Winter Gipsy Nova,Different Ways,selection.tsv
+19,001-b-02,001,ON THE AIR,tape,B,2,The Jumping Jacques,Gossip and Chatter,selection.tsv
+20,001-b-03,001,ON THE AIR,tape,B,3,Jack Jones,I Must Know,selection.tsv
+21,001-b-04,001,ON THE AIR,tape,B,4,Via Szbaba,Razom,selection.tsv
+22,001-b-05,001,ON THE AIR,tape,B,5,Jair Rodrigues,Deixa isso pra lá,selection.tsv
+23,001-b-06,001,ON THE AIR,tape,B,6,Brazilian Singers,Por Esse Mundo Afora,selection.tsv
+24,001-b-07,001,ON THE AIR,tape,B,7,Caterina Valente,Saudades da Bahia (Baion),selection.tsv
+25,001-b-08,001,ON THE AIR,tape,B,8,The Brady Bunch,Love Me Do,selection.tsv
+26,001-b-09,001,ON THE AIR,tape,B,9,Evinha (Eva),Moon River,selection.tsv
+27,001-b-10,001,ON THE AIR,tape,B,10,Jula De Palma,"Oh, Alfredo",selection.tsv
+28,001-b-11,001,ON THE AIR,tape,B,11,Dalida,Rio do Brasil,selection.tsv
+29,001-b-12,001,ON THE AIR,tape,B,12,Anita Strandell,Va’ är de’ här för nå’t (Here We Are Falling in Love Again),selection.tsv
+30,001-b-13,001,ON THE AIR,tape,B,13,Prini Lorez,Boogaloo,selection.tsv
+31,001-b-14,001,ON THE AIR,tape,B,14,Doris Svensson,Du som bara har sett vårar,selection.tsv
+32,001-b-15,001,ON THE AIR,tape,B,15,Freddy Cole,Tristeza,selection.tsv
+33,002-a-01,002,SINCERELY,tape,A,1,The Peddlers,Irresistible You,selection.tsv
+34,002-a-02,002,SINCERELY,tape,A,2,Dorothy Ellison,Hit the Road Jack,selection.tsv
+35,002-a-03,002,SINCERELY,tape,A,3,Della Reese,Blue Skies,selection.tsv
+36,002-a-04,002,SINCERELY,tape,A,4,April Set,Bossa Presso,selection.tsv
+37,002-a-05,002,SINCERELY,tape,A,5,Caterina Valente,Bala com Bala,selection.tsv
+38,002-a-06,002,SINCERELY,tape,A,6,The Roger Webb Sound,Dazzle,selection.tsv
+39,002-a-07,002,SINCERELY,tape,A,7,The Young Generation,Pretty,selection.tsv
+40,002-a-08,002,SINCERELY,tape,A,8,Paul Mauriat,La fête,selection.tsv
+41,002-a-09,002,SINCERELY,tape,A,9,John Schroeder,Paramaribo,selection.tsv
+42,002-a-10,002,SINCERELY,tape,A,10,Ethel Ennis,Who Will Buy?,selection.tsv
+43,002-a-11,002,SINCERELY,tape,A,11,Marie Myriam,La Chanson de Julie,selection.tsv
+44,002-a-12,002,SINCERELY,tape,A,12,Birgit Lystager,Christina (Tristeza),selection.tsv
+45,002-a-13,002,SINCERELY,tape,A,13,Augusto Martelli,Summertime,selection.tsv
+46,002-a-14,002,SINCERELY,tape,A,14,Pery Ribeiro,Só Quero,selection.tsv
+47,002-a-15,002,SINCERELY,tape,A,15,The Renaissance,Walk on by,selection.tsv
+48,002-a-16,002,SINCERELY,tape,A,16,Jean Leccia,Les Cerfs-volants,selection.tsv
+49,002-b-01,002,SINCERELY,tape,B,1,Reg Wilson,The Windmills of Your Mind,selection.tsv
+50,002-b-02,002,SINCERELY,tape,B,2,Miguel Angel,Deixa isso pra lá,selection.tsv
+51,002-b-03,002,SINCERELY,tape,B,3,Ornella Vanoni,Samba della rosa,selection.tsv
+52,002-b-04,002,SINCERELY,tape,B,4,Joe Fender,Abrassado,selection.tsv
+53,002-b-05,002,SINCERELY,tape,B,5,Les Miladys,Jazz à Gogo,selection.tsv
+54,002-b-06,002,SINCERELY,tape,B,6,The Group Six Players,Time Check,selection.tsv
+55,002-b-07,002,SINCERELY,tape,B,7,Sacha Distel,Déjà (Deixa),selection.tsv
+56,002-b-08,002,SINCERELY,tape,B,8,Jo Carlier,Aquarella,selection.tsv
+57,002-b-09,002,SINCERELY,tape,B,9,Orquestra Namorados da TV,Shirley Sexy,selection.tsv
+58,002-b-10,002,SINCERELY,tape,B,10,Sônia Santos,Crioula,selection.tsv
+59,002-b-11,002,SINCERELY,tape,B,11,Erlon Chaves,Testamento,selection.tsv
+60,002-b-12,002,SINCERELY,tape,B,12,Anita Harris,The Clapping Song,selection.tsv
+61,002-b-13,002,SINCERELY,tape,B,13,Trio Esperança,A Feiticeirinha (Georgy Girl),selection.tsv
+62,002-b-14,002,SINCERELY,tape,B,14,Cliff Richard,Fly Me to the Moon,selection.tsv
+63,002-b-15,002,SINCERELY,tape,B,15,Bob Azzam,Let's Celebrate,selection.tsv
+64,002-b-16,002,SINCERELY,tape,B,16,José Bartel,"Marin, ami, amant ou mari",selection.tsv
+65,002-b-17,002,SINCERELY,tape,B,17,Alain Delon,Laetitia,selection.tsv
+66,003-a-01,003,COMMERCIALS,tape,A,1,Cyro Aguiar,Rei do Maracatu,selection.tsv
+67,003-a-02,003,COMMERCIALS,tape,A,2,Nina & Frederik,Tu m'as sauvé,selection.tsv
+68,003-a-03,003,COMMERCIALS,tape,A,3,Greetje Kauffeld,When You Wish Upon a Star,selection.tsv
+69,003-a-04,003,COMMERCIALS,tape,A,4,The Ritz,Baile en la noche,selection.tsv
+70,003-a-05,003,COMMERCIALS,tape,A,5,Uno Loop,Märtsis mai,selection.tsv
+71,003-a-06,003,COMMERCIALS,tape,A,6,O Quarteto,Vou deitar e rolar (Quaquaraquaquá) / Deixa,selection.tsv
+72,003-a-07,003,COMMERCIALS,tape,A,7,Mina,"Que no, que no",selection.tsv
+73,003-a-08,003,COMMERCIALS,tape,A,8,Lill-Babs,Dansa (Chante… comme si tu devais mourir),selection.tsv
+74,003-a-09,003,COMMERCIALS,tape,A,9,Monoprix,Nova a Go Go,selection.tsv
+75,003-a-10,003,COMMERCIALS,tape,A,10,April Set,雪 (Yuki),selection.tsv
+76,003-a-11,003,COMMERCIALS,tape,A,11,Feather,Nica's Dream,selection.tsv
+77,003-a-12,003,COMMERCIALS,tape,A,12,Copa 7,Copa Sete no Samba,selection.tsv
+78,003-a-13,003,COMMERCIALS,tape,A,13,Jamie and the J. Silvia Singers,It's Not Unusual,selection.tsv
+79,003-a-14,003,COMMERCIALS,tape,A,14,Mario Cavallero,La fête,selection.tsv
+80,003-b-01,003,COMMERCIALS,tape,B,1,Yehudit Ravitz,Taj Mahal,selection.tsv
+81,003-b-02,003,COMMERCIALS,tape,B,2,Monserate starring Lyda Zamora,Eso Beso,selection.tsv
+82,003-b-03,003,COMMERCIALS,tape,B,3,Eddy Mitchell,Tighten Up,selection.tsv
+83,003-b-04,003,COMMERCIALS,tape,B,4,Erlon Chaves,I Can't Stop Dancing,selection.tsv
+84,003-b-05,003,COMMERCIALS,tape,B,5,Georges Jouvin,Zozoï,selection.tsv
+85,003-b-06,003,COMMERCIALS,tape,B,6,The Underground,Money Money,selection.tsv
+86,003-b-07,003,COMMERCIALS,tape,B,7,The Coasters,Love Potion No. 9,selection.tsv
+87,003-b-08,003,COMMERCIALS,tape,B,8,The Singers Unlimited,You Are My Sunshine,selection.tsv
+88,003-b-09,003,COMMERCIALS,tape,B,9,The Morgan-James Duo,You Don't Know What Love Is,selection.tsv
+89,003-b-10,003,COMMERCIALS,tape,B,10,The Swingle Singers,Fuga in Bulldozer,selection.tsv
+90,003-b-11,003,COMMERCIALS,tape,B,11,Nina Lizell,Sunny,selection.tsv
+91,003-b-12,003,COMMERCIALS,tape,B,12,The Gimmicks,Jokern (Swedish),selection.tsv
+92,003-b-13,003,COMMERCIALS,tape,B,13,Douglas Westlund & Kjell Öhman,The Snake,selection.tsv
+93,003-b-14,003,COMMERCIALS,tape,B,14,The Arbors,Moondance,selection.tsv
+94,003-b-15,003,COMMERCIALS,tape,B,15,Ira,Che cosa mai sarà,selection.tsv
+95,003-b-16,003,COMMERCIALS,tape,B,16,Sonia Rosa,I'll Never Fall in Love Again,selection.tsv
+96,003-b-17,003,COMMERCIALS,tape,B,17,Jack Diéval,Valse pour une ombre,selection.tsv
+97,004-a-01,004,AUDIOSCAPE,tape,A,1,Mina,Portami con te,selection.tsv
+98,004-a-02,004,AUDIOSCAPE,tape,A,2,The Morgan-James,If It Comes to That,selection.tsv
+99,004-a-03,004,AUDIOSCAPE,tape,A,3,The Lee Mason Sound,Sky High,selection.tsv
+100,004-a-04,004,AUDIOSCAPE,tape,A,4,Daniela und Ann,The Pain in My Heart,selection.tsv
+101,004-a-05,004,AUDIOSCAPE,tape,A,5,Lado's Latin Combination,Mosca Española,selection.tsv
+102,004-a-06,004,AUDIOSCAPE,tape,A,6,The Group,Sonho de Carnaval,selection.tsv
+103,004-a-07,004,AUDIOSCAPE,tape,A,7,Birgit Lystager,Another Night,selection.tsv
+104,004-a-08,004,AUDIOSCAPE,tape,A,8,Berndt Egerbladh,The Beatmaker,selection.tsv
+105,004-a-09,004,AUDIOSCAPE,tape,A,9,Mary Roos,Die Liebe kommt leis’ (You Can't Hurry Love),selection.tsv
+106,004-a-10,004,AUDIOSCAPE,tape,A,10,Dany Delmin,Petit Matin,selection.tsv
+107,004-a-11,004,AUDIOSCAPE,tape,A,11,Barney Kessel,Love for Sale,selection.tsv
+108,004-a-12,004,AUDIOSCAPE,tape,A,12,The Impossibles,Give It Up,selection.tsv
+109,004-a-13,004,AUDIOSCAPE,tape,A,13,Delirious Sound,Shirley Sexy,selection.tsv
+110,004-a-14,004,AUDIOSCAPE,tape,A,14,Portinho e sua Orquestra,Shirley Sexy,selection.tsv
+111,004-a-15,004,AUDIOSCAPE,tape,A,15,Nina van Pallandt,For Once in My Life,selection.tsv
+112,004-a-16,004,AUDIOSCAPE,tape,A,16,Paul Nero,This Is Soul,selection.tsv
+113,004-a-17,004,AUDIOSCAPE,tape,A,17,Giovanni Fenati e la sua orchestra,Michigan,selection.tsv
+114,004-a-18,004,AUDIOSCAPE,tape,A,18,Los Machucambos,Tristeza,selection.tsv
+115,004-b-01,004,AUDIOSCAPE,tape,B,1,April Set,Bossa Presso — Episode 2 Cecil's Portrait,selection.tsv
+116,004-b-02,004,AUDIOSCAPE,tape,B,2,Les Petits Chanteurs du Rock,Aquarela,selection.tsv
+117,004-b-03,004,AUDIOSCAPE,tape,B,3,Łucja Prus,Głupi albo gra,selection.tsv
+118,004-b-04,004,AUDIOSCAPE,tape,B,4,Edgar e os Tais,Dela,selection.tsv
+119,004-b-05,004,AUDIOSCAPE,tape,B,5,Eugen Cicero,Lucky Chance,selection.tsv
+120,004-b-06,004,AUDIOSCAPE,tape,B,6,Piero Umiliani,Corsetta di partenza,selection.tsv
+121,004-b-07,004,AUDIOSCAPE,tape,B,7,Two Man Sound,Disco Samba,selection.tsv
+122,004-b-08,004,AUDIOSCAPE,tape,B,8,Sacha Distel,Venus,selection.tsv
+123,004-b-09,004,AUDIOSCAPE,tape,B,9,Moonflowers,Tighten Up,selection.tsv
+124,004-b-10,004,AUDIOSCAPE,tape,B,10,Aldemaro Romero,Two (Chipoleando),selection.tsv
+125,004-b-11,004,AUDIOSCAPE,tape,B,11,Monique & Louis Aldebert,Un homme et une femme,selection.tsv
+126,004-b-12,004,AUDIOSCAPE,tape,B,12,Basso-Valdambrini Quintet,Lotar,selection.tsv
+127,004-b-13,004,AUDIOSCAPE,tape,B,13,Van Price & Orchestra,Hully Gully,selection.tsv
+128,004-b-14,004,AUDIOSCAPE,tape,B,14,Séverine,Je suis bien la même (Am I the Same Girl),selection.tsv
+129,004-b-15,004,AUDIOSCAPE,tape,B,15,The Mike Sammes Singers,Hurry to Me,selection.tsv
+130,005-a-01,005,JINGLES,tape,A,1,Carol Burnett & Martha Raye,Let Go,selection.tsv
+131,005-a-02,005,JINGLES,tape,A,2,The Jumping Jacques,Lucinda,selection.tsv
+132,005-a-03,005,JINGLES,tape,A,3,Juan Demonio,Esto Me Gusto,selection.tsv
+133,005-a-04,005,JINGLES,tape,A,4,Stan Reynolds and His Orchestra,True Love,selection.tsv
+134,005-a-05,005,JINGLES,tape,A,5,Bruno Battisti D'Amario feat. Edda Dell'Orso,C’è più samba,selection.tsv
+135,005-a-06,005,JINGLES,tape,A,6,Kitty Kallen,Nothing's Going on Below the Border,selection.tsv
+136,005-a-07,005,JINGLES,tape,A,7,Bossa Nova +5,Sincopado Triste,selection.tsv
+137,005-a-08,005,JINGLES,tape,A,8,Louis Corchia,Les Demoiselles de Rochefort,selection.tsv
+138,005-a-09,005,JINGLES,tape,A,9,Mahna Mackay,Daydream,selection.tsv
+139,005-a-10,005,JINGLES,tape,A,10,Siw Malmkvist,Bossa Nova Baby,selection.tsv
+140,005-a-11,005,JINGLES,tape,A,11,The Modernaires,Tijuana Taxi,selection.tsv
+141,005-a-12,005,JINGLES,tape,A,12,Günter Kühnholz Orchestra,Na und?,selection.tsv
+142,005-a-13,005,JINGLES,tape,A,13,Bebeto,Take It Easy My Brother Charles / Charlie Brown,selection.tsv
+143,005-a-14,005,JINGLES,tape,A,14,Freda Payne,More,selection.tsv
+144,005-a-15,005,JINGLES,tape,A,15,Bobby Cole,I Love Paris,selection.tsv
+145,005-a-16,005,JINGLES,tape,A,16,Dieter Reith Orchestra,Bitter Sweet Samba,selection.tsv
+146,005-a-17,005,JINGLES,tape,A,17,Armando Trovajoli,Descansado,selection.tsv
+147,005-b-01,005,JINGLES,tape,B,1,Lena Horne,It Had Better Be Tonight,selection.tsv
+148,005-b-02,005,JINGLES,tape,B,2,Adam Wade,Around the World,selection.tsv
+149,005-b-03,005,JINGLES,tape,B,3,France Gall,Le temps du tempo,selection.tsv
+150,005-b-04,005,JINGLES,tape,B,4,The Coen van Nassou Swingtet,Batucada,selection.tsv
+151,005-b-05,005,JINGLES,tape,B,5,Füsun Önal,İnsancıklar,selection.tsv
+152,005-b-06,005,JINGLES,tape,B,6,Dr. Severino e Conjunto,Olhou pra mim,selection.tsv
+153,005-b-07,005,JINGLES,tape,B,7,Masanori Suzuki,B.C. Air,selection.tsv
+154,005-b-08,005,JINGLES,tape,B,8,Alma,Otra ilusión (Another Star),selection.tsv
+155,005-b-09,005,JINGLES,tape,B,9,Pelles med Christer Sjögren,Smile,selection.tsv
+156,005-b-10,005,JINGLES,tape,B,10,Melodia Ensemble,Devil's Wheel,selection.tsv
+157,005-b-11,005,JINGLES,tape,B,11,Bobby Rydell,The Joker,selection.tsv
+158,005-b-12,005,JINGLES,tape,B,12,Petula Clark,If I Were a Bell,selection.tsv
+159,005-b-13,005,JINGLES,tape,B,13,Marlene VerPlanck,Mission: Impossible,selection.tsv
+160,005-b-14,005,JINGLES,tape,B,14,The Night Men,Funky Street,selection.tsv
+161,005-b-15,005,JINGLES,tape,B,15,Jerry Williams & His Dynamite & Soul Band,The Name Game,selection.tsv
+162,005-b-16,005,JINGLES,tape,B,16,Johnny Reimar,En solskinssang (Trini's Tune),selection.tsv
+163,005-b-17,005,JINGLES,tape,B,17,Blossom Dearie,The 59th Street Bridge Song (Feelin’ Groovy),selection.tsv
+164,006-a-01,006,COUNSELING,tape,A,1,Yvonne Gray,Bird of Beauty,selection.tsv
+165,006-a-02,006,COUNSELING,tape,A,2,Svante Thuresson,Fantasi (Fantasy),selection.tsv
+166,006-a-03,006,COUNSELING,tape,A,3,Roger Webb and His Piano and Orchestra,The Spiderman,selection.tsv
+167,006-a-04,006,COUNSELING,tape,A,4,The Peddlers,That's Life,selection.tsv
+168,006-a-05,006,COUNSELING,tape,A,5,Alma Cogan,I Feel Fine,selection.tsv
+169,006-a-06,006,COUNSELING,tape,A,6,Pat Rolle,Love,selection.tsv
+170,006-a-07,006,COUNSELING,tape,A,7,Blossom Dearie,"Lazy, Crazy Days of Summer",selection.tsv
+171,006-a-08,006,COUNSELING,tape,A,8,Kay Dennis,Feeling Good,selection.tsv
+172,006-a-09,006,COUNSELING,tape,A,9,Basso-Valdambrini Quintet,Barbados,selection.tsv
+173,006-a-10,006,COUNSELING,tape,A,10,Pascal von Wroblewsky,Swinging Pool,selection.tsv
+174,006-a-11,006,COUNSELING,tape,A,11,Maria Koterbska,"Dziś nie wiem, kto to jest (Today I Don't Know Who He Is)",selection.tsv
+175,006-a-12,006,COUNSELING,tape,A,12,Siw Malmkvist,La la la,selection.tsv
+176,006-a-13,006,COUNSELING,tape,A,13,Boris,Teresa,selection.tsv
+177,006-a-14,006,COUNSELING,tape,A,14,Raffaella Carrà,Satisfaction,selection.tsv
+178,006-a-15,006,COUNSELING,tape,A,15,Tages,I Got You (I Feel Good),selection.tsv
+179,006-a-16,006,COUNSELING,tape,A,16,The Manhattan Trio and the Sylvet’s,We Don’t Need Them,selection.tsv
+180,006-b-01,006,COUNSELING,tape,B,1,Don Paulin,Suddenly,selection.tsv
+181,006-b-02,006,COUNSELING,tape,B,2,Daniela Davoli,Samba para mi amor,selection.tsv
+182,006-b-03,006,COUNSELING,tape,B,3,The Mike Sammes Singers,I Must Know,selection.tsv
+183,006-b-04,006,COUNSELING,tape,B,4,Monica Zetterlund,Det finns ju faktiskt telefon,selection.tsv
+184,006-b-05,006,COUNSELING,tape,B,5,Pierre Devevey feat. Christiane Legrand,Angelina,selection.tsv
+185,006-b-06,006,COUNSELING,tape,B,6,Major Schiffer & The Majories,Half a Minute,selection.tsv
+186,006-b-07,006,COUNSELING,tape,B,7,Shirley Bassey,Copacabana (At the Copa),selection.tsv
+187,006-b-08,006,COUNSELING,tape,B,8,Berry Lipman,The Girls from Paramaribo '82,selection.tsv
+188,006-b-09,006,COUNSELING,tape,B,9,Teddy Parker,Bossa Nova in Panama,selection.tsv
+189,006-b-10,006,COUNSELING,tape,B,10,Ednita Nazario,Cua Cuaracua Cua,selection.tsv
+190,006-b-11,006,COUNSELING,tape,B,11,Peter Beasson,Walle-Street,selection.tsv
+191,006-b-12,006,COUNSELING,tape,B,12,Masanori Suzuki × Riki Azuma,Blue Cafe Exercise Punch Out!,selection.tsv
+192,006-b-13,006,COUNSELING,tape,B,13,"Claes Dieden, Etcetera",Go-Go-Gorilla,selection.tsv
+193,006-b-14,006,COUNSELING,tape,B,14,Eden 4,Watermelon Man,selection.tsv
+194,006-b-15,006,COUNSELING,tape,B,15,Diane Rubin,Been to Cannan,selection.tsv
+195,007-a-01,007,HOLIDAY MUSIC,tape,A,1,Roger Pilon,Amarillo de Cobalto,selection.tsv
+196,007-a-02,007,HOLIDAY MUSIC,tape,A,2,Shirley Bassey,It's Impossible,selection.tsv
+197,007-a-03,007,HOLIDAY MUSIC,tape,A,3,Martin Haak Kwartet,Jordu,selection.tsv
+198,007-a-04,007,HOLIDAY MUSIC,tape,A,4,The Peddlers,Say no More (Mas que nada),selection.tsv
+199,007-a-05,007,HOLIDAY MUSIC,tape,A,5,Margot Lefebvre,Dis-moi je t’adore,selection.tsv
+200,007-a-06,007,HOLIDAY MUSIC,tape,A,6,Les Sans Nom,Top of the World,selection.tsv
+201,007-a-07,007,HOLIDAY MUSIC,tape,A,7,Svenne & Lotta,I Want You Back,selection.tsv
+202,007-a-08,007,HOLIDAY MUSIC,tape,A,8,Miguel Salerno and the M. S. Affair,More Bananas,selection.tsv
+203,007-a-09,007,HOLIDAY MUSIC,tape,A,9,Monica Zetterlund,Konstigt,selection.tsv
+204,007-a-10,007,HOLIDAY MUSIC,tape,A,10,Dany Doriz,L'amour est une drôle de chose,selection.tsv
+205,007-a-11,007,HOLIDAY MUSIC,tape,A,11,Peter Thomas,Jerry Cotton Theme,selection.tsv
+206,007-a-12,007,HOLIDAY MUSIC,tape,A,12,David & Dominique,Petit hommage au jazz,selection.tsv
+207,007-a-13,007,HOLIDAY MUSIC,tape,A,13,Sonido 5,Batucada,selection.tsv
+208,007-a-14,007,HOLIDAY MUSIC,tape,A,14,Willie Colón,"Cua cua ra, cua cua",selection.tsv
+209,007-a-15,007,HOLIDAY MUSIC,tape,A,15,Brasa Brasil,Juliana,selection.tsv
+210,007-a-16,007,HOLIDAY MUSIC,tape,A,16,Rebecca Parris,It's You,selection.tsv
+211,007-a-17,007,HOLIDAY MUSIC,tape,A,17,シンガーズ・スリー／池野成秋とプレイ8,Chopin's Etude No. 10-3,selection.tsv
+212,007-b-01,007,HOLIDAY MUSIC,tape,B,1,Serge Gainsbourg,Comment trouvez-vous ma sœur?,selection.tsv
+213,007-b-02,007,HOLIDAY MUSIC,tape,B,2,Michèle Richard,Le Happening,selection.tsv
+214,007-b-03,007,HOLIDAY MUSIC,tape,B,3,The Blue Diamonds,I Want You to Be My Baby,selection.tsv
+215,007-b-04,007,HOLIDAY MUSIC,tape,B,4,Johnny Hawksworth,X Cert,selection.tsv
+216,007-b-05,007,HOLIDAY MUSIC,tape,B,5,Nick Ayoub,Montreal East,selection.tsv
+217,007-b-06,007,HOLIDAY MUSIC,tape,B,6,Gilbert Bécaud,Heureusement y'a les copains,selection.tsv
+218,007-b-07,007,HOLIDAY MUSIC,tape,B,7,Armand Migiani,Heureusement y'a les copains,selection.tsv
+219,007-b-08,007,HOLIDAY MUSIC,tape,B,8,Christine Nérac,Je t'aimais tant,selection.tsv
+220,007-b-09,007,HOLIDAY MUSIC,tape,B,9,Victoria Newton,The Real Thing,selection.tsv
+221,007-b-10,007,HOLIDAY MUSIC,tape,B,10,Henry Rubio,El Musiquito,selection.tsv
+222,007-b-11,007,HOLIDAY MUSIC,tape,B,11,Romina Power,Zozoï,selection.tsv
+223,007-b-12,007,HOLIDAY MUSIC,tape,B,12,Wilma Reading,If You Hold My Hand,selection.tsv
+224,007-b-13,007,HOLIDAY MUSIC,tape,B,13,Edgar e os Tais,Viva a alegria em ritmo de energia,selection.tsv
+225,007-b-14,007,HOLIDAY MUSIC,tape,B,14,Letty de Jong,Een meeuw boven zee (Comme un oiseau),selection.tsv
+226,007-b-15,007,HOLIDAY MUSIC,tape,B,15,Bruno Nicolai,I Want It All,selection.tsv
+227,007-b-16,007,HOLIDAY MUSIC,tape,B,16,Nora Orlandi e I 4+4,Gangsters a New York,selection.tsv
+228,cd-00-d1-01,cd-00,CLASSIC BLEND,cd,D1,1,Reg Wilson,Theme from the Thomas Crown Affair,cd_catalog.json
+229,cd-00-d1-02,cd-00,CLASSIC BLEND,cd,D1,2,Joe Fender,Abrassado,cd_catalog.json
+230,cd-00-d1-03,cd-00,CLASSIC BLEND,cd,D1,3,Daniela und Ann,The Pain in My Heart,cd_catalog.json
+231,cd-00-d1-04,cd-00,CLASSIC BLEND,cd,D1,4,Voices in Latin,Busy,cd_catalog.json
+232,cd-00-d1-05,cd-00,CLASSIC BLEND,cd,D1,5,The Ritz,Baile en la noche,cd_catalog.json
+233,cd-00-d1-06,cd-00,CLASSIC BLEND,cd,D1,6,Armando Trovajoli,Sei mesi di felicità,cd_catalog.json
+234,cd-00-d1-07,cd-00,CLASSIC BLEND,cd,D1,7,Yvonne Gray,Bird of Beauty,cd_catalog.json
+235,cd-00-d1-08,cd-00,CLASSIC BLEND,cd,D1,8,Wilma Reading,More Today Than Yesterday,cd_catalog.json
+236,cd-00-d1-09,cd-00,CLASSIC BLEND,cd,D1,9,Bob Azzam,Let's Celebrate,cd_catalog.json
+237,cd-00-d1-10,cd-00,CLASSIC BLEND,cd,D1,10,Kerrie Biddell,Sing a Simple Song,cd_catalog.json
+238,cd-00-d1-11,cd-00,CLASSIC BLEND,cd,D1,11,Lucifer and Co.,Eden,cd_catalog.json
+239,cd-00-d1-12,cd-00,CLASSIC BLEND,cd,D1,12,Paul Mauriat,La fête,cd_catalog.json
+240,cd-00-d1-13,cd-00,CLASSIC BLEND,cd,D1,13,Trio Esperança,Chuva Fina,cd_catalog.json
+241,cd-00-d1-14,cd-00,CLASSIC BLEND,cd,D1,14,Les Petits Chanteurs du Rock,Aquarela,cd_catalog.json
+242,cd-00-d1-15,cd-00,CLASSIC BLEND,cd,D1,15,Orquestra Namorados da TV,Shirley Sexy,cd_catalog.json
+243,cd-00-d1-16,cd-00,CLASSIC BLEND,cd,D1,16,Portinho e sua Orquestra,Shirley Sexy,cd_catalog.json
+244,cd-00-d1-17,cd-00,CLASSIC BLEND,cd,D1,17,Chico Arnez & His Cubana Brass,Eso Beso,cd_catalog.json
+245,cd-00-d1-18,cd-00,CLASSIC BLEND,cd,D1,18,Willie Colón,Cua Cua Ra Cua Cua,cd_catalog.json
+246,cd-00-d1-19,cd-00,CLASSIC BLEND,cd,D1,19,John Schroeder,Paramaribo,cd_catalog.json
+247,cd-00-d1-20,cd-00,CLASSIC BLEND,cd,D1,20,Yehudit Ravitz,Taj Mahal,cd_catalog.json
+248,cd-00-d1-21,cd-00,CLASSIC BLEND,cd,D1,21,Berry Lipman,The Girls from Paramaribo (Disco),cd_catalog.json
+249,cd-00-d1-22,cd-00,CLASSIC BLEND,cd,D1,22,Anita Lindblom,Falling in Love Again,cd_catalog.json
+250,cd-00-d1-23,cd-00,CLASSIC BLEND,cd,D1,23,Augusto Martelli,Summertime,cd_catalog.json
+251,cd-00-d1-24,cd-00,CLASSIC BLEND,cd,D1,24,Eddy Mitchell,Tighten Up,cd_catalog.json
+252,cd-00-d2-01,cd-00,CLASSIC BLEND,cd,D2,1,Martial Solal,Generique,cd_catalog.json
+253,cd-00-d2-02,cd-00,CLASSIC BLEND,cd,D2,2,Petula Clark,If I Were a Bell,cd_catalog.json
+254,cd-00-d2-03,cd-00,CLASSIC BLEND,cd,D2,3,Stan Reynolds and His Orchestra,True Love,cd_catalog.json
+255,cd-00-d2-04,cd-00,CLASSIC BLEND,cd,D2,4,Anita Harris,The Clapping Song,cd_catalog.json
+256,cd-00-d2-05,cd-00,CLASSIC BLEND,cd,D2,5,The Morgan-James,If It Comes to That,cd_catalog.json
+257,cd-00-d2-06,cd-00,CLASSIC BLEND,cd,D2,6,Roger Webb and His Piano and Orchestra,The Spiderman,cd_catalog.json
+258,cd-00-d2-07,cd-00,CLASSIC BLEND,cd,D2,7,Gérard Baqué,Tant de nuits (Bitter Sweet Samba),cd_catalog.json
+259,cd-00-d2-08,cd-00,CLASSIC BLEND,cd,D2,8,The Young Generation,Pretty,cd_catalog.json
+260,cd-00-d2-09,cd-00,CLASSIC BLEND,cd,D2,9,Ana Maria e Maurício,Figa de Guiné,cd_catalog.json
+261,cd-00-d2-10,cd-00,CLASSIC BLEND,cd,D2,10,The Group Six Players,Time Check,cd_catalog.json
+262,cd-00-d2-11,cd-00,CLASSIC BLEND,cd,D2,11,Bobby Cole Trio,I Love Paris,cd_catalog.json
+263,cd-00-d2-12,cd-00,CLASSIC BLEND,cd,D2,12,Pat Rolle,L O V e,cd_catalog.json
+264,cd-00-d2-13,cd-00,CLASSIC BLEND,cd,D2,13,Dany Doriz,L'amour Est une Drole de Chose,cd_catalog.json
+265,cd-00-d2-14,cd-00,CLASSIC BLEND,cd,D2,14,Della Reese,Blue Skies,cd_catalog.json
+266,cd-00-d2-15,cd-00,CLASSIC BLEND,cd,D2,15,Karen Wyman,Night and Day,cd_catalog.json
+267,cd-00-d2-16,cd-00,CLASSIC BLEND,cd,D2,16,Jullien Ballay et son orchestre,Les Demoiselles de Rochefort,cd_catalog.json
+268,cd-00-d2-17,cd-00,CLASSIC BLEND,cd,D2,17,"Stan Butcher, His Birds & Brass",Heigh-Ho,cd_catalog.json
+269,cd-00-d2-18,cd-00,CLASSIC BLEND,cd,D2,18,Kitty Winter Gipsy Nova,Different Ways,cd_catalog.json
+270,cd-00-d2-19,cd-00,CLASSIC BLEND,cd,D2,19,Maria Koterbska,"Dziś nie wiem, kto to jest (Today I Don't Know Who He Is)",cd_catalog.json
+271,cd-00-d2-20,cd-00,CLASSIC BLEND,cd,D2,20,Rebecca Parris,It's You,cd_catalog.json
+272,cd-00-d2-21,cd-00,CLASSIC BLEND,cd,D2,21,Teddy Parker,Bossa Nova in Panama,cd_catalog.json
+273,cd-00-d2-22,cd-00,CLASSIC BLEND,cd,D2,22,Brazilian Singers,Por Esse Mundo Afora,cd_catalog.json
+274,cd-00-d2-23,cd-00,CLASSIC BLEND,cd,D2,23,Raymonde Beretta,Rose est notre vie,cd_catalog.json
+275,cd-00-d2-24,cd-00,CLASSIC BLEND,cd,D2,24,Eugen Cicero,Lucky Chance,cd_catalog.json
+276,cd-00-d2-25,cd-00,CLASSIC BLEND,cd,D2,25,Marianne Mille,Le Marchand de thé,cd_catalog.json
+277,cd-00-d2-26,cd-00,CLASSIC BLEND,cd,D2,26,The Singers Unlimited,You Are My Sunshine,cd_catalog.json
+278,cd-00-d2-27,cd-00,CLASSIC BLEND,cd,D2,27,The Morgan-James Duo,You Don't Know What Love Is,cd_catalog.json
+279,cd-00-d2-28,cd-00,CLASSIC BLEND,cd,D2,28,Ira!,Che Cosa Mai Sara,cd_catalog.json
+280,cd-00-d2-29,cd-00,CLASSIC BLEND,cd,D2,29,Bruno Nicolai,I Want It All,cd_catalog.json
+281,cd-01-d1-01,cd-01,A LA MODE,cd,D1,1,Orchester José Fernando,Langosta Fria,cd_catalog.json
+282,cd-01-d1-02,cd-01,A LA MODE,cd,D1,2,Bill Henderson,Something’s Gotta Give,cd_catalog.json
+283,cd-01-d1-03,cd-01,A LA MODE,cd,D1,3,Charles Aznavour,Je t’aime,cd_catalog.json
+284,cd-01-d1-04,cd-01,A LA MODE,cd,D1,4,Cha.Cho,Usted Abuso (Voce Abusou),cd_catalog.json
+285,cd-01-d1-05,cd-01,A LA MODE,cd,D1,5,Alfonso Santisteban,Nuestro ayer,cd_catalog.json
+286,cd-01-d1-06,cd-01,A LA MODE,cd,D1,6,Turma dos Bicões,Bico na jogada,cd_catalog.json
+287,cd-01-d1-07,cd-01,A LA MODE,cd,D1,7,Billy Taylor,A Secret,cd_catalog.json
+288,cd-01-d1-08,cd-01,A LA MODE,cd,D1,8,Playa,I Like It (April Set Cubano Bossa Remix),cd_catalog.json
+289,cd-01-d1-09,cd-01,A LA MODE,cd,D1,9,Henri Guédon et Les Contesta,Dorothy,cd_catalog.json
+290,cd-01-d1-10,cd-01,A LA MODE,cd,D1,10,Louie Ramírez & Ray de la Paz,Solo tú y yo (Just the Two of Us),cd_catalog.json
+291,cd-01-d1-11,cd-01,A LA MODE,cd,D1,11,Ray Ramos,I’ve Got You Under My Skin,cd_catalog.json
+292,cd-01-d1-12,cd-01,A LA MODE,cd,D1,12,The Dubious Brothers,Inspector le Strade,cd_catalog.json
+293,cd-01-d1-13,cd-01,A LA MODE,cd,D1,13,Franck Fernandel,Un Américain dans les rues de Rio,cd_catalog.json
+294,cd-01-d1-14,cd-01,A LA MODE,cd,D1,14,Anthony Adverse,The Ruling Class,cd_catalog.json
+295,cd-01-d1-15,cd-01,A LA MODE,cd,D1,15,Mamie Lee,Charade,cd_catalog.json
+296,cd-01-d1-16,cd-01,A LA MODE,cd,D1,16,Zak Thomas,Midem Song 75 (Indicatif du Midem 75),cd_catalog.json
+297,cd-01-d1-17,cd-01,A LA MODE,cd,D1,17,Maynard Ferguson,Wack Wack,cd_catalog.json
+298,cd-01-d1-18,cd-01,A LA MODE,cd,D1,18,Edgard e os Tais,Jura,cd_catalog.json
+299,cd-01-d1-19,cd-01,A LA MODE,cd,D1,19,Swingles,Nightbird,cd_catalog.json
+300,cd-01-d1-20,cd-01,A LA MODE,cd,D1,20,Lisa Linn & Bo Sylvén og Orkester,Synge,cd_catalog.json
+301,cd-01-d1-21,cd-01,A LA MODE,cd,D1,21,Christine Chartrand,Pala Pala Pala,cd_catalog.json
+302,cd-01-d1-22,cd-01,A LA MODE,cd,D1,22,Osibisa,Coffee Song,cd_catalog.json
+303,cd-01-d1-23,cd-01,A LA MODE,cd,D1,23,The Ritz,South of the Border,cd_catalog.json
+304,cd-01-d1-24,cd-01,A LA MODE,cd,D1,24,Romano Mussolini,Versiliana Samba,cd_catalog.json
+305,cd-01-d1-25,cd-01,A LA MODE,cd,D1,25,Bernard Désormières Trio,Gentle Rain,cd_catalog.json
+306,cd-01-d1-26,cd-01,A LA MODE,cd,D1,26,Gracinha Leporace,Última batucada,cd_catalog.json
+307,cd-02-d1-01,cd-02,PARADISE FLIGHT,cd,D1,1,Garry Blake,Strawberries and Cream,cd_catalog.json
+308,cd-02-d1-02,cd-02,PARADISE FLIGHT,cd,D1,2,Ray Christoph,Wordless Blues,cd_catalog.json
+309,cd-02-d1-03,cd-02,PARADISE FLIGHT,cd,D1,3,La Nueva Banda de Santisteban,The Suitcase,cd_catalog.json
+310,cd-02-d1-04,cd-02,PARADISE FLIGHT,cd,D1,4,Bobbi Boyle & the Trio,Spring Can Really Hang You Up the Most,cd_catalog.json
+311,cd-02-d1-05,cd-02,PARADISE FLIGHT,cd,D1,5,Shake,Rien N'est Plus Beau que L'amour,cd_catalog.json
+312,cd-02-d1-06,cd-02,PARADISE FLIGHT,cd,D1,6,Elaine Delmar,Alone Again (Naturally),cd_catalog.json
+313,cd-02-d1-07,cd-02,PARADISE FLIGHT,cd,D1,7,Maggie Eaves Singers,I Will Wait for You,cd_catalog.json
+314,cd-02-d1-08,cd-02,PARADISE FLIGHT,cd,D1,8,Mr. K. Soze,Stubborn Kinda Fellow,cd_catalog.json
+315,cd-02-d1-09,cd-02,PARADISE FLIGHT,cd,D1,9,Billy Kaui,Empty,cd_catalog.json
+316,cd-02-d1-10,cd-02,PARADISE FLIGHT,cd,D1,10,Marcia Hines,You,cd_catalog.json
+317,cd-02-d1-11,cd-02,PARADISE FLIGHT,cd,D1,11,J.N.Feet,Fiesta Vanda,cd_catalog.json
+318,cd-02-d1-12,cd-02,PARADISE FLIGHT,cd,D1,12,Gringos,Envy,cd_catalog.json
+319,cd-02-d1-13,cd-02,PARADISE FLIGHT,cd,D1,13,Jeffery Smith,Cinnamon & Clove,cd_catalog.json
+320,cd-02-d1-14,cd-02,PARADISE FLIGHT,cd,D1,14,April Aloisio,Nica's Dream,cd_catalog.json
+321,cd-02-d1-15,cd-02,PARADISE FLIGHT,cd,D1,15,Munich Big Band,Latin Haze,cd_catalog.json
+322,cd-02-d1-16,cd-02,PARADISE FLIGHT,cd,D1,16,Danny Mack,Under the Paris Skies,cd_catalog.json
+323,cd-02-d1-17,cd-02,PARADISE FLIGHT,cd,D1,17,Vic Caesar,It's All Right with Me,cd_catalog.json
+324,cd-02-d1-18,cd-02,PARADISE FLIGHT,cd,D1,18,"New York, New York",I Wanna Be Like You,cd_catalog.json
+325,cd-02-d1-19,cd-02,PARADISE FLIGHT,cd,D1,19,Ragni Malmsten,Samba Banta,cd_catalog.json
+326,cd-02-d1-20,cd-02,PARADISE FLIGHT,cd,D1,20,Grupo Xodó,Morena Morenô,cd_catalog.json
+327,cd-02-d1-21,cd-02,PARADISE FLIGHT,cd,D1,21,SILVA,Maquina Cafe,cd_catalog.json
+328,cd-02-d1-22,cd-02,PARADISE FLIGHT,cd,D1,22,Rosemary Clooney,The Coffee Song,cd_catalog.json
+329,cd-02-d1-23,cd-02,PARADISE FLIGHT,cd,D1,23,April Set,Carnival (Bossa Float),cd_catalog.json
+330,cd-02-d1-24,cd-02,PARADISE FLIGHT,cd,D1,24,Piero Piccioni,Luna Non Sei Nessuna,cd_catalog.json
+331,cd-03-d1-01,cd-03,GROOVE CHANNEL,cd,D1,1,Charla Bevan,Sometime Lover,cd_catalog.json
+332,cd-03-d1-02,cd-03,GROOVE CHANNEL,cd,D1,2,Ingmar Johansson,Eleanor Rigby,cd_catalog.json
+333,cd-03-d1-03,cd-03,GROOVE CHANNEL,cd,D1,3,Eric van Aro,Georgy Porgy,cd_catalog.json
+334,cd-03-d1-04,cd-03,GROOVE CHANNEL,cd,D1,4,Sophy,Amor y Tentacion,cd_catalog.json
+335,cd-03-d1-05,cd-03,GROOVE CHANNEL,cd,D1,5,The J’s with Jamie,Cotton Fields,cd_catalog.json
+336,cd-03-d1-06,cd-03,GROOVE CHANNEL,cd,D1,6,Fat Daddy Pussycat Orch.,(That's the Way) I Like It,cd_catalog.json
+337,cd-03-d1-07,cd-03,GROOVE CHANNEL,cd,D1,7,Wim Koopmans,L.O.V.E.,cd_catalog.json
+338,cd-03-d1-08,cd-03,GROOVE CHANNEL,cd,D1,8,Rhetta Hughes,Walk on by,cd_catalog.json
+339,cd-03-d1-09,cd-03,GROOVE CHANNEL,cd,D1,9,Maria Muldaur,Clean Up Woman,cd_catalog.json
+340,cd-03-d1-10,cd-03,GROOVE CHANNEL,cd,D1,10,Assagai,Telephone Girl,cd_catalog.json
+341,cd-03-d1-11,cd-03,GROOVE CHANNEL,cd,D1,11,Johnny Griffith,O.D. (Overdose),cd_catalog.json
+342,cd-03-d1-12,cd-03,GROOVE CHANNEL,cd,D1,12,Roberto Blanco,Moliendo café,cd_catalog.json
+343,cd-03-d1-13,cd-03,GROOVE CHANNEL,cd,D1,13,Nazaré Pereira,Couleur café,cd_catalog.json
+344,cd-03-d1-14,cd-03,GROOVE CHANNEL,cd,D1,14,Nena Caterine,Trepa que Te Trepa,cd_catalog.json
+345,cd-03-d1-15,cd-03,GROOVE CHANNEL,cd,D1,15,Sobra,Wonderwall,cd_catalog.json
+346,cd-03-d1-16,cd-03,GROOVE CHANNEL,cd,D1,16,Saragossa Band,Aiko Aiko,cd_catalog.json
+347,cd-03-d1-17,cd-03,GROOVE CHANNEL,cd,D1,17,Olivier Briac Session,La Danse,cd_catalog.json
+348,cd-03-d1-18,cd-03,GROOVE CHANNEL,cd,D1,18,Phil Flowers & The Flower Shop,Like a Rolling Stone,cd_catalog.json
+349,cd-03-d1-19,cd-03,GROOVE CHANNEL,cd,D1,19,Lu Elliot,If I Were a Bell,cd_catalog.json
+350,cd-03-d1-20,cd-03,GROOVE CHANNEL,cd,D1,20,Sweet Emily,Someday,cd_catalog.json
+351,cd-03-d1-21,cd-03,GROOVE CHANNEL,cd,D1,21,Rick Nelson,Fools Rush in,cd_catalog.json
+352,cd-03-d1-22,cd-03,GROOVE CHANNEL,cd,D1,22,Gossip,Tell Me Now,cd_catalog.json
+353,cd-03-d1-23,cd-03,GROOVE CHANNEL,cd,D1,23,Los Mismos,Jefe Ironside,cd_catalog.json
+354,cd-03-d1-24,cd-03,GROOVE CHANNEL,cd,D1,24,Ricky Page~The Soul Society,Pata Pata,cd_catalog.json
+355,cd-03-d1-25,cd-03,GROOVE CHANNEL,cd,D1,25,Heaven Bound with Tony Scotti,I Will,cd_catalog.json
+356,cd-03-d1-26,cd-03,GROOVE CHANNEL,cd,D1,26,Trio Esperança,Smile,cd_catalog.json
+357,cd-04-d1-01,cd-04,SPICE OF LIFE,cd,D1,1,Jack Mimram,Promenade,cd_catalog.json
+358,cd-04-d1-02,cd-04,SPICE OF LIFE,cd,D1,2,Arlène,"Premier amour, premier chagrin",cd_catalog.json
+359,cd-04-d1-03,cd-04,SPICE OF LIFE,cd,D1,3,Lucinha Turnbull,Burucuntum,cd_catalog.json
+360,cd-04-d1-04,cd-04,SPICE OF LIFE,cd,D1,4,Elis Regina,Silencio,cd_catalog.json
+361,cd-04-d1-05,cd-04,SPICE OF LIFE,cd,D1,5,Dany Brillant,La Queue du Chat,cd_catalog.json
+362,cd-04-d1-06,cd-04,SPICE OF LIFE,cd,D1,6,The Mirza Men,Eleanor Rigby,cd_catalog.json
+363,cd-04-d1-07,cd-04,SPICE OF LIFE,cd,D1,7,Los Manolos,All My Loving,cd_catalog.json
+364,cd-04-d1-08,cd-04,SPICE OF LIFE,cd,D1,8,Apple Jam,Lady Madonna,cd_catalog.json
+365,cd-04-d1-09,cd-04,SPICE OF LIFE,cd,D1,9,Simon Said,Smile,cd_catalog.json
+366,cd-04-d1-10,cd-04,SPICE OF LIFE,cd,D1,10,Sammy Barbot,Brazilian Rhyme,cd_catalog.json
+367,cd-04-d1-11,cd-04,SPICE OF LIFE,cd,D1,11,The Harlem Children's Chorus,Name Game,cd_catalog.json
+368,cd-04-d1-12,cd-04,SPICE OF LIFE,cd,D1,12,Ernie Barry & Marie Elena,Name Game,cd_catalog.json
+369,cd-04-d1-13,cd-04,SPICE OF LIFE,cd,D1,13,Yvonne Carré with Gogo Jackson and His Pop-Brass,Halleluya,cd_catalog.json
+370,cd-04-d1-14,cd-04,SPICE OF LIFE,cd,D1,14,Col Nolan & The Soul Syndicate,St. Thomas,cd_catalog.json
+371,cd-04-d1-15,cd-04,SPICE OF LIFE,cd,D1,15,The Mike Sammes Singers,Will William Tell,cd_catalog.json
+372,cd-04-d1-16,cd-04,SPICE OF LIFE,cd,D1,16,Cătălin Tîrcolea,Sesame Street,cd_catalog.json
+373,cd-04-d1-17,cd-04,SPICE OF LIFE,cd,D1,17,Aviva Paz,Te Quiero Means I Love You,cd_catalog.json
+374,cd-04-d1-18,cd-04,SPICE OF LIFE,cd,D1,18,Maggie Eaves Singers,I Must Know,cd_catalog.json
+375,cd-04-d1-19,cd-04,SPICE OF LIFE,cd,D1,19,Roland Shaw Orchestra,Jump Up,cd_catalog.json
+376,cd-04-d1-20,cd-04,SPICE OF LIFE,cd,D1,20,Byron Lee & The Dragonaires,Jamaica Jump Up,cd_catalog.json
+377,cd-04-d1-21,cd-04,SPICE OF LIFE,cd,D1,21,Dani,H Comme Hippie,cd_catalog.json
+378,cd-04-d1-22,cd-04,SPICE OF LIFE,cd,D1,22,The Jimmy Dale Adventure,Bye Bye,cd_catalog.json
+379,cd-04-d1-23,cd-04,SPICE OF LIFE,cd,D1,23,Costy De Oliveira,Disco Carnival,cd_catalog.json
+380,cd-04-d1-24,cd-04,SPICE OF LIFE,cd,D1,24,Trinidad Oil Company,College Song (A.B.C.),cd_catalog.json
+381,cd-04-d1-25,cd-04,SPICE OF LIFE,cd,D1,25,Miriam de Kova,"Porte, porte-jarretelles",cd_catalog.json
+382,cd-04-d1-26,cd-04,SPICE OF LIFE,cd,D1,26,Patty Weaver,Laughter in the Rain,cd_catalog.json
+383,cd-04-d1-27,cd-04,SPICE OF LIFE,cd,D1,27,Sound Of Ace,Snake Hip,cd_catalog.json
+384,cd-04-d1-28,cd-04,SPICE OF LIFE,cd,D1,28,Pete Hgler Quintet,The Camp,cd_catalog.json
+385,cd-04-d1-29,cd-04,SPICE OF LIFE,cd,D1,29,Yan & Yin,The Yin Yan,cd_catalog.json
+386,cd-04-d1-30,cd-04,SPICE OF LIFE,cd,D1,30,Alfonso Santisteban,Suenos Prohibidos,cd_catalog.json
+387,cd-04-d1-31,cd-04,SPICE OF LIFE,cd,D1,31,Al De Lory,Song from M*A*S*H,cd_catalog.json
+388,cd-05-d1-01,cd-05,MUSIC THERAPY,cd,D1,1,The Brass Ring,A Man and a Woman,cd_catalog.json
+389,cd-05-d1-02,cd-05,MUSIC THERAPY,cd,D1,2,Manfredo Fest,Theme from Love Story,cd_catalog.json
+390,cd-05-d1-03,cd-05,MUSIC THERAPY,cd,D1,3,Othella Dallas,Memories of Yesterday,cd_catalog.json
+391,cd-05-d1-04,cd-05,MUSIC THERAPY,cd,D1,4,Charlie Steinmann,Born in Spring,cd_catalog.json
+392,cd-05-d1-05,cd-05,MUSIC THERAPY,cd,D1,5,La Nueva Generación,Yeh! Yeh!,cd_catalog.json
+393,cd-05-d1-06,cd-05,MUSIC THERAPY,cd,D1,6,Susan Shifrin,Me and Julio Down by the Schoolyard,cd_catalog.json
+394,cd-05-d1-07,cd-05,MUSIC THERAPY,cd,D1,7,Louis Prima (King Louie),I Wan’na Be Like You (The Monkey Song),cd_catalog.json
+395,cd-05-d1-08,cd-05,MUSIC THERAPY,cd,D1,8,J.P.Massiera,Turn Radio on (Wack Wack),cd_catalog.json
+396,cd-05-d1-09,cd-05,MUSIC THERAPY,cd,D1,9,Yaha Yakoni,Bashana Haba-Ah,cd_catalog.json
+397,cd-05-d1-10,cd-05,MUSIC THERAPY,cd,D1,10,Sergio Mendes & Brasil '88,Magic Lady,cd_catalog.json
+398,cd-05-d1-11,cd-05,MUSIC THERAPY,cd,D1,11,Nicole Alexander,El Musiquito,cd_catalog.json
+399,cd-05-d1-12,cd-05,MUSIC THERAPY,cd,D1,12,New Sun Pops Orchestra,Bitter Sweet Samba,cd_catalog.json
+400,cd-05-d1-13,cd-05,MUSIC THERAPY,cd,D1,13,Ray Charles,"Baby, Don't You Cry (The New Swingova Rhythm)",cd_catalog.json
+401,cd-05-d1-14,cd-05,MUSIC THERAPY,cd,D1,14,Hermanas Benítez,La canción de las gemelas,cd_catalog.json
+402,cd-05-d1-15,cd-05,MUSIC THERAPY,cd,D1,15,Jacqueline François,Nossa Samba (Notre Samba),cd_catalog.json
+403,cd-05-d1-16,cd-05,MUSIC THERAPY,cd,D1,16,Guy Magenta,Notre Samba,cd_catalog.json
+404,cd-05-d1-17,cd-05,MUSIC THERAPY,cd,D1,17,April Set feat. Pecombo,Scat Stream,cd_catalog.json
+405,cd-05-d1-18,cd-05,MUSIC THERAPY,cd,D1,18,Roger Williams,Song from M*A*S*H (Suicide Is Painless),cd_catalog.json
+406,cd-05-d1-19,cd-05,MUSIC THERAPY,cd,D1,19,Nina Simone,"Ain't Got No, I Got Life (Groovefinder Remix)",cd_catalog.json
+407,cd-05-d1-20,cd-05,MUSIC THERAPY,cd,D1,20,Bobby Hebb,Sunny '76,cd_catalog.json
+408,cd-05-d1-21,cd-05,MUSIC THERAPY,cd,D1,21,Ray Conniff,Lowdown,cd_catalog.json
+409,cd-05-d1-22,cd-05,MUSIC THERAPY,cd,D1,22,Chico Arnez,Hippy Parade (A Banda),cd_catalog.json
+410,cd-05-d1-23,cd-05,MUSIC THERAPY,cd,D1,23,Rossa Nova,Samba Brasil,cd_catalog.json
+411,cd-05-d1-24,cd-05,MUSIC THERAPY,cd,D1,24,Orquesta Tropicalla,Samba Samba,cd_catalog.json
+412,cd-05-d1-25,cd-05,MUSIC THERAPY,cd,D1,25,Lady Osumi,Copacabana,cd_catalog.json
+413,cd-05-d1-26,cd-05,MUSIC THERAPY,cd,D1,26,Kuh Ledesma,Never Can Say Goodbye,cd_catalog.json
+414,cd-05-d1-27,cd-05,MUSIC THERAPY,cd,D1,27,Marta,Tror du (I Saw the Light),cd_catalog.json
+415,cd-06-d1-01,cd-06,FULL THROTTLE,cd,D1,1,Andy Williams,Loves Theme,cd_catalog.json
+416,cd-06-d1-02,cd-06,FULL THROTTLE,cd,D1,2,Arthur Verocai,Bis,cd_catalog.json
+417,cd-06-d1-03,cd-06,FULL THROTTLE,cd,D1,3,KEI,You'd Be So Nice to Come Home to,cd_catalog.json
+418,cd-06-d1-04,cd-06,FULL THROTTLE,cd,D1,4,Nükhet Ruacan,Oba Oba,cd_catalog.json
+419,cd-06-d1-05,cd-06,FULL THROTTLE,cd,D1,5,Edwin Hawkins,I Love the Load,cd_catalog.json
+420,cd-06-d1-06,cd-06,FULL THROTTLE,cd,D1,6,Vava,El hombrecito (Le petit homme — Spanish version),cd_catalog.json
+421,cd-06-d1-07,cd-06,FULL THROTTLE,cd,D1,7,Nadine Sutherland,Life,cd_catalog.json
+422,cd-06-d1-08,cd-06,FULL THROTTLE,cd,D1,8,U-KNEEK,Dyer Maker,cd_catalog.json
+423,cd-06-d1-09,cd-06,FULL THROTTLE,cd,D1,9,Bobby Leclerc,C’est pourquoi (Little Green Bag),cd_catalog.json
+424,cd-06-d1-10,cd-06,FULL THROTTLE,cd,D1,10,Leone Di Lernia,Gaccia ad’avè (I Gotcha),cd_catalog.json
+425,cd-06-d1-11,cd-06,FULL THROTTLE,cd,D1,11,The Chuck Borris Trio,Funky Nassau,cd_catalog.json
+426,cd-06-d1-12,cd-06,FULL THROTTLE,cd,D1,12,Michel Fugain et le Big Bazar,Estate insieme (La fête — Italian version),cd_catalog.json
+427,cd-06-d1-13,cd-06,FULL THROTTLE,cd,D1,13,Rose Hill,Wasi-Wala,cd_catalog.json
+428,cd-06-d1-14,cd-06,FULL THROTTLE,cd,D1,14,Carioca,Maria,cd_catalog.json
+429,cd-06-d1-15,cd-06,FULL THROTTLE,cd,D1,15,Billies,Top of the World,cd_catalog.json
+430,cd-06-d1-16,cd-06,FULL THROTTLE,cd,D1,16,Disco Tex & His Sex-O-Lettes,Hot Lava,cd_catalog.json
+431,cd-06-d1-17,cd-06,FULL THROTTLE,cd,D1,17,Modern Romance,Juanita,cd_catalog.json
+432,cd-06-d1-18,cd-06,FULL THROTTLE,cd,D1,18,Patrícia Marx,Se você pensa,cd_catalog.json
+433,cd-06-d1-19,cd-06,FULL THROTTLE,cd,D1,19,EIKO,Last Tango in Paris,cd_catalog.json
+434,cd-06-d1-20,cd-06,FULL THROTTLE,cd,D1,20,Linda,What a Feeling,cd_catalog.json
+435,cd-06-d1-21,cd-06,FULL THROTTLE,cd,D1,21,Ginette Reno,Someday My Prince Will Come,cd_catalog.json
+436,cd-06-d1-22,cd-06,FULL THROTTLE,cd,D1,22,Ultimate,Ritmo de Brazil,cd_catalog.json
+437,cd-06-d1-23,cd-06,FULL THROTTLE,cd,D1,23,Gypsy Kids,Club Tropicana,cd_catalog.json
+438,cd-06-d1-24,cd-06,FULL THROTTLE,cd,D1,24,与野（Yono）,バンボレオ (Bamboleo),cd_catalog.json
+439,cd-06-d1-25,cd-06,FULL THROTTLE,cd,D1,25,Jho Archer,Batucada,cd_catalog.json
+440,cd-06-d1-26,cd-06,FULL THROTTLE,cd,D1,26,Duško Goykovich,Antilope,cd_catalog.json
+441,cd-06-d1-27,cd-06,FULL THROTTLE,cd,D1,27,Aji Band,Sweet Sticky Thing,cd_catalog.json
+442,cd-06-d1-28,cd-06,FULL THROTTLE,cd,D1,28,YUCARI,For All We Know,cd_catalog.json
+443,cd-07-d1-01,cd-07,GROOVE ATTENDANT,cd,D1,1,"Herb ""Ohta-San"" Ohta",Fragments,cd_catalog.json
+444,cd-07-d1-02,cd-07,GROOVE ATTENDANT,cd,D1,2,葉麗儀 (Frances Yip),Bluebird,cd_catalog.json
+445,cd-07-d1-03,cd-07,GROOVE ATTENDANT,cd,D1,3,Alan Sorrenti,Donna Luna,cd_catalog.json
+446,cd-07-d1-04,cd-07,GROOVE ATTENDANT,cd,D1,4,Orchestra Josè Fernando,Kookaburra,cd_catalog.json
+447,cd-07-d1-05,cd-07,GROOVE ATTENDANT,cd,D1,5,ジミー竹内とエキサイターズ,別れのサンバ,cd_catalog.json
+448,cd-07-d1-06,cd-07,GROOVE ATTENDANT,cd,D1,6,Ronnie & HIS Ramblers,Blowing the Wind,cd_catalog.json
+449,cd-07-d1-07,cd-07,GROOVE ATTENDANT,cd,D1,7,Mina,Moliendo café,cd_catalog.json
+450,cd-07-d1-08,cd-07,GROOVE ATTENDANT,cd,D1,8,Max Greger,Moliendo café,cd_catalog.json
+451,cd-07-d1-09,cd-07,GROOVE ATTENDANT,cd,D1,9,Nathalie,Lover's Concerto,cd_catalog.json
+452,cd-07-d1-10,cd-07,GROOVE ATTENDANT,cd,D1,10,Nikki Cleary,Walking on Sunshine,cd_catalog.json
+453,cd-07-d1-11,cd-07,GROOVE ATTENDANT,cd,D1,11,18th Century Concepts,Can't Hurry Love,cd_catalog.json
+454,cd-07-d1-12,cd-07,GROOVE ATTENDANT,cd,D1,12,Maggie Eaves Singers,Other Side of Life,cd_catalog.json
+455,cd-07-d1-13,cd-07,GROOVE ATTENDANT,cd,D1,13,Paul Miles,I'm Not Afraid by Death,cd_catalog.json
+456,cd-07-d1-14,cd-07,GROOVE ATTENDANT,cd,D1,14,Speedometer,Am I Your Woman?,cd_catalog.json
+457,cd-07-d1-15,cd-07,GROOVE ATTENDANT,cd,D1,15,El Kimiko,As,cd_catalog.json
+458,cd-07-d1-16,cd-07,GROOVE ATTENDANT,cd,D1,16,Inger Lise Rypdal,Blame It on the Boogie,cd_catalog.json
+459,cd-07-d1-17,cd-07,GROOVE ATTENDANT,cd,D1,17,Elenore Ost,The Hustle,cd_catalog.json
+460,cd-07-d1-18,cd-07,GROOVE ATTENDANT,cd,D1,18,Brave Combo,The Hustle,cd_catalog.json
+461,cd-07-d1-19,cd-07,GROOVE ATTENDANT,cd,D1,19,Flora Wilson,Dancing on a Daydream,cd_catalog.json
+462,cd-07-d1-20,cd-07,GROOVE ATTENDANT,cd,D1,20,Catch Up II,Sister Jane,cd_catalog.json
+463,cd-07-d1-21,cd-07,GROOVE ATTENDANT,cd,D1,21,Harald Gundhus,St. Thomas,cd_catalog.json
+464,cd-07-d1-22,cd-07,GROOVE ATTENDANT,cd,D1,22,Marina Voica,Samba Brazileiro,cd_catalog.json
+465,cd-07-d1-23,cd-07,GROOVE ATTENDANT,cd,D1,23,Tres Palabras,En el Cafe,cd_catalog.json
+466,cd-07-d1-24,cd-07,GROOVE ATTENDANT,cd,D1,24,Republic,One Chance,cd_catalog.json
+467,cd-07-d1-25,cd-07,GROOVE ATTENDANT,cd,D1,25,Joe Dassin,Cécilia,cd_catalog.json
+468,cd-07-d1-26,cd-07,GROOVE ATTENDANT,cd,D1,26,Tom Jones,Late in the Evening,cd_catalog.json
+469,cd-07-d1-27,cd-07,GROOVE ATTENDANT,cd,D1,27,Sandiego,Can't Take My Eyes Off You,cd_catalog.json
+470,cd-07-d1-28,cd-07,GROOVE ATTENDANT,cd,D1,28,D2,Last Tango in Paris,cd_catalog.json
+471,cd-07-d1-29,cd-07,GROOVE ATTENDANT,cd,D1,29,Big Bang,Ai no Corrida,cd_catalog.json
+472,cd-07-d1-30,cd-07,GROOVE ATTENDANT,cd,D1,30,Gentle Disco Orchestra & Singers,Air on G Strings,cd_catalog.json
+473,cd-07-d1-31,cd-07,GROOVE ATTENDANT,cd,D1,31,Antonio Conde,Danny Boy,cd_catalog.json
+474,cd-07-d1-32,cd-07,GROOVE ATTENDANT,cd,D1,32,Roland Kovac,Albatros,cd_catalog.json
+475,cd-07-d1-33,cd-07,GROOVE ATTENDANT,cd,D1,33,Mocedades,Love Me Tender,cd_catalog.json
+476,cd-08-d1-01,cd-08,KNOCK OUT,cd,D1,1,Björn Skifs,Wouldn't It Be Groovy,cd_catalog.json
+477,cd-08-d1-02,cd-08,KNOCK OUT,cd,D1,2,Simpatico Voices and Strings,Masquerade,cd_catalog.json
+478,cd-08-d1-03,cd-08,KNOCK OUT,cd,D1,3,The Robert Tennison Troupe,Don't Be Afraid,cd_catalog.json
+479,cd-08-d1-04,cd-08,KNOCK OUT,cd,D1,4,Anita Strandell,Morgonen efter,cd_catalog.json
+480,cd-08-d1-05,cd-08,KNOCK OUT,cd,D1,5,Christal,Foxy Roxy,cd_catalog.json
+481,cd-08-d1-06,cd-08,KNOCK OUT,cd,D1,6,Die Perry Singers,Olivia,cd_catalog.json
+482,cd-08-d1-07,cd-08,KNOCK OUT,cd,D1,7,Debra Joyce,Give Me Rain,cd_catalog.json
+483,cd-08-d1-08,cd-08,KNOCK OUT,cd,D1,8,Amado Lovera,Vehiculo,cd_catalog.json
+484,cd-08-d1-09,cd-08,KNOCK OUT,cd,D1,9,The Funk Brothers,Funky Bump,cd_catalog.json
+485,cd-08-d1-10,cd-08,KNOCK OUT,cd,D1,10,Groove Thing,Your Smiling Face,cd_catalog.json
+486,cd-08-d1-11,cd-08,KNOCK OUT,cd,D1,11,Mistral,Paradise,cd_catalog.json
+487,cd-08-d1-12,cd-08,KNOCK OUT,cd,D1,12,Mademoiselle,"C’est l’amour, c’est la vie",cd_catalog.json
+488,cd-08-d1-13,cd-08,KNOCK OUT,cd,D1,13,Gerard Reggini,Bien Avant Dans la Nuit,cd_catalog.json
+489,cd-08-d1-14,cd-08,KNOCK OUT,cd,D1,14,Count Buffalo and His Big Band,Wives and Lovers,cd_catalog.json
+490,cd-08-d1-15,cd-08,KNOCK OUT,cd,D1,15,Gilberto Gil,De Bob Dylan a Bob Marley Um Samba Provocacao (Re-Edit),cd_catalog.json
+491,cd-08-d1-16,cd-08,KNOCK OUT,cd,D1,16,Roé,Soledad,cd_catalog.json
+492,cd-08-d1-17,cd-08,KNOCK OUT,cd,D1,17,RUM-Beats,La Vie en Rose,cd_catalog.json
+493,cd-08-d1-18,cd-08,KNOCK OUT,cd,D1,18,Gordon Henderson & U Convention,Frenzy,cd_catalog.json
+494,cd-08-d1-19,cd-08,KNOCK OUT,cd,D1,19,Sandra Wright,Midnight Affair,cd_catalog.json
+495,cd-08-d1-20,cd-08,KNOCK OUT,cd,D1,20,KG 22 Band,Love the One You’re with,cd_catalog.json
+496,cd-08-d1-21,cd-08,KNOCK OUT,cd,D1,21,Jady Kurrent Band,Standing There,cd_catalog.json
+497,cd-08-d1-22,cd-08,KNOCK OUT,cd,D1,22,Phil Fearon & Galaxy,What do I Do? (Carnival Mix),cd_catalog.json
+498,cd-08-d1-23,cd-08,KNOCK OUT,cd,D1,23,Starr Gazer,Strangers in the Night,cd_catalog.json
+499,cd-08-d1-24,cd-08,KNOCK OUT,cd,D1,24,"Joe Sherman, His Orchestra and Chorus",That Certain Party in Apt. 14C,cd_catalog.json
+500,cd-08-d1-25,cd-08,KNOCK OUT,cd,D1,25,Perry Dominguez,Billie Jean,cd_catalog.json
+501,cd-08-d1-26,cd-08,KNOCK OUT,cd,D1,26,Helena Uriburu,De Repente,cd_catalog.json
+502,cd-08-d1-27,cd-08,KNOCK OUT,cd,D1,27,Paul Delicato,Cara Mia,cd_catalog.json
+503,cd-08-d1-28,cd-08,KNOCK OUT,cd,D1,28,Tonya Gipson,Can't Let You Loose,cd_catalog.json
+504,cd-08-d1-29,cd-08,KNOCK OUT,cd,D1,29,The Montesas,Rokhar (Mathar),cd_catalog.json
+505,cd-08-d1-30,cd-08,KNOCK OUT,cd,D1,30,Rajput & The Sepoy Mutiny,Brasilian Beat,cd_catalog.json
+506,cd-09-d1-01,cd-09,WEEKEND OPERATOR,cd,D1,1,Ranny Sinclair,Bye Bye,cd_catalog.json
+507,cd-09-d1-02,cd-09,WEEKEND OPERATOR,cd,D1,2,Pete Moore Orchestra,Las Vegas,cd_catalog.json
+508,cd-09-d1-03,cd-09,WEEKEND OPERATOR,cd,D1,3,Orchester Fritz Maldener,Short Walk,cd_catalog.json
+509,cd-09-d1-04,cd-09,WEEKEND OPERATOR,cd,D1,4,Steve 'n' Leila,You Made a Lover Out of Me,cd_catalog.json
+510,cd-09-d1-05,cd-09,WEEKEND OPERATOR,cd,D1,5,Wencke Myhre,"Mañana, Mañana",cd_catalog.json
+511,cd-09-d1-06,cd-09,WEEKEND OPERATOR,cd,D1,6,The Wayfarers,Esperanto,cd_catalog.json
+512,cd-09-d1-07,cd-09,WEEKEND OPERATOR,cd,D1,7,Dario Marcello,Rio mon amour,cd_catalog.json
+513,cd-09-d1-08,cd-09,WEEKEND OPERATOR,cd,D1,8,The Flying Machine,Maybe We've Been Loving Too Long,cd_catalog.json
+514,cd-09-d1-09,cd-09,WEEKEND OPERATOR,cd,D1,9,Las 4 Monedas y Gregory,Trauma,cd_catalog.json
+515,cd-09-d1-10,cd-09,WEEKEND OPERATOR,cd,D1,10,Rune Öfwerman,Hush,cd_catalog.json
+516,cd-09-d1-11,cd-09,WEEKEND OPERATOR,cd,D1,11,Noel Quinlan,I Shot the Sheriff,cd_catalog.json
+517,cd-09-d1-12,cd-09,WEEKEND OPERATOR,cd,D1,12,Claudio Aldi & His Orchestra,Sunglow ’75,cd_catalog.json
+518,cd-09-d1-13,cd-09,WEEKEND OPERATOR,cd,D1,13,Wakefield Sun,Sing a Simple Song,cd_catalog.json
+519,cd-09-d1-14,cd-09,WEEKEND OPERATOR,cd,D1,14,Laura del Valle,I Got Love,cd_catalog.json
+520,cd-09-d1-15,cd-09,WEEKEND OPERATOR,cd,D1,15,Judge's Nephews,Si Tu Querer,cd_catalog.json
+521,cd-09-d1-16,cd-09,WEEKEND OPERATOR,cd,D1,16,アーティスト未確認,Tristez,cd_catalog.json
+522,cd-09-d1-17,cd-09,WEEKEND OPERATOR,cd,D1,17,José Bello,Blue Bossa,cd_catalog.json
+523,cd-09-d1-18,cd-09,WEEKEND OPERATOR,cd,D1,18,Bobby Enriquez,Classical Gas,cd_catalog.json
+524,cd-09-d1-19,cd-09,WEEKEND OPERATOR,cd,D1,19,Ghalib Ghallab,Night in Tunisia,cd_catalog.json
+525,cd-09-d1-20,cd-09,WEEKEND OPERATOR,cd,D1,20,H.P. Riot,Do It for Yourself,cd_catalog.json
+526,cd-09-d1-21,cd-09,WEEKEND OPERATOR,cd,D1,21,Sergio Franchi,More,cd_catalog.json
+527,cd-09-d1-22,cd-09,WEEKEND OPERATOR,cd,D1,22,Joe Pugliese,Theme from “Black Belt Jones”,cd_catalog.json
+528,cd-09-d1-23,cd-09,WEEKEND OPERATOR,cd,D1,23,Alan Parker,Freedom Lover,cd_catalog.json
+529,cd-09-d1-24,cd-09,WEEKEND OPERATOR,cd,D1,24,First Class,Candy,cd_catalog.json
+530,cd-09-d1-25,cd-09,WEEKEND OPERATOR,cd,D1,25,Kai Warner’s Salsoul Sensation,Candy,cd_catalog.json
+531,cd-09-d1-26,cd-09,WEEKEND OPERATOR,cd,D1,26,France Gall,Zozoï (Italian version),cd_catalog.json
+532,cd-09-d1-27,cd-09,WEEKEND OPERATOR,cd,D1,27,April Set,Yesterday When I Was Young,cd_catalog.json
+533,cd-10-d1-01,cd-10,HIPSTERS,cd,D1,1,Tadao Hayashi（林忠男）,Kapalaran,cd_catalog.json
+534,cd-10-d1-02,cd-10,HIPSTERS,cd,D1,2,Pierre Cavalli,Passarinhos,cd_catalog.json
+535,cd-10-d1-03,cd-10,HIPSTERS,cd,D1,3,Sapphire,Searching on,cd_catalog.json
+536,cd-10-d1-04,cd-10,HIPSTERS,cd,D1,4,Vancouver Community College,Shaker Song,cd_catalog.json
+537,cd-10-d1-05,cd-10,HIPSTERS,cd,D1,5,François Guy,Chérie chérie,cd_catalog.json
+538,cd-10-d1-06,cd-10,HIPSTERS,cd,D1,6,Horacio Saavedra,La Piragua (Fresh Air),cd_catalog.json
+539,cd-10-d1-07,cd-10,HIPSTERS,cd,D1,7,Miele,I've Got You Under My Skin,cd_catalog.json
+540,cd-10-d1-08,cd-10,HIPSTERS,cd,D1,8,Johnny Ray,You're My Everything,cd_catalog.json
+541,cd-10-d1-09,cd-10,HIPSTERS,cd,D1,9,Yoshiro広石,Elly mi amor,cd_catalog.json
+542,cd-10-d1-10,cd-10,HIPSTERS,cd,D1,10,Doris med Dandys,Don't Let It Rain,cd_catalog.json
+543,cd-10-d1-11,cd-10,HIPSTERS,cd,D1,11,Calole,Mama Never Told Me,cd_catalog.json
+544,cd-10-d1-12,cd-10,HIPSTERS,cd,D1,12,Singing Players,Mabusso,cd_catalog.json
+545,cd-10-d1-13,cd-10,HIPSTERS,cd,D1,13,The Organization,Smokey Feeling,cd_catalog.json
+546,cd-10-d1-14,cd-10,HIPSTERS,cd,D1,14,Lainie Kazan,One Fine Morning,cd_catalog.json
+547,cd-10-d1-15,cd-10,HIPSTERS,cd,D1,15,由紀さおり & 安田祥子,Chanson des jumelles（ふたごの歌）,cd_catalog.json
+548,cd-10-d1-16,cd-10,HIPSTERS,cd,D1,16,The Laurie Bower Singers,I've Found a New Baby,cd_catalog.json
+549,cd-10-d1-17,cd-10,HIPSTERS,cd,D1,17,"The Jan Brenner, Ltd.",Love So Fine,cd_catalog.json
+550,cd-10-d1-18,cd-10,HIPSTERS,cd,D1,18,Diana George with the Phil Lenk Trio,That's Me,cd_catalog.json
+551,cd-10-d1-19,cd-10,HIPSTERS,cd,D1,19,ORF Big Band,Samba '73,cd_catalog.json
+552,cd-10-d1-20,cd-10,HIPSTERS,cd,D1,20,Neil Sedaka,Hot and Sultry Nights,cd_catalog.json
+553,cd-10-d1-21,cd-10,HIPSTERS,cd,D1,21,Exosphere,Angela,cd_catalog.json
+554,cd-10-d1-22,cd-10,HIPSTERS,cd,D1,22,René Hatchi,Toumaranke (L’exile),cd_catalog.json
+555,cd-10-d1-23,cd-10,HIPSTERS,cd,D1,23,Kurtis Scott,Moon River,cd_catalog.json
+556,cd-10-d1-24,cd-10,HIPSTERS,cd,D1,24,Mona Richardson,California Soul,cd_catalog.json
+557,cd-10-d1-25,cd-10,HIPSTERS,cd,D1,25,Lee Jay Nelson,Harbor Lights,cd_catalog.json
+558,cd-10-d1-26,cd-10,HIPSTERS,cd,D1,26,The Ambassador College Band & The New World Singers,Smile Upon Your Brother,cd_catalog.json
+559,cd-10-d1-27,cd-10,HIPSTERS,cd,D1,27,The Adam Ross Reeds,Silly Savage,cd_catalog.json
+560,cd-10-d1-28,cd-10,HIPSTERS,cd,D1,28,Kansas City Stompers,Karneval i København,cd_catalog.json
+561,cd-10-d1-29,cd-10,HIPSTERS,cd,D1,29,The Five Chords,Candy,cd_catalog.json
+562,cd-11-d1-01,cd-11,GROOVE CENTURY,cd,D1,1,Steve Jackson et son orchestre,AllO Sylvie,cd_catalog.json
+563,cd-11-d1-02,cd-11,GROOVE CENTURY,cd,D1,2,Lilian Terry,Mille Parole D'amore,cd_catalog.json
+564,cd-11-d1-03,cd-11,GROOVE CENTURY,cd,D1,3,Ernie Castel 4 feat. Elaine Terzi,Mr. Weatherman,cd_catalog.json
+565,cd-11-d1-04,cd-11,GROOVE CENTURY,cd,D1,4,Michelle Hart,Oba Oba,cd_catalog.json
+566,cd-11-d1-05,cd-11,GROOVE CENTURY,cd,D1,5,El Combo 5,"Aquí, allá y en todas partes (Here, There and Everywhere)",cd_catalog.json
+567,cd-11-d1-06,cd-11,GROOVE CENTURY,cd,D1,6,Francis Guillon,By My Side,cd_catalog.json
+568,cd-11-d1-07,cd-11,GROOVE CENTURY,cd,D1,7,Laurie Holloway,Stratus,cd_catalog.json
+569,cd-11-d1-08,cd-11,GROOVE CENTURY,cd,D1,8,Michèle Richard & Denis Pantis,Bonnie and Clyde,cd_catalog.json
+570,cd-11-d1-09,cd-11,GROOVE CENTURY,cd,D1,9,Julie Sue（蘇芮）,Magic in My Life,cd_catalog.json
+571,cd-11-d1-10,cd-11,GROOVE CENTURY,cd,D1,10,Cavril Payne,Lovin’ Train,cd_catalog.json
+572,cd-11-d1-11,cd-11,GROOVE CENTURY,cd,D1,11,Barbara Książkiewicz,"Za to wszystko, co przed nami",cd_catalog.json
+573,cd-11-d1-12,cd-11,GROOVE CENTURY,cd,D1,12,Sola,Bada-Bada-Ba,cd_catalog.json
+574,cd-11-d1-13,cd-11,GROOVE CENTURY,cd,D1,13,The Tartans,Donde Estas (Amor),cd_catalog.json
+575,cd-11-d1-14,cd-11,GROOVE CENTURY,cd,D1,14,"Pedro Ruy-Blas,Dolores",Smoilenbash (Re-Edit),cd_catalog.json
+576,cd-11-d1-15,cd-11,GROOVE CENTURY,cd,D1,15,Monna Bell,Es por ti (Swearin’ to God),cd_catalog.json
+577,cd-11-d1-16,cd-11,GROOVE CENTURY,cd,D1,16,Una Valli,Reach Out I'll Be There,cd_catalog.json
+578,cd-11-d1-17,cd-11,GROOVE CENTURY,cd,D1,17,Kashmere Stage Band,Satin Soul,cd_catalog.json
+579,cd-11-d1-18,cd-11,GROOVE CENTURY,cd,D1,18,"Luis ""Perico"" Ortiz",Sometimes,cd_catalog.json
+580,cd-11-d1-19,cd-11,GROOVE CENTURY,cd,D1,19,Jacqui Magno,Rio’s Disco Hill,cd_catalog.json
+581,cd-11-d1-20,cd-11,GROOVE CENTURY,cd,D1,20,Smp Organization,Pacemaker,cd_catalog.json
+582,cd-11-d1-21,cd-11,GROOVE CENTURY,cd,D1,21,Tony Crombie,Bolero Reverie,cd_catalog.json
+583,cd-11-d1-22,cd-11,GROOVE CENTURY,cd,D1,22,Mike Selesia,Mr. P.C.,cd_catalog.json
+584,cd-11-d1-23,cd-11,GROOVE CENTURY,cd,D1,23,Konstantin Orbelyen Orchestra,曲名未確認,cd_catalog.json
+585,cd-11-d1-24,cd-11,GROOVE CENTURY,cd,D1,24,Rosa King,Summertime,cd_catalog.json
+586,cd-11-d1-25,cd-11,GROOVE CENTURY,cd,D1,25,Windrose,Late in the Evening,cd_catalog.json
+587,cd-11-d1-26,cd-11,GROOVE CENTURY,cd,D1,26,Two Nations,Independance,cd_catalog.json
+588,cd-11-d1-27,cd-11,GROOVE CENTURY,cd,D1,27,Jorge Antonio Alves et son orchestre,Samba Laia,cd_catalog.json
+589,cd-11-d1-28,cd-11,GROOVE CENTURY,cd,D1,28,Laurie Bower Singers,Simple Song,cd_catalog.json
+590,cd-11-d1-29,cd-11,GROOVE CENTURY,cd,D1,29,Frank Chacksfield,As Lovely as You Are (Theme from Jealousy),cd_catalog.json
+591,cd-12-d1-01,cd-12,HOW TO GROOVE,cd,D1,1,Pete Rugolo et son orchestre,Paris B.B.,cd_catalog.json
+592,cd-12-d1-02,cd-12,HOW TO GROOVE,cd,D1,2,Jacqueline Boyer,Le Soleil Dans les Yeux,cd_catalog.json
+593,cd-12-d1-03,cd-12,HOW TO GROOVE,cd,D1,3,Paula Sydney,Pretty,cd_catalog.json
+594,cd-12-d1-04,cd-12,HOW TO GROOVE,cd,D1,4,Jimmie Haskell,Pretty,cd_catalog.json
+595,cd-12-d1-05,cd-12,HOW TO GROOVE,cd,D1,5,Erica & Chiquinho,Chattanooga Choo Choo,cd_catalog.json
+596,cd-12-d1-06,cd-12,HOW TO GROOVE,cd,D1,6,Willy Chirino,Always Something There to Remind Me,cd_catalog.json
+597,cd-12-d1-07,cd-12,HOW TO GROOVE,cd,D1,7,Mighty Sparrow,Children Must Learn,cd_catalog.json
+598,cd-12-d1-08,cd-12,HOW TO GROOVE,cd,D1,8,赤い鳥 (The Red Birds),Mariposa,cd_catalog.json
+599,cd-12-d1-09,cd-12,HOW TO GROOVE,cd,D1,9,Hear & Now,Climbin' Tree,cd_catalog.json
+600,cd-12-d1-10,cd-12,HOW TO GROOVE,cd,D1,10,The Charade,Love So Fine,cd_catalog.json
+601,cd-12-d1-11,cd-12,HOW TO GROOVE,cd,D1,11,Del Richardson,Do What You Can,cd_catalog.json
+602,cd-12-d1-12,cd-12,HOW TO GROOVE,cd,D1,12,Nina Lizell,Pappa Joe,cd_catalog.json
+603,cd-12-d1-13,cd-12,HOW TO GROOVE,cd,D1,13,Cañones y Mantequilla,No me tomes el pelo,cd_catalog.json
+604,cd-12-d1-14,cd-12,HOW TO GROOVE,cd,D1,14,The Ambros Seelos Showband,"Wow, Wow, Wow",cd_catalog.json
+605,cd-12-d1-15,cd-12,HOW TO GROOVE,cd,D1,15,Jean-Claude Petit,Donato Brass,cd_catalog.json
+606,cd-12-d1-16,cd-12,HOW TO GROOVE,cd,D1,16,Blue Rhythm Combo,Black Water Gold,cd_catalog.json
+607,cd-12-d1-17,cd-12,HOW TO GROOVE,cd,D1,17,The IgG Band,I Still Want You,cd_catalog.json
+608,cd-12-d1-18,cd-12,HOW TO GROOVE,cd,D1,18,Babadu!,Words to a Song,cd_catalog.json
+609,cd-12-d1-19,cd-12,HOW TO GROOVE,cd,D1,19,Max Greger Jr.,Sister Jane 1980,cd_catalog.json
+610,cd-12-d1-20,cd-12,HOW TO GROOVE,cd,D1,20,Lisa,It Might as Well Be Spring,cd_catalog.json
+611,cd-12-d1-21,cd-12,HOW TO GROOVE,cd,D1,21,Philly Devotions,Hurt So Bad,cd_catalog.json
+612,cd-12-d1-22,cd-12,HOW TO GROOVE,cd,D1,22,Ketty Lester,Don't Think Twice,cd_catalog.json
+613,cd-12-d1-23,cd-12,HOW TO GROOVE,cd,D1,23,Johnny Chingas,I'm Honey,cd_catalog.json
+614,cd-12-d1-24,cd-12,HOW TO GROOVE,cd,D1,24,The Ventures,M*A*S*H,cd_catalog.json
+615,cd-12-d1-25,cd-12,HOW TO GROOVE,cd,D1,25,Christine Charbonneau,Censuré,cd_catalog.json
+616,cd-12-d1-26,cd-12,HOW TO GROOVE,cd,D1,26,Luiza Maura,Odara,cd_catalog.json
+617,cd-12-d1-27,cd-12,HOW TO GROOVE,cd,D1,27,"Chico Arnez, His Orchestra & Choir",A banda,cd_catalog.json
+618,cd-12-d1-28,cd-12,HOW TO GROOVE,cd,D1,28,Banda Peanuts,Coco Samba,cd_catalog.json
+619,cd-12-d1-29,cd-12,HOW TO GROOVE,cd,D1,29,Hank Ballard & The Midnighters,A Samba,cd_catalog.json
+620,cd-13-d1-01,cd-13,DO THE ACTION,cd,D1,1,Orchester Peter Jacques,Hamburgers,cd_catalog.json
+621,cd-13-d1-02,cd-13,DO THE ACTION,cd,D1,2,アーティスト未確認,Chante,cd_catalog.json
+622,cd-13-d1-03,cd-13,DO THE ACTION,cd,D1,3,Nuovo Sistema,In qualche maniera,cd_catalog.json
+623,cd-13-d1-04,cd-13,DO THE ACTION,cd,D1,4,Glen Vargas,So Much in Love,cd_catalog.json
+624,cd-13-d1-05,cd-13,DO THE ACTION,cd,D1,5,Mighty Sparrow,Tour of Jamaica,cd_catalog.json
+625,cd-13-d1-06,cd-13,DO THE ACTION,cd,D1,6,Orchester Fritz Maldener,Short Walk,cd_catalog.json
+626,cd-13-d1-07,cd-13,DO THE ACTION,cd,D1,7,Nina Shaw,Love So Fine,cd_catalog.json
+627,cd-13-d1-08,cd-13,DO THE ACTION,cd,D1,8,Betty Chung,Bye Bye Love,cd_catalog.json
+628,cd-13-d1-09,cd-13,DO THE ACTION,cd,D1,9,Ricky May,Tomorrow,cd_catalog.json
+629,cd-13-d1-10,cd-13,DO THE ACTION,cd,D1,10,Vince Tempera,La preda,cd_catalog.json
+630,cd-13-d1-11,cd-13,DO THE ACTION,cd,D1,11,Polly Brown,The Feeling’s Right,cd_catalog.json
+631,cd-13-d1-12,cd-13,DO THE ACTION,cd,D1,12,Carey Harris & Michael Orr,Here I Go (Through These Changes Again),cd_catalog.json
+632,cd-13-d1-13,cd-13,DO THE ACTION,cd,D1,13,Nick Apolo,Free,cd_catalog.json
+633,cd-13-d1-14,cd-13,DO THE ACTION,cd,D1,14,Les Requins,Campus No. 8,cd_catalog.json
+634,cd-13-d1-15,cd-13,DO THE ACTION,cd,D1,15,Ralph Marco Band,High Snobiety,cd_catalog.json
+635,cd-13-d1-16,cd-13,DO THE ACTION,cd,D1,16,The Sunshine Band,Black Water Gold,cd_catalog.json
+636,cd-13-d1-17,cd-13,DO THE ACTION,cd,D1,17,Harry Belafonte,Down on the Corner,cd_catalog.json
+637,cd-13-d1-18,cd-13,DO THE ACTION,cd,D1,18,Kuh Ledesma,Too Marvelous for Words,cd_catalog.json
+638,cd-13-d1-19,cd-13,DO THE ACTION,cd,D1,19,Frank Sinatra,L.A. Is My Lady,cd_catalog.json
+639,cd-13-d1-20,cd-13,DO THE ACTION,cd,D1,20,TSU Jazz Ensemble,Jazzman,cd_catalog.json
+640,cd-13-d1-21,cd-13,DO THE ACTION,cd,D1,21,Yasushi Sawada,Lonely Escape,cd_catalog.json
+641,cd-13-d1-22,cd-13,DO THE ACTION,cd,D1,22,Berry Lipman & His Orchestra,I Like It,cd_catalog.json
+642,cd-13-d1-23,cd-13,DO THE ACTION,cd,D1,23,Stephanie Taylor,I'm Going to Make You Love Me,cd_catalog.json
+643,cd-13-d1-24,cd-13,DO THE ACTION,cd,D1,24,Cornélius,Eu perdi seu amor,cd_catalog.json
+644,cd-13-d1-25,cd-13,DO THE ACTION,cd,D1,25,Gene Ferrari & The Disco Roma Band,"Quando, Quando, Quando",cd_catalog.json
+645,cd-13-d1-26,cd-13,DO THE ACTION,cd,D1,26,Harmony Cats,Seja como nós (De pé no chão),cd_catalog.json
+646,cd-13-d1-27,cd-13,DO THE ACTION,cd,D1,27,The Koalas,We Don't Want to Glow Up,cd_catalog.json
+647,cd-13-d1-28,cd-13,DO THE ACTION,cd,D1,28,Dynamite Brass,Fura de fila,cd_catalog.json
+648,cd-13-d1-29,cd-13,DO THE ACTION,cd,D1,29,Jan Tober & Ron Satterfield,Focus,cd_catalog.json
+649,cd-13-d1-30,cd-13,DO THE ACTION,cd,D1,30,Liz Damon’s Orient Express,Loneliness Remembers (What Happiness Forgets),cd_catalog.json
+650,cd-14-d1-01,cd-14,RECORD HOUR,cd,D1,1,Sheila Graham,Without You,cd_catalog.json
+651,cd-14-d1-02,cd-14,RECORD HOUR,cd,D1,2,Gerri Granger,Can't Take My Eyes Off You,cd_catalog.json
+652,cd-14-d1-03,cd-14,RECORD HOUR,cd,D1,3,Harmony Four,Mä vapauden sain (Let’s Celebrate),cd_catalog.json
+653,cd-14-d1-04,cd-14,RECORD HOUR,cd,D1,4,Chris Christman,Love on the Run,cd_catalog.json
+654,cd-14-d1-05,cd-14,RECORD HOUR,cd,D1,5,Mushroom,Lose Control,cd_catalog.json
+655,cd-14-d1-06,cd-14,RECORD HOUR,cd,D1,6,Anita,Je Suis Amoureuse de Travolta,cd_catalog.json
+656,cd-14-d1-07,cd-14,RECORD HOUR,cd,D1,7,Tommy Sterne,Goo Goo Barabajagal,cd_catalog.json
+657,cd-14-d1-08,cd-14,RECORD HOUR,cd,D1,8,Teddy Tanaka,Heart in Hand,cd_catalog.json
+658,cd-14-d1-09,cd-14,RECORD HOUR,cd,D1,9,Ahmad Nawab,Regent Club,cd_catalog.json
+659,cd-14-d1-10,cd-14,RECORD HOUR,cd,D1,10,Clarence Curvan Orchestra,Rip Van Winkle,cd_catalog.json
+660,cd-14-d1-11,cd-14,RECORD HOUR,cd,D1,11,Edmundo Ros,London Is the Place for Me,cd_catalog.json
+661,cd-14-d1-12,cd-14,RECORD HOUR,cd,D1,12,Trio Hans Jansen,London Is the Place for Me,cd_catalog.json
+662,cd-14-d1-13,cd-14,RECORD HOUR,cd,D1,13,Gunter Noris Und Der Big Band,Jamaica Samba,cd_catalog.json
+663,cd-14-d1-14,cd-14,RECORD HOUR,cd,D1,14,Demis Roussos,Bahia Blue,cd_catalog.json
+664,cd-14-d1-15,cd-14,RECORD HOUR,cd,D1,15,Lucky Vlaviano,Bahia Blue,cd_catalog.json
+665,cd-14-d1-16,cd-14,RECORD HOUR,cd,D1,16,Francis Lai,Canto per Te,cd_catalog.json
+666,cd-14-d1-17,cd-14,RECORD HOUR,cd,D1,17,Charmaine Forde,What You Won’t do for Love,cd_catalog.json
+667,cd-14-d1-18,cd-14,RECORD HOUR,cd,D1,18,The Manzanilla Sound,Ain't no Mountain High Enough,cd_catalog.json
+668,cd-14-d1-19,cd-14,RECORD HOUR,cd,D1,19,Dennis Souza,Ali's Theme,cd_catalog.json
+669,cd-14-d1-20,cd-14,RECORD HOUR,cd,D1,20,The Shelters,Make It with You,cd_catalog.json
+670,cd-14-d1-21,cd-14,RECORD HOUR,cd,D1,21,Terry McCullough,I've Got the Melody,cd_catalog.json
+671,cd-14-d1-22,cd-14,RECORD HOUR,cd,D1,22,Chris Montez,Nothing to Hide,cd_catalog.json
+672,cd-14-d1-23,cd-14,RECORD HOUR,cd,D1,23,Franck Fernandel,Rio,cd_catalog.json
+673,cd-14-d1-24,cd-14,RECORD HOUR,cd,D1,24,Dave Daffodil & His Honey Sax,One More Samba,cd_catalog.json
+674,cd-14-d1-25,cd-14,RECORD HOUR,cd,D1,25,Dr. Dragon & The Oriental Express,Samba Club,cd_catalog.json
+675,cd-14-d1-26,cd-14,RECORD HOUR,cd,D1,26,Guido Basso,What Are You Doing New Year’s Eve?,cd_catalog.json

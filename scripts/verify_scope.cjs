@@ -7,7 +7,7 @@ const catalog=JSON.parse(fs.readFileSync('catalog.json')),research=JSON.parse(fs
 Object.assign(sources,JSON.parse(fs.readFileSync('audio_sources.json')));
 const audio=catalog.tracks.filter(t=>sources[t.id]).map(t=>({...t,videoId:sources[t.id].id,url:sources[t.id].url}));let events,videoId='',calls=[];
 function Player(id,opts){events=opts.events;Object.assign(this,{loadVideoById(id){videoId=id;calls.push(['load',id])},cueVideoById(id){videoId=id;calls.push(['cue',id])},getVideoData:()=>({video_id:videoId}),pauseVideo(){calls.push(['pause'])},playVideo(){calls.push(['play'])},stopVideo(){calls.push(['stop'])},seekTo(n){calls.push(['seek',n])},getDuration:()=>180,getCurrentTime:()=>0})}
-const ctx={document:doc,PREMIUM_AUDIO:audio,PREMIUM_ESSENTIAL_IDS:JSON.parse(fs.readFileSync('features.json')).essentials.track_ids,URL,URLSearchParams,Map,Set,console,location:{origin:'https://example.test',pathname:'/premiumcuts/features/essentials.html'},window:{YT:{Player}},YT:{Player},localStorage:{getItem:()=>null,setItem(){}},setTimeout:()=>1,clearTimeout(){},setInterval(){},addEventListener(k,f){winhandlers[k]=f},history:{pushState(a,b,u){const x=new URL(u,ctx.location.origin);Object.assign(ctx.location,{pathname:x.pathname,search:x.search,href:x.href})}}};ctx.window.scrollTo=()=>{};vm.createContext(ctx);vm.runInContext(fs.readFileSync('src/player.js','utf8'),ctx);const api=ctx.window.PremiumPlayer;
+const ctx={document:doc,PREMIUM_AUDIO:audio,PREMIUM_MYSPIN:JSON.parse(fs.readFileSync('myspin.json')),PREMIUM_ESSENTIAL_IDS:JSON.parse(fs.readFileSync('features.json')).essentials.track_ids,URL,URLSearchParams,Map,Set,console,location:{origin:'https://example.test',pathname:'/premiumcuts/features/essentials.html'},window:{YT:{Player}},YT:{Player},localStorage:{getItem:()=>null,setItem(){}},setTimeout:()=>1,clearTimeout(){},setInterval(){},addEventListener(k,f){winhandlers[k]=f},history:{pushState(a,b,u){const x=new URL(u,ctx.location.origin);Object.assign(ctx.location,{pathname:x.pathname,search:x.search,href:x.href})}}};ctx.window.scrollTo=()=>{};vm.createContext(ctx);vm.runInContext(fs.readFileSync('src/player.js','utf8'),ctx);const api=ctx.window.PremiumPlayer;
 
 const expected=JSON.parse(fs.readFileSync('features.json')).essentials.track_ids;
 assert.deepEqual(Array.from(api.getState().queue),expected);
@@ -61,5 +61,19 @@ async function visit(path){const href='https://example.test'+path;const a={href,
  get('pc-next').onclick();assert.equal(api.getState().current,expected[expected.indexOf('002-a-08')+1]);
  const html=fs.readFileSync('dist/index.html','utf8');assert.ok(!html.match(/<nav[^>]*>[\s\S]*?>PLAYER<\/[\s\S]*?<\/nav>/));
  assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'6de095808e2d8fe9f3c9ae880473eedf5f5831808587e06ec67a3cf1964e895c');
+ const myspin=JSON.parse(fs.readFileSync('myspin.json')),myids=myspin.map(t=>t.id);
+ api.stop(); await visit('/premiumcuts/my-spin.html');
+ assert.equal(api.getState().scope,'myspin');assert.deepEqual(Array.from(api.getState().queue),myids);assert.equal(api.getState().wantsPlay,false);
+ await visit('/premiumcuts/tracks/'+myids[1]+'.html');assert.equal(api.getState().scope,'myspin');
+ api.play(myids[0],'myspin');events.onStateChange({data:1});get('pc-next').onclick();assert.equal(api.getState().current,myids[1]);
+ api.play(myids.at(-1),'myspin');events.onStateChange({data:1});events.onStateChange({data:0});assert.equal(api.getState().wantsPlay,false);
+ await visit('/premiumcuts/tracks.html');assert.equal(api.getState().scope,'all');assert.equal(api.getState().queue.length,37);assert.ok(!api.getState().queue.some(id=>myids.includes(id)));
+ await visit('/premiumcuts/features/essentials.html');assert.deepEqual(Array.from(api.getState().queue),expected);
+ await visit('/premiumcuts/my-spin.html');
+ ctx.fetch=async u=>({ok:true,json:async()=>String(u).includes('version.json')?{version:'new'}:{version:'new',audio,tracks:catalog.tracks,volumes:catalog.volumes,myspin},text:async()=>'<main></main>'});
+ await api.refresh(true);assert.deepEqual(Array.from(api.getState().queue),myids);
+ ctx.fetch=async u=>({ok:true,json:async()=>String(u).includes('version.json')?{version:'bad'}:{version:'bad',audio,tracks:catalog.tracks,volumes:catalog.volumes,myspin:[null]}});
+ assert.equal(await api.refresh(true),false);assert.deepEqual(Array.from(api.getState().queue),myids);api.play(myids[0],'myspin');assert.equal(api.getState().current,myids[0]);
+ console.log('PASS My-Spin navigation, detail, next/end, Songs/Essentials exclusion, refresh and malformed snapshot');
  console.log('PASS actual click navigation, article play, popstate, filtered Essentials');
 })().catch(e=>{console.error(e);process.exitCode=1});
