@@ -25,12 +25,12 @@ x=Counter();x.feed(allpage);assert x.rows==n
 print(f'PASS homepage hierarchy/copy; {n} categorized entries; no Essentials double count or mixed playback queue')
 
 songs=(p/'dist/tracks.html').read_text()
-assert '<h1>Premium Cuts<br><i>Songs</i></h1>' in songs
+assert '<h1>Premium Cuts<br><i id="catalog-heading-name">Songs</i></h1>' in songs
 assert '<section class="essentials-heading songs-heading">' in songs
-assert '<p class="song-lead">Premium Cutsすべての曲を、<em>ひとつの棚に。</em></p><p>ジャズ、ブラジル、フレンチ・ポップ。<br>こちらの世界もとてもひろかった。</p>' in songs
+assert '<p class="song-lead" id="catalog-heading-lead">Premium Cutsすべての曲を、<em>ひとつの棚に。</em></p><p id="catalog-heading-description">ジャズ、ブラジル、フレンチ・ポップ。<br>こちらの世界もとてもひろかった。</p>' in songs
 
 css=(p/'src/style.css').read_text()
-assert '.essentials-teaser{background:#f08080;color:#10394a;' in css
+assert '.essentials-teaser{background:#e8b6a7;color:#10394a;' in css
 assert 'text-align:right;justify-items:end' in css
 assert '.essentials-teaser a:focus-visible{outline-color:currentColor}' in css
 
@@ -46,3 +46,6 @@ from PIL import Image
 im=Image.open(p/'dist/assets/couple-french.webp')
 assert im.size==(960,720) and im.format=='WEBP'
 assert not im.getexif() and not any(k in im.info for k in ['exif','xmp'])
+
+assert 'aria-label="パンくず"' in songs and 'aria-current="page">Songs' in songs
+assert "My-Spin" not in home and "My-Spin" not in (p/"dist/my-spin.html").read_text()

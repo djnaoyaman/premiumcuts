@@ -96,7 +96,7 @@
 @media(max-width:700px){.volume-grid{grid-template-columns:minmax(0,1fr);gap:0}.volume-card h3{font-size:26px}.song-work-link{font-size:11px;max-width:100%;overflow-wrap:anywhere}}
 
 /* Owner-directed homepage hierarchy: original archive first, Essentials before About. */
-.essentials-teaser{background:#f08080;color:#10394a;padding:clamp(28px,5vw,64px);margin-block:48px 0;border:0;text-align:right;justify-items:end}
+.essentials-teaser{background:#e8b6a7;color:#10394a;padding:clamp(28px,5vw,64px);margin-block:48px 0;border:0;text-align:right;justify-items:end}
 .essentials-teaser>div{max-width:700px}
 .essentials-teaser .essentials-summary{justify-self:end}
 .essentials-teaser .essentials-summary,.essentials-teaser .text-link{color:inherit;border-color:currentColor}
