@@ -41,11 +41,11 @@ def enrich(dist,origin,base_path):
   elif rel=='/features/essentials.html':label='Essentials'
   crumbs=[]
   if rel!='/index.html':
-   match=re.search(r'<div class="breadcrumb">(.*?)</div>',s)
+   match=re.search(r'<(?P<tag>div|nav)\b(?P<attrs>[^>]*\bclass="[^"]*\bbreadcrumb\b[^"]*"[^>]*)>(?P<body>.*?)</(?P=tag)>',s)
    if match:
-    body=match.group(1)
+    body=match.group('body')
     if not re.search(r'>HOME</a>',body):body=f'<a href="{base_path}/">HOME</a> / '+body
-    s=s[:match.start()]+f'<div class="breadcrumb">{body}</div>'+s[match.end():]
+    s=s[:match.start('body')]+body+s[match.end('body'):]
    else:
     body=f'<a href="{base_path}/">HOME</a> / {esc(label)}'
     s=re.sub(r'(<main\b[^>]*>)',lambda m:m.group(1)+f'<div class="breadcrumb">{body}</div>',s,count=1)
