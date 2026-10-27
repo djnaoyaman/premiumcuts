@@ -28,12 +28,12 @@ assert f['essentials_ids']==f['essentials_revision']['previous_essentials_ids']+
 assert len(f['essentials_ids'])==36
 assert next(t for t in public['audio'] if t['id']=='001-b-02')['videoId']=='oDhgHoPfGNI'
 assert f['essentials_ids'][-3:]==['001-a-03','001-a-09','001-b-07']
-for track,video in [('001-a-03','oIBZHTDOuwo'),('001-a-09','ISS2DnNOuvU'),('001-b-07','houkrNCo1sQ')]:
+for track,video in [('001-a-03','oIBZHTDOuwo'),('001-a-09','v4q7wC_LSeg'),('001-b-07','houkrNCo1sQ')]:
  assert next(t for t in public['audio'] if t['id']==track)['videoId']==video
  assert not any(t['videoId']==video for t in public['myspin'])
 
 # Owner-designated videos attach to existing Songs only.
-for track,video in [("001-b-10","KmptGhVdutA"),("001-b-11","W6_akbmZSpk"),("001-b-13","Epr8SGiUXxc"),("001-b-14","v2CIOv_4Mbk")]:
+for track,video in [("001-b-10","KmptGhVdutA"),("001-b-11","98zvoTetV3Y"),("001-b-13","Epr8SGiUXxc"),("001-b-14","v2CIOv_4Mbk")]:
  assert next(t for t in public["audio"] if t["id"]==track)["videoId"]==video
  assert track not in f["essentials_ids"]
  assert not any(t["videoId"]==video for t in public["myspin"])
