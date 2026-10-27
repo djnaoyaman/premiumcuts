@@ -14,6 +14,11 @@ assert len(ids)==len(m) and not ids.intersection(t['id'] for t in actual)
 public=json.loads((p/'dist/catalog-public.json').read_text())
 assert public['myspin']==m and len(public['tracks'])==675
 assert not ids.intersection(t['id'] for t in public['audio'])
-assert len({t['videoId'] for t in public['audio']})==37
+assert len({t['videoId'] for t in public['audio']})==38
 assert all(t['id'] not in (p/'dist/tracks.html').read_text().split('<main')[1] for t in m)
 print('PASS fixed 675 Songs exact records/order, 32 Essentials order, baseline hashes, My-Spin isolation')
+
+# Audio for an existing Songs entry does not add it to either curated collection.
+assert next(t for t in public["audio"] if t["id"] == "001-a-02")["videoId"] == "8pQBEa4zRMw"
+assert "001-a-02" not in json.load(open("features.json"))["essentials"]["track_ids"]
+assert not any(t["videoId"] == "8pQBEa4zRMw" for t in public["myspin"])
