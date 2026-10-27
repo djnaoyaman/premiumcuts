@@ -14,9 +14,9 @@ assert len(ids)==len(m) and not ids.intersection(t['id'] for t in actual)
 public=json.loads((p/'dist/catalog-public.json').read_text())
 assert public['myspin']==m and len(public['tracks'])==675
 assert not ids.intersection(t['id'] for t in public['audio'])
-assert len({t['videoId'] for t in public['audio']})==43
+assert len({t['videoId'] for t in public['audio']})==46
 assert all(t['id'] not in (p/'dist/tracks.html').read_text().split('<main')[1] for t in m)
-print('PASS fixed 675 Songs exact records/order, 33 Essentials order, baseline hashes, My-Spin isolation')
+print('PASS fixed 675 Songs exact records/order, 36 Essentials order, baseline hashes, My-Spin isolation')
 
 # Audio for an existing Songs entry does not add it to either curated collection.
 assert next(t for t in public["audio"] if t["id"] == "001-a-02")["videoId"] == "8pQBEa4zRMw"
@@ -24,10 +24,13 @@ assert "001-a-02" not in json.load(open("features.json"))["essentials"]["track_i
 assert not any(t["videoId"] == "8pQBEa4zRMw" for t in public["myspin"])
 
 # Explicit owner selection extends, never replaces, the original frozen list.
-assert f['essentials_ids']==f['essentials_revision']['previous_essentials_ids']+['001-b-02']
-assert len(f['essentials_ids'])==33
+assert f['essentials_ids']==f['essentials_revision']['previous_essentials_ids']+['001-a-03','001-a-09','001-b-07']
+assert len(f['essentials_ids'])==36
 assert next(t for t in public['audio'] if t['id']=='001-b-02')['videoId']=='oDhgHoPfGNI'
-assert '001-a-03' not in f['essentials_ids'] and '001-a-09' not in f['essentials_ids']
+assert f['essentials_ids'][-3:]==['001-a-03','001-a-09','001-b-07']
+for track,video in [('001-a-03','oIBZHTDOuwo'),('001-a-09','ISS2DnNOuvU'),('001-b-07','houkrNCo1sQ')]:
+ assert next(t for t in public['audio'] if t['id']==track)['videoId']==video
+ assert not any(t['videoId']==video for t in public['myspin'])
 
 # Owner-designated videos attach to existing Songs only.
 for track,video in [("001-b-10","KmptGhVdutA"),("001-b-11","W6_akbmZSpk"),("001-b-13","Epr8SGiUXxc"),("001-b-14","v2CIOv_4Mbk")]:

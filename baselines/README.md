@@ -3,7 +3,7 @@
 Snapshot: `f09529d6b5043927ad127866eecdecd17fbe643c` (2026-10-27).
 
 - `songs-fixed.csv`: 675 original source entries in archive order.
-- `essentials-fixed.csv`: 33 owner-selected recording entries in selection order.
+- `essentials-fixed.csv`: 36 owner-selected recording entries in selection order.
 - `premiumcuts-fixed.json`: machine-readable equivalent and source provenance.
 - `SHA256SUMS`: hashes of the three current data files and archived Essentials CSV.
 
@@ -13,3 +13,6 @@ Verify after building: `python scripts/verify_fixed.py`.
 
 ## Essentials revision 2 (2026-10-27)
 Explicit owner selection appends The Jumping Jacques — Gossip and Chatter after the original 32. The original selection CSV is preserved in `revisions/essentials-20261027-r1.csv`; JSON records prior IDs and hashes. Songs and its original source commit remain unchanged.
+
+## Essentials revision 3 (2026-10-27)
+Explicit owner requests append Tant de nuits (Bitter Sweet Samba), Chico Arnez’s Eso Beso, and Caterina Valente’s Saudades da Bahia. Prior 33 entries retain their relative order; the prior CSV is preserved as revisions/essentials-20261027-r2.csv. Existing source entries and My-Spin are unchanged.
