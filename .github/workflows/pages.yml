@@ -31,6 +31,7 @@ jobs:
           python scripts/verify_fixed.py
           python scripts/verify_catalog.py
           node scripts/verify_scope.cjs
+          node scripts/verify_catalog_header.cjs
           node scripts/verify_random_start.cjs
           node scripts/verify_player.cjs
       - uses: actions/upload-pages-artifact@v3
