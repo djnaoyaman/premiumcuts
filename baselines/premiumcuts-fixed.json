@@ -8137,6 +8137,52 @@
     "007-b-11",
     "cd-00-d1-21",
     "cd-09-d1-22",
-    "cd-09-d1-26"
-  ]
+    "cd-09-d1-26",
+    "001-b-02"
+  ],
+  "essentials_revision": {
+    "revision": 2,
+    "date": "2026-10-27",
+    "reason": "Owner explicitly selected Gossip and Chatter; original Songs unchanged.",
+    "source_commit": "5023d681f1beef62317ac981590926c1e0fe61c2",
+    "previous_essentials_ids": [
+      "001-a-05",
+      "001-a-10",
+      "001-a-11",
+      "001-a-13",
+      "001-a-17",
+      "001-b-03",
+      "001-b-05",
+      "001-b-08",
+      "001-b-09",
+      "002-a-08",
+      "002-b-14",
+      "003-a-03",
+      "003-a-04",
+      "003-a-12",
+      "003-b-01",
+      "003-b-02",
+      "003-b-05",
+      "003-b-07",
+      "003-b-11",
+      "004-a-01",
+      "004-a-02",
+      "004-a-15",
+      "004-b-07",
+      "005-a-04",
+      "005-a-15",
+      "005-a-16",
+      "005-b-15",
+      "006-b-08",
+      "007-b-11",
+      "cd-00-d1-21",
+      "cd-09-d1-22",
+      "cd-09-d1-26"
+    ],
+    "added_ids": [
+      "001-b-02"
+    ],
+    "previous_baseline_sha256": "3cee53d9e363482369ad45cd4278598eb760b91ca8967e592dad51ac4b2ac7ee",
+    "previous_features_sha256": "6de095808e2d8fe9f3c9ae880473eedf5f5831808587e06ec67a3cf1964e895c"
+  }
 }
