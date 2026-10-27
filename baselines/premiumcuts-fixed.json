@@ -8133,6 +8133,8 @@
     "004-a-02",
     "004-a-15",
     "004-b-07",
+    "005-a-01",
+    "005-a-02",
     "005-a-04",
     "005-a-15",
     "005-a-16",
@@ -8143,18 +8145,22 @@
     "cd-09-d1-26"
   ],
   "essentials_revision": {
-    "revision": 4,
+    "revision": 5,
     "date": "2026-10-27",
-    "reason": "Owner explicitly removes Berry Lipman The Girls from Paramaribo '82 from Essentials only and requests Songs source order.",
-    "source_commit": "6019bcab6d064a118fe4973266fba59531d64252",
+    "reason": "Owner explicitly adds Carol Burnett & Martha Raye — Let Go and The Jumping Jacques — Lucinda to Essentials; preserves Songs source order.",
+    "source_commit": "221bbc1c480cf5705e88544cf9276eb37c2a5c3c",
     "previous_essentials_ids": [
+      "001-a-03",
       "001-a-05",
+      "001-a-09",
       "001-a-10",
       "001-a-11",
       "001-a-13",
       "001-a-17",
+      "001-b-02",
       "001-b-03",
       "001-b-05",
+      "001-b-07",
       "001-b-08",
       "001-b-09",
       "002-a-08",
@@ -8175,21 +8181,18 @@
       "005-a-15",
       "005-a-16",
       "005-b-15",
-      "006-b-08",
       "007-b-11",
       "cd-00-d1-21",
       "cd-09-d1-22",
-      "cd-09-d1-26",
-      "001-b-02",
-      "001-a-03",
-      "001-a-09",
-      "001-b-07"
+      "cd-09-d1-26"
     ],
-    "removed_ids": [
-      "006-b-08"
+    "added_ids": [
+      "005-a-01",
+      "005-a-02"
     ],
+    "removed_ids": [],
     "order_rule": "Songs source order, first occurrence of the same recording",
-    "previous_baseline_sha256": "bf146c9c4536b08e61c2665783a3cad91dd7b1d4dfd6a74509917bec75c940ac",
-    "previous_features_sha256": "9b140ba4834c60eae5889786aa5a764dff28ce4d05039fc4016cb02528cf07ab"
+    "previous_baseline_sha256": "0390e3791a91d283c27f048b67c90389ae06c7b03ac1b6c2bce6f89f65338920",
+    "previous_features_sha256": "24f0d5e25a2dd33b8375d53ee8767e7109d18aeb5fe794149457aac1b1947079"
   }
 }

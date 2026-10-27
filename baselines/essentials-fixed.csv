@@ -26,11 +26,13 @@
 25,98,004-a-02,004,AUDIOSCAPE,tape,A,2,The Morgan-James,If It Comes to That,selection.tsv
 26,111,004-a-15,004,AUDIOSCAPE,tape,A,15,Nina van Pallandt,For Once in My Life,selection.tsv
 27,121,004-b-07,004,AUDIOSCAPE,tape,B,7,Two Man Sound,Disco Samba,selection.tsv
-28,133,005-a-04,005,JINGLES,tape,A,4,Stan Reynolds and His Orchestra,True Love,selection.tsv
-29,144,005-a-15,005,JINGLES,tape,A,15,Bobby Cole,I Love Paris,selection.tsv
-30,145,005-a-16,005,JINGLES,tape,A,16,Dieter Reith Orchestra,Bitter Sweet Samba,selection.tsv
-31,161,005-b-15,005,JINGLES,tape,B,15,Jerry Williams & His Dynamite & Soul Band,The Name Game,selection.tsv
-32,222,007-b-11,007,HOLIDAY MUSIC,tape,B,11,Romina Power,Zozoï,selection.tsv
-33,248,cd-00-d1-21,cd-00,CLASSIC BLEND,cd,D1,21,Berry Lipman,The Girls from Paramaribo (Disco),cd_catalog.json
-34,527,cd-09-d1-22,cd-09,WEEKEND OPERATOR,cd,D1,22,Joe Pugliese,Theme from “Black Belt Jones”,cd_catalog.json
-35,531,cd-09-d1-26,cd-09,WEEKEND OPERATOR,cd,D1,26,France Gall,Zozoï (Italian version),cd_catalog.json
+28,130,005-a-01,005,JINGLES,tape,A,1,Carol Burnett & Martha Raye,Let Go,selection.tsv
+29,131,005-a-02,005,JINGLES,tape,A,2,The Jumping Jacques,Lucinda,selection.tsv
+30,133,005-a-04,005,JINGLES,tape,A,4,Stan Reynolds and His Orchestra,True Love,selection.tsv
+31,144,005-a-15,005,JINGLES,tape,A,15,Bobby Cole,I Love Paris,selection.tsv
+32,145,005-a-16,005,JINGLES,tape,A,16,Dieter Reith Orchestra,Bitter Sweet Samba,selection.tsv
+33,161,005-b-15,005,JINGLES,tape,B,15,Jerry Williams & His Dynamite & Soul Band,The Name Game,selection.tsv
+34,222,007-b-11,007,HOLIDAY MUSIC,tape,B,11,Romina Power,Zozoï,selection.tsv
+35,248,cd-00-d1-21,cd-00,CLASSIC BLEND,cd,D1,21,Berry Lipman,The Girls from Paramaribo (Disco),cd_catalog.json
+36,527,cd-09-d1-22,cd-09,WEEKEND OPERATOR,cd,D1,22,Joe Pugliese,Theme from “Black Belt Jones”,cd_catalog.json
+37,531,cd-09-d1-26,cd-09,WEEKEND OPERATOR,cd,D1,26,France Gall,Zozoï (Italian version),cd_catalog.json
