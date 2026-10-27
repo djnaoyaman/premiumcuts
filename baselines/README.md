@@ -3,7 +3,7 @@
 Snapshot: `f09529d6b5043927ad127866eecdecd17fbe643c` (2026-10-27).
 
 - `songs-fixed.csv`: 675 original source entries in archive order.
-- `essentials-fixed.csv`: 36 owner-selected recording entries in selection order.
+- `essentials-fixed.csv`: 35 owner-selected recording entries in Songs source order.
 - `premiumcuts-fixed.json`: machine-readable equivalent and source provenance.
 - `SHA256SUMS`: hashes of the three current data files and archived Essentials CSV.
 
@@ -16,3 +16,6 @@ Explicit owner selection appends The Jumping Jacques — Gossip and Chatter afte
 
 ## Essentials revision 3 (2026-10-27)
 Explicit owner requests append Tant de nuits (Bitter Sweet Samba), Chico Arnez’s Eso Beso, and Caterina Valente’s Saudades da Bahia. Prior 33 entries retain their relative order; the prior CSV is preserved as revisions/essentials-20261027-r2.csv. Existing source entries and My-Spin are unchanged.
+
+## Essentials revision 4 (2026-10-27)
+Explicit owner request removes only Berry Lipman — The Girls from Paramaribo ’82 from Essentials, keeping its Songs entry and playback source. The remaining 35 selections are sorted in Songs source order. Prior 36-entry order is archived as revisions/essentials-20261027-r3.csv. No Songs or Spin membership changes.
