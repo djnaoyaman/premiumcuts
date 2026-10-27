@@ -105,5 +105,17 @@
     "note": "指定されたTopic音源は『Fantastica Caterina Valente!』収録版です。配信元の説明には℗1996 Butterfly Music、配信日2006年5月9日とあり、ここでは配信年を表示しています。原録音の年とは区別しています。",
     "source": "https://www.youtube.com/watch?v=F_lWiRh-1Co",
     "source_label": "The Orchard Enterprises配信クレジット"
+  },
+  {
+    "id": "myspin-mjq-laurindo-almeida-one-note-samba",
+    "title": "One Note Samba",
+    "artist": "The Modern Jazz Quartet & Laurindo Almeida",
+    "videoId": "cl8EgQGA4kU",
+    "url": "https://www.youtube.com/watch?v=cl8EgQGA4kU",
+    "album": "Collaboration",
+    "year": 1964,
+    "note": "The Modern Jazz QuartetとギタリストLaurindo Almeidaの共演盤『Collaboration』（1964年）に収録された「One Note Samba」です。指定された動画の投稿者名ではなく、演奏者名で掲載しています。",
+    "source": "https://books.scielo.org/id/7s5ff/pdf/francischini-9788579830358-07.pdf",
+    "source_label": "SciELO Books収録ディスコグラフィー"
   }
 ]
