@@ -35,7 +35,7 @@ for a in r['articles']:
  for i,_ in a['related']:assert i in byid,i
  for _,_,refs in a['sections']:assert all(1<=n<=len(a['sources']) for n in refs)
 players.update(json.loads((root/'audio_sources.json').read_text()))
-assert len({v['id'] for v in players.values()})==39
+assert len({v['id'] for v in players.values()})==41
 explicit_sources=json.loads((root/'audio_sources.json').read_text())
 assert all(i in articles or i in explicit_sources for i in players)
 assert all(i in byid for i in explicit_sources)
