@@ -14,7 +14,11 @@ assert len(ids)==len(m) and not ids.intersection(t['id'] for t in actual)
 public=json.loads((p/'dist/catalog-public.json').read_text())
 assert public['myspin']==m and len(public['tracks'])==675
 assert not ids.intersection(t['id'] for t in public['audio'])
-assert len({t['videoId'] for t in public['audio']})==46
+preserved=json.loads((p/'baselines/audio-preserved.json').read_text())
+actual_audio={t['id']:t['videoId'] for t in public['audio']}
+assert all(actual_audio.get(k)==v for k,v in preserved.items()), 'Previously selected recording changed'
+assert len(actual_audio)==len(public['audio']), 'Duplicate audio track ID'
+assert set(actual_audio).issubset(t['id'] for t in actual), 'Audio outside fixed Songs'
 assert all(t['id'] not in (p/'dist/tracks.html').read_text().split('<main')[1] for t in m)
 print('PASS fixed 675 Songs exact records/order, 35 Essentials order, baseline hashes, My-Spin isolation')
 
