@@ -35,7 +35,9 @@ for a in r['articles']:
  for i,_ in a['related']:assert i in byid,i
  for _,_,refs in a['sections']:assert all(1<=n<=len(a['sources']) for n in refs)
 players.update(json.loads((root/'audio_sources.json').read_text()))
-assert len({v['id'] for v in players.values()})==46
+public_audio=json.loads((root/'dist/catalog-public.json').read_text())['audio']
+assert {t['id']:t['videoId'] for t in public_audio}=={k:v['id'] for k,v in players.items()}
+assert all(re.fullmatch(r'[A-Za-z0-9_-]{11}',v['id']) and v['url'] in ('https://www.youtube.com/watch?v='+v['id'],'https://youtu.be/'+v['id']) for v in players.values())
 explicit_sources=json.loads((root/'audio_sources.json').read_text())
 assert all(i in articles or i in explicit_sources for i in players)
 assert all(i in byid for i in explicit_sources)
