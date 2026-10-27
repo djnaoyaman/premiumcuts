@@ -16,18 +16,24 @@ assert public['myspin']==m and len(public['tracks'])==675
 assert not ids.intersection(t['id'] for t in public['audio'])
 assert len({t['videoId'] for t in public['audio']})==46
 assert all(t['id'] not in (p/'dist/tracks.html').read_text().split('<main')[1] for t in m)
-print('PASS fixed 675 Songs exact records/order, 36 Essentials order, baseline hashes, My-Spin isolation')
+print('PASS fixed 675 Songs exact records/order, 35 Essentials order, baseline hashes, My-Spin isolation')
 
 # Audio for an existing Songs entry does not add it to either curated collection.
 assert next(t for t in public["audio"] if t["id"] == "001-a-02")["videoId"] == "8pQBEa4zRMw"
 assert "001-a-02" not in json.load(open("features.json"))["essentials"]["track_ids"]
 assert not any(t["videoId"] == "8pQBEa4zRMw" for t in public["myspin"])
 
-# Explicit owner selection extends, never replaces, the original frozen list.
-assert f['essentials_ids']==f['essentials_revision']['previous_essentials_ids']+['001-a-03','001-a-09','001-b-07']
-assert len(f['essentials_ids'])==36
-assert next(t for t in public['audio'] if t['id']=='001-b-02')['videoId']=='oDhgHoPfGNI'
-assert f['essentials_ids'][-3:]==['001-a-03','001-a-09','001-b-07']
+# Explicit owner revision: one removal, then fixed Songs order.
+previous=f['essentials_revision']['previous_essentials_ids']
+assert set(previous)-set(f['essentials_ids'])=={'006-b-08'}
+assert not set(f['essentials_ids'])-set(previous)
+assert len(f['essentials_ids'])==35
+source_order={t['id']:t['order'] for t in f['songs']}
+assert f['essentials_ids']==sorted(f['essentials_ids'],key=source_order.get)
+assert '006-b-08' in {t['id'] for t in public['tracks']}
+assert next(t for t in public['audio'] if t['id']=='006-b-08')['videoId']
+assert not next(t for t in public['tracks'] if t['id']=='006-b-08')['essentials']
+assert 'cd-00-d1-21' in f['essentials_ids']
 for track,video in [('001-a-03','oIBZHTDOuwo'),('001-a-09','v4q7wC_LSeg'),('001-b-07','houkrNCo1sQ')]:
  assert next(t for t in public['audio'] if t['id']==track)['videoId']==video
  assert not any(t['videoId']==video for t in public['myspin'])

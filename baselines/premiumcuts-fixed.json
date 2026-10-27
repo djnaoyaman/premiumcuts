@@ -8106,13 +8106,17 @@
     }
   ],
   "essentials_ids": [
+    "001-a-03",
     "001-a-05",
+    "001-a-09",
     "001-a-10",
     "001-a-11",
     "001-a-13",
     "001-a-17",
+    "001-b-02",
     "001-b-03",
     "001-b-05",
+    "001-b-07",
     "001-b-08",
     "001-b-09",
     "002-a-08",
@@ -8133,21 +8137,16 @@
     "005-a-15",
     "005-a-16",
     "005-b-15",
-    "006-b-08",
     "007-b-11",
     "cd-00-d1-21",
     "cd-09-d1-22",
-    "cd-09-d1-26",
-    "001-b-02",
-    "001-a-03",
-    "001-a-09",
-    "001-b-07"
+    "cd-09-d1-26"
   ],
   "essentials_revision": {
-    "revision": 3,
+    "revision": 4,
     "date": "2026-10-27",
-    "reason": "Owner explicitly resumed three requested Essentials recordings; original Songs unchanged.",
-    "source_commit": "31e51d9e03e314a47f8f94748f57534799d46544",
+    "reason": "Owner explicitly removes Berry Lipman The Girls from Paramaribo '82 from Essentials only and requests Songs source order.",
+    "source_commit": "6019bcab6d064a118fe4973266fba59531d64252",
     "previous_essentials_ids": [
       "001-a-05",
       "001-a-10",
@@ -8181,14 +8180,16 @@
       "cd-00-d1-21",
       "cd-09-d1-22",
       "cd-09-d1-26",
-      "001-b-02"
-    ],
-    "added_ids": [
+      "001-b-02",
       "001-a-03",
       "001-a-09",
       "001-b-07"
     ],
-    "previous_baseline_sha256": "aebca88ccf6a2b01976a617443aee7416b1a9a6a7bb52aeebd5a886637f8de92",
-    "previous_features_sha256": "ac7dee915f6c7a48f150071afadc72ab143abe80874f654549dcee579c28be36"
+    "removed_ids": [
+      "006-b-08"
+    ],
+    "order_rule": "Songs source order, first occurrence of the same recording",
+    "previous_baseline_sha256": "bf146c9c4536b08e61c2665783a3cad91dd7b1d4dfd6a74509917bec75c940ac",
+    "previous_features_sha256": "9b140ba4834c60eae5889786aa5a764dff28ce4d05039fc4016cb02528cf07ab"
   }
 }
