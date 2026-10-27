@@ -58,9 +58,8 @@ All 32 selected recordings have editorial pages. The Berry Lipman normal and Dis
 Validation includes `python build.py`, `node scripts/verify_player.cjs` and `python scripts/verify_catalog.py`.
 
 
-## Record-shelf artwork
-
-`artwork.py` supplies 23 original square SVG sleeves: seven tapes, fifteen mix CDs, and a dedicated Essentials feature. All use cobalt blue (#073DA8), warm ivory (#F4EFE5), consistent margins and sleeve typography. Flowing bands, quarter-circle modules, fine-line arcs, nested frames and negative-space patterns provide varied compositions across the series. Stable data-art IDs keep each cover identical on the home shelf, volume pages and track pages. The responsive cover containers stay square so the art is never cropped; the existing single-column mobile shelf and broader desktop/tablet layouts are preserved.
+## Text-only work index
+The work index, volume pages, track pages and Essentials feature do not render the generated Bauhaus-style sleeves. Work titles, edition numbers, entry counts and navigation remain available as text. `artwork.py` is retained as recoverable source only; it is not imported or rendered by the build. Other images, branding and player functionality are unchanged.
 
 ## Premium Cuts Essentials
 
