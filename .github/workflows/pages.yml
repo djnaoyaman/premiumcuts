@@ -28,6 +28,7 @@ jobs:
       - name: Verify fixed catalog and collection isolation
         run: |
           python scripts/verify_home_index.py
+          python scripts/verify_about_gallery.py
           python scripts/verify_fixed.py
           python scripts/verify_catalog.py
           node scripts/verify_scope.cjs
