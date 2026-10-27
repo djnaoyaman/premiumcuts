@@ -75,3 +75,19 @@
 @media(max-width:700px){header{padding-block:14px;gap:8px}header nav{justify-content:flex-start;font-size:11px;gap:0 18px}header nav>a{padding-block:8px}.filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.filters .search-field{grid-column:1/-1;min-width:0}.filters #volume-filter{grid-column:1/-1}.filters select{width:100%;max-width:100%;font-size:16px;min-height:44px;padding:10px 26px 10px 10px}.search-field input{font-size:16px;min-height:46px}.filters .reset{min-height:44px;font-size:12px;justify-self:start}.track-main>span,.catalog-title>span{font-size:12px;line-height:1.6}.text-link{min-height:44px;display:inline-flex;align-items:center}.volume-pagination>a,.song-pagination>a{min-height:44px}.song-cover{width:min(100%,340px)}.song-info dl>div{grid-template-columns:76px minmax(0,1fr)}.song-info dd{overflow-wrap:anywhere}}
 
 .hero-bottom{gap:24px;align-items:end}.hero-credits{display:grid;gap:5px;min-width:0;line-height:1.6}.hero-bottom>span:last-child{text-align:right;line-height:1.6}@media(max-width:700px){.hero-bottom{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}.hero-bottom>span:last-child{text-align:left}}
+
+/* Text-only work index: no replacement imagery or reserved sleeve columns. */
+.volume-hero,.song-hero,.essentials-heading{display:block}
+.song-work-link{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;line-height:1.6}
+.essentials-summary{font-size:11px;letter-spacing:.08em;line-height:1.8}
+.essentials-heading .essentials-summary{margin-top:24px}
+.essentials-teaser{grid-template-columns:minmax(0,1fr);gap:20px}
+.volume-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.volume-card>a{display:block;height:100%;padding:20px 0;border-top:1px solid var(--line)}
+.volume-card h3{min-height:0;margin:16px 0;font-size:28px;line-height:1.25}
+.volume-card .card-meta{padding-top:0}
+.volume-grid .index-card{background:transparent;color:var(--blue);border-top:1px solid var(--line);padding:20px 0;min-height:0}
+.volume-grid .index-card>strong{font-size:25px;margin:16px 0}
+.volume-grid .index-number{font-size:28px;margin:0 0 16px}
+.volume-grid .index-number small{font-size:12px;margin-left:8px}
+@media(max-width:700px){.volume-grid{grid-template-columns:minmax(0,1fr);gap:0}.volume-card h3{font-size:26px}.song-work-link{font-size:11px;max-width:100%;overflow-wrap:anywhere}}
