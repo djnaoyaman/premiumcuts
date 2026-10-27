@@ -14,7 +14,7 @@ assert len(ids)==len(m) and not ids.intersection(t['id'] for t in actual)
 public=json.loads((p/'dist/catalog-public.json').read_text())
 assert public['myspin']==m and len(public['tracks'])==675
 assert not ids.intersection(t['id'] for t in public['audio'])
-assert len({t['videoId'] for t in public['audio']})==39
+assert len({t['videoId'] for t in public['audio']})==41
 assert all(t['id'] not in (p/'dist/tracks.html').read_text().split('<main')[1] for t in m)
 print('PASS fixed 675 Songs exact records/order, 33 Essentials order, baseline hashes, My-Spin isolation')
 
@@ -28,3 +28,9 @@ assert f['essentials_ids']==f['essentials_revision']['previous_essentials_ids']+
 assert len(f['essentials_ids'])==33
 assert next(t for t in public['audio'] if t['id']=='001-b-02')['videoId']=='oDhgHoPfGNI'
 assert '001-a-03' not in f['essentials_ids'] and '001-a-09' not in f['essentials_ids']
+
+# Owner-designated videos attach to existing Songs only.
+for track,video in [("001-b-10","KmptGhVdutA"),("001-b-11","W6_akbmZSpk")]:
+ assert next(t for t in public["audio"] if t["id"]==track)["videoId"]==video
+ assert track not in f["essentials_ids"]
+ assert not any(t["videoId"]==video for t in public["myspin"])
