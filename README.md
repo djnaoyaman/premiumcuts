@@ -74,3 +74,8 @@ The work index, volume pages, track pages and Essentials feature do not render t
 The Remix category is an explicit selection in features.json, separate from Essentials. It is visible through badges and the catalog feature filter. Adding a playable remix does not add it to the Essentials selection.
 
 Explicit catalog audio sources take priority over reference-only links and are included in normal work and all-track queues. The ten recordings supplied in this editing session are pinned by track ID and YouTube ID in the player regression checks. Core navigation, source-backed track pages and the persistent YouTube player follow SUBURBIA CLASSICA and CRATE DIGGIN; About links to both related sites.
+
+## Songs starting point
+Songs starts at one randomly selected available recording; the queue and visible catalog remain in published order. Following tracks play sequentially from that point. Initial loading, an idle transition into Songs, and an explicit Songs play-all action select a starting point without shuffling. Browsing while audio is playing never interrupts it; explicitly selected tracks and pause/resume retain the selection. Essentials, My-Spin and volume playback retain their existing behavior. Automatic playback stops at the list end; manual next/previous retain their existing wrap behavior.
+
+`node scripts/verify_random_start.cjs` covers deterministic random boundaries, initial load/reload, manual selection, pause/resume, active and idle collection transitions, sequential next/previous/end, and collection isolation.
