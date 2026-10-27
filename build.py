@@ -141,7 +141,7 @@ public_tracks=[{k:v for k,v in t.items() if k in {'id','volume','side','position
 
 (D/'data.js').write_text((D/'data.js').read_text()+'\nconst PREMIUM_MYSPIN='+json.dumps(myspin,ensure_ascii=False)+';')
 
-asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','myspin.json','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','editorial_updates.json','src/app.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
+asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','share_metadata.py','myspin.json','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','editorial_updates.json','src/app.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
 # Public-only catalog snapshots let open players receive newly published sources.
 public_audio=[dict(id=t['id'],volume=t['volume'],title=t['title'],artist=t['artist'],videoId=players[t['id']]['id'],url=players[t['id']]['url']) for t in tracks if t['id'] in players]
 (D/'catalog-public.json').write_text(json.dumps(dict(version=asset_version,tracks=public_tracks,volumes=volumes,audio=public_audio,myspin=myspin),ensure_ascii=False))
@@ -307,3 +307,7 @@ if base_path:
  js=(D/'app.js').read_text().replace('href="/tracks/','href="'+base_path+'/tracks/').replace('href="/volumes/','href="'+base_path+'/volumes/').replace('href="/features/','href="'+base_path+'/features/')
  (D/'app.js').write_text(js)
 (D/'.nojekyll').write_text('')
+
+# Metadata stays separate from catalog content and playback behavior.
+from share_metadata import enrich
+enrich(D,origin,base_path)
