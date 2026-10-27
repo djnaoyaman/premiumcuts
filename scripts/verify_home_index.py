@@ -37,3 +37,12 @@ assert '.essentials-teaser a:focus-visible{outline-color:currentColor}' in css
 assert "background:var(--blue);color:var(--paper);min-height:300px" in css
 assert ".songs-index>strong{font:500 21px/1.65 var(--sans)" in css
 assert "class=\"index-card songs-index\"" in home
+
+# The personal illustration is About-only, preserving the homepage.
+about=(p/'dist/about.html').read_text()
+assert 'class="about-portrait"' in about and 'couple-french.webp' in about
+assert 'couple-french.webp' not in home
+from PIL import Image
+im=Image.open(p/'dist/assets/couple-french.webp')
+assert im.size==(960,720) and im.format=='WEBP'
+assert not im.getexif() and not any(k in im.info for k in ['exif','xmp'])
