@@ -16,6 +16,7 @@ for p in D.rglob('*.html'):
  assert len(re.findall('<h1(?: |>)',s))==1,p
  if p.name=='404.html':assert h.meta['robots']=='noindex';continue
  canonical=[x['href'] for x in h.links if x.get('rel')=='canonical'];assert len(canonical)==1,p
+ assert len(re.findall(r'<(?:nav|div)\b[^>]*class="[^"]*\bbreadcrumb\b[^"]*"',s))==(0 if p.name=='index.html' else 1),p
  expected=origin+('/' if p.name=='index.html' else '/'+p.relative_to(D).as_posix())
  assert canonical[0]==expected,(p,canonical)
  assert h.meta['og:url']==expected,p
