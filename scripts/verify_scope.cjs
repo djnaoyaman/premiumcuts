@@ -60,7 +60,7 @@ async function visit(path){const href='https://example.test'+path;const a={href,
  get('pc-toggle').onclick();get('pc-toggle').onclick();assert.equal(api.getState().current,'002-a-08');
  get('pc-next').onclick();assert.equal(api.getState().current,expected[expected.indexOf('002-a-08')+1]);
  const html=fs.readFileSync('dist/index.html','utf8');assert.ok(!html.match(/<nav[^>]*>[\s\S]*?>PLAYER<\/[\s\S]*?<\/nav>/));
- assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'24f0d5e25a2dd33b8375d53ee8767e7109d18aeb5fe794149457aac1b1947079');
+ assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'f98c7b8bd3345b36f14e861f9078c9c43ef1c72771ade8a61b84e7640d57dacd');
  const myspin=JSON.parse(fs.readFileSync('myspin.json')),myids=myspin.map(t=>t.id);
  api.stop(); await visit('/premiumcuts/my-spin.html');
  assert.equal(api.getState().scope,'myspin');assert.deepEqual(Array.from(api.getState().queue),myids);assert.equal(api.getState().wantsPlay,false);

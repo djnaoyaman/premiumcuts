@@ -3,7 +3,7 @@
 Snapshot: `f09529d6b5043927ad127866eecdecd17fbe643c` (2026-10-27).
 
 - `songs-fixed.csv`: 675 original source entries in archive order.
-- `essentials-fixed.csv`: 35 owner-selected recording entries in Songs source order.
+- `essentials-fixed.csv`: 37 owner-selected recording entries in Songs source order.
 - `premiumcuts-fixed.json`: machine-readable equivalent and source provenance.
 - `SHA256SUMS`: hashes of the three current data files and archived Essentials CSV.
 
@@ -19,3 +19,6 @@ Explicit owner requests append Tant de nuits (Bitter Sweet Samba), Chico Arnez�
 
 ## Essentials revision 4 (2026-10-27)
 Explicit owner request removes only Berry Lipman — The Girls from Paramaribo ’82 from Essentials, keeping its Songs entry and playback source. The remaining 35 selections are sorted in Songs source order. Prior 36-entry order is archived as revisions/essentials-20261027-r3.csv. No Songs or Spin membership changes.
+
+## Essentials revision 5 (2026-10-27)
+Explicit owner requests add only Carol Burnett & Martha Raye — Let Go (005-a-01) and The Jumping Jacques — Lucinda (005-a-02). All 37 entries remain in Songs source order. Prior 35-entry selection is archived as revisions/essentials-20261027-r4.csv. Songs, Spin, and existing audio references are unchanged.
