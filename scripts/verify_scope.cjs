@@ -16,7 +16,7 @@ assert.equal(api.getState().wantsPlay,false);
 events.onReady();
 api.play(expected[0],'essentials'); events.onStateChange({data:1});
 const before=calls.length;api.chooseScope('all');assert.equal(calls.length,before,'queue switch must not restart audio');
-assert.equal(api.getState().queue.length,38);
+assert.equal(api.getState().queue.length,39);
 api.chooseScope('essentials');get('pc-next').onclick();assert.equal(api.getState().current,expected[1]);
 api.play(expected.at(-1),'essentials');events.onStateChange({data:1});events.onStateChange({data:0});
 assert.equal(api.getState().wantsPlay,false,'stop at Essentials end');
@@ -39,7 +39,7 @@ ctx.location.assign=u=>{throw Error('navigation fallback '+u)};
 async function visit(path){const href='https://example.test'+path;const a={href,target:'',hasAttribute:()=>false};await handlers.click({button:0,preventDefault(){},target:{closest(selector){return selector==='a[href]'?a:null}}});await new Promise(resolve=>setImmediate(resolve));}
 (async()=>{
  await visit('/premiumcuts/tracks.html');
- assert.equal(api.getState().scope,'all');assert.equal(api.getState().queue.length,38);
+ assert.equal(api.getState().scope,'all');assert.equal(api.getState().queue.length,39);
  await visit('/premiumcuts/features/essentials.html');
  assert.equal(api.getState().scope,'essentials');assert.deepEqual(Array.from(api.getState().queue),expected);
  await visit('/premiumcuts/tracks/'+expected[0]+'.html');
@@ -60,14 +60,14 @@ async function visit(path){const href='https://example.test'+path;const a={href,
  get('pc-toggle').onclick();get('pc-toggle').onclick();assert.equal(api.getState().current,'002-a-08');
  get('pc-next').onclick();assert.equal(api.getState().current,expected[expected.indexOf('002-a-08')+1]);
  const html=fs.readFileSync('dist/index.html','utf8');assert.ok(!html.match(/<nav[^>]*>[\s\S]*?>PLAYER<\/[\s\S]*?<\/nav>/));
- assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'6de095808e2d8fe9f3c9ae880473eedf5f5831808587e06ec67a3cf1964e895c');
+ assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'ac7dee915f6c7a48f150071afadc72ab143abe80874f654549dcee579c28be36');
  const myspin=JSON.parse(fs.readFileSync('myspin.json')),myids=myspin.map(t=>t.id);
  api.stop(); await visit('/premiumcuts/my-spin.html');
  assert.equal(api.getState().scope,'myspin');assert.deepEqual(Array.from(api.getState().queue),myids);assert.equal(api.getState().wantsPlay,false);
  await visit('/premiumcuts/tracks/'+myids[1]+'.html');assert.equal(api.getState().scope,'myspin');
  api.play(myids[0],'myspin');events.onStateChange({data:1});get('pc-next').onclick();assert.equal(api.getState().current,myids[1]);
  api.play(myids.at(-1),'myspin');events.onStateChange({data:1});events.onStateChange({data:0});assert.equal(api.getState().wantsPlay,false);
- await visit('/premiumcuts/tracks.html');assert.equal(api.getState().scope,'all');assert.equal(api.getState().queue.length,38);assert.ok(!api.getState().queue.some(id=>myids.includes(id)));
+ await visit('/premiumcuts/tracks.html');assert.equal(api.getState().scope,'all');assert.equal(api.getState().queue.length,39);assert.ok(!api.getState().queue.some(id=>myids.includes(id)));
  await visit('/premiumcuts/features/essentials.html');assert.deepEqual(Array.from(api.getState().queue),expected);
  await visit('/premiumcuts/my-spin.html');
  ctx.fetch=async u=>({ok:true,json:async()=>String(u).includes('version.json')?{version:'new'}:{version:'new',audio,tracks:catalog.tracks,volumes:catalog.volumes,myspin},text:async()=>'<main></main>'});
