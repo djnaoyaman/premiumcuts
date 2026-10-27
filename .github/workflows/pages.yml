@@ -29,6 +29,7 @@ jobs:
         run: |
           python scripts/verify_home_index.py
           python scripts/verify_about_gallery.py
+          python scripts/verify_labels.py
           python scripts/verify_fixed.py
           python scripts/verify_catalog.py
           python scripts/verify_metadata.py
