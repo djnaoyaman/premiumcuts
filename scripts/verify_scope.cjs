@@ -1,0 +1,65 @@
+const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+class Node{constructor(){this.dataset={};this.hidden=false;this.checked=true;this.value=0;this.children=[];this.style={};this.attrs={};this.classList={toggle(){}}}setAttribute(k,v){this.attrs[k]=v}removeAttribute(k){delete this.attrs[k]}querySelector(){return new Node()}querySelectorAll(){return []}addEventListener(){}append(...n){this.children.push(...n)}replaceChildren(){this.children=[]}focus(){}getClientRects(){return [1]}}
+const handlers={},winhandlers={};
+const nodes=new Map(),get=id=>{if(!nodes.has(id))nodes.set(id,new Node());return nodes.get(id)},body=new Node();
+const doc={currentScript:{src:'https://example.test/premiumcuts/player.js'},getElementById:get,querySelector:()=>new Node(),querySelectorAll:()=>[],createElement:()=>new Node(),addEventListener(k,f){handlers[k]=f},head:new Node(),body,activeElement:null};
+const catalog=JSON.parse(fs.readFileSync('catalog.json')),research=JSON.parse(fs.readFileSync('research.json')),sources={...research.players};for(const a of research.articles)if(a.youtube)for(const id of a.ids)sources[id]=a.youtube;
+Object.assign(sources,JSON.parse(fs.readFileSync('audio_sources.json')));
+const audio=catalog.tracks.filter(t=>sources[t.id]).map(t=>({...t,videoId:sources[t.id].id,url:sources[t.id].url}));let events,videoId='',calls=[];
+function Player(id,opts){events=opts.events;Object.assign(this,{loadVideoById(id){videoId=id;calls.push(['load',id])},cueVideoById(id){videoId=id;calls.push(['cue',id])},getVideoData:()=>({video_id:videoId}),pauseVideo(){calls.push(['pause'])},playVideo(){calls.push(['play'])},stopVideo(){calls.push(['stop'])},seekTo(n){calls.push(['seek',n])},getDuration:()=>180,getCurrentTime:()=>0})}
+const ctx={document:doc,PREMIUM_AUDIO:audio,PREMIUM_ESSENTIAL_IDS:JSON.parse(fs.readFileSync('features.json')).essentials.track_ids,URL,URLSearchParams,Map,Set,console,location:{origin:'https://example.test',pathname:'/premiumcuts/features/essentials.html'},window:{YT:{Player}},YT:{Player},localStorage:{getItem:()=>null,setItem(){}},setTimeout:()=>1,clearTimeout(){},setInterval(){},addEventListener(k,f){winhandlers[k]=f},history:{pushState(a,b,u){const x=new URL(u,ctx.location.origin);Object.assign(ctx.location,{pathname:x.pathname,search:x.search,href:x.href})}}};ctx.window.scrollTo=()=>{};vm.createContext(ctx);vm.runInContext(fs.readFileSync('src/player.js','utf8'),ctx);const api=ctx.window.PremiumPlayer;
+
+const expected=JSON.parse(fs.readFileSync('features.json')).essentials.track_ids;
+assert.deepEqual(Array.from(api.getState().queue),expected);
+assert.equal(api.getState().scope,'essentials');
+assert.equal(api.getState().wantsPlay,false);
+events.onReady();
+api.play(expected[0],'essentials'); events.onStateChange({data:1});
+const before=calls.length;api.chooseScope('all');assert.equal(calls.length,before,'queue switch must not restart audio');
+assert.equal(api.getState().queue.length,37);
+api.chooseScope('essentials');get('pc-next').onclick();assert.equal(api.getState().current,expected[1]);
+api.play(expected.at(-1),'essentials');events.onStateChange({data:1});events.onStateChange({data:0});
+assert.equal(api.getState().wantsPlay,false,'stop at Essentials end');
+assert.equal(api.getState().current,expected.at(-1));
+events.onError({data:101});assert.equal(api.getState().scope,'essentials');get('pc-next').onclick();
+assert.equal(api.getState().current,expected[0]);assert.equal(api.getState().wantsPlay,false);
+assert.deepEqual(Array.from(api.getState().queue),expected);
+console.log('PASS Essentials frozen order, initial cue, context switch continuity, next, end, unavailable');
+
+api.play('001-b-12','all');events.onStateChange({data:1});api.chooseScope('essentials');
+get('pc-toggle').onclick();get('pc-toggle').onclick();assert.equal(api.getState().current,expected[0],'resume in current collection');
+api.play('cd-00-d1-12','essentials');assert.equal(api.getState().current,'002-a-08','canonical duplicate stays Essentials');
+assert.equal(api.getState().scope,'essentials');
+Node.prototype.replaceWith=function(){};
+ctx.location.href='https://example.test/premiumcuts/features/essentials.html';
+ctx.location.search='';
+ctx.DOMParser=class {parseFromString(){return {title:'test',querySelector:()=>new Node(),head:new Node()}}};
+ctx.fetch=async u=>({ok:true,json:async()=>({version:'test'}),text:async()=>'<main></main>'});
+ctx.location.assign=u=>{throw Error('navigation fallback '+u)};
+async function visit(path){const href='https://example.test'+path;const a={href,target:'',hasAttribute:()=>false};await handlers.click({button:0,preventDefault(){},target:{closest(selector){return selector==='a[href]'?a:null}}});await new Promise(resolve=>setImmediate(resolve));}
+(async()=>{
+ await visit('/premiumcuts/tracks.html');
+ assert.equal(api.getState().scope,'all');assert.equal(api.getState().queue.length,37);
+ await visit('/premiumcuts/features/essentials.html');
+ assert.equal(api.getState().scope,'essentials');assert.deepEqual(Array.from(api.getState().queue),expected);
+ await visit('/premiumcuts/tracks/'+expected[0]+'.html');
+ assert.equal(api.getState().scope,'essentials');
+ const b={dataset:{playId:expected[0],playScope:'volume:001'},hasAttribute:()=>false};
+ await handlers.click({preventDefault(){},target:{closest(selector){return selector==='[data-play-id],[data-play-volume],[data-play-all]'?b:null}}});
+ assert.equal(api.getState().scope,'essentials');
+ Object.assign(ctx.location,{pathname:'/premiumcuts/tracks.html',href:'https://example.test/premiumcuts/tracks.html',search:''});
+ await winhandlers.popstate();assert.equal(api.getState().scope,'all');
+ await visit('/premiumcuts/tracks.html?feature=essentials');assert.equal(api.getState().scope,'essentials');
+ await visit('/premiumcuts/tracks/cd-00-d1-12.html');
+ const alias={dataset:{playId:'cd-00-d1-12',playScope:'volume:cd-00'},hasAttribute:()=>false};
+ await handlers.click({preventDefault(){},target:{closest(selector){return selector==='[data-play-id],[data-play-volume],[data-play-all]'?alias:null}}});
+ assert.equal(api.getState().scope,'essentials');assert.equal(api.getState().current,'002-a-08');
+ api.play('cd-00-d1-12','volume:cd-00');events.onStateChange({data:1});
+ const aliasCalls=calls.length;api.chooseScope('essentials');
+ assert.equal(calls.length,aliasCalls);assert.equal(api.getState().current,'002-a-08');
+ get('pc-toggle').onclick();get('pc-toggle').onclick();assert.equal(api.getState().current,'002-a-08');
+ get('pc-next').onclick();assert.equal(api.getState().current,expected[expected.indexOf('002-a-08')+1]);
+ const html=fs.readFileSync('dist/index.html','utf8');assert.ok(!html.match(/<nav[^>]*>[\s\S]*?>PLAYER<\/[\s\S]*?<\/nav>/));
+ assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'6de095808e2d8fe9f3c9ae880473eedf5f5831808587e06ec67a3cf1964e895c');
+ console.log('PASS actual click navigation, article play, popstate, filtered Essentials');
+})().catch(e=>{console.error(e);process.exitCode=1});
