@@ -96,9 +96,11 @@
 @media(max-width:700px){.volume-grid{grid-template-columns:minmax(0,1fr);gap:0}.volume-card h3{font-size:26px}.song-work-link{font-size:11px;max-width:100%;overflow-wrap:anywhere}}
 
 /* Owner-directed homepage hierarchy: original archive first, Essentials before About. */
-.essentials-teaser{background:var(--blue);color:var(--paper);padding:clamp(28px,5vw,64px);margin-block:48px 0;border:0}
+.essentials-teaser{background:#f08080;color:#10394a;padding:clamp(28px,5vw,64px);margin-block:48px 0;border:0;text-align:right;justify-items:end}
+.essentials-teaser>div{max-width:700px}
+.essentials-teaser .essentials-summary{justify-self:end}
 .essentials-teaser .essentials-summary,.essentials-teaser .text-link{color:inherit;border-color:currentColor}
-.essentials-teaser a:focus-visible{outline-color:var(--paper)}
+.essentials-teaser a:focus-visible{outline-color:currentColor}
 .songs-index{display:flex;flex-direction:column;align-items:flex-start;gap:24px;width:100%;padding:clamp(28px,5vw,64px) 0;margin-top:36px;border-top:1px solid var(--blue);background:transparent;color:var(--blue);min-height:0}
 .songs-index>strong{font:400 clamp(36px,6vw,88px)/1.2 var(--serif);letter-spacing:-.025em;margin:0}
 .songs-index .index-number{font:400 clamp(32px,4vw,54px)/1.2 var(--serif);margin:0}

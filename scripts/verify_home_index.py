@@ -26,4 +26,10 @@ print(f'PASS homepage hierarchy/copy; {n} categorized entries; no Essentials dou
 
 songs=(p/'dist/tracks.html').read_text()
 assert '<h1>Premium Cuts<br><i>Songs</i></h1>' in songs
-assert 'Premium Cutsすべての曲を、<em>ひとつの棚に。</em><br>ジャズ、ブラジル、フレンチ・ポップ。<br>こちらの世界もとてもひろかった。' in songs
+assert '<section class="essentials-heading songs-heading">' in songs
+assert '<p class="song-lead">Premium Cutsすべての曲を、<em>ひとつの棚に。</em></p><p>ジャズ、ブラジル、フレンチ・ポップ。<br>こちらの世界もとてもひろかった。</p>' in songs
+
+css=(p/'src/style.css').read_text()
+assert '.essentials-teaser{background:#f08080;color:#10394a;' in css
+assert 'text-align:right;justify-items:end' in css
+assert '.essentials-teaser a:focus-visible{outline-color:currentColor}' in css
