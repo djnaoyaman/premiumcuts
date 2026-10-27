@@ -66,5 +66,44 @@
     "note": "『Blame It on the Bossa Nova』（1963年）に収録された「One Note Samba」です。指定動画の配信年とは分けて、元のアルバムの発表年を記載しています。",
     "source": "https://www.clarkterry.com/press/discography.pdf",
     "source_label": "Clark Terry 公式ディスコグラフィー"
+  },
+  {
+    "id": "myspin-alexia-gardner-one-note-samba",
+    "title": "One Note Samba",
+    "artist": "Alexia Gardner",
+    "videoId": "KZJPWr0cthg",
+    "url": "https://www.youtube.com/watch?v=KZJPWr0cthg",
+    "album": "The Rest Of Your Life",
+    "year": 2002,
+    "year_label": "配信作品情報の年",
+    "note": "『The Rest Of Your Life』に収録されたAlexia Gardnerの「One Note Samba」です。配信作品情報では2002年のアルバムとして掲載されています。",
+    "source": "https://music.amazon.co.uk/albums/B002IFCAZ8",
+    "source_label": "Amazon Music"
+  },
+  {
+    "id": "myspin-sergio-mendes-brazilian-bag-one-note-samba",
+    "title": "One Note Samba",
+    "artist": "Sergio Mendes",
+    "videoId": "v2jG8Jxb0Mc",
+    "url": "https://www.youtube.com/watch?v=v2jG8Jxb0Mc",
+    "album": "In The Brazilian Bag!",
+    "year": 1966,
+    "year_label": "収録アルバム版の年",
+    "note": "『In The Brazilian Bag!』収録の単独曲版です。先に選んだ「Spanish Flea」とのメドレーとは、収録アルバムも異なります。年は配信作品情報に掲載されたこのアルバム版の年で、録音年ではありません。",
+    "source": "https://music.amazon.com/albums/B0C922F9BM",
+    "source_label": "Amazon Music"
+  },
+  {
+    "id": "myspin-caterina-valente-samba-de-uma-nota-so",
+    "title": "Samba De Uma Nota So",
+    "artist": "Caterina Valente",
+    "videoId": "F_lWiRh-1Co",
+    "url": "https://www.youtube.com/watch?v=F_lWiRh-1Co",
+    "album": "Fantastica Caterina Valente!",
+    "year": 2006,
+    "year_label": "指定音源の配信年",
+    "note": "指定されたTopic音源は『Fantastica Caterina Valente!』収録版です。配信元の説明には℗1996 Butterfly Music、配信日2006年5月9日とあり、ここでは配信年を表示しています。原録音の年とは区別しています。",
+    "source": "https://www.youtube.com/watch?v=F_lWiRh-1Co",
+    "source_label": "The Orchard Enterprises配信クレジット"
   }
 ]
