@@ -39,10 +39,10 @@
     "videoId": "YacrKDzDJo4",
     "url": "https://www.youtube.com/watch?v=YacrKDzDJo4",
     "album": "Inédito",
-    "year": 1987,
-    "note": "『Inédito』に収録された、Tom Jobim自身による「Samba de Uma Nota Só」です。Instituto Antônio Carlos Jobimの資料では、アルバムとこの録音を1987年として記録しています。",
-    "source": "https://www.jobim.org/jobim/handle/2010/13438",
-    "source_label": "Instituto Antônio Carlos Jobim"
+    "year": 1995,
+    "note": "『Inédito』に収録されたTom Jobim自身の演奏です。1987年に録音・限定配布され、一般発売されたCDは1995年です。ここでは制作年ではなく、一般発売年を表示しています。",
+    "source": "https://www.qobuz.com/br-pt/album/inedito-tom-jobim/7898324753015",
+    "source_label": "Qobuz／Jobim Biscoito Fino作品情報"
   },
   {
     "id": "myspin-herbie-mann-one-note-samba",
@@ -75,8 +75,7 @@
     "url": "https://www.youtube.com/watch?v=KZJPWr0cthg",
     "album": "The Rest Of Your Life",
     "year": 2002,
-    "year_label": "配信作品情報の年",
-    "note": "『The Rest Of Your Life』に収録されたAlexia Gardnerの「One Note Samba」です。配信作品情報では2002年のアルバムとして掲載されています。",
+    "note": "『The Rest Of Your Life』（2002年）に収録されたAlexia Gardnerの「One Note Samba」です。発売年はGardner Recordsの配信作品情報で確認しています。",
     "source": "https://music.amazon.co.uk/albums/B002IFCAZ8",
     "source_label": "Amazon Music"
   },
@@ -87,11 +86,10 @@
     "videoId": "v2jG8Jxb0Mc",
     "url": "https://www.youtube.com/watch?v=v2jG8Jxb0Mc",
     "album": "In The Brazilian Bag!",
-    "year": 1966,
-    "year_label": "収録アルバム版の年",
-    "note": "『In The Brazilian Bag!』収録の単独曲版です。先に選んだ「Spanish Flea」とのメドレーとは、収録アルバムも異なります。年は配信作品情報に掲載されたこのアルバム版の年で、録音年ではありません。",
-    "source": "https://music.amazon.com/albums/B0C922F9BM",
-    "source_label": "Amazon Music"
+    "year": 1965,
+    "note": "指定音源は『In The Brazilian Bag!』収録の単独曲版です。元のアルバム『Brasil ’65』（Capitol T/ST2294）は1965年発売で、後に改題再発されています。ここでは元の発売年を表示し、「Spanish Flea」とのメドレーとは分けています。",
+    "source": "https://www.worldradiohistory.com/Archive-Billboard/60s/1965/Billboard%201965-03-13.pdf",
+    "source_label": "Billboard 1965年3月13日号・新譜一覧"
   },
   {
     "id": "myspin-caterina-valente-samba-de-uma-nota-so",
@@ -100,11 +98,10 @@
     "videoId": "F_lWiRh-1Co",
     "url": "https://www.youtube.com/watch?v=F_lWiRh-1Co",
     "album": "Fantastica Caterina Valente!",
-    "year": 2006,
-    "year_label": "指定音源の配信年",
-    "note": "指定されたTopic音源は『Fantastica Caterina Valente!』収録版です。配信元の説明には℗1996 Butterfly Music、配信日2006年5月9日とあり、ここでは配信年を表示しています。原録音の年とは区別しています。",
-    "source": "https://www.youtube.com/watch?v=F_lWiRh-1Co",
-    "source_label": "The Orchard Enterprises配信クレジット"
+    "year": 1989,
+    "note": "指定された『Fantastica Caterina Valente!』は『A briglia sciolta』の再発盤です。共演ピアニストGuido Manusardiの公式ディスコグラフィーでは、元のLPが1989年、CDが1990年と記録されています。動画の2006年という配信日ではなく、元のLP発売年を表示しています。",
+    "source": "https://www.guidomanusardi.com/discografia/",
+    "source_label": "Guido Manusardi公式ディスコグラフィー"
   },
   {
     "id": "myspin-mjq-laurindo-almeida-one-note-samba",
