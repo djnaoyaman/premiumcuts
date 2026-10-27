@@ -1,0 +1,70 @@
+[
+  {
+    "id": "myspin-cliff-richard-one-note-samba",
+    "title": "One Note Samba",
+    "artist": "Cliff Richard",
+    "videoId": "BWbi6KalRG8",
+    "album": "Kinda Latin",
+    "year": 1966,
+    "note": "1966年のアルバム『Kinda Latin』に収録された「One Note Samba」です。",
+    "source": "https://music.apple.com/gb/song/696787050",
+    "url": "https://www.youtube.com/watch?v=BWbi6KalRG8"
+  },
+  {
+    "id": "myspin-sergio-mendes-one-note-samba",
+    "title": "One Note Samba / Spanish Flea",
+    "artist": "Sergio Mendes & Brasil ’66",
+    "videoId": "Gg7I3VFqF1I",
+    "album": "Herb Alpert Presents: Sergio Mendes & Brasil ’66",
+    "year": 1966,
+    "note": "「One Note Samba」と「Spanish Flea」をつないだメドレーです。1966年の『Herb Alpert Presents: Sergio Mendes & Brasil ’66』に収録されています。",
+    "source": "https://music.apple.com/us/song/1440847105",
+    "url": "https://www.youtube.com/watch?v=Gg7I3VFqF1I"
+  },
+  {
+    "id": "myspin-nancy-wilson-one-note-samba",
+    "title": "One Note Samba",
+    "artist": "Nancy Wilson",
+    "videoId": "6iGydKBt2ZA",
+    "album": "Today, Tomorrow, Forever",
+    "year": 1964,
+    "note": "1964年のアルバム『Today, Tomorrow, Forever』に収録された「One Note Samba」です。指定動画は「Digitally Remastered 00」表記の音源です。",
+    "source": "https://music.apple.com/us/song/723542393",
+    "url": "https://www.youtube.com/watch?v=6iGydKBt2ZA"
+  },
+  {
+    "id": "myspin-tom-jobim-samba-de-uma-nota-so",
+    "title": "Samba de Uma Nota Só",
+    "artist": "Tom Jobim",
+    "videoId": "YacrKDzDJo4",
+    "url": "https://www.youtube.com/watch?v=YacrKDzDJo4",
+    "album": "Inédito",
+    "year": 1987,
+    "note": "『Inédito』に収録された、Tom Jobim自身による「Samba de Uma Nota Só」です。Instituto Antônio Carlos Jobimの資料では、アルバムとこの録音を1987年として記録しています。",
+    "source": "https://www.jobim.org/jobim/handle/2010/13438",
+    "source_label": "Instituto Antônio Carlos Jobim"
+  },
+  {
+    "id": "myspin-herbie-mann-one-note-samba",
+    "title": "One Note Samba",
+    "artist": "Herbie Mann",
+    "videoId": "fkGLhcBqd-w",
+    "url": "https://www.youtube.com/watch?v=fkGLhcBqd-w",
+    "album": "Brazil, Bossa Nova & Blues",
+    "year": 1962,
+    "note": "Herbie Mannのアルバム『Brazil, Bossa Nova & Blues』（1962年）に収録された「One Note Samba」です。",
+    "source": "https://music.apple.com/ua/song/1447858565"
+  },
+  {
+    "id": "myspin-eydie-gorme-one-note-samba",
+    "title": "One Note Samba",
+    "artist": "Eydie Gormé",
+    "videoId": "A-IEHJVG-iE",
+    "url": "https://www.youtube.com/watch?v=A-IEHJVG-iE",
+    "album": "Blame It on the Bossa Nova",
+    "year": 1963,
+    "note": "『Blame It on the Bossa Nova』（1963年）に収録された「One Note Samba」です。指定動画の配信年とは分けて、元のアルバムの発表年を記載しています。",
+    "source": "https://www.clarkterry.com/press/discography.pdf",
+    "source_label": "Clark Terry 公式ディスコグラフィー"
+  }
+]

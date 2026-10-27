@@ -25,6 +25,12 @@ jobs:
           SITE_ORIGIN: https://djnaoyaman.github.io/premiumcuts
           BASE_PATH: /premiumcuts
         run: python build.py
+      - name: Verify fixed catalog and collection isolation
+        run: |
+          python scripts/verify_fixed.py
+          python scripts/verify_catalog.py
+          node scripts/verify_scope.cjs
+          node scripts/verify_player.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
