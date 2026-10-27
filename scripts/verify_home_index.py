@@ -40,12 +40,15 @@ assert "class=\"index-card songs-index\"" in home
 
 # The personal illustration is About-only, preserving the homepage.
 about=(p/'dist/about.html').read_text()
-assert 'class="about-portrait"' in about and 'couple-french.webp' in about
-assert 'couple-french.webp' not in home
+assert 'class="about-portrait"' in about and 'couple-french-transparent.webp' in about
+assert 'couple-french-transparent.webp' not in home
 from PIL import Image
-im=Image.open(p/'dist/assets/couple-french.webp')
+im=Image.open(p/'dist/assets/couple-french-transparent.webp')
 assert im.size==(960,720) and im.format=='WEBP'
 assert not im.getexif() and not any(k in im.info for k in ['exif','xmp'])
 
 assert 'aria-label="パンくず"' in songs and 'aria-current="page">Songs' in songs
 assert "My-Spin" not in home and "My-Spin" not in (p/"dist/my-spin.html").read_text()
+
+assert about.index("デザインについて。")<about.index('class="about-portrait"')<about.index('class="round-link"')
+assert im.mode=="RGBA" and im.getextrema()[3][0]==0
