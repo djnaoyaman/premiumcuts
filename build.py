@@ -15,8 +15,8 @@ for f in (D/'tracks').glob('*.html'):f.unlink()
 for n in ['style.css','app.js','player.css','player.js']:shutil.copy2(P/'src'/n,D/n)
 # Captions describe the artwork, not unverified dates or locations.
 about_posters = [
- ('01', 'Paris, 2002', 'NAOYAとSAYA、2002年パリでの二人を朱色とクリーム色で描いたヴィンテージポスター'),
- ('02', 'NAOYA & SAYA', 'NAOYAとSAYAの肖像を組み合わせたフランス映画風のポスター'),
+ ('01', 'Paris, 2002', '2002年パリでのNAOYAとSAYAにClassmatesの文字と二人の物語を添えた正方形のポスター'),
+ ('02', 'NAOYA', '車窓を眺めるNAOYAの肖像と海外での歩みを英語で組み合わせた正方形のポスター'),
  ('04', 'NAOYA', 'カフェのNAOYAをサーモンピンクとクリーム色で描いたポスター'),
  ('05', 'SAYA', 'カフェの窓辺でうつむくSAYAをボルドー色とクリーム色で描いたポスター'),
  ('06', 'Horloge', '建築の時計をモチーフにした正方形のポスター'),
