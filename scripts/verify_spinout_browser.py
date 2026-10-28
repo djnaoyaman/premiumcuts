@@ -17,8 +17,8 @@ async def main():
     try:
         async with async_playwright() as pw:
             browser = await pw.chromium.launch()
-            for width in [320, 390, 1200]:
-                context = await browser.new_context(viewport={'width': width, 'height': 900}, reduced_motion='reduce')
+            for width in [320, 390, 430, 844, 1200]:
+                context = await browser.new_context(viewport={'width': width, 'height': 390 if width == 844 else 900}, reduced_motion='reduce')
                 async def route(r):
                     if r.request.url.startswith((origin, 'https://fonts.googleapis.com/', 'https://fonts.gstatic.com/')):
                         await r.continue_()
@@ -37,6 +37,21 @@ async def main():
                 assert await page.locator('h1').inner_text() == 'Spinout.'
                 assert await page.evaluate("PremiumPlayer.getState().scope === 'myspin' && PremiumPlayer.getState().queue.length === 11")
                 assert await nav.nth(4).get_attribute('class') == 'selected'
+                # Spinout shares row classes with Essentials but must retain its grid.
+                rows = page.locator('.essential-list > .essential-cut')
+                assert await rows.count() == 11
+                for expanded in [True, False]:
+                    if await page.locator('#pc-player').get_attribute('data-expanded') != str(expanded).lower():
+                        await page.locator('#pc-fold').click()
+                    for row in await rows.all():
+                        assert await row.evaluate("e => getComputedStyle(e).display") == 'grid'
+                        button = await row.locator(':scope > .pc-inline-play').bounding_box()
+                        detail = await row.locator(':scope > .text-link').bounding_box()
+                        song = await row.locator('.essential-song').bounding_box()
+                        assert button and detail and song
+                        assert not overlap(button, detail) and not overlap(button, song), (width, button, detail, song)
+                        assert button['x'] >= 0 and button['x'] + button['width'] <= width
+                    await page.screenshot(path=str(out / f'{width}-spinout-{expanded}.png'))
                 await page.screenshot(path=str(out / f'{width}-spinout.png'))
                 await nav.nth(5).click()
                 await page.wait_for_url('**/about.html')
@@ -53,7 +68,7 @@ async def main():
         server.shutdown()
         server.server_close()
     (out / 'report.json').write_text(json.dumps(report, indent=2))
-    print('PASS Spinout header order, responsive geometry, legacy URL and keyboard SPA navigation at 320/390/1200px')
+    print('PASS Spinout header order, responsive geometry, legacy URL and keyboard SPA navigation at 320/390/430/844/1200px, row action separation and expanded/collapsed player')
 
 if __name__ == '__main__':
     asyncio.run(main())
