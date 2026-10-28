@@ -43,7 +43,7 @@ async def render():
     cards = manifest['pages']
     sample = '--sample' in sys.argv
     if sample:
-        selected = {'index.html','tracks.html','features/essentials.html','my-spin.html','about.html','tracks/001-a-01.html','volumes/001.html','all-tracks.html'}
+        selected = {'index.html','tracks.html','features/essentials.html','my-spin.html','about.html','tracks/001-a-01.html','tracks/cd-10-d1-15.html','volumes/001.html','all-tracks.html'}
         cards = [c for c in cards if c['page'] in selected]
         assert len(cards) == len(selected)
     results = []
@@ -143,13 +143,33 @@ async def render():
                     top = round(header['y'] + header['height'])
                     assert 0 <= title['y'] - top and title['y'] + title['height'] <= top + HEIGHT, (card['page'], title)
                     assert title['x'] >= 0 and title['x'] + title['width'] <= WIDTH, (card['page'], title)
-                    heading_inside = await page.locator('main h1').evaluate('''(e, clip) => {
+                    heading_geometry = await page.locator('main h1').evaluate('''(e, clip) => {
                         const range = document.createRange(); range.selectNodeContents(e);
                         const rects = [...range.getClientRects()].filter(r => r.width && r.height);
-                        return e.scrollWidth <= e.clientWidth + 1 && rects.every(r =>
-                            r.left >= 0 && r.right <= clip.width && r.top >= clip.top && r.bottom <= clip.top + clip.height);
+                        // Native mixed-script glyphs can overhang a CSS box while
+                        // remaining fully visible. Test the image and actual clipping
+                        // ancestors, not scrollWidth against a visible-overflow box.
+                        const clipping = [];
+                        for (let node=e; node; node=node.parentElement) {
+                            const style=getComputedStyle(node), box=node.getBoundingClientRect();
+                            const x=style.overflowX!=='visible', y=style.overflowY!=='visible';
+                            if (x || y) clipping.push({x,y,box:box.toJSON()});
+                        }
+                        return {inside: rects.every(r =>
+                            r.left >= 0 && r.right <= clip.width && r.top >= clip.top && r.bottom <= clip.top + clip.height &&
+                            clipping.every(c => (!c.x || r.left >= c.box.left && r.right <= c.box.right) &&
+                              (!c.y || r.top >= c.box.top && r.bottom <= c.box.bottom))),
+                            clipping,
+                            scrollWidth:e.scrollWidth,clientWidth:e.clientWidth,rects:rects.map(r=>r.toJSON())};
                     }''', {'top': top, 'width': WIDTH, 'height': HEIGHT})
-                    assert heading_inside, (card['page'], 'Heading text outside social image')
+                    heading_inside = heading_geometry['inside']
+                    if not heading_inside:
+                        diagnostics = ROOT / 'qa/social-failures'
+                        diagnostics.mkdir(parents=True, exist_ok=True)
+                        name = Path(card['page']).stem
+                        await page.screenshot(path=str(diagnostics / (name + '.png')), clip={'x':0,'y':top,'width':WIDTH,'height':HEIGHT})
+                        (diagnostics / (name + '.json')).write_text(json.dumps({'page':card['page'],'clipTop':top,'title':title,**heading_geometry},indent=2))
+                    assert heading_inside, (card['page'], 'Heading text outside social image', heading_geometry)
                     image = DIST / card['image']
                     image.parent.mkdir(parents=True, exist_ok=True)
                     await page.screenshot(path=str(image), clip={'x': 0, 'y': top, 'width': WIDTH, 'height': HEIGHT}, animations='disabled')

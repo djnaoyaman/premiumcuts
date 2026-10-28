@@ -96,7 +96,8 @@ Google Fonts as the site and fails rather than silently using substitute fonts.
 `python scripts/verify_metadata.py` verifies every resulting image and metadata pair.
 For an environment where browser execution is unavailable, `--structure-only`
 checks metadata structure but explicitly does not claim image/render verification.
-Draft pull requests first upload eight `social-preview-samples` for visual review.
+Draft pull requests first upload representative `social-preview-samples` for visual review,
+including a mixed Latin/Japanese title edge case.
 Marking the PR ready runs the complete renderer and all image checks; only main
 can publish after those checks succeed. Actual X/Facebook debugger
 validation is a separate post-publication step, not implied by these tests.
