@@ -27,7 +27,8 @@ async def main():
     assert await first.locator('.essential-listening-state').is_visible()
     count=await page.evaluate('__audioCalls.length');await first.locator('.essential-liner > summary').click();assert await page.evaluate('__audioCalls.length')==count
     assert await first.locator('.essential-liner p').is_visible()
-    assert await page.locator('#pc-player').get_attribute('data-expanded')=='false'
+    # Native details queues its toggle event; wait for the observable fold result.
+    await page.wait_for_function("document.getElementById('pc-player').dataset.expanded === 'false'")
     await summary.scroll_into_view_if_needed();await page.wait_for_timeout(500);await page.screenshot(path=str(out/f'{width}.png'))
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
     second=page.locator('.essential-recording').nth(1);await second.locator(':scope > summary').click();assert await first.get_attribute('open') is None;assert await second.get_attribute('open') is not None
