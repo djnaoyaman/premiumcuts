@@ -174,3 +174,10 @@ body .mix-marker{text-transform:uppercase}
 .songs-scroll-nav :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 @media(max-width:700px){.catalog-page{padding-right:76px}.songs-scroll-nav{left:auto;right:max(12px,env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top))}.songs-scroll-nav input{height:52px}}
 @media(max-height:600px){.songs-scroll-nav{top:16px}.songs-scroll-nav input{height:40px}}
+
+/* About only: gentle staggered reveal and ordinary save-gesture deterrence. */
+.about-page .about-poster{opacity:1;transform:none;transition:opacity .8s ease var(--reveal-delay,0ms),transform .8s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms)}
+.about-page .about-poster.about-reveal-pending{opacity:0;transform:translateY(24px)}
+.about-page .about-poster img,.about-page .about-poster>a{-webkit-touch-callout:none;user-select:none;-webkit-user-select:none}
+.about-page .about-poster img{-webkit-user-drag:none}
+@media(prefers-reduced-motion:reduce){.about-page .about-poster,.about-page .about-poster.about-reveal-pending{opacity:1;transform:none;transition:none}}
