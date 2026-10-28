@@ -31,7 +31,7 @@ for page in D.rglob('*.html'):
 def current(relative):
     return html.unescape(re.search(r'<span[^>]*aria-current="page">(.*?)</span>', (D / relative).read_text()).group(1))
 
-for relative, name in [('tracks.html', 'Songs'), ('my-spin.html', 'Spin'), ('features/essentials.html', 'Essentials'), ('about.html', 'About'), ('all-tracks.html', 'すべての曲'), ('404.html', '404')]:
+for relative, name in [('tracks.html', 'Songs'), ('my-spin.html', 'Spinout'), ('features/essentials.html', 'Essentials'), ('about.html', 'About'), ('all-tracks.html', 'すべての曲'), ('404.html', '404')]:
     assert current(relative) == name, relative
 assert current('tracks/001-a-03.html') == 'Tant de nuits (Bitter Sweet Samba)'
 assert current('tracks/myspin-cliff-richard-one-note-samba.html') == 'One Note Samba'
@@ -48,3 +48,22 @@ assert 'header nav>a:last-child{display:inline-flex}' in css
 assert '.breadcrumb ol{display:flex;flex-wrap:wrap;align-items:baseline' in css
 assert 'overflow-wrap:anywhere' in css
 print(f'PASS {checked} common breadcrumbs, current-page semantics, JSON-LD parity, responsive navigation scope')
+
+# Spinout is a display-only rename, between Remix and About on every page.
+expected_nav = ['Works', 'Songs', 'Essentials', 'Remix', 'Spinout', 'About']
+for page in D.rglob('*.html'):
+    markup = page.read_text()
+    nav = re.search(r'<nav aria-label="メインナビゲーション">(.*?)</nav>', markup).group(1)
+    links = re.findall(r'<a[^>]+href="([^"]*)"[^>]*>(.*?)</a>', nav)
+    assert [text for url, text in links] == expected_nav, page
+    assert links[4][0] == '/premiumcuts/my-spin.html', page
+spin = (D / 'my-spin.html').read_text()
+assert '<h1>Spinout.</h1>' in spin
+assert '<option value="myspin">Spinout</option>' in (D / 'player.html').read_text()
+catalog = json.loads((D / 'catalog-public.json').read_text())
+assert len(catalog['myspin']) == 11
+for track in catalog['myspin']:
+    assert track['id'].startswith('myspin-')
+    markup = (D / 'tracks' / (track['id'] + '.html')).read_text()
+    assert 'data-play-scope="myspin"' in markup and 'Spinoutへ戻る' in markup
+print('PASS all-page navigation order and Spinout label; legacy URLs, 11 IDs and player scope retained')

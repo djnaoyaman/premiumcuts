@@ -19,7 +19,7 @@ def breadcrumb_markup(parts,current_id=''):
 
 def page_breadcrumbs(rel,label,catalog,base_path):
  home=('HOME',base_path+'/')
- labels={'/tracks.html':'Songs','/my-spin.html':'Spin','/features/essentials.html':'Essentials','/all-tracks.html':'すべての曲','/about.html':'About','/player.html':'Player'}
+ labels={'/tracks.html':'Songs','/my-spin.html':'Spinout','/features/essentials.html':'Essentials','/all-tracks.html':'すべての曲','/about.html':'About','/player.html':'Player'}
  if rel in labels:return [home,(labels[rel],None)]
  volumes={v['id']:v for v in catalog['volumes']}
  if rel.startswith('/volumes/'):
@@ -28,7 +28,7 @@ def page_breadcrumbs(rel,label,catalog,base_path):
  if rel.startswith('/tracks/'):
   tid=Path(rel).stem
   spin=next((t for t in catalog['myspin'] if t['id']==tid),None)
-  if spin:return [home,('Spin',base_path+'/my-spin.html'),(spin['title'],None)]
+  if spin:return [home,('Spinout',base_path+'/my-spin.html'),(spin['title'],None)]
   t=next((t for t in catalog['tracks'] if t['id']==tid),None)
   if t:
    v=volumes[t['volume']]
@@ -67,7 +67,7 @@ def enrich(dist,origin,base_path):
   s=re.sub(r'<meta property="og:image"[^>]*>',f'<meta property="og:image" content="{image_url}">',s)
   label=title.split(' | ')[0]
   if rel=='/tracks.html':label='Songs'
-  elif rel=='/my-spin.html':label='Spin'
+  elif rel=='/my-spin.html':label='Spinout'
   elif rel=='/features/essentials.html':label='Essentials'
   crumbs=[]
   if rel!='/index.html':
@@ -102,4 +102,4 @@ def enrich(dist,origin,base_path):
   s=re.sub(r'(<meta (?:property|name)="'+key+r'" content=")[^"]*',lambda m:m[1]+esc(image_alt),s)
  (dist/'404.html').write_text(s,encoding='utf-8')
  (dist/'social-card-manifest.json').write_text(json.dumps({'schema':1,'width':1200,'height':630,'pages':cards},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
- (dist/'llms.txt').write_text(f'''# Premium Cuts Listed\n\nPublic music-track archive and listening guide. This file is a navigation aid, not a ranking or indexing guarantee.\n\n- [About]({origin}/about.html): scope and editorial background.\n- [Songs]({origin}/tracks.html): original Premium Cuts track placements, in published order.\n- [Essentials]({origin}/features/essentials.html): the owner's explicitly selected subset of Songs.\n- [Spin]({origin}/my-spin.html): an independent derived selection, not original Premium Cuts contents.\n- [All tracks]({origin}/all-tracks.html): category-separated public index.\n- [Sitemap]({origin}/sitemap.xml): canonical public pages.\n\nTrack pages distinguish verified release information, references, interpretation and unresolved information. Read their cited sources and uncertainty notes. Embedded YouTube availability varies; the archive does not host the recordings. Query filters are views of Songs, not separate releases.\n''',encoding='utf-8')
+ (dist/'llms.txt').write_text(f'''# Premium Cuts Listed\n\nPublic music-track archive and listening guide. This file is a navigation aid, not a ranking or indexing guarantee.\n\n- [About]({origin}/about.html): scope and editorial background.\n- [Songs]({origin}/tracks.html): original Premium Cuts track placements, in published order.\n- [Essentials]({origin}/features/essentials.html): the owner's explicitly selected subset of Songs.\n- [Spinout]({origin}/my-spin.html): an independent derived selection, not original Premium Cuts contents.\n- [All tracks]({origin}/all-tracks.html): category-separated public index.\n- [Sitemap]({origin}/sitemap.xml): canonical public pages.\n\nTrack pages distinguish verified release information, references, interpretation and unresolved information. Read their cited sources and uncertainty notes. Embedded YouTube availability varies; the archive does not host the recordings. Query filters are views of Songs, not separate releases.\n''',encoding='utf-8')
