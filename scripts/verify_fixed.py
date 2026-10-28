@@ -20,18 +20,18 @@ assert all(actual_audio.get(k)==v for k,v in preserved.items()), 'Previously sel
 assert len(actual_audio)==len(public['audio']), 'Duplicate audio track ID'
 assert set(actual_audio).issubset(t['id'] for t in actual), 'Audio outside fixed Songs'
 assert all(t['id'] not in (p/'dist/tracks.html').read_text().split('<main')[1] for t in m)
-print('PASS fixed 675 Songs exact records/order, 37 Essentials order, baseline hashes, My-Spin isolation')
+print('PASS fixed 675 Songs exact records/order, 38 Essentials order, baseline hashes, My-Spin isolation')
 
 # Audio for an existing Songs entry does not add it to either curated collection.
 assert next(t for t in public["audio"] if t["id"] == "001-a-02")["videoId"] == "8pQBEa4zRMw"
 assert "001-a-02" not in json.load(open("features.json"))["essentials"]["track_ids"]
 assert not any(t["videoId"] == "8pQBEa4zRMw" for t in public["myspin"])
 
-# Explicit owner revision: two additions, preserving fixed Songs order.
+# Explicit owner revision: Aquarela only, preserving fixed Songs order.
 previous=f['essentials_revision']['previous_essentials_ids']
 assert not set(previous)-set(f['essentials_ids'])
-assert set(f['essentials_ids'])-set(previous)=={'005-a-01','005-a-02'}
-assert len(f['essentials_ids'])==37
+assert set(f['essentials_ids'])-set(previous)=={'004-b-02'}
+assert len(f['essentials_ids'])==38
 source_order={t['id']:t['order'] for t in f['songs']}
 assert f['essentials_ids']==sorted(f['essentials_ids'],key=source_order.get)
 assert '006-b-08' in {t['id'] for t in public['tracks']}
@@ -47,3 +47,14 @@ for track,video in [("001-b-10","KmptGhVdutA"),("001-b-11","98zvoTetV3Y"),("001-
  assert next(t for t in public["audio"] if t["id"]==track)["videoId"]==video
  assert track not in f["essentials_ids"]
  assert not any(t["videoId"]==video for t in public["myspin"])
+
+# The tape/CD appearances share one selected recording, never two queue items.
+assert 'cd-00-d1-14' not in f['essentials_ids']
+for track in ('004-b-02','cd-00-d1-14'):
+ assert next(t for t in public['tracks'] if t['id']==track)['essentials']
+ assert next(t for t in public['audio'] if t['id']==track)['videoId']=='s9jj2qf9TJ0'
+ assert 'ESSENTIALS' in (p/'dist/tracks'/f'{track}.html').read_text()
+feature=(p/'dist/features/essentials.html').read_text()
+assert feature.count('data-play-id="004-b-02"')==1
+assert 'data-play-id="cd-00-d1-14"' not in feature
+assert '38 ESSENTIAL RECORDINGS' in feature
