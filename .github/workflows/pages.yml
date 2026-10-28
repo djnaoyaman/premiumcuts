@@ -39,6 +39,7 @@ jobs:
           node scripts/verify_catalog_header.cjs
           node scripts/verify_random_start.cjs
           node scripts/verify_player.cjs
+          node scripts/verify_back_to_top.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
