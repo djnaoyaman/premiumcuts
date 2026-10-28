@@ -139,7 +139,7 @@ public_tracks=[{k:v for k,v in t.items() if k in {'id','volume','side','position
 (P/'catalog.json').write_text(json.dumps({'volumes':volumes,'tracks':public_tracks,'markers':marks},ensure_ascii=False,indent=2))
 (P/'tracks.json').unlink(missing_ok=True)
 
-(D/'data.js').write_text((D/'data.js').read_text()+'\nconst PREMIUM_MYSPINOUT='+json.dumps(myspin,ensure_ascii=False)+';')
+(D/'data.js').write_text((D/'data.js').read_text()+'\nconst PREMIUM_MYSPIN='+json.dumps(myspin,ensure_ascii=False)+';')
 
 asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','share_metadata.py','scripts/render_social_cards.py','about_profile.json','myspin.json','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','editorial_updates.json','src/app.js','src/back-to-top.js','src/home-intro.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
 # Public-only catalog snapshots let open players receive newly published sources.

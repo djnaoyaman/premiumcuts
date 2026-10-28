@@ -35,6 +35,7 @@ async def main():
                 assert all(not overlap(a, b) for i, a in enumerate(boxes) for b in boxes[i+1:])
                 assert await page.evaluate('document.documentElement.scrollWidth <= innerWidth')
                 assert await page.locator('h1').inner_text() == 'Spinout.'
+                assert await page.evaluate("PremiumPlayer.getState().scope === 'myspin' && PremiumPlayer.getState().queue.length === 11")
                 assert await nav.nth(4).get_attribute('class') == 'selected'
                 await page.screenshot(path=str(out / f'{width}-spinout.png'))
                 await nav.nth(5).click()
@@ -44,6 +45,7 @@ async def main():
                 await page.keyboard.press('Enter')
                 await page.wait_for_url('**/my-spin.html')
                 assert await page.locator('h1').inner_text() == 'Spinout.'
+                assert await page.evaluate("PremiumPlayer.getState().scope === 'myspin' && PremiumPlayer.getState().queue.length === 11")
                 report.append({'width': width, 'headerLinks': boxes, 'keyboardLegacyRoute': True, 'noOverflowOrOverlap': True})
                 await context.close()
             await browser.close()

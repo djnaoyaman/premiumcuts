@@ -67,3 +67,6 @@ for track in catalog['myspin']:
     markup = (D / 'tracks' / (track['id'] + '.html')).read_text()
     assert 'data-play-scope="myspin"' in markup and 'Spinoutへ戻る' in markup
 print('PASS all-page navigation order and Spinout label; legacy URLs, 11 IDs and player scope retained')
+
+assert 'const PREMIUM_MYSPIN=' in (D / 'data.js').read_text()
+assert 'PREMIUM_MYSPINOUT' not in (D / 'data.js').read_text()
