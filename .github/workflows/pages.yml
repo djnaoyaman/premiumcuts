@@ -27,6 +27,17 @@ jobs:
           SITE_ORIGIN: https://djnaoyaman.github.io/premiumcuts
           BASE_PATH: /premiumcuts
         run: python build.py
+      - name: Render representative social previews
+        env:
+          BASE_PATH: /premiumcuts
+        run: python scripts/render_social_cards.py --sample
+      - uses: actions/upload-artifact@v4
+        with:
+          name: social-preview-samples
+          path: |
+            dist/social/
+            dist/social-card-sample-report.json
+          retention-days: 7
       - name: Render faithful page-specific social previews
         env:
           BASE_PATH: /premiumcuts
@@ -45,6 +56,15 @@ jobs:
           node scripts/verify_catalog_header.cjs
           node scripts/verify_random_start.cjs
           node scripts/verify_player.cjs
+          node scripts/verify_back_to_top.cjs
+      - name: Verify Songs control in Chromium
+        run: python scripts/verify_back_to_top_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: back-to-top-browser-qa
+          path: qa/back-to-top/
+          retention-days: 7
       - name: Upload social preview review artifacts
         uses: actions/upload-artifact@v4
         with:
