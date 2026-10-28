@@ -13,7 +13,13 @@ class Tags(HTMLParser):
         self.tags.append((tag, dict(attrs)))
 
 about = (root/'dist/about.html').read_text()
-tags = Tags(about).tags
+# The archived markup stays restorable, but must not create live DOM elements.
+assert '<!-- ABOUT GALLERY PAUSED\n' in about
+active_tags = Tags(about).tags
+assert not any('about-poster' in a.get('class', '') or a.get('class') == 'about-gallery' for t,a in active_tags)
+assert not any('about-poster-' in a.get('src', '') for t,a in active_tags)
+archived = about.split('<!-- ABOUT GALLERY PAUSED\n', 1)[1].split('\nEND ABOUT GALLERY PAUSED -->', 1)[0]
+tags = Tags(archived).tags
 source = ast.parse((root/'build.py').read_text())
 manifest = next(ast.literal_eval(node.value) for node in source.body if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == 'about_posters' for target in node.targets))
 assert len(manifest) >= 14 and len(manifest) % 2 == 0
@@ -57,4 +63,4 @@ assert '.about-poster-grid{display:grid;grid-template-columns:repeat(2,minmax(0,
 assert '@media(max-width:700px)' in css and '.about-poster-grid{gap:24px 12px}' in css
 assert '.about-poster-grid{grid-template-columns:1fr' not in css
 assert '.about-poster img{display:block;width:100%;height:auto}' in css
-print(f'PASS {len(manifest)} uncropped About-only posters; asset sizes; alt/lazy dimensions; accessible enlarge links; responsive rules')
+print(f'PASS gallery commented out; {len(manifest)} restorable uncropped About-only posters; asset sizes; alt/lazy dimensions; accessible enlarge links; responsive rules')
