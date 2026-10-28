@@ -60,12 +60,15 @@ jobs:
           node scripts/verify_player.cjs
           node scripts/verify_back_to_top.cjs
           node scripts/verify_home_intro.cjs
+          node scripts/verify_one_note_samba.cjs
       - name: Verify homepage intro in Chromium
         run: python scripts/verify_home_intro_browser.py
       - name: Verify Songs control in Chromium
         run: python scripts/verify_back_to_top_browser.py
       - name: Verify Spinout navigation in Chromium
         run: python scripts/verify_spinout_browser.py
+      - name: Verify One Note Samba feature in Chromium
+        run: python scripts/verify_one_note_samba_browser.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
