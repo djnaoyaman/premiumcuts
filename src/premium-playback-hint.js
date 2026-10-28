@@ -26,7 +26,7 @@
       close.addEventListener('click', dismiss); node.append(copy, close);
       node.addEventListener('focusin', () => { if (timer) cancel(timer); });
       node.addEventListener('focusout', arm);
-      host.append(node); arm(); return true;
+      host.append(node); host.scrollTop = host.scrollHeight; arm(); return true;
     }
     return { show, dismiss };
   }
