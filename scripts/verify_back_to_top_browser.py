@@ -28,7 +28,7 @@ async def main():
     try:
         async with async_playwright() as pw:
             browser=await pw.chromium.launch()
-            for width,height in [(1200,900),(390,844)]:
+            for width,height in [(1200,900),(390,844),(320,568)]:
                 context=await browser.new_context(viewport={'width':width,'height':height},locale='ja-JP')
                 # No external playback or third-party state is needed for UI QA.
                 async def route(r):
@@ -39,25 +39,34 @@ async def main():
                 await page.goto(origin+'/premiumcuts/tracks.html',wait_until='networkidle')
                 await page.evaluate('document.fonts.ready')
                 button=page.locator('#songs-back-to-top')
-                assert not await button.is_visible()
+                assert await button.is_disabled()
                 await page.evaluate("window.scrollTo({top:2000,behavior:'instant'})")
                 await button.wait_for(state='visible')
                 for expanded in [True,False]:
                     if await page.locator('#pc-player').get_attribute('data-expanded') != str(expanded).lower():
                         await page.locator('#pc-fold').click()
                     assert await page.locator('#pc-player').get_attribute('data-expanded')==str(expanded).lower()
-                    a=await button.bounding_box();b=await page.locator('#pc-player').bounding_box()
+                    a=await page.locator('#songs-scroll-nav').bounding_box();b=await page.locator('#pc-player').bounding_box()
                     assert a and b and not overlap(a,b),(width,expanded,a,b)
                     assert a['width']>=44 and a['height']>=44
                     assert a['x']>=0 and a['x']+a['width']<=width and a['y']>=0 and a['y']+a['height']<=height
                     name=f'{width}-'+('expanded' if expanded else 'collapsed')+'.png'
                     await page.screenshot(path=str(OUT/name))
                     report.append({'viewport':[width,height],'playerExpanded':expanded,'button':a,'player':b,'overlap':False,'screenshot':name})
+                # Bottom and native range controls follow the complete scrollable extent.
+                await page.locator('[data-scroll-edge="bottom"]').click()
+                await page.wait_for_function('Math.abs(scrollY-(document.documentElement.scrollHeight-innerHeight)) < 3')
+                assert await page.locator('#songs-scroll-nav output').inner_text() == '100%'
+                slider = page.locator('#songs-scroll-nav input')
+                await slider.fill('50')
+                await page.wait_for_function('Math.abs(scrollY/(document.documentElement.scrollHeight-innerHeight)-.5) < .01')
+                await slider.focus(); await page.keyboard.press('ArrowDown')
+                assert int(await slider.input_value()) in (49,51)
                 await button.focus()
                 await page.keyboard.press('Enter')
                 await page.wait_for_function('window.scrollY < 2')
                 assert await page.locator('main h1').evaluate('e=>e===document.activeElement')
-                assert not await button.is_visible()
+                assert await button.is_disabled()
                 # Existing internal navigation removes the control on every other page.
                 await page.locator('header nav a').filter(has_text='About').click()
                 await page.wait_for_url('**/about.html')
@@ -76,6 +85,10 @@ async def main():
             await page.locator('#songs-back-to-top').click()
             assert await page.evaluate('window.scrollY')<2
             assert await page.locator('main h1').evaluate('e=>e===document.activeElement')
+            await page.locator('#search').fill('zzzznoresultzzzz')
+            await page.wait_for_timeout(200)
+            assert await page.locator('#result-count').inner_text() == '0 曲目'
+            assert await page.evaluate('document.documentElement.scrollWidth <= innerWidth')
             await context.close();await browser.close()
     finally:
         server.shutdown();server.server_close()
