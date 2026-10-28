@@ -3,6 +3,7 @@ on:
   push:
     branches: [main]
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
   workflow_dispatch:
 permissions:
   contents: read
@@ -39,6 +40,7 @@ jobs:
             dist/social-card-sample-report.json
           retention-days: 7
       - name: Render faithful page-specific social previews
+        if: github.event_name != 'pull_request' || !github.event.pull_request.draft
         env:
           BASE_PATH: /premiumcuts
         run: python scripts/render_social_cards.py
@@ -50,7 +52,7 @@ jobs:
           python scripts/verify_labels.py
           python scripts/verify_fixed.py
           python scripts/verify_catalog.py
-          python scripts/verify_metadata.py
+          python scripts/verify_metadata.py ${{ github.event_name == 'pull_request' && github.event.pull_request.draft && '--structure-only' || '' }}
           python scripts/verify_navigation.py
           node scripts/verify_scope.cjs
           node scripts/verify_catalog_header.cjs
@@ -69,6 +71,7 @@ jobs:
           path: qa/
           retention-days: 7
       - name: Upload social preview review artifacts
+        if: github.event_name != 'pull_request' || !github.event.pull_request.draft
         uses: actions/upload-artifact@v4
         with:
           name: social-previews
@@ -78,6 +81,7 @@ jobs:
             dist/social-card-report.json
           retention-days: 7
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request' || !github.event.pull_request.draft
         with:
           path: dist
   deploy:

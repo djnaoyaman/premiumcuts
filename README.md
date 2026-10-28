@@ -84,8 +84,9 @@ Songs starts at one randomly selected available recording; the queue and visible
 
 Open Graph and X cards share a unique, versioned 1200 x 630 PNG for every page.
 They are Chromium captures of the actual generated main content: the same HTML,
-CSS, fonts, paper/ink colours, title hierarchy and whitespace, without the fixed
-listening overlay or header navigation. There is no independently designed poster.
+CSS, fonts, paper/ink colours, title hierarchy and whitespace. Capture-only visibility
+rules exclude following sections/filters so the card never cuts through them; the
+fixed listening overlay and header navigation are not part of the card. There is no independently designed poster.
 The image URL changes when page content, styles or the renderer changes.
 
 After `python build.py`, run `python scripts/render_social_cards.py` before serving
@@ -95,6 +96,7 @@ Google Fonts as the site and fails rather than silently using substitute fonts.
 `python scripts/verify_metadata.py` verifies every resulting image and metadata pair.
 For an environment where browser execution is unavailable, `--structure-only`
 checks metadata structure but explicitly does not claim image/render verification.
-The Pages workflow runs the complete renderer and all checks; pull requests upload
-reviewable `social-previews` artifacts but cannot deploy. Actual X/Facebook debugger
+Draft pull requests first upload eight `social-preview-samples` for visual review.
+Marking the PR ready runs the complete renderer and all image checks; only main
+can publish after those checks succeed. Actual X/Facebook debugger
 validation is a separate post-publication step, not implied by these tests.

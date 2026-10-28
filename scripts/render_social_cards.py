@@ -101,8 +101,39 @@ async def render():
                         }));
                     }'''), timeout=30)
                     assert all(f['loaded'] for f in font_status), (card['page'], font_status)
-                    # This capture-only rule removes a transient, user-controlled
-                    # overlay, never changes the site's visual content or layout.
+                    # Retain the original opening block and its exact geometry.
+                    # Hide later sections rather than crop through controls or text;
+                    # visibility preserves the public page's spacing and paper grain.
+                    framing = await page.evaluate('''() => {
+                        const main = document.querySelector('main');
+                        const children = [...main.children];
+                        let keep, kind;
+                        if (main.querySelector(':scope > .hero')) {
+                            const hero = main.querySelector(':scope > .hero');
+                            keep = [hero]; kind = 'home hero';
+                            for (const e of hero.children) {
+                                if (!e.matches('.hero-top,.hero-content')) e.style.visibility = 'hidden';
+                            }
+                        } else {
+                            const hero = main.querySelector(':scope > .song-hero,:scope > .volume-hero,:scope > .essentials-heading,:scope > .catalog-heading');
+                            if (hero) {
+                                keep = [hero, ...main.querySelectorAll(':scope > .breadcrumb')];
+                                kind = hero.className;
+                            } else if (main.classList.contains('about-page')) {
+                                keep = children.filter(e => e.matches('.breadcrumb,.eyebrow,h1,.about-body,p'));
+                                const sections = main.querySelectorAll('.about-body > section');
+                                for (const e of [...sections].slice(1)) e.style.visibility = 'hidden';
+                                kind = 'about opening';
+                            } else {
+                                keep = children.filter(e => e.matches('.breadcrumb,h1'));
+                                const lead = main.querySelector(':scope > p');
+                                if (lead) keep.push(lead);
+                                kind = 'page title and lead';
+                            }
+                        }
+                        for (const e of children) if (!keep.includes(e)) e.style.visibility = 'hidden';
+                        return kind;
+                    }''')
                     await page.add_style_tag(content='.pc-player{visibility:hidden!important}')
                     main = await page.locator('main').bounding_box()
                     title = await page.locator('main h1').bounding_box()
@@ -122,7 +153,7 @@ async def render():
                     }''')
                     results.append({**card, 'sha256': hashlib.sha256(image.read_bytes()).hexdigest(),
                                     'capture': {'x': 0, 'y': top, 'width': WIDTH, 'height': HEIGHT},
-                                    'heading': styles, 'fontsLoaded': True})
+                                    'heading': styles, 'fontsLoaded': True, 'framing': framing})
                     completed += 1
                     if completed % 50 == 0 or completed == len(cards):
                         print(f'Rendered {completed}/{len(cards)} actual-page social cards', flush=True)
@@ -142,7 +173,7 @@ async def render():
     shutil.copyfile(DIST / home['image'], DIST / 'og.png')
     report_name = 'social-card-sample-report.json' if sample else 'social-card-report.json'
     (DIST / report_name).write_text(json.dumps({
-        'renderer': 'Chromium / actual page main-content crop',
+        'renderer': 'Chromium / original opening block with following sections excluded',
         'width': WIDTH, 'height': HEIGHT, 'pages': results,
     }, ensure_ascii=False, indent=2) + '\n')
 

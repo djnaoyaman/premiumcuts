@@ -141,7 +141,7 @@ public_tracks=[{k:v for k,v in t.items() if k in {'id','volume','side','position
 
 (D/'data.js').write_text((D/'data.js').read_text()+'\nconst PREMIUM_MYSPIN='+json.dumps(myspin,ensure_ascii=False)+';')
 
-asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','share_metadata.py','about_profile.json','myspin.json','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','editorial_updates.json','src/app.js','src/back-to-top.js','src/home-intro.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
+asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','share_metadata.py','scripts/render_social_cards.py','about_profile.json','myspin.json','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','editorial_updates.json','src/app.js','src/back-to-top.js','src/home-intro.js','src/player.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
 # Public-only catalog snapshots let open players receive newly published sources.
 public_audio=[dict(id=t['id'],volume=t['volume'],title=t['title'],artist=t['artist'],videoId=players[t['id']]['id'],url=players[t['id']]['url']) for t in tracks if t['id'] in players]
 (D/'catalog-public.json').write_text(json.dumps(dict(version=asset_version,tracks=public_tracks,volumes=volumes,audio=public_audio,myspin=myspin),ensure_ascii=False))
