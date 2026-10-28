@@ -54,6 +54,7 @@ if not structure_only:
  report=json.loads((D/'social-card-report.json').read_text())
  assert {c['page'] for c in report['pages']}==set(cards)
  for c in report['pages']:
+  assert c['headingInside'],c
   assert c['fontsLoaded'] and c['capture']['width']==1200 and c['capture']['height']==630,c
   assert c['heading']['color']=='rgb(18, 104, 135)',c
   assert c['heading']['background']=='rgb(242, 232, 215)',c

@@ -143,6 +143,13 @@ async def render():
                     top = round(header['y'] + header['height'])
                     assert 0 <= title['y'] - top and title['y'] + title['height'] <= top + HEIGHT, (card['page'], title)
                     assert title['x'] >= 0 and title['x'] + title['width'] <= WIDTH, (card['page'], title)
+                    heading_inside = await page.locator('main h1').evaluate('''(e, clip) => {
+                        const range = document.createRange(); range.selectNodeContents(e);
+                        const rects = [...range.getClientRects()].filter(r => r.width && r.height);
+                        return e.scrollWidth <= e.clientWidth + 1 && rects.every(r =>
+                            r.left >= 0 && r.right <= clip.width && r.top >= clip.top && r.bottom <= clip.top + clip.height);
+                    }''', {'top': top, 'width': WIDTH, 'height': HEIGHT})
+                    assert heading_inside, (card['page'], 'Heading text outside social image')
                     image = DIST / card['image']
                     image.parent.mkdir(parents=True, exist_ok=True)
                     await page.screenshot(path=str(image), clip={'x': 0, 'y': top, 'width': WIDTH, 'height': HEIGHT}, animations='disabled')
@@ -153,7 +160,7 @@ async def render():
                     }''')
                     results.append({**card, 'sha256': hashlib.sha256(image.read_bytes()).hexdigest(),
                                     'capture': {'x': 0, 'y': top, 'width': WIDTH, 'height': HEIGHT},
-                                    'heading': styles, 'fontsLoaded': True, 'framing': framing})
+                                    'heading': styles, 'headingInside': heading_inside, 'fontsLoaded': True, 'framing': framing})
                     completed += 1
                     if completed % 50 == 0 or completed == len(cards):
                         print(f'Rendered {completed}/{len(cards)} actual-page social cards', flush=True)

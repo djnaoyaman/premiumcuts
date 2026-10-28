@@ -47,8 +47,8 @@
         const start = window.performance.now();
         function tick(now) {
           if (run.cancelled) return;
-          const progress = Math.min(1, (now - start) / 680);
-          window.scrollTo({top: bottom * Math.pow(1 - progress, 3), behavior: 'instant'});
+          const progress = Math.min(1, (now - start) / 4000);
+          window.scrollTo({top: bottom * (1 - Math.pow(progress, 2)), behavior: 'instant'});
           if (progress < 1) frame(tick); else stop();
         }
         frame(tick);
