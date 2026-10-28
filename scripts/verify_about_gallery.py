@@ -21,7 +21,7 @@ posters = [a for t,a in tags if t == 'img' and 'about-poster-' in a.get('src', '
 assert len(posters) == len(manifest)
 assert 'about-portrait' not in about
 assert 'couple-french-transparent.webp' not in about
-assert about.index('デザインについて。') < about.index('about-gallery') < about.index('<footer')
+assert about.index('デザインについて。') < about.index('<section class="about-gallery"') < about.index('<footer')
 assert about.count('id="about-gallery-title"') == 1
 assert 'about-gallery-story' not in about and 'about-gallery-coda' not in about
 assert 'Married in 2013.' not in about and 'Influenced by Saya.' not in about
@@ -51,7 +51,7 @@ for number, image in zip(sequence, posters):
 for left, right in zip(posters[::2], posters[1::2]):
     assert int(left['width']) * int(right['height']) == int(right['width']) * int(left['height'])
 assert about.count('Paris, 2002') == 2  # caption and link label, only poster 01
-assert 'about-gallery' not in (root/'dist/index.html').read_text()
+assert '<section class="about-gallery"' not in (root/'dist/index.html').read_text()
 css = (root/'dist/style.css').read_text()
 assert '.about-poster-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))' in css
 assert '@media(max-width:700px)' in css and '.about-poster-grid{gap:24px 12px}' in css

@@ -68,6 +68,8 @@ jobs:
         run: python scripts/verify_spinout_browser.py
       - name: Verify Essentials experience in Chromium
         run: python scripts/verify_essentials_experience_browser.py
+      - name: Verify About reveal in Chromium
+        run: python scripts/verify_about_reveal_browser.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
