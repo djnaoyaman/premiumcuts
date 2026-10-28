@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,html,re,shutil,unicodedata,collections,os,hashlib
 from urllib.parse import quote
-from PIL import Image,ImageDraw,ImageFont
+from PIL import Image,ImageDraw
 from catalog_style import normalize_tracks
 P=Path(__file__).parent;D=P/'dist';e=html.escape
 origin=os.environ.get('SITE_ORIGIN','https://premium-cuts-listed.mossyelf3.chatgpt.site').rstrip('/')
@@ -293,9 +293,7 @@ for v in playable_volumes:
  pagefile.write_text(markup)
 # Matching sharing and home-screen assets.
 (D/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#f2e8d7"/><circle cx="32" cy="32" r="25" fill="#126887"/><circle cx="32" cy="32" r="10" fill="#f2e8d7"/><circle cx="32" cy="32" r="3" fill="#126887"/></svg>')
-im=Image.new('RGB',(1200,630),'#f2e8d7');draw=ImageDraw.Draw(im);font='/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf';draw.line((50,65,1150,65),fill='#126887',width=2);draw.text((60,120),'Premium',font=ImageFont.truetype(font,100),fill='#126887');draw.text((60,240),'Cuts Listed.',font=ImageFont.truetype(font,92),fill='#126887');draw.text((65,520),'THE PREMIUM CUTS ARCHIVE / TAPES + MIX CDS',font=ImageFont.truetype(font,23),fill='#126887');
-for x in range(810,1140,40):draw.rectangle((x,115,x+18,460),fill='#126887')
-im.save(D/'og.png');icon=Image.new('RGB',(180,180),'#f2e8d7');dr=ImageDraw.Draw(icon);dr.ellipse((15,15,165,165),fill='#126887');dr.ellipse((60,60,120,120),fill='#f2e8d7');dr.ellipse((82,82,98,98),fill='#126887');icon.save(D/'apple-touch-icon.png')
+icon=Image.new('RGB',(180,180),'#f2e8d7');dr=ImageDraw.Draw(icon);dr.ellipse((15,15,165,165),fill='#126887');dr.ellipse((60,60,120,120),fill='#f2e8d7');dr.ellipse((82,82,98,98),fill='#126887');icon.save(D/'apple-touch-icon.png')
 urls=['/','/all-tracks.html','/my-spin.html','/features/essentials.html','/tracks.html','/about.html','/player.html']+['/volumes/'+v['id']+'.html' for v in volumes]+['/tracks/'+t['id']+'.html' for t in tracks+myspin]
 (D/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+origin+u+'</loc></url>' for u in urls)+'</urlset>');(D/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+origin+'/sitemap.xml\n')
 print(json.dumps({'volumes':len(volumes),'entries':len(tracks),'corrected':sum(t['status']=='corrected' for t in tracks),'pending':sum(t['status']=='pending' for t in tracks),'counts':[(v['id'],v['count']) for v in volumes]},ensure_ascii=False))

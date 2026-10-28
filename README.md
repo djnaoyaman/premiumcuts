@@ -79,3 +79,22 @@ Explicit catalog audio sources take priority over reference-only links and are i
 Songs starts at one randomly selected available recording; the queue and visible catalog remain in published order. Following tracks play sequentially from that point. Initial loading, an idle transition into Songs, and an explicit Songs play-all action select a starting point without shuffling. Browsing while audio is playing never interrupts it; explicitly selected tracks and pause/resume retain the selection. Essentials, My-Spin and volume playback retain their existing behavior. Automatic playback stops at the list end; manual next/previous retain their existing wrap behavior.
 
 `node scripts/verify_random_start.cjs` covers deterministic random boundaries, initial load/reload, manual selection, pause/resume, active and idle collection transitions, sequential next/previous/end, and collection isolation.
+
+## Page-faithful social previews
+
+Open Graph and X cards share a unique, versioned 1200 x 630 PNG for every page.
+They are Chromium captures of the actual generated main content: the same HTML,
+CSS, fonts, paper/ink colours, title hierarchy and whitespace, without the fixed
+listening overlay or header navigation. There is no independently designed poster.
+The image URL changes when page content, styles or the renderer changes.
+
+After `python build.py`, run `python scripts/render_social_cards.py` before serving
+or publishing `dist/`. Install `Pillow` and `playwright==1.62.0`, then
+`python -m playwright install --with-deps chromium`. The renderer loads the same
+Google Fonts as the site and fails rather than silently using substitute fonts.
+`python scripts/verify_metadata.py` verifies every resulting image and metadata pair.
+For an environment where browser execution is unavailable, `--structure-only`
+checks metadata structure but explicitly does not claim image/render verification.
+The Pages workflow runs the complete renderer and all checks; pull requests upload
+reviewable `social-previews` artifacts but cannot deploy. Actual X/Facebook debugger
+validation is a separate post-publication step, not implied by these tests.

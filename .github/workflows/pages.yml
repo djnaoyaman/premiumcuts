@@ -2,13 +2,14 @@ name: Deploy Premium Cuts Listed
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   build:
@@ -18,13 +19,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install Pillow
+      - run: python -m pip install Pillow playwright==1.62.0
+      - run: python -m playwright install --with-deps chromium
       - uses: actions/configure-pages@v5
       - name: Build static archive
         env:
           SITE_ORIGIN: https://djnaoyaman.github.io/premiumcuts
           BASE_PATH: /premiumcuts
         run: python build.py
+      - name: Render faithful page-specific social previews
+        env:
+          BASE_PATH: /premiumcuts
+        run: python scripts/render_social_cards.py
       - name: Verify fixed catalog and collection isolation
         run: |
           python scripts/verify_home_index.py
@@ -39,10 +45,20 @@ jobs:
           node scripts/verify_catalog_header.cjs
           node scripts/verify_random_start.cjs
           node scripts/verify_player.cjs
+      - name: Upload social preview review artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: social-previews
+          path: |
+            dist/social/
+            dist/social-card-manifest.json
+            dist/social-card-report.json
+          retention-days: 7
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
