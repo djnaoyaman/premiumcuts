@@ -40,11 +40,15 @@ async def main():
                 trace=await page.evaluate('window.__introTrace')
                 assert trace[0]['y']>844 and trace[-1]['y']==0,trace
                 duration=trace[-1]['time']-trace[0]['time']
-                assert 600<=duration<=1000,duration
+                assert 2400<=duration<=2800,duration
+                third=len(trace)//3
+                early=(trace[0]['y']-trace[third]['y'])/(trace[third]['time']-trace[0]['time'])
+                late=(trace[-third]['y']-trace[-1]['y'])/(trace[-1]['time']-trace[-third]['time'])
+                assert late>early*2,(early,late)
                 assert all(b['y']<=a['y'] for a,b in zip(trace,trace[1:])),trace
                 assert await page.evaluate('document.activeElement===document.body')
                 await page.screenshot(path=str(OUT/f'{width}-finished.png'))
-                reports.append({'case':f'{width}-complete','durationMs':duration,'trace':trace})
+                reports.append({'case':f'{width}-complete','durationMs':duration,'earlySpeedPxMs':early,'lateSpeedPxMs':late,'trace':trace})
                 await page.reload(wait_until='networkidle')
                 assert await page.evaluate('window.__introTrace.length')==0
                 await ctx.close()
@@ -83,6 +87,6 @@ async def main():
             await ctx.close();await browser.close()
     finally:server.shutdown();server.server_close()
     (OUT/'report.json').write_text(json.dumps(reports,ensure_ascii=False,indent=2)+'\n')
-    print('PASS actual Chromium: fast upward sweep, desktop/mobile, once/session, input cancellation, reduced motion, anchors, other pages and SPA history')
+    print('PASS actual Chromium: 2500ms accelerating upward sweep, desktop/mobile, once/session, input cancellation, reduced motion, anchors, other pages and SPA history')
 
 if __name__=='__main__':asyncio.run(main())
