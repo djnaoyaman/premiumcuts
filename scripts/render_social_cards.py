@@ -54,9 +54,15 @@ async def render():
             # No autoplay/random player state, requests to YouTube, or user data.
             context = await browser.new_context(
                 viewport={'width': WIDTH, 'height': HEIGHT + 400},
-                device_scale_factor=1, java_script_enabled=False,
+                device_scale_factor=1,
                 locale='ja-JP', reduced_motion='reduce',
             )
+            async def static_assets(route):
+                if route.request.resource_type in {'script', 'media', 'websocket'}:
+                    await route.abort()
+                else:
+                    await route.continue_()
+            await context.route('**/*', static_assets)
             # Cache remote font bytes across pages, and fail rather than silently
             # publishing substitute typography if the site's fonts cannot load.
             font_cache = {}
@@ -69,17 +75,19 @@ async def render():
                 if url not in font_cache:
                     font_cache[url] = asyncio.create_task(fetch_font())
                 body, headers = await font_cache[url]
-                await route.fulfill(status=200, body=body, headers=headers)
+                await route.fulfill(status=200, body=body, content_type=headers.get('content-type', 'application/octet-stream'))
             await context.route('https://fonts.googleapis.com/**', font_route)
             await context.route('https://fonts.gstatic.com/**', font_route)
             async def worker(batch):
                 nonlocal completed
                 page = await context.new_page()
                 for card in batch:
+                    if sample:
+                        print('Capturing '+card['page'], flush=True)
                     response = await page.goto(origin + BASE + '/' + card['page'], wait_until='networkidle')
                     assert response and response.ok, card['page']
-                    await page.evaluate('document.fonts.ready')
-                    font_status = await page.evaluate('''async () => {
+                    await asyncio.wait_for(page.evaluate('document.fonts.ready'), timeout=30)
+                    font_status = await asyncio.wait_for(page.evaluate('''async () => {
                         const samples = [
                           ['400 24px "DM Serif Display"', 'Premium Cuts'],
                           ['italic 24px "DM Serif Display"', 'Listed.'],
@@ -91,7 +99,7 @@ async def render():
                           const loaded = await document.fonts.load(font, text);
                           return {font, loaded: loaded.length > 0 && loaded.every(f => f.status === 'loaded')};
                         }));
-                    }''')
+                    }'''), timeout=30)
                     assert all(f['loaded'] for f in font_status), (card['page'], font_status)
                     # This capture-only rule removes a transient, user-controlled
                     # overlay, never changes the site's visual content or layout.
