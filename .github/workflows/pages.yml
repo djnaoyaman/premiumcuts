@@ -2,13 +2,14 @@ name: Deploy Premium Cuts Listed
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   build:
@@ -18,7 +19,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install Pillow
+      - run: python -m pip install Pillow playwright==1.62.0
+      - run: python -m playwright install --with-deps chromium
       - uses: actions/configure-pages@v5
       - name: Build static archive
         env:
@@ -39,10 +41,20 @@ jobs:
           node scripts/verify_catalog_header.cjs
           node scripts/verify_random_start.cjs
           node scripts/verify_player.cjs
+          node scripts/verify_back_to_top.cjs
+      - name: Verify Songs control in Chromium
+        run: python scripts/verify_back_to_top_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: back-to-top-browser-qa
+          path: qa/back-to-top/
+          retention-days: 7
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

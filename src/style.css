@@ -163,3 +163,9 @@ body .mix-marker{text-transform:uppercase}
 @supports (interpolate-size:allow-keywords){.profile-details{interpolate-size:allow-keywords}.profile-details::details-content{height:0;overflow:clip;transition:height .28s ease,content-visibility .28s allow-discrete}.profile-details[open]::details-content{height:auto}}
 @media(max-width:700px){.about-profile{grid-template-columns:1fr;gap:20px;margin:40px 0;padding:28px 0}}
 @media(prefers-reduced-motion:reduce){.profile-details::details-content{transition:none}}
+
+/* Songs-only page-top control: opposite the listening panel, never the homepage. */
+.songs-back-to-top{position:fixed;left:max(4.5%,env(safe-area-inset-left));bottom:calc(24px + env(safe-area-inset-bottom));z-index:30;width:56px;height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:1px solid var(--blue);border-radius:50%;background:var(--paper);color:var(--blue);box-shadow:3px 4px 0 #12688712;font:600 9px/1 var(--sans);letter-spacing:1px}
+.songs-back-to-top>span:first-child{font:24px/1 var(--sans);letter-spacing:0}
+.songs-back-to-top:hover{background:var(--blue);color:var(--paper)}
+@media(max-width:700px){.songs-back-to-top{left:auto;right:calc(16px + env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top));bottom:auto;width:50px;height:50px}}
