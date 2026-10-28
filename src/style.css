@@ -183,7 +183,7 @@ body .mix-marker{text-transform:uppercase}
 @media(prefers-reduced-motion:reduce){.about-page .about-poster,.about-page .about-poster.about-reveal-pending{opacity:1;transform:none;transition:none}}
 
 /* Essentials: a typographic special edition, not an invented record sleeve. */
-.essentials-page .essential-cut{display:block;padding:0;transition:background .25s,border-color .25s}
+.essentials-page .essential-cut:has(>.essential-recording){display:block;padding:0;transition:background .25s,border-color .25s}
 .essential-recording>summary{display:grid;grid-template-columns:42px minmax(0,1fr) 44px;gap:24px;align-items:center;padding:30px 0;cursor:pointer;list-style:none}
 .essential-recording>summary::-webkit-details-marker{display:none}
 .essential-recording>summary:focus-visible,.essential-liner>summary:focus-visible{outline:2px solid var(--blue);outline-offset:5px}
