@@ -29,7 +29,11 @@ async def main():
     assert await first.locator('.essential-liner p').is_visible()
     # Native details queues its toggle event; wait for the observable fold result.
     await page.wait_for_function("document.getElementById('pc-player').dataset.expanded === 'false'")
-    await summary.scroll_into_view_if_needed();await page.wait_for_timeout(500);await page.screenshot(path=str(out/f'{width}.png'))
+    paragraph=first.locator('.essential-liner p');await paragraph.evaluate("e=>e.scrollIntoView({block:'start',behavior:'instant'})");await page.wait_for_timeout(500)
+    a=await paragraph.bounding_box();b=await page.locator('#pc-player').bounding_box()
+    assert a and b and (a['y']+a['height']<=b['y'] or a['x']+a['width']<=b['x']), (width,a,b)
+    assert await page.evaluate('__audioCalls.length')==count
+    await page.screenshot(path=str(out/f'{width}-reading.png'))
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
     second=page.locator('.essential-recording').nth(1);await second.locator(':scope > summary').click();assert await first.get_attribute('open') is None;assert await second.get_attribute('open') is not None
     assert await page.evaluate('__audioCalls.length')==count
