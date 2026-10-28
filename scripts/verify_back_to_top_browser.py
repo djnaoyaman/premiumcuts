@@ -43,7 +43,8 @@ async def main():
                 await page.evaluate("window.scrollTo({top:2000,behavior:'instant'})")
                 await button.wait_for(state='visible')
                 for expanded in [True,False]:
-                    if not expanded:await page.locator('#pc-fold').click()
+                    if await page.locator('#pc-player').get_attribute('data-expanded') != str(expanded).lower():
+                        await page.locator('#pc-fold').click()
                     assert await page.locator('#pc-player').get_attribute('data-expanded')==str(expanded).lower()
                     a=await button.bounding_box();b=await page.locator('#pc-player').bounding_box()
                     assert a and b and not overlap(a,b),(width,expanded,a,b)

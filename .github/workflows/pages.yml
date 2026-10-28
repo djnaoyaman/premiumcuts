@@ -45,6 +45,7 @@ jobs:
       - name: Verify Songs control in Chromium
         run: python scripts/verify_back_to_top_browser.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: back-to-top-browser-qa
           path: qa/back-to-top/
