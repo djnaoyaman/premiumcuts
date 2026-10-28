@@ -12,6 +12,7 @@ const ctx={document:doc,PREMIUM_AUDIO:audio,PREMIUM_MYSPIN:JSON.parse(fs.readFil
 const expected=JSON.parse(fs.readFileSync('features.json')).essentials.track_ids;
 assert.deepEqual(Array.from(api.getState().queue),expected);
 assert.equal(api.getState().scope,'essentials');
+assert.equal(api.getState().queue.filter(id=>['004-b-02','cd-00-d1-14'].includes(id)).length,1);
 assert.equal(api.getState().wantsPlay,false);
 events.onReady();
 api.play(expected[0],'essentials'); events.onStateChange({data:1});
@@ -28,6 +29,7 @@ console.log('PASS Essentials frozen order, initial cue, context switch continuit
 
 api.play('001-b-12','all');events.onStateChange({data:1});api.chooseScope('essentials');
 get('pc-toggle').onclick();get('pc-toggle').onclick();assert.equal(api.getState().current,expected[0],'resume in current collection');
+api.play('cd-00-d1-14','essentials');assert.equal(api.getState().current,'004-b-02','Aquarela CD duplicate resolves to one Essentials recording');
 api.play('cd-00-d1-12','essentials');assert.equal(api.getState().current,'002-a-08','canonical duplicate stays Essentials');
 assert.equal(api.getState().scope,'essentials');
 Node.prototype.replaceWith=function(){};
@@ -60,7 +62,7 @@ async function visit(path){const href='https://example.test'+path;const a={href,
  get('pc-toggle').onclick();get('pc-toggle').onclick();assert.equal(api.getState().current,'002-a-08');
  get('pc-next').onclick();assert.equal(api.getState().current,expected[expected.indexOf('002-a-08')+1]);
  const html=fs.readFileSync('dist/index.html','utf8');assert.ok(!html.match(/<nav[^>]*>[\s\S]*?>PLAYER<\/[\s\S]*?<\/nav>/));
- assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'f98c7b8bd3345b36f14e861f9078c9c43ef1c72771ade8a61b84e7640d57dacd');
+ assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'f8b9f24ad6d436e7f23a43a37a83990b02d9d7383491b4291e153b0dbee6a2de');
  const myspin=JSON.parse(fs.readFileSync('myspin.json')),myids=myspin.map(t=>t.id);
  api.stop(); await visit('/premiumcuts/my-spin.html');
  assert.equal(api.getState().scope,'myspin');assert.deepEqual(Array.from(api.getState().queue),myids);assert.equal(api.getState().wantsPlay,false);

@@ -8132,6 +8132,7 @@
     "004-a-01",
     "004-a-02",
     "004-a-15",
+    "004-b-02",
     "004-b-07",
     "005-a-01",
     "005-a-02",
@@ -8145,10 +8146,10 @@
     "cd-09-d1-26"
   ],
   "essentials_revision": {
-    "revision": 5,
-    "date": "2026-10-27",
-    "reason": "Owner explicitly adds Carol Burnett & Martha Raye — Let Go and The Jumping Jacques — Lucinda to Essentials; preserves Songs source order.",
-    "source_commit": "221bbc1c480cf5705e88544cf9276eb37c2a5c3c",
+    "revision": 6,
+    "date": "2026-10-28",
+    "reason": "Owner explicitly adds Les Petits Chanteurs du Rock — Aquarela to Essentials. The shared tape/CD recording appears once, at its first Songs occurrence.",
+    "source_commit": "e77a7e5b717ff7a46c886e72a6c0415c17dffd3c",
     "previous_essentials_ids": [
       "001-a-03",
       "001-a-05",
@@ -8177,6 +8178,8 @@
       "004-a-02",
       "004-a-15",
       "004-b-07",
+      "005-a-01",
+      "005-a-02",
       "005-a-04",
       "005-a-15",
       "005-a-16",
@@ -8187,12 +8190,11 @@
       "cd-09-d1-26"
     ],
     "added_ids": [
-      "005-a-01",
-      "005-a-02"
+      "004-b-02"
     ],
     "removed_ids": [],
     "order_rule": "Songs source order, first occurrence of the same recording",
-    "previous_baseline_sha256": "0390e3791a91d283c27f048b67c90389ae06c7b03ac1b6c2bce6f89f65338920",
-    "previous_features_sha256": "24f0d5e25a2dd33b8375d53ee8767e7109d18aeb5fe794149457aac1b1947079"
+    "previous_baseline_sha256": "79c61bc85fbff54c0f2ba4e9e5b201b7ce8e343f382fda12995c1cbb988cb7a7",
+    "previous_features_sha256": "f98c7b8bd3345b36f14e861f9078c9c43ef1c72771ade8a61b84e7640d57dacd"
   }
 }
