@@ -18,3 +18,14 @@
 /* A geometric icon stays centered across mobile browser font metrics. */
 .pc-inline-play{display:inline-flex;align-items:center;justify-content:center;padding:0;line-height:1;font-size:0;appearance:none;-webkit-appearance:none}
 .pc-inline-play::before{content:"";display:block;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid currentColor;transform:translateX(1px)}
+
+/* In normal flow, never over the video or transport; intentionally no animation. */
+.premium-playback-hint{display:flex;align-items:flex-start;gap:8px;grid-column:1/-1;margin:8px 0 0;padding:8px 0;border-top:1px solid currentColor;font-family:inherit;font-size:12px;line-height:1.6;overflow-wrap:anywhere;max-width:100%;box-sizing:border-box}
+.premium-playback-hint>span{flex:1;min-width:0;font-size:12px;line-height:1.6}
+.premium-playback-hint small{display:block;font-size:10px;line-height:1.6;opacity:.8}
+.premium-playback-hint a{color:inherit;text-decoration:underline;text-underline-offset:2px;margin-left:4px}
+.premium-playback-hint button{flex:none;min-width:28px;min-height:28px;padding:0;border:0;border-radius:0;background:transparent;color:inherit;font-family:inherit;font-size:20px;line-height:1;cursor:pointer}
+.premium-playback-hint :focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.pc-player.pc-fullscreen .premium-playback-hint{display:none}
+/* Keep the Songs rail clear on short screens while the temporary note is present. */
+@media(max-height:700px){body:has(#songs-scroll-nav) .pc-player:not(.pc-fullscreen):has(.premium-playback-hint){max-height:calc(100dvh - 195px);overflow-y:auto}}
