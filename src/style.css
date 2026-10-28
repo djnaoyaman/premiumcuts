@@ -169,3 +169,10 @@ body .mix-marker{text-transform:uppercase}
 .songs-back-to-top>span:first-child{font:24px/1 var(--sans);letter-spacing:0}
 .songs-back-to-top:hover{background:var(--blue);color:var(--paper)}
 @media(max-width:700px){.songs-back-to-top{left:auto;right:calc(16px + env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top));bottom:auto;width:50px;height:50px}}
+
+/* About only: gentle staggered reveal and ordinary save-gesture deterrence. */
+.about-page .about-poster{opacity:1;transform:none;transition:opacity .8s ease var(--reveal-delay,0ms),transform .8s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms)}
+.about-page .about-poster.about-reveal-pending{opacity:0;transform:translateY(24px)}
+.about-page .about-poster img,.about-page .about-poster>a{-webkit-touch-callout:none;user-select:none;-webkit-user-select:none}
+.about-page .about-poster img{-webkit-user-drag:none}
+@media(prefers-reduced-motion:reduce){.about-page .about-poster,.about-page .about-poster.about-reveal-pending{opacity:1;transform:none;transition:none}}
