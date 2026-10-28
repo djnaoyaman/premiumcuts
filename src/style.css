@@ -172,7 +172,7 @@ body .mix-marker{text-transform:uppercase}
 .songs-scroll-nav output{font:600 10px/1.5 var(--sans);font-variant-numeric:tabular-nums}
 .songs-scroll-nav input{writing-mode:vertical-lr;direction:ltr;width:44px;height:96px;margin:6px 0;accent-color:var(--blue);cursor:ns-resize;touch-action:none}
 .songs-scroll-nav :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-@media(max-width:700px){.catalog-page{padding-right:76px}.songs-scroll-nav{left:auto;right:max(12px,env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top))}.songs-scroll-nav input{height:52px}}
+@media(max-width:700px){.songs-scroll-nav{left:auto;right:max(12px,env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top))}.songs-scroll-nav input{height:52px}}
 @media(max-height:600px){.songs-scroll-nav{top:16px}.songs-scroll-nav input{height:40px}}
 
 /* About only: gentle staggered reveal and ordinary save-gesture deterrence. */
