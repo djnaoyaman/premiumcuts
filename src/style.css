@@ -169,3 +169,28 @@ body .mix-marker{text-transform:uppercase}
 .songs-back-to-top>span:first-child{font:24px/1 var(--sans);letter-spacing:0}
 .songs-back-to-top:hover{background:var(--blue);color:var(--paper)}
 @media(max-width:700px){.songs-back-to-top{left:auto;right:calc(16px + env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top));bottom:auto;width:50px;height:50px}}
+
+/* Essentials: a typographic special edition, not an invented record sleeve. */
+.essentials-page .essential-cut{display:block;padding:0;transition:background .25s,border-color .25s}
+.essential-recording>summary{display:grid;grid-template-columns:42px minmax(0,1fr) 44px;gap:24px;align-items:center;padding:30px 0;cursor:pointer;list-style:none}
+.essential-recording>summary::-webkit-details-marker{display:none}
+.essential-recording>summary:focus-visible,.essential-liner>summary:focus-visible{outline:2px solid var(--blue);outline-offset:5px}
+.essential-recording .essential-open{display:grid;place-items:center;width:44px;height:44px;font:24px var(--sans);transition:transform .3s}
+.essential-recording[open] .essential-open{transform:rotate(45deg)}
+.essential-recording .essential-song strong{transition:font-size .35s;letter-spacing:-.02em}
+.essential-recording[open] .essential-song strong{font-size:clamp(32px,4.5vw,62px)}
+.essential-recording[open]{padding:0 24px;background:#12688706;border-left:2px solid var(--blue)}
+.essential-inside{padding:0 0 34px 66px;animation:essential-page-open .4s ease both}
+.essential-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.essential-actions .pc-inline-play{width:auto!important;min-height:48px!important;padding:12px 24px!important;border-radius:0!important;font:500 15px var(--sans)!important;background:var(--blue);color:var(--paper)}
+.essential-actions .essential-origin{margin:0}
+.essential-liner{border-top:1px solid var(--line);max-width:680px}
+.essential-liner>summary{cursor:pointer;padding:20px 0;min-height:44px;font-size:12px;letter-spacing:.03em}
+.essential-liner h3{font:400 clamp(24px,3vw,34px)/1.4 var(--serif);margin:10px 0 20px;overflow-wrap:anywhere}
+.essential-liner p{font-size:14px;line-height:2.1;margin:0 0 22px}
+.essential-listening-state{display:none;font:600 10px var(--sans);letter-spacing:.13em;margin:0 0 18px}
+body:has(#pc-player[data-playing="true"]) .essential-cut:has([aria-pressed="true"]){border-color:var(--blue);background:#1268870a}
+body:has(#pc-player[data-playing="true"]) .essential-cut:has([aria-pressed="true"]) .essential-listening-state{display:block}
+@keyframes essential-page-open{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.essential-recording>summary{grid-template-columns:24px minmax(0,1fr) 44px;gap:12px;padding:24px 0}.essential-recording[open]{padding:0 12px}.essential-inside{padding-left:0}.essential-actions{gap:14px}.essential-recording[open] .essential-song strong{font-size:32px}}
+@media(prefers-reduced-motion:reduce){.essential-recording *,.essentials-page .essential-cut{transition:none!important;animation:none!important}}
