@@ -38,6 +38,13 @@ async def main():
                 page=await context.new_page()
                 await page.goto(origin+'/premiumcuts/tracks.html',wait_until='networkidle')
                 await page.evaluate('document.fonts.ready')
+                # The fixed rail overlays Songs; it must not reserve a content gutter.
+                assert await page.locator('main').evaluate('e=>getComputedStyle(e).paddingLeft===getComputedStyle(e).paddingRight')
+                assert await page.locator('#songs-scroll-nav').evaluate('e=>getComputedStyle(e).position') == 'fixed'
+                assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
+                main_box=await page.locator('main').bounding_box()
+                filters_box=await page.locator('.filters').bounding_box()
+                assert main_box and filters_box and abs(filters_box['width']-main_box['width'])<2
                 button=page.locator('#songs-back-to-top')
                 assert await button.is_disabled()
                 await page.evaluate("window.scrollTo({top:2000,behavior:'instant'})")
