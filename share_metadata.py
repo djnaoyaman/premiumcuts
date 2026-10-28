@@ -20,6 +20,7 @@ def breadcrumb_markup(parts,current_id=''):
 def page_breadcrumbs(rel,label,catalog,base_path):
  home=('HOME',base_path+'/')
  labels={'/tracks.html':'Songs','/my-spin.html':'Spinout','/features/essentials.html':'Essentials','/all-tracks.html':'すべての曲','/about.html':'About','/player.html':'Player'}
+ if rel=='/features/one-note-samba.html':return [home,('Spinout',base_path+'/my-spin.html'),('One Note Samba',None)]
  if rel in labels:return [home,(labels[rel],None)]
  volumes={v['id']:v for v in catalog['volumes']}
  if rel.startswith('/volumes/'):
