@@ -1,0 +1,224 @@
+{
+  "slug": "one-note-samba",
+  "series": "Spinout",
+  "title": "One Note Samba",
+  "subtitle": "一音から、いくつもの景色へ。",
+  "dek": "リオからジャズへ、歌声から楽器へ。同じ曲を入口に、時代と演奏者のあいだを旅する。",
+  "sections": [
+    {
+      "heading": "一音なのに、景色が変わる",
+      "text": "「ワン・ノート」といっても、最後まで一つの音だけで進む曲ではない。入口では同じ高さの音を繰り返しながら、その下の和声が表情を変えていく。やがて旋律は音階を上下し、反復との鮮やかな対照をつくる。音を増やすだけが、曲を前へ運ぶ方法ではないのだ。歌詞も、そのとき旋律に起きていることを語る。音と言葉が互いを説明する、ちょっとした仕掛けのある歌なのである。",
+      "sources": [
+        "S04",
+        "S05",
+        "S19"
+      ]
+    },
+    {
+      "heading": "1959年の作品、1960年のレコード",
+      "text": "原題は「Samba de uma nota só」。アントニオ・カルロス・ジョビンの公式アーカイヴは、作曲ジョビン、作詞ニュートン・メンドンサ、成立年1959と記録する。1950年代末のリオ・デ・ジャネイロで形になったボサノヴァの、初期を代表するレパートリーの一つだ。1960年にはジョアン・ジルベルトの『O amor, o sorriso e a flor』に収録。当時の新聞記事にも、同年5月発売の盤のA面冒頭曲として名前が残っている。",
+      "sources": [
+        "S01",
+        "S02",
+        "S03"
+      ]
+    },
+    {
+      "heading": "ジャズへ渡り、歌い手の持ち曲になる",
+      "text": "海の向こうでの広がりをたどるなら、スタン・ゲッツとチャーリー・バードの『Jazz Samba』（1962年）が重要な通過点になる。本曲を収めたこのアルバムは、米国でのボサノヴァ人気を押し広げた。ここに並ぶハービー・マンの1962年盤も、その時代の一枚。その後もイーディ・ゴーメ、ナンシー・ウィルソン、クリフ・リチャードと、それぞれの歌の世界へ迎えられていく。",
+      "sources": [
+        "S06",
+        "S11",
+        "S12",
+        "S09",
+        "S07"
+      ]
+    },
+    {
+      "heading": "一人の名前にも、二つの入口",
+      "text": "セルジオ・メンデスは、単独曲としての「One Note Samba」と、Brasil ’66による「Spanish Flea」とのメドレーを聴き分けたい。同じ「One Note Samba」も、別の曲と接続すると入口も出口も変わる。一方、モダン・ジャズ・カルテットとラウリンド・アルメイダの『Collaboration』（1964年）には、ヴィブラフォン、ピアノ、ギターを含む編成がある。声の有無だけでなく、どの楽器が旋律を受け取るのかも、聴き比べの手がかりになる。",
+      "sources": [
+        "S08",
+        "S14",
+        "S17"
+      ]
+    },
+    {
+      "heading": "流行のあとにも、曲は続く",
+      "text": "この特集は1960年代だけで閉じない。カテリーナ・ヴァレンテの版は1989年の『A briglia sciolta』へ、アレクシア・ガードナーの版は2002年の『The Rest Of Your Life』へつながる。そしてジョビン自身の『Inédito』へ。こちらは1987年に録音・限定配布され、一般発売は1995年だった。曲が生まれた年、演奏が録られた年、いま目にする再発の年。その三つを分けると、一曲が長く歌い継がれる時間まで見えてくる。",
+      "sources": [
+        "S15",
+        "S16",
+        "S13",
+        "S10"
+      ]
+    },
+    {
+      "heading": "Listen!!! — 同じ音の、その下を聴く",
+      "text": "まずは好きな一版から。繰り返される主旋律を覚えたら、次はその下で動く伴奏へ耳を移してみよう。歌手が言葉を置く場所、楽器の音がほどける長さ、メドレーが次の曲へ向かう瞬間。どれが「正解」かを決めるより、同じ一音が誰の手でどんな表情になるかを楽しみたい。",
+      "sources": []
+    }
+  ],
+  "display_note": "掲載年は各録音の参照元盤の発売年。ジョビン『Inédito』は一般発売年を表示し、録音・限定配布年を注記。動画公開日やリマスター年とは区別しています。",
+  "versions": [
+    {
+      "id": "myspin-cliff-richard-one-note-samba",
+      "sources": [
+        "S07"
+      ]
+    },
+    {
+      "id": "myspin-sergio-mendes-one-note-samba",
+      "sources": [
+        "S08"
+      ]
+    },
+    {
+      "id": "myspin-nancy-wilson-one-note-samba",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "id": "myspin-tom-jobim-samba-de-uma-nota-so",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "id": "myspin-herbie-mann-one-note-samba",
+      "sources": [
+        "S11",
+        "S18"
+      ]
+    },
+    {
+      "id": "myspin-eydie-gorme-one-note-samba",
+      "sources": [
+        "S12"
+      ]
+    },
+    {
+      "id": "myspin-alexia-gardner-one-note-samba",
+      "sources": [
+        "S13"
+      ]
+    },
+    {
+      "id": "myspin-sergio-mendes-brazilian-bag-one-note-samba",
+      "sources": [
+        "S14"
+      ]
+    },
+    {
+      "id": "myspin-caterina-valente-samba-de-uma-nota-so",
+      "sources": [
+        "S15",
+        "S16"
+      ]
+    },
+    {
+      "id": "myspin-mjq-laurindo-almeida-one-note-samba",
+      "sources": [
+        "S17"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "label": "Instituto Antônio Carlos Jobim — Samba de uma nota só",
+      "url": "https://www.jobim.org/jobim/handle/2010/4926"
+    },
+    {
+      "id": "S02",
+      "label": "Instituto Antônio Carlos Jobim — 1960年6月12日付新聞記事",
+      "url": "https://www.jobim.org/jobim/handle/2010/8994"
+    },
+    {
+      "id": "S03",
+      "label": "EBC — 60 anos da Bossa Nova",
+      "url": "https://conteudo.ebc.com.br/portal/projetos/2018/bossa-nova/"
+    },
+    {
+      "id": "S04",
+      "label": "Arthur Nestrovski — Bossa Nova: Tom Jobim",
+      "url": "https://www.arthurnestrovski.com.br/escrita/textos/bossa-nova-tom-jobim-10-de-julho-2008"
+    },
+    {
+      "id": "S05",
+      "label": "Instituto Moreira Salles / Rádio Batuta — Mas a base é uma só",
+      "url": "https://radiobatuta.ims.com.br/programas/o-fim-da-cancao/episodio-2-mas-a-base-e-uma-so"
+    },
+    {
+      "id": "S06",
+      "label": "Decca / Universal — Jazz Samba (Acoustic Sounds)",
+      "url": "https://shop.decca.com/products/jazz-samba-acoustic-sounds-1lp"
+    },
+    {
+      "id": "S07",
+      "label": "Cliff Richard公式 — Kinda Latin",
+      "url": "https://www.cliffrichard.org/discography/detail/?collection_id=17"
+    },
+    {
+      "id": "S08",
+      "label": "Apple Music / A&M — One Note Samba / Spanish Flea",
+      "url": "https://music.apple.com/us/song/one-note-samba-spanish-flea/1440847105"
+    },
+    {
+      "id": "S09",
+      "label": "Apple Music / Capitol — Today, Tomorrow, Forever",
+      "url": "https://music.apple.com/us/album/today-tomorrow-forever/723542005"
+    },
+    {
+      "id": "S10",
+      "label": "Qobuz / Jobim Biscoito Fino — Inédito",
+      "url": "https://www.qobuz.com/br-pt/album/inedito-tom-jobim/7898324753015"
+    },
+    {
+      "id": "S11",
+      "label": "Apple Music / Blue Note — Brazil, Bossa Nova & Blues",
+      "url": "https://music.apple.com/us/album/brazil-bossa-nova-blues/1447858549"
+    },
+    {
+      "id": "S12",
+      "label": "Clark Terry公式 — Discography（PDF、p.41）",
+      "url": "https://www.clarkterry.com/press/discography.pdf"
+    },
+    {
+      "id": "S13",
+      "label": "Amazon Music / Gardner Records — The Rest Of Your Life",
+      "url": "https://music.amazon.co.uk/albums/B002IFCAZ8"
+    },
+    {
+      "id": "S14",
+      "label": "SecondHandSongs — Brasil ’65原盤目録",
+      "url": "https://secondhandsongs.com/release/55576"
+    },
+    {
+      "id": "S15",
+      "label": "Guido Manusardi公式 — Discografia",
+      "url": "https://www.guidomanusardi.com/discografia/"
+    },
+    {
+      "id": "S16",
+      "label": "Caterina Valente公式 — Career resumé",
+      "url": "https://caterinavalente.com/"
+    },
+    {
+      "id": "S17",
+      "label": "Jazz Discography Project — Modern Jazz Quartet（1964セッション）",
+      "url": "https://www.jazzdisco.org/the-modern-jazz-quartet/discography/"
+    },
+    {
+      "id": "S18",
+      "label": "Presto / Blue Note — Brazil, Bossa Nova & Blues",
+      "url": "https://www.prestomusic.com/jazz/products/8544340--brazil-bossa-nova-blues"
+    },
+    {
+      "id": "S19",
+      "label": "Hal Leonard — One Note Samba / Young Jazz Classics",
+      "url": "https://www.halleonard.com/product/7011259/one-note-samba"
+    }
+  ]
+}
