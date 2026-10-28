@@ -165,12 +165,12 @@ body .mix-marker{text-transform:uppercase}
 @media(prefers-reduced-motion:reduce){.profile-details::details-content{transition:none}}
 
 /* Songs-only page-top control: opposite the listening panel, never the homepage. */
-.songs-scroll-nav{position:fixed;right:max(12px,env(safe-area-inset-right));top:calc(130px + env(safe-area-inset-top));z-index:30;width:48px;display:flex;flex-direction:column;align-items:center;background:var(--paper);border:1px solid var(--blue);border-radius:25px;box-shadow:2px 3px 0 #12688712;color:var(--blue)}
+.songs-scroll-nav{position:fixed;left:4px;right:auto;top:calc(130px + env(safe-area-inset-top));z-index:30;width:48px;display:flex;flex-direction:column;align-items:center;background:var(--paper);border:1px solid var(--blue);border-radius:25px;box-shadow:2px 3px 0 #12688712;color:var(--blue)}
 .songs-scroll-nav button{width:46px;height:44px;border:0;border-radius:50%;background:transparent;color:inherit;font:24px/1 var(--sans);cursor:pointer}
 .songs-scroll-nav button:disabled{opacity:.3;cursor:default}
 .songs-scroll-nav button:hover:not(:disabled){background:var(--blue);color:var(--paper)}
 .songs-scroll-nav output{font:600 10px/1.5 var(--sans);font-variant-numeric:tabular-nums}
 .songs-scroll-nav input{writing-mode:vertical-lr;direction:ltr;width:44px;height:96px;margin:6px 0;accent-color:var(--blue);cursor:ns-resize;touch-action:none}
 .songs-scroll-nav :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-@media(max-width:700px){.catalog-page{padding-right:76px}.songs-scroll-nav{top:calc(120px + env(safe-area-inset-top))}}
-@media(max-height:600px){.songs-scroll-nav{top:80px}.songs-scroll-nav input{height:40px}}
+@media(max-width:700px){.catalog-page{padding-right:76px}.songs-scroll-nav{left:auto;right:max(12px,env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top))}.songs-scroll-nav input{height:52px}}
+@media(max-height:600px){.songs-scroll-nav{top:16px}.songs-scroll-nav input{height:40px}}
