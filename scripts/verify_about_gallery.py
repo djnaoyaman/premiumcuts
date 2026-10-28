@@ -23,11 +23,8 @@ assert 'about-portrait' not in about
 assert 'couple-french-transparent.webp' not in about
 assert about.index('デザインについて。') < about.index('about-gallery') < about.index('<footer')
 assert about.count('id="about-gallery-title"') == 1
-assert 'Classmates.<br>Both have the last name Miyazaki.<br>A man and a woman.<br>Art is their playground.<br>Listening to music.<br>Married in 2013.<br>Welcomed SUI in 2016.' in about
-assert about.count('Married in 2013.') == 1
-assert 'Saya studied abroad in Limoges, France.<br>NAOYA was posted to NY.<br>NAOYA travels around the world.' in about
-assert 'NAOYA is a DJ.<br>Expanded from Hip-Hop DJ to all genres.<br>Influenced by Saya.' in about
-assert about.count('Influenced by Saya.') == 1
+assert 'about-gallery-story' not in about and 'about-gallery-coda' not in about
+assert 'Married in 2013.' not in about and 'Influenced by Saya.' not in about
 assert len([a for t,a in tags if t == 'figure' and a.get('class') == 'about-poster']) == len(manifest)
 sequence = [entry[0] for entry in manifest]
 assert len(set(sequence)) == len(sequence)
