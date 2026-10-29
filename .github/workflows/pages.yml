@@ -57,6 +57,8 @@ jobs:
           node scripts/verify_scope.cjs
           node scripts/verify_catalog_header.cjs
           node scripts/verify_random_start.cjs
+          python scripts/verify_analytics.py
+          node scripts/verify_analytics.cjs
           node scripts/verify_player.cjs
           node scripts/verify_back_to_top.cjs
           node scripts/verify_home_intro.cjs
