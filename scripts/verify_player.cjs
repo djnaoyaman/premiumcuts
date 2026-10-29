@@ -10,7 +10,7 @@ const ctx={document:doc,PREMIUM_AUDIO:audio,URL,Map,Set,console,location:{origin
 assert.equal(api.getState().queue.length,new Set(audio.map(t=>t.videoId)).size,'all recordings deduplicated across appearances');assert.equal(audio.find(t=>t.id==='cd-00-d1-21').videoId,'JNbxvLowZD8');assert.equal(audio.find(t=>t.id==='006-b-08').videoId,'xHVpXZHupHA');
 assert.equal(audio.find(t=>t.id==='005-a-15').videoId,'MF13kdqG6jA');assert.equal(audio.find(t=>t.id==='cd-00-d2-11').videoId,'MF13kdqG6jA');
 for(const [id,video] of [['001-a-02','8pQBEa4zRMw'],['004-a-15','Zcu63MDhWUo'],['001-a-13','74Oqe3JT1lY'],['001-a-17','Qih2wz3mnIQ'],['cd-09-d1-26','gCtPEw730ng'],['003-b-05','LEk0_8ptRhU'],['cd-01-d1-08','lEGnY5vuIoQ'],['cd-05-d1-19','tK3Rxpaff0g'],['005-a-16','s_OUgwDOODg'],['001-a-11','i5qBz24yrAU'],['005-b-15','BX5ITL2uvG4'],['003-a-14','jvUs1KWbg3M'],['002-a-11','vK4aPIPghC8'],['001-b-12','JQaWphaYiUU']])assert.equal(audio.find(t=>t.id===id).videoId,video,'specified recording '+id);
-get('pc-toggle').onclick();api.stop();events.onReady();assert.equal(calls.at(-1)[0],'cue','stop before API ready cancels pending playback');
+get('pc-toggle').onclick();api.stop();events.onStateChange({data:0});assert.equal(api.getState().artState,'stopped','stale ended after stop must not move needle inward');events.onReady();assert.equal(calls.at(-1)[0],'cue','stop before API ready cancels pending playback');
 const mixIds=volume=>audio.filter(t=>t.volume===volume).map(t=>t.id);
 const mix003=mixIds('003'),afterRitz=mix003[mix003.indexOf('003-a-04')+1],last003=mix003.at(-1);
 api.play('003-a-04','volume:003');assert.equal(api.getState().queue.join(','),mix003.join(','));assert.equal(calls.at(-1)[1],'o1w5FMjoQ9Y');
