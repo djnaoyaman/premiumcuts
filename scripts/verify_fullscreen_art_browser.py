@@ -33,7 +33,7 @@ async def main():
     await page.evaluate("PremiumPlayer.playReference({track:'001-a-11',video:'i5qBz24yrAU',title:'Reference rendition',artist:'Reference artist'});PremiumFullscreenArt.sync()")
     assert 'Reference rendition' in await page.locator('#label-copy').text_content();assert '発売 未確認' in await page.locator('#label-copy').text_content()
     await page.evaluate('PremiumPlayer.stop();PremiumFullscreenArt.sync()');assert await page.locator('#pc-player').get_attribute('data-needle')=='up'
-    await page.locator('#pc-close-full').click();assert not await page.locator('#art-disc').is_visible();assert await page.locator('.pc-original-label').is_visible()
+    await page.locator('#pc-close-full').click();assert not await page.locator('#art-disc').is_visible();assert await page.locator('.pc-original-label').evaluate("e=>getComputedStyle(e).display==='grid'");assert await page.locator('.pc-art').evaluate("e=>getComputedStyle(e).display==='none'")
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth');report.append({'width':width,**result});await context.close()
    context=await browser.new_context(reduced_motion='reduce');await context.add_init_script(MOCK);await context.route('**/*',route);page=await context.new_page();await page.goto(origin+'/premiumcuts/player.html',wait_until='networkidle');await page.locator('#pc-full').click();await page.evaluate("__provider.onStateChange({data:1});PremiumFullscreenArt.sync()");await page.wait_for_timeout(100);a=await page.locator('#disc-spin').get_attribute('transform');await page.wait_for_timeout(350);assert a==await page.locator('#disc-spin').get_attribute('transform');await context.close();await browser.close()
  finally:server.shutdown();server.server_close()
