@@ -21,13 +21,21 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install Pillow playwright==1.62.0
-      - run: python -m playwright install --with-deps chromium
+      - run: python -m playwright install --with-deps chromium webkit
       - uses: actions/configure-pages@v5
       - name: Build static archive
         env:
           SITE_ORIGIN: https://djnaoyaman.github.io/premiumcuts
           BASE_PATH: /premiumcuts
         run: python build.py
+      - name: Verify painted tonearm in Chromium and WebKit
+        run: python scripts/verify_tonearm_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tonearm-cross-engine-review
+          path: qa/tonearm/
+          retention-days: 7
       - name: Render representative social previews
         env:
           BASE_PATH: /premiumcuts
