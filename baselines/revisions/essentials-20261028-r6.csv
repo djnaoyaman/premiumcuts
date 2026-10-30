@@ -1,0 +1,39 @@
+﻿essentials_order,order,id,work_id,work_title,format,side,position,artist,title,source
+1,3,001-a-03,001,ON THE AIR,tape,A,3,Gérard Baqué,Tant de nuits (Bitter Sweet Samba),selection.tsv
+2,5,001-a-05,001,ON THE AIR,tape,A,5,Nico Gomez,Meu Pião,selection.tsv
+3,9,001-a-09,001,ON THE AIR,tape,A,9,Chico Arnez & His Cubana Brass,Eso Beso,selection.tsv
+4,10,001-a-10,001,ON THE AIR,tape,A,10,Karen Wyman,Night and Day,selection.tsv
+5,11,001-a-11,001,ON THE AIR,tape,A,11,Julian Barey Orchestra,Chanson des jumelles (Version instrumentale),selection.tsv
+6,13,001-a-13,001,ON THE AIR,tape,A,13,Wilma Goich,"Baci, baci, baci",selection.tsv
+7,17,001-a-17,001,ON THE AIR,tape,A,17,Jean Sullivan,I Saw the Light,selection.tsv
+8,19,001-b-02,001,ON THE AIR,tape,B,2,The Jumping Jacques,Gossip and Chatter,selection.tsv
+9,20,001-b-03,001,ON THE AIR,tape,B,3,Jack Jones,I Must Know,selection.tsv
+10,22,001-b-05,001,ON THE AIR,tape,B,5,Jair Rodrigues,Deixa isso pra lá,selection.tsv
+11,24,001-b-07,001,ON THE AIR,tape,B,7,Caterina Valente,Saudades da Bahia (Baion),selection.tsv
+12,25,001-b-08,001,ON THE AIR,tape,B,8,The Brady Bunch,Love Me Do,selection.tsv
+13,26,001-b-09,001,ON THE AIR,tape,B,9,Evinha (Eva),Moon River,selection.tsv
+14,40,002-a-08,002,SINCERELY,tape,A,8,Paul Mauriat,La fête,selection.tsv
+15,62,002-b-14,002,SINCERELY,tape,B,14,Cliff Richard,Fly Me to the Moon,selection.tsv
+16,68,003-a-03,003,COMMERCIALS,tape,A,3,Greetje Kauffeld,When You Wish Upon a Star,selection.tsv
+17,69,003-a-04,003,COMMERCIALS,tape,A,4,The Ritz,Baile en la noche,selection.tsv
+18,77,003-a-12,003,COMMERCIALS,tape,A,12,Copa 7,Copa Sete no Samba,selection.tsv
+19,80,003-b-01,003,COMMERCIALS,tape,B,1,Yehudit Ravitz,Taj Mahal,selection.tsv
+20,81,003-b-02,003,COMMERCIALS,tape,B,2,Monserate starring Lyda Zamora,Eso Beso,selection.tsv
+21,84,003-b-05,003,COMMERCIALS,tape,B,5,Georges Jouvin,Zozoï,selection.tsv
+22,86,003-b-07,003,COMMERCIALS,tape,B,7,The Coasters,Love Potion No. 9,selection.tsv
+23,90,003-b-11,003,COMMERCIALS,tape,B,11,Nina Lizell,Sunny,selection.tsv
+24,97,004-a-01,004,AUDIOSCAPE,tape,A,1,Mina,Portami con te,selection.tsv
+25,98,004-a-02,004,AUDIOSCAPE,tape,A,2,The Morgan-James,If It Comes to That,selection.tsv
+26,111,004-a-15,004,AUDIOSCAPE,tape,A,15,Nina van Pallandt,For Once in My Life,selection.tsv
+27,116,004-b-02,004,AUDIOSCAPE,tape,B,2,Les Petits Chanteurs du Rock,Aquarela,selection.tsv
+28,121,004-b-07,004,AUDIOSCAPE,tape,B,7,Two Man Sound,Disco Samba,selection.tsv
+29,130,005-a-01,005,JINGLES,tape,A,1,Carol Burnett & Martha Raye,Let Go,selection.tsv
+30,131,005-a-02,005,JINGLES,tape,A,2,The Jumping Jacques,Lucinda,selection.tsv
+31,133,005-a-04,005,JINGLES,tape,A,4,Stan Reynolds and His Orchestra,True Love,selection.tsv
+32,144,005-a-15,005,JINGLES,tape,A,15,Bobby Cole,I Love Paris,selection.tsv
+33,145,005-a-16,005,JINGLES,tape,A,16,Dieter Reith Orchestra,Bitter Sweet Samba,selection.tsv
+34,161,005-b-15,005,JINGLES,tape,B,15,Jerry Williams & His Dynamite & Soul Band,The Name Game,selection.tsv
+35,222,007-b-11,007,HOLIDAY MUSIC,tape,B,11,Romina Power,Zozoï,selection.tsv
+36,248,cd-00-d1-21,cd-00,CLASSIC BLEND,cd,D1,21,Berry Lipman,The Girls from Paramaribo (Disco),cd_catalog.json
+37,527,cd-09-d1-22,cd-09,WEEKEND OPERATOR,cd,D1,22,Joe Pugliese,Theme from “Black Belt Jones”,cd_catalog.json
+38,531,cd-09-d1-26,cd-09,WEEKEND OPERATOR,cd,D1,26,France Gall,Zozoï (Italian version),cd_catalog.json
