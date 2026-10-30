@@ -46,6 +46,14 @@ async def main():
       if state=='inner':assert '23.18996342096852' in geometry['angle'],geometry
       await page.evaluate('PremiumPlayer.getState=window.__realGetState')
       report.append({'engine':engine.name,'width':width,'state':state,'painted_pixels':count,**geometry})
+     if height<500:
+      await page.locator('#pc-toggle').scroll_into_view_if_needed()
+      controls=await page.locator('#pc-toggle').bounding_box()
+      assert controls and controls['y']>=0 and controls['y']+controls['height']<=height,(engine.name,'landscape controls inaccessible',controls)
+      await page.screenshot(path=str(out/f'{engine.name}-{width}-controls-scrolled.png'))
+      await page.locator('#pc-player').evaluate('e=>e.scrollTop=0')
+      await page.wait_for_timeout(100)
+      assert await page.locator('#pc-player').evaluate('e=>e.scrollTop')==0
      await context.close()
     await browser.close()
  finally:server.shutdown();server.server_close();(out/'report.json').write_text(json.dumps(report,indent=2))
