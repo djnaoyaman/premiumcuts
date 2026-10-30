@@ -40,7 +40,7 @@ async def main():
       await page.locator('#tonearm').evaluate("e=>e.style.visibility='hidden'");hidden=await page.screenshot();await page.locator('#tonearm').evaluate("e=>e.style.visibility='visible'")
       a=Image.open(io.BytesIO(visible)).convert('RGB');b=Image.open(io.BytesIO(hidden)).convert('RGB');diff=ImageChops.difference(a,b);count=sum(1 for p in diff.getdata() if max(p)>20)
       assert count>35,(engine.name,width,state,'tonearm not painted',count)
-      geometry=await page.evaluate("()=>{const e=document.querySelector('#tonearm'),p=e.getBoundingClientRect(),s=document.querySelector('.pc-stage').getBoundingClientRect();return {arm:[p.x,p.y,p.width,p.height],stage:[s.x,s.y,s.width,s.height],angle:e.getAttribute('transform')}}")
+      geometry=await page.evaluate("()=>{const e=document.querySelector('#tonearm'),s=document.querySelector('.pc-stage').getBoundingClientRect(),pts=[...e.querySelectorAll('path,rect,circle')].flatMap(n=>{const b=n.getBBox(),m=n.getScreenCTM();return [b.x,b.x+b.width].flatMap(x=>[b.y,b.y+b.height].map(y=>new DOMPoint(x,y).matrixTransform(m)))}),x=Math.min(...pts.map(p=>p.x)),y=Math.min(...pts.map(p=>p.y)),r=Math.max(...pts.map(p=>p.x)),b=Math.max(...pts.map(p=>p.y));return {arm:[x,y,r-x,b-y],stage:[s.x,s.y,s.width,s.height],angle:e.getAttribute('transform')}}")
       x,y,w,h=geometry['arm'];sx,sy,sw,sh=geometry['stage']
       assert x>=sx-sw*.01 and x+w<=sx+sw*1.01 and y>=max(0,sy)-sh*.01 and y+h<=min(height,sy+sh)+sh*.01,(engine.name,width,state,'arm clipped',geometry)
       if state=='inner':assert '23.18996342096852' in geometry['angle'],geometry
