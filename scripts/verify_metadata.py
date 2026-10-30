@@ -17,6 +17,7 @@ class Head(HTMLParser):
   if t=='meta':self.meta[a.get('property',a.get('name'))]=a.get('content')
   if t=='link':self.links.append(a)
 count=0
+track_titles={}
 for p in D.rglob('*.html'):
  s=p.read_text();h=Head();h.feed(s);count+=1
  assert len(re.findall('<h1(?: |>)',s))==1,p
@@ -31,6 +32,10 @@ for p in D.rglob('*.html'):
   assert Image.open(image).size==(1200,630),image
   assert 1000<image.stat().st_size<5_000_000,image
  if p.name=='404.html':assert h.meta['robots']=='noindex';continue
+ if p.parent.name=='tracks':
+  title=h.meta['og:title'].casefold()
+  assert title not in track_titles, ('Track placements need distinct titles',track_titles.get(title),p)
+  track_titles[title]=p
  canonical=[x['href'] for x in h.links if x.get('rel')=='canonical'];assert len(canonical)==1,p
  assert len(re.findall(r'<(?:nav|div)\b[^>]*class="[^"]*\bbreadcrumb\b[^"]*"',s))==(0 if p.name=='index.html' else 1),p
  expected=origin+('/' if p.name=='index.html' else '/'+p.relative_to(D).as_posix())
