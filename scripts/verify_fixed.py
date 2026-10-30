@@ -20,18 +20,18 @@ assert all(actual_audio.get(k)==v for k,v in preserved.items()), 'Previously sel
 assert len(actual_audio)==len(public['audio']), 'Duplicate audio track ID'
 assert set(actual_audio).issubset(t['id'] for t in actual), 'Audio outside fixed Songs'
 assert all(t['id'] not in (p/'dist/tracks.html').read_text().split('<main')[1] for t in m)
-print('PASS fixed 675 Songs exact records/order, 39 Essentials order, baseline hashes, My-Spin isolation')
+print('PASS fixed 675 Songs exact records/order, 40 Essentials order, baseline hashes, My-Spin isolation')
 
 # Audio for an existing Songs entry does not add it to either curated collection.
 assert next(t for t in public["audio"] if t["id"] == "001-a-02")["videoId"] == "8pQBEa4zRMw"
 assert "001-a-02" not in json.load(open("features.json"))["essentials"]["track_ids"]
 assert not any(t["videoId"] == "8pQBEa4zRMw" for t in public["myspin"])
 
-# Explicit owner revision: Tijuana Taxi only, preserving all previous selections and fixed Songs order.
+# Explicit owner revision: Tijuana Taxi and Kerrie Biddell, preserving all previous selections and fixed Songs order.
 previous=f['essentials_revision']['previous_essentials_ids']
 assert not set(previous)-set(f['essentials_ids'])
-assert set(f['essentials_ids'])-set(previous)=={'005-a-11'}
-assert len(f['essentials_ids'])==39
+assert set(f['essentials_ids'])-set(previous)=={'005-a-11','cd-00-d1-10'}
+assert len(f['essentials_ids'])==40
 source_order={t['id']:t['order'] for t in f['songs']}
 assert f['essentials_ids']==sorted(f['essentials_ids'],key=source_order.get)
 assert '006-b-08' in {t['id'] for t in public['tracks']}
@@ -57,9 +57,16 @@ for track in ('004-b-02','cd-00-d1-14'):
 feature=(p/'dist/features/essentials.html').read_text()
 assert feature.count('data-play-id="004-b-02"')==1
 assert 'data-play-id="cd-00-d1-14"' not in feature
-assert '39 ESSENTIAL RECORDINGS' in feature
+assert '40 ESSENTIAL RECORDINGS' in feature
 
 # Tijuana Taxi joins Essentials without changing its pre-existing audio.
 assert feature.count('data-play-id="005-a-11"')==1
 assert next(t for t in public["tracks"] if t["id"]=="005-a-11")["essentials"]
 assert "ESSENTIALS" in (p/"dist/tracks/005-a-11.html").read_text()
+
+# Exact user-selected Kerrie recording; no change to the other Sing a Simple Song.
+assert feature.count('data-play-id="cd-00-d1-10"')==1
+assert next(t for t in public["audio"] if t["id"]=="cd-00-d1-10")["videoId"]=="ljr74cmBtDQ"
+assert next(t for t in public["audio"] if t["id"]=="005-a-11")["videoId"]=="-XB0oRDtdVE"
+assert not next(t for t in public["tracks"] if t["id"]=="cd-09-d1-13")["essentials"]
+assert "ESSENTIALS" in (p/"dist/tracks/cd-00-d1-10.html").read_text()

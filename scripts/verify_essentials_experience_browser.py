@@ -18,9 +18,10 @@ async def main():
      if r.request.url.startswith((origin,'https://fonts.googleapis.com/','https://fonts.gstatic.com/')):await r.continue_()
      else:await r.abort()
     await context.route('**/*',route);page=await context.new_page();await page.goto(origin+'/premiumcuts/features/essentials.html',wait_until='networkidle')
-    assert await page.locator('.essential-recording').count()==39
+    assert await page.locator('.essential-recording').count()==40
     assert await page.locator('.essential-recording[open]').count()==0
     assert await page.locator('.essential-recording [data-play-id="005-a-11"]').count()==1
+    assert await page.locator('.essential-recording [data-play-id="cd-00-d1-10"]').count()==1
     assert not await page.evaluate('__audioCalls.some(x=>x[0]==="load")')
     first=page.locator('.essential-recording').first;summary=first.locator(':scope > summary');await summary.focus();await page.keyboard.press('Enter')
     assert await first.get_attribute('open') is not None
@@ -46,6 +47,6 @@ async def main():
     await context.close()
    await browser.close()
  finally:server.shutdown();server.server_close()
- (out/'report.json').write_text(json.dumps({'checks':['38 retained plus Tijuana Taxi','native keyboard accordion','no autoplay','playback emphasis','liner continuity','SPA','320/390/1200','reduced motion','no JS']}))
- print('PASS Essentials native disclosures, player continuity, scope, 39 selections and accessibility fallbacks')
+ (out/'report.json').write_text(json.dumps({'checks':['38 retained plus Tijuana Taxi and Kerrie Biddell','native keyboard accordion','no autoplay','playback emphasis','liner continuity','SPA','320/390/1200','reduced motion','no JS']}))
+ print('PASS Essentials native disclosures, player continuity, scope, 40 selections and accessibility fallbacks')
 if __name__=='__main__':asyncio.run(main())

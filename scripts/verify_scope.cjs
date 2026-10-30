@@ -62,7 +62,7 @@ async function visit(path){const href='https://example.test'+path;const a={href,
  get('pc-toggle').onclick();get('pc-toggle').onclick();assert.equal(api.getState().current,'002-a-08');
  get('pc-next').onclick();assert.equal(api.getState().current,expected[expected.indexOf('002-a-08')+1]);
  const html=fs.readFileSync('dist/index.html','utf8');assert.ok(!html.match(/<nav[^>]*>[\s\S]*?>PLAYER<\/[\s\S]*?<\/nav>/));
- assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'b335c0255a63b43d7dfdc8d10a3f8823979d6a6cc900798aabb3bf51effdb3b5');
+ assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync('features.json')).digest('hex'),'bc476b4b45fa45553815d0449434c2bb65002850a45cb564ef007bb301bf86c7');
  const myspin=JSON.parse(fs.readFileSync('myspin.json')),myids=myspin.map(t=>t.id);
  api.stop(); await visit('/premiumcuts/my-spin.html');
  assert.equal(api.getState().scope,'myspin');assert.deepEqual(Array.from(api.getState().queue),myids);assert.equal(api.getState().wantsPlay,false);
@@ -81,4 +81,7 @@ async function visit(path){const href='https://example.test'+path;const a={href,
 })().catch(e=>{console.error(e);process.exitCode=1});
 
 assert(expected.includes("005-a-11"));
-assert.equal(expected.length,39);
+assert.equal(expected.length,40);
+
+assert(expected.includes("cd-00-d1-10"));
+assert(!expected.includes("cd-09-d1-13"));
