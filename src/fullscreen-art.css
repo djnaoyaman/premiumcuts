@@ -1,6 +1,13 @@
 /* Approved Demo03 geometry; keep the existing fullscreen shell and compact player. */
 .pc-record>svg#art-disc{display:none}
-.pc-fullscreen .pc-record{position:relative;background:none;animation:none!important}
+.pc-fullscreen .pc-record{position:relative;background:none;animation:none!important;overflow:visible}
 .pc-fullscreen .pc-record>.pc-original-label{display:none}
-.pc-fullscreen .pc-record>svg#art-disc{display:block;width:100%;height:100%;overflow:visible;border-radius:50%}
+.pc-fullscreen .pc-record>svg#art-disc{display:block;width:100%;height:100%;overflow:visible;border-radius:0}
 @media(prefers-reduced-motion:reduce){.pc-fullscreen .pc-record{animation:none!important}}
+
+/* The arm extends outside the disc viewBox. Do not circular-clip the SVG viewport (WebKit). The disc itself is already a circle. */
+/* Short landscape viewports must not center an oversized player above the scroll origin. */
+@media(max-height:500px) and (orientation:landscape){
+ .pc-fullscreen.pc-player{justify-content:flex-start;padding-top:55px}
+ .pc-fullscreen .pc-stage{width:min(80vw,calc(66dvh * 16 / 9));max-height:none}
+}
