@@ -16,19 +16,19 @@ async def main():
    for engine in [pw.chromium,pw.webkit]:
     browser=await engine.launch()
     for width,height in [(320,900),(390,844),(844,390),(1200,900)]:
-     context=await browser.new_context(viewport={'width':width,'height':height},device_scale_factor=1);await context.add_init_script(MOCK)
+     context=await browser.new_context(viewport={'width':width,'height':height},device_scale_factor=1);await context.add_init_script(MOCK.replace('this.getCurrentTime=()=>0','this.getCurrentTime=()=>window.__testTime||0'))
      async def route(r):
       if r.request.url.startswith(origin):await r.continue_()
       else:await r.abort()
      await context.route('**/*',route);page=await context.new_page();await page.goto(origin+'/premiumcuts/player.html',wait_until='networkidle');await page.locator('#pc-full').click();await page.locator('[data-pc-mode="art"]').click()
      for state in ['stopped','playing','paused','inner','ended-return']:
-      await page.evaluate("document.getElementById('pc-auto').checked=false;PremiumPlayer.play('cd-03-d1-21','all');__provider.onStateChange({data:1});PremiumFullscreenArt.sync()")
+      await page.evaluate("window.__testTime=0;document.getElementById('pc-auto').checked=false;PremiumPlayer.play('cd-03-d1-21','all');__provider.onStateChange({data:1});PremiumFullscreenArt.sync()")
       if state=='stopped':await page.evaluate('PremiumPlayer.stop();PremiumFullscreenArt.sync()')
       elif state=='paused':await page.evaluate('__provider.onStateChange({data:2});PremiumFullscreenArt.sync()')
       elif state=='inner':
-       await page.evaluate("document.getElementById('pc-seek').value=document.getElementById('pc-seek').max;__provider.onStateChange({data:2});PremiumFullscreenArt.sync()")
+       await page.evaluate("window.__testTime=180;__provider.onStateChange({data:2});document.getElementById('pc-seek').value=180;PremiumFullscreenArt.sync()")
       elif state=='ended-return':await page.evaluate('__provider.onStateChange({data:0});PremiumFullscreenArt.sync()')
-      await page.wait_for_timeout(800 if state=='inner' else 1900)
+      await page.wait_for_timeout(1900)
       # Freeze motion for pixel comparison, not SVG layout/paint.
       await page.evaluate("document.getElementById('pc-player').dataset.playing='false';window.__realGetState=PremiumPlayer.getState;window.PremiumPlayer.getState=(()=>{const s=PremiumPlayer.getState();return ()=>({...s,playing:false})})()")
       await page.wait_for_timeout(120)
@@ -41,6 +41,9 @@ async def main():
       a=Image.open(io.BytesIO(visible)).convert('RGB');b=Image.open(io.BytesIO(hidden)).convert('RGB');diff=ImageChops.difference(a,b);count=sum(1 for p in diff.getdata() if max(p)>20)
       assert count>35,(engine.name,width,state,'tonearm not painted',count)
       geometry=await page.evaluate("()=>{const e=document.querySelector('#tonearm'),p=e.getBoundingClientRect(),s=document.querySelector('.pc-stage').getBoundingClientRect();return {arm:[p.x,p.y,p.width,p.height],stage:[s.x,s.y,s.width,s.height],angle:e.getAttribute('transform')}}")
+      x,y,w,h=geometry['arm'];sx,sy,sw,sh=geometry['stage']
+      assert x>=sx-sw*.01 and x+w<=sx+sw*1.01 and y>=max(0,sy)-sh*.01 and y+h<=min(height,sy+sh)+sh*.01,(engine.name,width,state,'arm clipped',geometry)
+      if state=='inner':assert '23.18996342096852' in geometry['angle'],geometry
       await page.evaluate('PremiumPlayer.getState=window.__realGetState')
       report.append({'engine':engine.name,'width':width,'state':state,'painted_pixels':count,**geometry})
      await context.close()
