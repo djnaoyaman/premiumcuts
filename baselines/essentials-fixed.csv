@@ -30,10 +30,11 @@
 29,130,005-a-01,005,JINGLES,tape,A,1,Carol Burnett & Martha Raye,Let Go,selection.tsv
 30,131,005-a-02,005,JINGLES,tape,A,2,The Jumping Jacques,Lucinda,selection.tsv
 31,133,005-a-04,005,JINGLES,tape,A,4,Stan Reynolds and His Orchestra,True Love,selection.tsv
-32,144,005-a-15,005,JINGLES,tape,A,15,Bobby Cole,I Love Paris,selection.tsv
-33,145,005-a-16,005,JINGLES,tape,A,16,Dieter Reith Orchestra,Bitter Sweet Samba,selection.tsv
-34,161,005-b-15,005,JINGLES,tape,B,15,Jerry Williams & His Dynamite & Soul Band,The Name Game,selection.tsv
-35,222,007-b-11,007,HOLIDAY MUSIC,tape,B,11,Romina Power,Zozoï,selection.tsv
-36,248,cd-00-d1-21,cd-00,CLASSIC BLEND,cd,D1,21,Berry Lipman,The Girls from Paramaribo (Disco),cd_catalog.json
-37,527,cd-09-d1-22,cd-09,WEEKEND OPERATOR,cd,D1,22,Joe Pugliese,Theme from “Black Belt Jones”,cd_catalog.json
-38,531,cd-09-d1-26,cd-09,WEEKEND OPERATOR,cd,D1,26,France Gall,Zozoï (Italian version),cd_catalog.json
+32,140,005-a-11,005,JINGLES,tape,A,11,The Modernaires,Tijuana Taxi,selection.tsv
+33,144,005-a-15,005,JINGLES,tape,A,15,Bobby Cole,I Love Paris,selection.tsv
+34,145,005-a-16,005,JINGLES,tape,A,16,Dieter Reith Orchestra,Bitter Sweet Samba,selection.tsv
+35,161,005-b-15,005,JINGLES,tape,B,15,Jerry Williams & His Dynamite & Soul Band,The Name Game,selection.tsv
+36,222,007-b-11,007,HOLIDAY MUSIC,tape,B,11,Romina Power,Zozoï,selection.tsv
+37,248,cd-00-d1-21,cd-00,CLASSIC BLEND,cd,D1,21,Berry Lipman,The Girls from Paramaribo (Disco),cd_catalog.json
+38,527,cd-09-d1-22,cd-09,WEEKEND OPERATOR,cd,D1,22,Joe Pugliese,Theme from “Black Belt Jones”,cd_catalog.json
+39,531,cd-09-d1-26,cd-09,WEEKEND OPERATOR,cd,D1,26,France Gall,Zozoï (Italian version),cd_catalog.json

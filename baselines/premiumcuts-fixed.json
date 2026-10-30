@@ -8137,6 +8137,7 @@
     "005-a-01",
     "005-a-02",
     "005-a-04",
+    "005-a-11",
     "005-a-15",
     "005-a-16",
     "005-b-15",
@@ -8146,10 +8147,11 @@
     "cd-09-d1-26"
   ],
   "essentials_revision": {
-    "revision": 6,
-    "date": "2026-10-28",
-    "reason": "Owner explicitly adds Les Petits Chanteurs du Rock — Aquarela to Essentials. The shared tape/CD recording appears once, at its first Songs occurrence.",
-    "source_commit": "e77a7e5b717ff7a46c886e72a6c0415c17dffd3c",
+    "revision": 7,
+    "date": "2026-10-30",
+    "reason": "Owner explicitly requests Tijuana Taxi by The Modernaires in Essentials. Preserve all previous selections and Songs source order; no recording change.",
+    "source_commit": "8b66dd11ee5895edb1c1529ad3cad3ac7ac2b2fb",
+    "request_message_id": "Sentinel_3af674b2b698819190e3a619034d13ff",
     "previous_essentials_ids": [
       "001-a-03",
       "001-a-05",
@@ -8177,6 +8179,7 @@
       "004-a-01",
       "004-a-02",
       "004-a-15",
+      "004-b-02",
       "004-b-07",
       "005-a-01",
       "005-a-02",
@@ -8190,11 +8193,11 @@
       "cd-09-d1-26"
     ],
     "added_ids": [
-      "004-b-02"
+      "005-a-11"
     ],
     "removed_ids": [],
     "order_rule": "Songs source order, first occurrence of the same recording",
-    "previous_baseline_sha256": "79c61bc85fbff54c0f2ba4e9e5b201b7ce8e343f382fda12995c1cbb988cb7a7",
-    "previous_features_sha256": "f98c7b8bd3345b36f14e861f9078c9c43ef1c72771ade8a61b84e7640d57dacd"
+    "previous_baseline_sha256": "12a1e78b577845b8b862056daeaf42ff4cf66cb21d20c2eef576f763e1d23aa8",
+    "previous_features_sha256": "f8b9f24ad6d436e7f23a43a37a83990b02d9d7383491b4291e153b0dbee6a2de"
   }
 }
