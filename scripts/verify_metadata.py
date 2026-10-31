@@ -16,6 +16,9 @@ class Head(HTMLParser):
   a=dict(a)
   if t=='meta':self.meta[a.get('property',a.get('name'))]=a.get('content')
   if t=='link':self.links.append(a)
+home=Head();home.feed((D/'index.html').read_text())
+webmanifest=json.loads((D/'site.webmanifest').read_text())
+assert webmanifest['description']==home.meta['description'] and webmanifest['description'].strip(), 'Manifest description must match the current homepage'
 count=0
 track_titles={}
 for p in D.rglob('*.html'):
