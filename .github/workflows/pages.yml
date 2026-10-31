@@ -75,6 +75,14 @@ jobs:
           node scripts/verify_back_to_top.cjs
           node scripts/verify_home_intro.cjs
           node scripts/verify_one_note_samba.cjs
+      - name: Verify painted update dates in Chromium
+        run: python scripts/verify_update_dates_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: update-dates-browser-review
+          path: qa/update-dates/
+          retention-days: 7
       - name: Verify fullscreen ART in Chromium
         run: python scripts/verify_fullscreen_art_browser.py
       - uses: actions/upload-artifact@v4
