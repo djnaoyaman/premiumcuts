@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -54,6 +56,7 @@ jobs:
         run: python scripts/render_social_cards.py
       - name: Verify fixed catalog and collection isolation
         run: |
+          python scripts/verify_update_dates.py
           python scripts/verify_home_index.py
           python scripts/verify_about_gallery.py
           python scripts/verify_about_profile.py

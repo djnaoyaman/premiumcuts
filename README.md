@@ -101,3 +101,14 @@ including a mixed Latin/Japanese title edge case.
 Marking the PR ready runs the complete renderer and all image checks; only main
 can publish after those checks succeed. Actual X/Facebook debugger
 validation is a separate post-publication step, not implied by these tests.
+
+## Last modified dates
+
+Every page shows the latest shared site-source change in JST. The same UTC ISO
+value is used in WebPage/WebSite dateModified and sitemap lastmod. Shared
+catalog/player data, templates, styles, assets and editorial inputs are included;
+CI configuration, documentation-only commits and redeploys are excluded. This is
+not an article research-review date, which remains unchanged. Production needs
+full Git history (checkout fetch-depth: 0). Non-Git source exports use the
+explicit reviewed baseline in update_dates.py, never the current build time.
+Run python scripts/verify_update_dates.py after building.

@@ -36,7 +36,7 @@ def page_breadcrumbs(rel,label,catalog,base_path):
    return [home,('Songs',base_path+'/tracks.html'),(v['display_code']+' '+v['title'],base_path+'/volumes/'+v['id']+'.html'),(t['title'],None)]
  return [home,(label,None)]
 
-def enrich(dist,origin,base_path):
+def enrich(dist,origin,base_path,modified):
  esc=html.escape
  # Social images are literal crops of the generated page, rendered after this build.
  # Changing page content, styles or the renderer changes the public image URL.
@@ -81,6 +81,8 @@ def enrich(dist,origin,base_path):
     item=url if not href else (origin+href[len(base_path):] if base_path and href.startswith(base_path+'/') else origin+href)
     crumbs.append({'@type':'ListItem','position':i,'name':name,'item':item})
   graph=[{'@type':'WebSite','@id':origin+'/#website','url':origin+'/','name':'Premium Cuts Listed','inLanguage':'ja'}, {'@type':'WebPage','@id':url+'#webpage','url':url,'name':title,'description':desc,'inLanguage':'ja','isPartOf':{'@id':origin+'/#website'}}]
+  graph[0]['dateModified']=modified
+  graph[1]['dateModified']=modified
   if crumbs:graph.append({'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':crumbs});graph[1]['breadcrumb']={'@id':url+'#breadcrumb'}
   extra=f'''<meta property="og:site_name" content="Premium Cuts Listed"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="{esc(image_alt)}"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{image_url}"><meta name="twitter:image:alt" content="{esc(image_alt)}"><link rel="icon" href="{base_path}/icon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="{base_path}/icon-48.png" type="image/png" sizes="48x48"><link rel="manifest" href="{base_path}/site.webmanifest"><script type="application/ld+json">{json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('<','\\u003c')}</script>'''
   s=s.replace('</head>',extra+'</head>');page.write_text(s,encoding='utf-8')
