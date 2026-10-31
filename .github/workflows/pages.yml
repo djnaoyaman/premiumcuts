@@ -77,11 +77,15 @@ jobs:
           node scripts/verify_one_note_samba.cjs
       - name: Verify painted update dates in Chromium
         run: python scripts/verify_update_dates_browser.py
+      - name: Check compact profile in browser
+        run: python scripts/verify_compact_profile_browser.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: update-dates-browser-review
-          path: qa/update-dates/
+          path: |
+            qa/update-dates/
+            qa/compact-profile/
           retention-days: 7
       - name: Verify fullscreen ART in Chromium
         run: python scripts/verify_fullscreen_art_browser.py
