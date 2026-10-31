@@ -1,9 +1,11 @@
 from pathlib import Path
 import json,html,re,shutil,unicodedata,collections,os,hashlib
 from urllib.parse import quote
+from update_dates import source_modified, japanese_timestamp
 from PIL import Image,ImageDraw
 from catalog_style import normalize_tracks
 P=Path(__file__).parent;D=P/'dist';e=html.escape
+SOURCE_MODIFIED = source_modified(P)
 origin=os.environ.get('SITE_ORIGIN','https://premium-cuts-listed.mossyelf3.chatgpt.site').rstrip('/')
 base_path=os.environ.get('BASE_PATH','').rstrip('/')
 titles=['ON THE AIR','SINCERELY','COMMERCIALS','AUDIOSCAPE','JINGLES','COUNSELING','HOLIDAY MUSIC']
@@ -145,7 +147,7 @@ listening_features={'one-note-samba':{'label':'One Note Samba','ids':[v['id'] fo
 assert listening_features['one-note-samba']['ids']==[t['id'] for t in myspin if t['id'] in listening_features['one-note-samba']['ids']]
 (D/'data.js').write_text((D/'data.js').read_text()+'\nconst PREMIUM_LISTENING_FEATURES='+json.dumps(listening_features,ensure_ascii=False)+';')
 
-asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','share_metadata.py','scripts/render_social_cards.py','about_profile.json','myspin.json','one_note_samba.json','spinout_features.py','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','editorial_updates.json','src/app.js','src/fullscreen-art.js','src/fullscreen-art.css','src/player-shell.html','src/analytics.js','src/analytics-privacy.js','src/back-to-top.js','src/home-intro.js','src/about-gallery.js','src/player.js','src/premium-playback-hint.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
+asset_version=hashlib.sha256(''.join((P/n).read_text() for n in ['build.py','share_metadata.py','update_dates.py','scripts/render_social_cards.py','about_profile.json','myspin.json','one_note_samba.json','spinout_features.py','features.json','artwork.py','catalog_style.py','cd_catalog.json','research.json','audio_sources.json','editorial_updates.json','src/app.js','src/fullscreen-art.js','src/fullscreen-art.css','src/player-shell.html','src/analytics.js','src/analytics-privacy.js','src/back-to-top.js','src/home-intro.js','src/about-gallery.js','src/player.js','src/premium-playback-hint.js','src/player.css','src/style.css']).encode()).hexdigest()[:12]
 # Public-only catalog snapshots let open players receive newly published sources.
 public_audio=[dict(id=t['id'],volume=t['volume'],title=t['title'],artist=t['artist'],videoId=players[t['id']]['id'],url=players[t['id']]['url']) for t in tracks if t['id'] in players]
 # Label data is separate from fixed catalog/audio records. Release year is not production year.
@@ -167,7 +169,7 @@ def head(title,desc,path='/'):
  return f'''<!doctype html><html lang="ja"><head><script src="/analytics-privacy.js?v={asset_version}"></script>{GOOGLE_TAG}<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="{origin}{path}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{origin}{path}"><meta property="og:image" content="{origin}/og.png"><meta property="og:locale" content="ja_JP"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#f2e8d7"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/style.css?v={asset_version}"><link rel="stylesheet" href="/player.css?v={asset_version}"><link rel="stylesheet" href="/fullscreen-art.css?v={asset_version}"><script defer src="/data.js?v={asset_version}"></script><script defer src="/analytics.js?v={asset_version}"></script><script defer src="/app.js?v={asset_version}"></script><script defer src="/back-to-top.js?v={asset_version}"></script><script defer src="/home-intro.js?v={asset_version}"></script><script defer src="/about-gallery.js?v={asset_version}"></script><script defer src="/player.js?v={asset_version}"></script><script defer src="/fullscreen-art.js?v={asset_version}"></script><script defer src="/premium-playback-hint.js?v={asset_version}"></script></head>'''
 def header(active=''):
  return '<a class="skip" href="#main">本文へ</a><header><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><svg class="asterisk-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 3v58M3 32h58M11.5 11.5l41 41M11.5 52.5l41-41" fill="none" stroke="currentColor" stroke-width="3"/></svg></span><span>Premium Cuts<br><b>Listed.</b></span></a><nav aria-label="メインナビゲーション">'+''.join(f'<a class="{"selected" if k==active else ""}" href="{u}">{n}</a>' for k,u,n in [('volumes','/#collection','Works'),('tracks','/tracks.html','Songs'),('essentials','/features/essentials.html','Essentials'),('remix','/tracks.html?feature=remix','Remix'),('myspin','/my-spin.html','Spinout'),('about','/about.html','About')])+'</nav><span class="header-meta">LES BONNES<br>VIBRATIONS.</span></header>'
-def footer():return (P/'src/player-shell.html').read_text()+'<footer><a class="footer-logo" href="/">Premium Cuts Listed<span>Une collection de bonnes vibrations.</span></a><p>Selection & mix by Masanori Suzuki &amp; Me</p><a href="#top">ページの上へ ↑</a></footer>'
+def footer():return (P/'src/player-shell.html').read_text()+'<footer><a class="footer-logo" href="/">Premium Cuts Listed<span>Une collection de bonnes vibrations.</span></a><p>Selection & mix by Masanori Suzuki &amp; Me</p><p class="site-updated">最終更新：<time datetime="'+SOURCE_MODIFIED+'">'+japanese_timestamp(SOURCE_MODIFIED)+'</time></p><a href="#top">ページの上へ ↑</a></footer>'
 def tile(v):
  description='SIDE A + SIDE B' if v['format']=='tape' else ('2 DISCS' if len(v['discs'])>1 else 'TRACKLIST')
  return f'''<article class="volume-card"><a href="/volumes/{v['id']}.html"><div class="card-meta"><span>PREMIUM CUTS</span><span>{v['display_code']}</span></div><h3>{e(v['title'])}<span>↗</span></h3><div class="card-bottom"><span>{description}</span><span>{v['count']} ENTRIES</span></div></a></article>'''
@@ -319,7 +321,7 @@ for v in playable_volumes:
 (D/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#f2e8d7"/><circle cx="32" cy="32" r="25" fill="#126887"/><circle cx="32" cy="32" r="10" fill="#f2e8d7"/><circle cx="32" cy="32" r="3" fill="#126887"/></svg>')
 icon=Image.new('RGB',(180,180),'#f2e8d7');dr=ImageDraw.Draw(icon);dr.ellipse((15,15,165,165),fill='#126887');dr.ellipse((60,60,120,120),fill='#f2e8d7');dr.ellipse((82,82,98,98),fill='#126887');icon.save(D/'apple-touch-icon.png')
 urls=['/','/all-tracks.html','/my-spin.html','/features/essentials.html','/features/one-note-samba.html','/tracks.html','/about.html','/player.html']+['/volumes/'+v['id']+'.html' for v in volumes]+['/tracks/'+t['id']+'.html' for t in tracks+myspin]
-(D/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+origin+u+'</loc></url>' for u in urls)+'</urlset>');(D/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+origin+'/sitemap.xml\n')
+(D/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+origin+u+'</loc><lastmod>'+SOURCE_MODIFIED+'</lastmod></url>' for u in urls)+'</urlset>');(D/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+origin+'/sitemap.xml\n')
 print(json.dumps({'volumes':len(volumes),'entries':len(tracks),'corrected':sum(t['status']=='corrected' for t in tracks),'pending':sum(t['status']=='pending' for t in tracks),'counts':[(v['id'],v['count']) for v in volumes]},ensure_ascii=False))
 
 # Project Pages lives below /premiumcuts rather than the domain root.
@@ -335,4 +337,4 @@ if base_path:
 
 # Metadata stays separate from catalog content and playback behavior.
 from share_metadata import enrich
-enrich(D,origin,base_path)
+enrich(D,origin,base_path,SOURCE_MODIFIED)

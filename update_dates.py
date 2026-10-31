@@ -1,0 +1,41 @@
+"""Stable site-source modification time, never build or deployment time.
+
+All pages load the common catalog/player and share the template. This clock
+therefore covers their shared content dependencies as well as rendered prose.
+Research verification dates and original publication dates remain independent.
+"""
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+import subprocess
+
+SOURCE_PATHS = (
+    'build.py', 'share_metadata.py', 'update_dates.py', 'catalog_style.py',
+    'spinout_features.py', 'selection.tsv', 'cd_catalog.json', 'features.json',
+    'about_profile.json', 'myspin.json', 'one_note_samba.json', 'research.json',
+    'audio_sources.json', 'editorial_updates.json', 'src',
+    'scripts/render_social_cards.py',
+)
+# Reviewed source-export baseline for non-Git local previews. Not datetime.now().
+# Production checkout has full history and always derives the value from Git.
+SOURCE_EXPORT_UPDATED = '2026-10-31T04:15:00+00:00'
+
+def source_modified(root):
+    root = Path(root)
+    def git(*args):
+        return subprocess.check_output(['git', '-C', str(root), *args], text=True, stderr=subprocess.DEVNULL).strip()
+    try:
+        top = git('rev-parse', '--show-toplevel')
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return SOURCE_EXPORT_UPDATED
+    if Path(top).resolve() != root.resolve():
+        return SOURCE_EXPORT_UPDATED
+    if git('rev-parse', '--is-shallow-repository') == 'true':
+        raise RuntimeError('Update dates require full source history (checkout fetch-depth: 0)')
+    value = git('log', '-1', '--format=%cI', '--', *SOURCE_PATHS)
+    if not value:
+        raise RuntimeError('No source revision date found')
+    return datetime.fromisoformat(value).astimezone(timezone.utc).isoformat(timespec='seconds')
+
+def japanese_timestamp(value):
+    dt = datetime.fromisoformat(value).astimezone(timezone(timedelta(hours=9)))
+    return dt.strftime('%Y年%m月%d日 %H:%M JST')
