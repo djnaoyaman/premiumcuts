@@ -57,7 +57,8 @@ def enrich(dist,origin,base_path,modified):
  icon=Image.open(dist/'apple-touch-icon.png')
  for size in [32,48,192,512]:icon.resize((size,size),Image.Resampling.LANCZOS).save(dist/f'icon-{size}.png')
  icon.save(dist/'favicon.ico',sizes=[(16,16),(32,32),(48,48)])
- (dist/'site.webmanifest').write_text(json.dumps({'name':'Premium Cuts Listed','short_name':'Premium Cuts','lang':'ja','start_url':base_path+'/','scope':base_path+'/','display':'browser','background_color':'#f2e8d7','theme_color':'#f2e8d7','icons':[{'src':base_path+f'/icon-{s}.png','sizes':f'{s}x{s}','type':'image/png','purpose':'any'} for s in [192,512]]},ensure_ascii=False),encoding='utf-8')
+ site_description=html.unescape(re.search(r'<meta name="description" content="([^"]*)"', (dist/'index.html').read_text()).group(1))
+ (dist/'site.webmanifest').write_text(json.dumps({'name':'Premium Cuts Listed','short_name':'Premium Cuts','description':site_description,'lang':'ja','start_url':base_path+'/','scope':base_path+'/','display':'browser','background_color':'#f2e8d7','theme_color':'#f2e8d7','icons':[{'src':base_path+f'/icon-{s}.png','sizes':f'{s}x{s}','type':'image/png','purpose':'any'} for s in [192,512]]},ensure_ascii=False),encoding='utf-8')
  catalog=json.loads((dist/'catalog-public.json').read_text())
  pages=sorted(p for p in dist.rglob('*.html') if p.name!='404.html')
  for page in pages:
