@@ -28,6 +28,8 @@ function mountSharePanel(root, { nav = navigator, lifecycle = window } = {}) {
     manual.open = true;
     input.focus({ preventScroll: true });
     input.select();
+    // Keep the manual URL above the fixed player without changing playback state.
+    input.scrollIntoView?.({ block: 'start', behavior: 'instant' });
   }
   async function run(kind) {
     if (busy) return;
