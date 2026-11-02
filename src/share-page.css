@@ -16,3 +16,7 @@
 footer:has(> .page-share){flex-wrap:wrap}
 footer > .page-share{flex:0 0 100%;max-width:none;min-width:0}
 footer > .page-share input{max-width:760px}
+
+/* An open fallback can scroll fully above the persistent player, including without JS. */
+.page-share details[open]{padding-bottom:80vh}
+.page-share input{scroll-margin-top:24px}
