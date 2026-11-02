@@ -77,7 +77,9 @@ async def main():
      assert await page.locator('[data-share-manual]').get_attribute('open') is not None
      assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(width,route)
      for b in [copy,share,field]:
+      await b.evaluate("e=>e.scrollIntoView({block:'start',behavior:'instant'})")
       rect=await b.bounding_box();assert rect and rect['height']>=44 and rect['x']>=0 and rect['x']+rect['width']<=width,(width,route,rect)
+     assert await field.evaluate("e=>{const r=e.getBoundingClientRect();return [r.left+8,r.right-8].every(x=>e.contains(document.elementFromPoint(x,r.top+r.height/2)))}"),(width,route,'manual field obscured')
      # Viewport evidence keeps the share/footer controls readable even on long catalogs.
      name=f'{width}-{route.strip("/").replace("/","-").replace(".html","") or "home"}.png'
      await page.screenshot(path=str(OUT/name))
@@ -117,6 +119,9 @@ async def main():
    assert await page.locator('[data-share-native]').is_disabled();assert await page.locator('[data-share-copy]').is_disabled()
    summary=page.locator('[data-share-manual] summary');await summary.focus();await page.keyboard.press('Enter')
    assert await page.locator('input[data-share-url]').is_visible();assert await page.locator('input[data-share-url]').input_value()=='https://djnaoyaman.github.io/premiumcuts/about.html'
+   # Native scrolling is still available when scripts are disabled.
+   rect=await page.locator('input[data-share-url]').bounding_box();await page.mouse.wheel(0,max(0,rect['y']-24));await page.wait_for_timeout(250)
+   assert await page.locator('input[data-share-url]').evaluate("e=>{const r=e.getBoundingClientRect();return [r.left+8,r.right-8].every(x=>e.contains(document.elementFromPoint(x,r.top+r.height/2)))}")
    await page.screenshot(path=str(OUT/'390-no-js.png'));await ctx.close()
    ctx,page,blocked=await new_context();await page.goto(origin+'/premiumcuts/404.html',wait_until='networkidle');assert await page.locator('[data-page-share]').count()==0;await ctx.close()
    await browser.close()
