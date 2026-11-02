@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,6 +30,8 @@ jobs:
           SITE_ORIGIN: https://djnaoyaman.github.io/premiumcuts
           BASE_PATH: /premiumcuts
         run: python build.py
+      - name: Verify preview network hold before browser rendering
+        run: python scripts/verify_preview_network_policy.py
       - name: Verify painted tonearm in Chromium and WebKit
         run: python scripts/verify_tonearm_browser.py
       - uses: actions/upload-artifact@v4
@@ -75,6 +77,8 @@ jobs:
           node scripts/verify_back_to_top.cjs
           node scripts/verify_home_intro.cjs
           node scripts/verify_one_note_samba.cjs
+          node --test scripts/verify_share.cjs
+          node --test scripts/verify_share_navigation.cjs
       - name: Verify painted update dates in Chromium
         run: python scripts/verify_update_dates_browser.py
       - name: Check compact profile in browser
@@ -109,6 +113,14 @@ jobs:
         run: python scripts/verify_about_reveal_browser.py
       - name: Verify One Note Samba feature in Chromium
         run: python scripts/verify_one_note_samba_browser.py
+      - name: Verify page sharing in Chromium, offline APIs
+        run: python scripts/verify_share_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: share-browser-review
+          path: qa/share/
+          retention-days: 7
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -65,6 +65,9 @@ def enrich(dist,origin,base_path,modified):
   s=page.read_text().replace('rel="apple-touch-icon"','rel="apple-touch-icon" sizes="180x180"');rel='/'+page.relative_to(dist).as_posix();url=origin+('/' if rel=='/index.html' else rel)
   title=html.unescape(re.search(r'<title>(.*?)</title>',s).group(1))
   desc=html.unescape(re.search(r'<meta name="description" content="([^"]*)"',s).group(1))
+  # Public canonical data is built server-side, not from current query/player state.
+  sharing=f'<section class="page-share" data-page-share data-share-title="{esc(title,quote=True)}" data-share-url="{esc(url,quote=True)}" aria-labelledby="page-share-heading"><h2 id="page-share-heading">このページを共有</h2><p>絞り込み条件や再生状態を含めず、ページ名とURLだけを共有します。</p><div class="page-share-actions" data-share-actions aria-busy="false"><button type="button" data-share-native disabled>共有メニュー</button><button type="button" data-share-copy disabled>URLをコピー</button></div><p data-share-status role="status" aria-live="polite" aria-atomic="true"></p><details data-share-manual><summary>URLを表示して手動でコピー</summary><label for="page-share-url">このページの公開URL</label><input id="page-share-url" data-share-url readonly value="{esc(url,quote=True)}" spellcheck="false" autocomplete="off"><p>JavaScriptを使わない場合も、URLを選択してコピーできます。</p></details></section>'
+  s=s.replace('</footer>',sharing+'</footer>')
   image_url,image_alt=social_image(page,s,title)
   s=re.sub(r'<meta property="og:image"[^>]*>',f'<meta property="og:image" content="{image_url}">',s)
   label=title.split(' | ')[0]
@@ -94,6 +97,7 @@ def enrich(dist,origin,base_path,modified):
  s=re.sub(r'<script type="application/ld\+json">.*?</script>','',s)
  s=re.sub(r'<title>.*?</title>','<title>ページが見つかりません | Premium Cuts Listed</title>',s)
  s=re.sub(r'<link rel="canonical"[^>]*>','',s)
+ s=re.sub(r'<section class="page-share".*?</section>','',s,flags=re.S) # Never share a missing URL or the copied Songs canonical.
  s=re.sub(r'<meta (?:property|name)="(?:og:title|twitter:title)"[^>]*>',lambda m:re.sub(r'content="[^"]*"','content="ページが見つかりません | Premium Cuts Listed"',m.group(0)),s)
  s=re.sub(r'<meta (?:property|name)="(?:description|og:description|twitter:description)"[^>]*>',lambda m:re.sub(r'content="[^"]*"','content="ページが移動したか、URLが間違っているようです。Songsから探してください。"',m.group(0)),s)
  s=re.sub(r'<meta property="og:url"[^>]*>',f'<meta property="og:url" content="{origin}/404.html">',s)
