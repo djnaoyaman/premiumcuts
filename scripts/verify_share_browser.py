@@ -74,6 +74,7 @@ async def main():
      assert await page.evaluate('PremiumPlayer.getState()')==before
      await reset(page,'reject');await copy.click();field=page.locator('input[data-share-url]');assert await field.count()==1
      assert await field.input_value()==expected['url'];assert await field.evaluate('e=>document.activeElement===e && e.selectionEnd===e.value.length')
+     assert await field.evaluate("e=>{const r=e.getBoundingClientRect();return [r.left+8,r.right-8].every(x=>e.contains(document.elementFromPoint(x,r.top+r.height/2)))}"),(width,route,'automatic fallback obscured')
      assert await page.locator('[data-share-manual]').get_attribute('open') is not None
      assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(width,route)
      for b in [copy,share,field]:
