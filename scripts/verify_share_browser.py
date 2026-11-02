@@ -31,15 +31,16 @@ SHARE_MOCK=r'''(() => {
  window.__shareDocumentToken=Math.random();
 })();'''
 PAGES=['/','/tracks.html','/about.html','/features/essentials.html','/features/one-note-samba.html','/my-spin.html','/volumes/001.html','/tracks/001-a-01.html','/player.html']
+# Songs may change document.title for a private filter; the public OG title remains canonical.
 async def payload(page):
- return await page.evaluate("({title:document.title,url:document.querySelector('link[rel=canonical]').href})")
+ return await page.evaluate("({title:document.querySelector('meta[property=\"og:title\"]').content,url:document.querySelector('link[rel=canonical]').href})")
 async def audit(page):return await page.evaluate('({share:__shareAudit.share,copy:__shareAudit.copy})')
 async def reset(page,mode='success'):
  await page.evaluate('(mode)=>{__shareAudit.share=[];__shareAudit.copy=[];__shareAudit.mode=mode}',mode)
 async def ready(page):
  await page.wait_for_function("document.querySelector('[data-share-native]')?.disabled===false")
 async def canonical_current(page):
- await page.wait_for_function("document.querySelector('[data-page-share]')?.dataset.shareUrl===document.querySelector('link[rel=canonical]')?.href && document.querySelector('[data-page-share]')?.dataset.shareTitle===document.title")
+ await page.wait_for_function("document.querySelector('[data-page-share]')?.dataset.shareUrl===document.querySelector('link[rel=canonical]')?.href && document.querySelector('[data-page-share]')?.dataset.shareTitle===document.querySelector('meta[property=\"og:title\"]')?.content")
 async def main():
  OUT.mkdir(parents=True,exist_ok=True)
  server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(ROOT/'dist')))
@@ -69,7 +70,7 @@ async def main():
      assert (await audit(page))['copy']==[expected['url']]
      share=page.locator('[data-share-native]');await share.focus();await page.keyboard.press('Space')
      await page.wait_for_function("document.querySelector('[data-share-status]').textContent==='共有操作が完了しました。'")
-     assert (await audit(page))['share']==[expected]
+     assert (await audit(page))['share']==[expected],(width,route,await audit(page),expected)
      assert await page.evaluate('PremiumPlayer.getState()')==before
      await reset(page,'reject');await copy.click();field=page.locator('input[data-share-url]');assert await field.count()==1
      assert await field.input_value()==expected['url'];assert await field.evaluate('e=>document.activeElement===e && e.selectionEnd===e.value.length')
