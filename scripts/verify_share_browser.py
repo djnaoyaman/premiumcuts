@@ -71,7 +71,7 @@ async def main():
      await page.wait_for_function("document.querySelector('[data-share-status]').textContent==='共有操作が完了しました。'")
      assert (await audit(page))['share']==[expected]
      assert await page.evaluate('PremiumPlayer.getState()')==before
-     await reset(page,'reject');await copy.click();field=page.locator('[data-share-url]')
+     await reset(page,'reject');await copy.click();field=page.locator('input[data-share-url]');assert await field.count()==1
      assert await field.input_value()==expected['url'];assert await field.evaluate('e=>document.activeElement===e && e.selectionEnd===e.value.length')
      assert await page.locator('[data-share-manual]').get_attribute('open') is not None
      assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(width,route)
@@ -115,7 +115,7 @@ async def main():
    ctx,page,blocked=await new_context(390,False);await page.goto(origin+'/premiumcuts/about.html',wait_until='networkidle')
    assert await page.locator('[data-share-native]').is_disabled();assert await page.locator('[data-share-copy]').is_disabled()
    summary=page.locator('[data-share-manual] summary');await summary.focus();await page.keyboard.press('Enter')
-   assert await page.locator('[data-share-url]').is_visible();assert await page.locator('[data-share-url]').input_value()=='https://djnaoyaman.github.io/premiumcuts/about.html'
+   assert await page.locator('input[data-share-url]').is_visible();assert await page.locator('input[data-share-url]').input_value()=='https://djnaoyaman.github.io/premiumcuts/about.html'
    await page.screenshot(path=str(OUT/'390-no-js.png'));await ctx.close()
    ctx,page,blocked=await new_context();await page.goto(origin+'/premiumcuts/404.html',wait_until='networkidle');assert await page.locator('[data-page-share]').count()==0;await ctx.close()
    await browser.close()
