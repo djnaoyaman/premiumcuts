@@ -17,6 +17,7 @@ import shutil
 import sys
 
 from playwright.async_api import async_playwright
+from preview_network_policy import youtube_family_request
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / 'dist'
@@ -58,6 +59,11 @@ async def render():
                 locale='ja-JP', reduced_motion='reduce',
             )
             async def static_assets(route):
+                # Provider requests are on hold, including thumbnails and avatars.
+                # Abort before resource-type handling so image/iframe/CSS cannot leak.
+                if youtube_family_request(route.request.url):
+                    await route.abort()
+                    return
                 if route.request.resource_type in {'script', 'media', 'websocket'}:
                     await route.abort()
                 else:

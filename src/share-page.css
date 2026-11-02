@@ -1,0 +1,24 @@
+/* Quiet page-specific sharing area. Player and existing branding styles are untouched. */
+.page-share{flex-basis:100%;width:100%;max-width:760px;border-top:1px solid var(--line);padding-top:20px;margin-top:4px;text-align:left}
+.page-share h2{font-family:inherit;font-size:15px;font-weight:500;margin:0 0 10px;letter-spacing:0}
+.page-share p{font-size:12px;line-height:1.8;margin:10px 0}
+.page-share-actions{display:flex;flex-wrap:wrap;gap:10px}
+.page-share button{min-height:44px;padding:10px 18px;border:1px solid currentColor;border-radius:24px;background:transparent;color:inherit;font:inherit;font-size:13px;cursor:pointer}
+.page-share button[aria-disabled="true"]{cursor:progress;opacity:.65}
+.page-share button:disabled{cursor:not-allowed;opacity:.65}
+.page-share :is(button,summary,input):focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.page-share [data-share-status]{min-height:1.8em}
+.page-share summary{width:fit-content;max-width:100%;min-height:44px;padding:10px 0;font-size:12px;cursor:pointer;box-sizing:border-box}
+.page-share label{display:block;font-size:12px;margin:4px 0 8px}
+.page-share input{display:block;width:100%;max-width:100%;min-width:0;min-height:44px;box-sizing:border-box;padding:10px;background:transparent;color:inherit;border:1px solid var(--line);border-radius:4px;font:inherit;font-size:16px}
+
+/* Layout proposal: only a footer containing the new share panel is affected. */
+footer:has(> .page-share){flex-wrap:wrap}
+footer > .page-share{flex:0 0 100%;max-width:none;min-width:0}
+footer > .page-share input{max-width:760px}
+
+/* An open fallback can scroll fully above the persistent player, including without JS. */
+.page-share details[open]{padding-bottom:80vh}
+.page-share input{scroll-margin-top:24px}
+
+@media(max-width:700px){body:has(#songs-scroll-nav) .page-share input{scroll-margin-top:220px}}
